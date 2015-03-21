@@ -1,0 +1,21 @@
+\contentsline {section}{\numberline {1}Introduction}{1}
+\contentsline {section}{\numberline {2}The concept of IGS(informational genomic segment)}{3}
+\contentsline {subsection}{\numberline {2.1}IGS(informative genomic segment) can represent the novel information of a genome}{4}
+\contentsline {subsection}{\numberline {2.2}IGS can be used to do alpha diversity analysis}{5}
+\contentsline {subsection}{\numberline {2.3}IGS can be used to do beta diversity analysis}{7}
+\contentsline {section}{\numberline {3}Evaluating IGS method using simulated data sets}{8}
+\contentsline {subsection}{\numberline {3.1}An experiment using a simple simulated data sets}{8}
+\contentsline {subsection}{\numberline {3.2}Evaluating the influence of variable sequencing depth and sequencing error}{9}
+\contentsline {subsubsection}{\numberline {3.2.1}comparison of dissimilarity matrix from beta diversity analysis}{10}
+\contentsline {subsubsection}{\numberline {3.2.2}Evaluate alpha diversity analysis by estimating size of metagenome}{13}
+\contentsline {subsection}{\numberline {3.3}The IGS method can provide a whole framework to do alpha or beta diversity, with good versatility.}{14}
+\contentsline {section}{\numberline {4}Applying IGS method to real metagenome data sets}{16}
+\contentsline {subsection}{\numberline {4.1}GOS data sets: Sorcerer II Global Ocean Sampling Expedition}{16}
+\contentsline {subsection}{\numberline {4.2}HMP metagenomics data set}{17}
+\contentsline {subsection}{\numberline {4.3}GPGC - Great Prairie Soil Metagenome Grand Challenge}{18}
+\contentsline {subsection}{\numberline {4.4}more soil metagenomic samples}{20}
+\contentsline {section}{\numberline {5}Future Direction}{21}
+\contentsline {section}{\numberline {6}Conclusion}{22}
+\contentsline {section}{\numberline {7}Data}{22}
+\contentsline {subsection}{\numberline {7.1}Four simulated reads data sets with different species abundance distribution}{22}
+\contentsline {subsection}{\numberline {7.2}Simulated sequencing reads of e.coli}{22}

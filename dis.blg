@@ -1,0 +1,171 @@
+This is BibTeX, Version 0.99d (TeX Live 2013)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: dis.aux
+The style file: abbrv.bst
+Database file #1: dis.bib
+Repeated entry---line 2607 of file dis.bib
+ : @article{pubmed21926975
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2651 of file dis.bib
+ : @article{pubmed19997069
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2905 of file dis.bib
+ : @inproceedings{CormodeM05
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2949 of file dis.bib
+ : @article{Howe2012
+ :                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3008 of file dis.bib
+ : @article{4160251
+ :                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3017 of file dis.bib
+ : @article{Luo2009
+ :                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3025 of file dis.bib
+ : @incollection{McDonald2013
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3036 of file dis.bib
+ : @unpublished{Brown2012blog
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3044 of file dis.bib
+ : @article{Haas2013
+ :                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3054 of file dis.bib
+ : @article{pubmed19997069
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3063 of file dis.bib
+ : @article{pubmed21926975
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3082 of file dis.bib
+ : @article{Kelley2010
+ :                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3091 of file dis.bib
+ : @article{Medvedev2011
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3101 of file dis.bib
+ : @article{Brown2012
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3110 of file dis.bib
+ : @article{adina2013
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3118 of file dis.bib
+ : @article{Deorowicz2013
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3128 of file dis.bib
+ : @article{Minoche2011
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3137 of file dis.bib
+ : @article{Rizk2013
+ :                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3147 of file dis.bib
+ : @article{Pell2012
+ :                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3157 of file dis.bib
+ : @article{BroderM03
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3166 of file dis.bib
+ : @article{Bloom70
+ :                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3205 of file dis.bib
+ : @article{Zerbino2008
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3215 of file dis.bib
+ : @article{Pevzner2001
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3225 of file dis.bib
+ : @article{Marcais2011
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3234 of file dis.bib
+ : @article{Qin2010
+ :                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3243 of file dis.bib
+ : @article{Kurtz2008
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3270 of file dis.bib
+ : @article{Cormode2005
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3322 of file dis.bib
+ : @article{Melsted2011
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3436 of file dis.bib
+ : @article{Rusu2008
+ :                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3455 of file dis.bib
+ : @article{Conway2011
+ :                    ,
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "ex"
+Warning--empty year in colwellestimates
+Warning--empty publisher in CormodeM05
+Warning--there's a number but no volume in flajolet2008hyperloglog
+You've used 132 entries,
+            2118 wiz_defined-function locations,
+            1278 strings with 35493 characters,
+and the built_in function-call counts, 63194 in all, are:
+= -- 5581
+> -- 5054
+< -- 11
++ -- 2013
+- -- 1867
+* -- 5845
+:= -- 11015
+add.period$ -- 399
+call.type$ -- 132
+change.case$ -- 1324
+chr.to.int$ -- 0
+cite$ -- 135
+duplicate$ -- 1650
+empty$ -- 3425
+format.name$ -- 1867
+if$ -- 12336
+int.to.chr$ -- 0
+int.to.str$ -- 132
+missing$ -- 132
+newline$ -- 661
+num.names$ -- 268
+pop$ -- 1130
+preamble$ -- 1
+purify$ -- 1195
+quote$ -- 0
+skip$ -- 1233
+stack$ -- 0
+substring$ -- 2930
+swap$ -- 336
+text.length$ -- 11
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 524
+warning$ -- 3
+while$ -- 406
+width$ -- 135
+write$ -- 1443
+(There were 30 error messages)
