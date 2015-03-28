@@ -1,11 +1,13 @@
 
-\documentclass{article}
+\documentclass[12pt]{report}
 \usepackage{graphicx}
 \begin{document}
 
 \tableofcontents
 
 %\chapter{IGS-based diversity analysis}
+
+\chapter{concept and simulation}
 
 \section{Introduction}
 
@@ -350,6 +352,8 @@ From these results, we show the IGS method can work well to a simplest scenario,
 
 \subsection{Evaluating the influence of variable sequencing depth and sequencing error}
 
+
+
 Previously we have shown the IGS method generally works to a simple simulated data sets, with high sequencing depth and no sequencing error. Since
 in many situations we deal with metagenomic data sets with low sequencing depth, like soil or sea water samples, we want to know if we can still 
 get reliable insights from the low coverage sequencing data. Also it is a fact that all sequencing technology will generate some errors. As discussed in the background 
@@ -490,7 +494,7 @@ The IGS method can provide a whole framework to do alpha or beta diversity. Here
 
 Compareads(Commet) based on reads overlap between samples can get a matrix reflecting the real relationship between samples pretty good but it is stuck with one metric, which is based on the percentage of overlap reads between samples. This metric is like bray curtis , but not exactly the same.
 
-
+\chapter{real data sets}
 
 \section{Applying IGS method to real metagenome data sets}
 
@@ -748,6 +752,12 @@ wisconsin\_switchgrass & 310966735 & 13G & 40259619921 & 129.5 \\ \hline
 \end{tabular}
 \label{table:gpgc}
 \end{table}
+
+\chapter{Conclusion}
+
+\section{Summary}
+
+\section{Future Work}
 
 
 \bibliography{dis}
