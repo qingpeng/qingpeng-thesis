@@ -1,9 +1,8 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  25 MAR 2015 14:16
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  28 MAR 2015 15:55
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
-**IGS_chapter.tex
+**IGS_chapter
 (./IGS_chapter.tex
 LaTeX2e <2011/06/27>
 Babel <3.9f> and hyphenation patterns for 78 languages loaded.
@@ -255,214 +254,216 @@ Package pdftex.def Info: ./figures/simple_chao_alpha.png used on input line 347
 LaTeX Warning: Text page 13 contains only floats.
 
 [13 <./figures/simple_PCA_3d.png> <./figures/simple_tree.png>]
-Overfull \hbox (6.76404pt too wide) in paragraph at lines 367--368
+<./figures/IGS_richness_no_adjustment.png, id=55, 696.6025pt x 513.92pt>
+File: ./figures/IGS_richness_no_adjustment.png Graphic file (type png)
+
+<use ./figures/IGS_richness_no_adjustment.png>
+Package pdftex.def Info: ./figures/IGS_richness_no_adjustment.png used on input
+ line 372.
+(pdftex.def)             Requested size: 289.07999pt x 213.26497pt.
+
+Overfull \hbox (6.76404pt too wide) in paragraph at lines 384--385
 \OT1/cmr/m/n/12 To eval-u-ate the ef-fec-tive-ness of beta di-ver-sity anal-y-s
 is us-ing IGS based method,
  []
 
 
-Overfull \hbox (38.4136pt too wide) in paragraph at lines 367--368
+Overfull \hbox (38.4136pt too wide) in paragraph at lines 384--385
 \OT1/cmr/m/n/12 that gen-er-ated from an-other metage-nomics com-par-i-son tool
  - Com-met(Compareads),
  []
 
-[14 <./figures/simple_chao_alpha.png>]
-<./figures/simulated_real_matrix.png, id=59, 517.935pt x 219.82124pt>
+[14 <./figures/simple_chao_alpha.png>] [15 <./figures/IGS_richness_no_adjustmen
+t.png>] <./figures/simulated_real_matrix.png, id=64, 517.935pt x 219.82124pt>
 File: ./figures/simulated_real_matrix.png Graphic file (type png)
 
 <use ./figures/simulated_real_matrix.png>
 Package pdftex.def Info: ./figures/simulated_real_matrix.png used on input line
- 395.
+ 412.
 (pdftex.def)             Requested size: 289.07999pt x 122.69653pt.
- [15]
-<./figures/simulated_matrix1.png, id=63, 505.89pt x 221.82875pt>
+
+<./figures/simulated_matrix1.png, id=65, 505.89pt x 221.82875pt>
 File: ./figures/simulated_matrix1.png Graphic file (type png)
 
 <use ./figures/simulated_matrix1.png>
-Package pdftex.def Info: ./figures/simulated_matrix1.png used on input line 402
+Package pdftex.def Info: ./figures/simulated_matrix1.png used on input line 419
 .
 (pdftex.def)             Requested size: 289.07999pt x 126.76186pt.
 
-<./figures/IGS_correlation_methods.png, id=64, 707.64375pt x 620.3175pt>
+<./figures/IGS_correlation_methods.png, id=66, 707.64375pt x 620.3175pt>
 File: ./figures/IGS_correlation_methods.png Graphic file (type png)
 
 <use ./figures/IGS_correlation_methods.png>
 Package pdftex.def Info: ./figures/IGS_correlation_methods.png used on input li
-ne 408.
+ne 425.
 (pdftex.def)             Requested size: 289.07999pt x 253.40422pt.
 
-<./figures/IGS_correlation_coverage.png, id=65, 509.905pt x 282.05376pt>
+<./figures/IGS_correlation_coverage.png, id=67, 509.905pt x 282.05376pt>
 File: ./figures/IGS_correlation_coverage.png Graphic file (type png)
 
 <use ./figures/IGS_correlation_coverage.png>
 Package pdftex.def Info: ./figures/IGS_correlation_coverage.png used on input l
-ine 415.
+ine 432.
 (pdftex.def)             Requested size: 289.07999pt x 159.91154pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 423--428
+Underfull \hbox (badness 10000) in paragraph at lines 440--445
 
  []
 
-[16 <./figures/simulated_real_matrix.png> <./figures/simulated_matrix1.png>]
-
-LaTeX Warning: Text page 17 contains only floats.
-
-[17 <./figures/IGS_correlation_methods.png> <./figures/IGS_correlation_coverage
-.png>] <./figures/IGS_table_alpha1_10x_0.png, id=76, 670.505pt x 247.92625pt>
+[16 <./figures/simulated_real_matrix.png>] [17 <./figures/simulated_matrix1.png
+> <./figures/IGS_correlation_methods.png>] [18 <./figures/IGS_correlation_cover
+age.png>]
+<./figures/IGS_table_alpha1_10x_0.png, id=81, 670.505pt x 247.92625pt>
 File: ./figures/IGS_table_alpha1_10x_0.png Graphic file (type png)
 
 <use ./figures/IGS_table_alpha1_10x_0.png>
 Package pdftex.def Info: ./figures/IGS_table_alpha1_10x_0.png used on input lin
-e 460.
+e 477.
 (pdftex.def)             Requested size: 289.07999pt x 106.88994pt.
 
-<./figures/IGS_table_alpha1_10x_3_ne.png, id=77, 718.685pt x 243.91125pt>
+<./figures/IGS_table_alpha1_10x_3_ne.png, id=82, 718.685pt x 243.91125pt>
 File: ./figures/IGS_table_alpha1_10x_3_ne.png Graphic file (type png)
 
 <use ./figures/IGS_table_alpha1_10x_3_ne.png>
 Package pdftex.def Info: ./figures/IGS_table_alpha1_10x_3_ne.png used on input 
-line 467.
+line 484.
 (pdftex.def)             Requested size: 289.07999pt x 98.10986pt.
 
-<./figures/IGS_table_alpha1_10x_3_e.png, id=78, 720.6925pt x 247.92625pt>
+<./figures/IGS_table_alpha1_10x_3_e.png, id=83, 720.6925pt x 247.92625pt>
 File: ./figures/IGS_table_alpha1_10x_3_e.png Graphic file (type png)
 
 <use ./figures/IGS_table_alpha1_10x_3_e.png>
 Package pdftex.def Info: ./figures/IGS_table_alpha1_10x_3_e.png used on input l
-ine 475.
+ine 492.
 (pdftex.def)             Requested size: 289.07999pt x 99.4449pt.
 
-<./figures/IGS_figure_test_alpha.png, id=79, 736.7525pt x 523.9575pt>
+<./figures/IGS_figure_test_alpha.png, id=84, 736.7525pt x 523.9575pt>
 File: ./figures/IGS_figure_test_alpha.png Graphic file (type png)
 
 <use ./figures/IGS_figure_test_alpha.png>
 Package pdftex.def Info: ./figures/IGS_figure_test_alpha.png used on input line
- 481.
+ 498.
 (pdftex.def)             Requested size: 289.07999pt x 205.58182pt.
- [18] [19 <./figures/IGS_table_alpha1_10x_0.png> <./figures/IGS_table_alpha1_10
-x_3_ne.png> <./figures/IGS_table_alpha1_10x_3_e.png>] [20 <./figures/IGS_figure
-_test_alpha.png>]
+ [19 <./figures/IGS_table_alpha1_10x_0.png> <./figures/IGS_table_alpha1_10x_3_n
+e.png>] [20 <./figures/IGS_table_alpha1_10x_3_e.png> <./figures/IGS_figure_test
+_alpha.png>] [21]
 Chapter 2.
 
-Overfull \hbox (6.7476pt too wide) in paragraph at lines 497--497
+Overfull \hbox (6.7476pt too wide) in paragraph at lines 514--514
 []\OT1/cmr/bx/n/17.28 Applying IGS method to real metagenome
  []
 
-[21
+[22
 
-] <./figures/GOS_cluster.png, id=97, 779.91376pt x 570.13pt>
+] <./figures/GOS_cluster.png, id=102, 779.91376pt x 570.13pt>
 File: ./figures/GOS_cluster.png Graphic file (type png)
 
 <use ./figures/GOS_cluster.png>
-Package pdftex.def Info: ./figures/GOS_cluster.png used on input line 542.
+Package pdftex.def Info: ./figures/GOS_cluster.png used on input line 559.
 (pdftex.def)             Requested size: 505.89pt x 369.81456pt.
 
-<./figures/GOS_observed.png, id=98, 850.17625pt x 473.77pt>
+<./figures/GOS_observed.png, id=103, 850.17625pt x 473.77pt>
 File: ./figures/GOS_observed.png Graphic file (type png)
 
 <use ./figures/GOS_observed.png>
-Package pdftex.def Info: ./figures/GOS_observed.png used on input line 548.
+Package pdftex.def Info: ./figures/GOS_observed.png used on input line 565.
 (pdftex.def)             Requested size: 505.89pt x 281.91472pt.
 
-<./figures/GOS_chao.png, id=99, 1146.2825pt x 580.1675pt>
+<./figures/GOS_chao.png, id=104, 1146.2825pt x 580.1675pt>
 File: ./figures/GOS_chao.png Graphic file (type png)
 
 <use ./figures/GOS_chao.png>
-Package pdftex.def Info: ./figures/GOS_chao.png used on input line 554.
+Package pdftex.def Info: ./figures/GOS_chao.png used on input line 571.
 (pdftex.def)             Requested size: 505.89pt x 256.04465pt.
- [22]
-<./figures/HMP_beta.png, id=103, 523.9575pt x 372.39125pt>
+ [23]
+<./figures/HMP_beta.png, id=108, 523.9575pt x 372.39125pt>
 File: ./figures/HMP_beta.png Graphic file (type png)
 
 <use ./figures/HMP_beta.png>
-Package pdftex.def Info: ./figures/HMP_beta.png used on input line 576.
+Package pdftex.def Info: ./figures/HMP_beta.png used on input line 593.
 (pdftex.def)             Requested size: 505.89pt x 359.55986pt.
 
-<./figures/HMP_alpha.png, id=104, 577.15625pt x 352.31625pt>
+<./figures/HMP_alpha.png, id=109, 577.15625pt x 352.31625pt>
 File: ./figures/HMP_alpha.png Graphic file (type png)
 
 <use ./figures/HMP_alpha.png>
-Package pdftex.def Info: ./figures/HMP_alpha.png used on input line 582.
+Package pdftex.def Info: ./figures/HMP_alpha.png used on input line 599.
 (pdftex.def)             Requested size: 505.89pt x 308.8243pt.
- [23 <./figures/GOS_cluster.png>] [24 <./figures/GOS_observed.png>] [25 <./figu
+ [24 <./figures/GOS_cluster.png>] [25 <./figures/GOS_observed.png>] [26 <./figu
 res/GOS_chao.png>]
-<./figures/GPGC_old_subset1M.png, id=118, 477.785pt x 437.635pt>
+<./figures/GPGC_old_subset1M.png, id=123, 477.785pt x 437.635pt>
 File: ./figures/GPGC_old_subset1M.png Graphic file (type png)
 
 <use ./figures/GPGC_old_subset1M.png>
-Package pdftex.def Info: ./figures/GPGC_old_subset1M.png used on input line 629
+Package pdftex.def Info: ./figures/GPGC_old_subset1M.png used on input line 646
 .
 (pdftex.def)             Requested size: 289.07999pt x 264.78668pt.
 
-<./figures/GPGC_1m_old.png, id=119, 953.5625pt x 824.07875pt>
+<./figures/GPGC_1m_old.png, id=124, 953.5625pt x 824.07875pt>
 File: ./figures/GPGC_1m_old.png Graphic file (type png)
 
 <use ./figures/GPGC_1m_old.png>
-Package pdftex.def Info: ./figures/GPGC_1m_old.png used on input line 637.
+Package pdftex.def Info: ./figures/GPGC_1m_old.png used on input line 654.
 (pdftex.def)             Requested size: 505.89pt x 437.19977pt.
- [26 <./figures/HMP_beta.png>]
-<./figures/IGS_KBS_beta.png, id=124, 652.4375pt x 538.01pt>
+ [27 <./figures/HMP_beta.png>]
+<./figures/IGS_KBS_beta.png, id=129, 652.4375pt x 538.01pt>
 File: ./figures/IGS_KBS_beta.png Graphic file (type png)
 
 <use ./figures/IGS_KBS_beta.png>
-Package pdftex.def Info: ./figures/IGS_KBS_beta.png used on input line 664.
+Package pdftex.def Info: ./figures/IGS_KBS_beta.png used on input line 681.
 (pdftex.def)             Requested size: 289.07999pt x 238.38342pt.
 
-<./figures/IGS_ARMO_beta.png, id=125, 631.35875pt x 510.90875pt>
+<./figures/IGS_ARMO_beta.png, id=130, 631.35875pt x 510.90875pt>
 File: ./figures/IGS_ARMO_beta.png Graphic file (type png)
 
 <use ./figures/IGS_ARMO_beta.png>
-Package pdftex.def Info: ./figures/IGS_ARMO_beta.png used on input line 670.
+Package pdftex.def Info: ./figures/IGS_ARMO_beta.png used on input line 687.
 (pdftex.def)             Requested size: 289.07999pt x 233.92946pt.
 
-<./figures/IGS_ARMO_alpha.png, id=126, 851.18pt x 428.60126pt>
+<./figures/IGS_ARMO_alpha.png, id=131, 851.18pt x 428.60126pt>
 File: ./figures/IGS_ARMO_alpha.png Graphic file (type png)
 
 <use ./figures/IGS_ARMO_alpha.png>
-Package pdftex.def Info: ./figures/IGS_ARMO_alpha.png used on input line 676.
+Package pdftex.def Info: ./figures/IGS_ARMO_alpha.png used on input line 693.
 (pdftex.def)             Requested size: 505.89pt x 254.73642pt.
- [27 <./figures/HMP_alpha.png>]
-Overfull \hbox (19.46458pt too wide) in paragraph at lines 713--713
+ [28 <./figures/HMP_alpha.png>]
+Overfull \hbox (19.46458pt too wide) in paragraph at lines 730--730
 []\OT1/cmr/bx/n/14.4 Four sim-u-lated reads data sets with dif-fer-ent species
  []
 
-[28 <./figures/GPGC_old_subset1M.png>]
+[29 <./figures/GPGC_old_subset1M.png>]
 Overfull \vbox (87.79977pt too high) has occurred while \output is active []
 
 
-[29 <./figures/GPGC_1m_old.png>]
-Overfull \hbox (35.93044pt too wide) in paragraph at lines 739--752
+[30 <./figures/GPGC_1m_old.png>]
+Overfull \hbox (35.93044pt too wide) in paragraph at lines 756--769
 [][]
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[30 <./figures/IGS_KBS_beta.png>] [31 <./figures/IGS_ARMO_beta.png>] [32 <./fig
+[31 <./figures/IGS_KBS_beta.png>] [32 <./figures/IGS_ARMO_beta.png>] [33 <./fig
 ures/IGS_ARMO_alpha.png>]
 Chapter 3.
-No file IGS_chapter.bbl.
-[33
+(./IGS_chapter.bbl) [34
 
-] (./IGS_chapter.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+] (./IGS_chapter.aux) ) 
 Here is how much of TeX's memory you used:
- 1655 strings out of 493315
- 25840 string characters out of 6137904
- 82826 words of memory out of 5000000
- 5089 multiletter control sequences out of 15000+600000
+ 1663 strings out of 493315
+ 26113 string characters out of 6137904
+ 82838 words of memory out of 5000000
+ 5094 multiletter control sequences out of 15000+600000
  8500 words of font info for 30 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 37i,8n,23p,1129b,219s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
-></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-Output written on IGS_chapter.pdf (33 pages, 1105374 bytes).
+ 37i,8n,23p,1125b,219s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2013/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmbx12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr12.pfb>
+Output written on IGS_chapter.pdf (34 pages, 1142263 bytes).
 PDF statistics:
- 164 PDF objects out of 1000 (max. 8388607)
- 81 compressed objects within 1 object stream
+ 169 PDF objects out of 1000 (max. 8388607)
+ 83 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 116 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 121 words of extra memory for PDF output out of 10000 (max. 10000000)
 

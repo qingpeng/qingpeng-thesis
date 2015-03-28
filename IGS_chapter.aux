@@ -15,7 +15,7 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.2.3}IGS can be used to do beta diversity analysis}{10}}
 \@writefile{toc}{\contentsline {section}{\numberline {1.3}Evaluating IGS method using simulated data sets}{11}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.3.1}An experiment using a simple simulated data sets}{11}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.2}Evaluating the influence of variable sequencing depth and sequencing error}{12}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.2}Improving the accuracy of this method in real world analysis}{12}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1.3}{\ignorespaces \bf  Ordination of the 6 synthetic samples using IGS method}}{13}}
 \newlabel{fig:simple_pcoa}{{1.3}{13}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1.4}{\ignorespaces \bf  Clustering of the 6 synthetic samples using IGS method}}{13}}
@@ -23,63 +23,67 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {1.5}{\ignorespaces \bf  Richness estimation of the 6 synthetic samples using IGS method}}{14}}
 \newlabel{fig:simple_alpha}{{1.5}{14}}
 \@writefile{toc}{\contentsline {subsubsection}{comparison of dissimilarity matrix from beta diversity analysis}{14}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.6}{\ignorespaces \bf  Dissimilarity matrix between synthetic samples using Bray-cutis from species composition directly }}{16}}
-\newlabel{fig:simulated_real_matrix}{{1.6}{16}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.7}{\ignorespaces \bf  Dissimilarity matrix between synthetic samples using Bray-cutis from sequencing reads using IGS method }}{16}}
-\newlabel{fig:simulated_matrix1}{{1.7}{16}}
-\@writefile{toc}{\contentsline {subsubsection}{Evaluate alpha diversity analysis by estimating size of metagenome}{16}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.8}{\ignorespaces \bf  Correlation between calculated distance matrix and true matrix from different data sets and using different methods}}{17}}
-\newlabel{fig:IGS_correlation_methods}{{1.8}{17}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.9}{\ignorespaces \bf  Correlation between calculated distance matrix and true matrix from different dat sets with different sequencing depth}}{17}}
-\newlabel{fig:IGS_correlation_coverage}{{1.9}{17}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.10}{\ignorespaces \bf  Coverage = 10x, No error}}{19}}
-\newlabel{fig:IGS_table_alpha1_10x_0}{{1.10}{19}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.11}{\ignorespaces \bf  Coverage = 10x, error = 3\%, no error correction}}{19}}
-\newlabel{fig:IGS_table_alpha1_10x_3_ne}{{1.11}{19}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.12}{\ignorespaces \bf  Coverage = 10x, error = 3\%, with error correction}}{19}}
-\newlabel{fig:IGS_table_alpha1_10x_3_e}{{1.12}{19}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.3}The IGS method can provide a whole framework to do alpha or beta diversity, with good versatility.}{19}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.13}{\ignorespaces \bf  estimated genome size from data sets with variable coverage}}{20}}
-\newlabel{fig:IGS_figure_test_alpha}{{1.13}{20}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {2}real data sets}{21}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.6}{\ignorespaces \bf  Richness estimation of the 6 synthetic samples using IGS method}}{15}}
+\newlabel{fig:IGS_richness_no_adjustment}{{1.6}{15}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.7}{\ignorespaces \bf  Dissimilarity matrix between synthetic samples using Bray-cutis from species composition directly }}{16}}
+\newlabel{fig:simulated_real_matrix}{{1.7}{16}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.8}{\ignorespaces \bf  Dissimilarity matrix between synthetic samples using Bray-cutis from sequencing reads using IGS method }}{17}}
+\newlabel{fig:simulated_matrix1}{{1.8}{17}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.9}{\ignorespaces \bf  Correlation between calculated distance matrix and true matrix from different data sets and using different methods}}{17}}
+\newlabel{fig:IGS_correlation_methods}{{1.9}{17}}
+\@writefile{toc}{\contentsline {subsubsection}{Evaluate alpha diversity analysis by estimating size of metagenome}{17}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.10}{\ignorespaces \bf  Correlation between calculated distance matrix and true matrix from different dat sets with different sequencing depth}}{18}}
+\newlabel{fig:IGS_correlation_coverage}{{1.10}{18}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.11}{\ignorespaces \bf  Coverage = 10x, No error}}{19}}
+\newlabel{fig:IGS_table_alpha1_10x_0}{{1.11}{19}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.12}{\ignorespaces \bf  Coverage = 10x, error = 3\%, no error correction}}{19}}
+\newlabel{fig:IGS_table_alpha1_10x_3_ne}{{1.12}{19}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.13}{\ignorespaces \bf  Coverage = 10x, error = 3\%, with error correction}}{20}}
+\newlabel{fig:IGS_table_alpha1_10x_3_e}{{1.13}{20}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.14}{\ignorespaces \bf  estimated genome size from data sets with variable coverage}}{20}}
+\newlabel{fig:IGS_figure_test_alpha}{{1.14}{20}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.3}The IGS method can provide a whole framework to do alpha or beta diversity, with good versatility.}{20}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {2}real data sets}{22}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {2.1}Applying IGS method to real metagenome data sets}{21}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.1}GOS data sets: Sorcerer II Global Ocean Sampling Expedition}{21}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.2}HMP metagenomics data set}{22}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces \bf  cluster of GOS samples using IGS method}}{23}}
-\newlabel{fig:GOS-beta}{{2.1}{23}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces \bf  Rarefaction curve of IGSs of the GOS samples}}{24}}
-\newlabel{fig:GOS-rarefaction}{{2.2}{24}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.3}GPGC - Great Prairie Soil Metagenome Grand Challenge}{24}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces \bf  Estimated number of IGSs of the GOS samples}}{25}}
-\newlabel{fig:GOS-chao1}{{2.3}{25}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces \bf  PCoA of HMP}}{26}}
-\newlabel{fig:HMP_beta}{{2.4}{26}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.5}{\ignorespaces \bf  alpha diversity of HMP}}{27}}
-\newlabel{fig:HMP_alpha}{{2.5}{27}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.4}more soil metagenomic samples}{27}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.6}{\ignorespaces \bf  PCoA of GPGC samples}}{28}}
-\newlabel{fig:GPGC_beta}{{2.6}{28}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.2}Future Direction}{28}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.7}{\ignorespaces \bf  alpha diversity of GPGC samples}}{29}}
-\newlabel{fig:GPGC-alpha}{{2.7}{29}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.3}Conclusion}{29}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.4}Data}{29}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.1}Four simulated reads data sets with different species abundance distribution}{29}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.2}Simulated sequencing reads of e.coli}{29}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.8}{\ignorespaces \bf  PCoA of soil samples collected from KBS}}{30}}
-\newlabel{fig:KBS_beta}{{2.8}{30}}
-\@writefile{lot}{\contentsline {table}{\numberline {2.1}{\ignorespaces  \bf  {Simulated sequencing reads data sets of e.coli} }}{30}}
-\newlabel{table:ecoli}{{2.1}{30}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.9}{\ignorespaces \bf  PCoA of soil samples collected from Amazon rainforest}}{31}}
-\newlabel{fig:ARMO_beta}{{2.9}{31}}
-\@writefile{lot}{\contentsline {table}{\numberline {2.2}{\ignorespaces GPGC Data sets}}{31}}
-\newlabel{my-label}{{2.2}{31}}
-\newlabel{table:gpgc}{{2.2}{31}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.10}{\ignorespaces \bf  PCoA of soil samples collected from Amazon rainforest}}{32}}
-\newlabel{fig:ARMO_alpha}{{2.10}{32}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.1}Applying IGS method to real metagenome data sets}{22}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.1}GOS data sets: Sorcerer II Global Ocean Sampling Expedition}{22}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.2}HMP metagenomics data set}{23}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces \bf  cluster of GOS samples using IGS method}}{24}}
+\newlabel{fig:GOS-beta}{{2.1}{24}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces \bf  Rarefaction curve of IGSs of the GOS samples}}{25}}
+\newlabel{fig:GOS-rarefaction}{{2.2}{25}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.3}GPGC - Great Prairie Soil Metagenome Grand Challenge}{25}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces \bf  Estimated number of IGSs of the GOS samples}}{26}}
+\newlabel{fig:GOS-chao1}{{2.3}{26}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces \bf  PCoA of HMP}}{27}}
+\newlabel{fig:HMP_beta}{{2.4}{27}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.5}{\ignorespaces \bf  alpha diversity of HMP}}{28}}
+\newlabel{fig:HMP_alpha}{{2.5}{28}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.4}more soil metagenomic samples}{28}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.6}{\ignorespaces \bf  PCoA of GPGC samples}}{29}}
+\newlabel{fig:GPGC_beta}{{2.6}{29}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}Future Direction}{29}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.7}{\ignorespaces \bf  alpha diversity of GPGC samples}}{30}}
+\newlabel{fig:GPGC-alpha}{{2.7}{30}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}Conclusion}{30}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.4}Data}{30}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.1}Four simulated reads data sets with different species abundance distribution}{30}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.2}Simulated sequencing reads of e.coli}{30}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.8}{\ignorespaces \bf  PCoA of soil samples collected from KBS}}{31}}
+\newlabel{fig:KBS_beta}{{2.8}{31}}
+\@writefile{lot}{\contentsline {table}{\numberline {2.1}{\ignorespaces  \bf  {Simulated sequencing reads data sets of e.coli} }}{31}}
+\newlabel{table:ecoli}{{2.1}{31}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.9}{\ignorespaces \bf  PCoA of soil samples collected from Amazon rainforest}}{32}}
+\newlabel{fig:ARMO_beta}{{2.9}{32}}
+\@writefile{lot}{\contentsline {table}{\numberline {2.2}{\ignorespaces GPGC Data sets}}{32}}
+\newlabel{my-label}{{2.2}{32}}
+\newlabel{table:gpgc}{{2.2}{32}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.10}{\ignorespaces \bf  PCoA of soil samples collected from Amazon rainforest}}{33}}
+\newlabel{fig:ARMO_alpha}{{2.10}{33}}
 \bibdata{dis}
-\@writefile{toc}{\contentsline {chapter}{\numberline {3}Conclusion}{33}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}Conclusion}{34}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}Summary}{34}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Future Work}{34}}

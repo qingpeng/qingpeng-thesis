@@ -350,19 +350,34 @@ From these results, we show the IGS method can work well to a simplest scenario,
 \end{figure}
 
 
-\subsection{Evaluating the influence of variable sequencing depth and sequencing error}
+\subsection{Improving the accuracy of this method in real world analysis}
 
 
-
-Previously we have shown the IGS method generally works to a simple simulated data sets, with high sequencing depth and no sequencing error. Since
-in many situations we deal with metagenomic data sets with low sequencing depth, like soil or sea water samples, we want to know if we can still 
-get reliable insights from the low coverage sequencing data. Also it is a fact that all sequencing technology will generate some errors. As discussed in the background 
+Previously we have shown the IGS method generally works to a simple simulated data sets, with high sequencing depth and no sequencing error. In real world,
+in many situations we have to deal with the metagenomic data sets with relatively low sequencing depth, like soil or sea water samples. 
+Also it is a fact that all sequencing technology will generate some errors. As discussed in the background 
 section, one of the reasons we develop the IGS method is that based on the abundance counting of reads rather than k-mers, it is expected that the IGS method 
-is more robust to sequencing error. We also wonder how error correction will help improving the results of IGS method.
+is less prone to sequencing error. However the effect of those factors jeopardizing the accuracy is still observable. 
 
-6 synthetic samples are generated with the same species composition as in last section. For each sample, sequencing reads data sets with different
-sequencing depth are simulated. A series of sequencing reads data sets are also generated with sequencing error as 3\%, besides a series of error-free data sets.  Here we plan to use these simulated data sets to check the effectiveness of the IGS based method(generally 
-and the effectiveness of error correction/filtering) and the influence of variable sequencing depth.
+In this section, we will analyze the effect of these factors to the accuracy of the IGS method and investigate the ways to reduce the effect to increase the accuracy
+of analysis.
+
+As in last section, six synthetic samples are generated with the same species composition . For each sample, sequencing reads data sets with different
+sequencing depth(0.1X, 1X, and 10X) and different sequencing error rate (0.5\%, 1.0\%, 1.5\%, and 0\% - no error at all) are simulated.
+
+As an example to show the effect of sequencing error to accuracy of the analysis, we compare the richness estimation using reads with different sequencing 
+error rate. (Figure \ref{fig:IGS_richness_no_adjustment}) 
+
+\begin{figure}[!ht]
+ \centerline{\includegraphics[width=4in]{./figures/IGS_richness_no_adjustment.png}}
+\caption{\bf Richness estimation of the 6 synthetic samples using IGS method}
+\label{fig:IGS_richness_no_adjustment}
+\end{figure}
+
+
+
+
+
 
 \subsubsection{comparison of dissimilarity matrix from beta diversity analysis}
 
