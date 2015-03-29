@@ -2,25 +2,27 @@
 \contentsline {section}{\numberline {1.1}Introduction}{3}
 \contentsline {section}{\numberline {1.2}The concept of IGS(informational genomic segment)}{5}
 \contentsline {subsection}{\numberline {1.2.1}IGS(informative genomic segment) can represent the novel information of a genome}{6}
-\contentsline {subsection}{\numberline {1.2.2}IGS can be used to do alpha diversity analysis}{7}
+\contentsline {subsection}{\numberline {1.2.2}IGS can be used to do alpha diversity analysis}{8}
 \contentsline {subsection}{\numberline {1.2.3}IGS can be used to do beta diversity analysis}{10}
-\contentsline {section}{\numberline {1.3}Evaluating IGS method using simulated data sets}{11}
-\contentsline {subsection}{\numberline {1.3.1}An experiment using a simple simulated data sets}{11}
-\contentsline {subsection}{\numberline {1.3.2}Improving the accuracy of this method in real world analysis}{12}
-\contentsline {subsubsection}{comparison of dissimilarity matrix from beta diversity analysis}{14}
-\contentsline {subsubsection}{Evaluate alpha diversity analysis by estimating size of metagenome}{17}
-\contentsline {subsection}{\numberline {1.3.3}The IGS method can provide a whole framework to do alpha or beta diversity, with good versatility.}{20}
-\contentsline {chapter}{\numberline {2}real data sets}{22}
-\contentsline {section}{\numberline {2.1}Applying IGS method to real metagenome data sets}{22}
-\contentsline {subsection}{\numberline {2.1.1}GOS data sets: Sorcerer II Global Ocean Sampling Expedition}{22}
-\contentsline {subsection}{\numberline {2.1.2}HMP metagenomics data set}{23}
-\contentsline {subsection}{\numberline {2.1.3}GPGC - Great Prairie Soil Metagenome Grand Challenge}{25}
-\contentsline {subsection}{\numberline {2.1.4}more soil metagenomic samples}{28}
-\contentsline {section}{\numberline {2.2}Future Direction}{29}
-\contentsline {section}{\numberline {2.3}Conclusion}{30}
-\contentsline {section}{\numberline {2.4}Data}{30}
-\contentsline {subsection}{\numberline {2.4.1}Four simulated reads data sets with different species abundance distribution}{30}
-\contentsline {subsection}{\numberline {2.4.2}Simulated sequencing reads of e.coli}{30}
-\contentsline {chapter}{\numberline {3}Conclusion}{34}
-\contentsline {section}{\numberline {3.1}Summary}{34}
-\contentsline {section}{\numberline {3.2}Future Work}{34}
+\contentsline {section}{\numberline {1.3}Evaluating IGS method using simulated data sets}{12}
+\contentsline {subsection}{\numberline {1.3.1}An experiment using a simple simulated data sets}{12}
+\contentsline {subsection}{\numberline {1.3.2}Improving the accuracy of this method in real world analysis}{13}
+\contentsline {subsubsection}{the effect of sequencing error to the accuracy of analysis}{14}
+\contentsline {subsubsection}{the effect of collision in bloom filter to analysis accuracy}{18}
+\contentsline {subsubsection}{comparison of dissimilarity matrix from beta diversity analysis}{19}
+\contentsline {subsubsection}{Evaluate alpha diversity analysis by estimating size of metagenome}{23}
+\contentsline {subsection}{\numberline {1.3.3}The IGS method can provide a whole framework to do alpha or beta diversity, with good versatility.}{25}
+\contentsline {chapter}{\numberline {2}real data sets}{26}
+\contentsline {section}{\numberline {2.1}Applying IGS method to real metagenome data sets}{26}
+\contentsline {subsection}{\numberline {2.1.1}GOS data sets: Sorcerer II Global Ocean Sampling Expedition}{26}
+\contentsline {subsection}{\numberline {2.1.2}HMP metagenomics data set}{27}
+\contentsline {subsection}{\numberline {2.1.3}GPGC - Great Prairie Soil Metagenome Grand Challenge}{29}
+\contentsline {subsection}{\numberline {2.1.4}more soil metagenomic samples}{32}
+\contentsline {section}{\numberline {2.2}Future Direction}{33}
+\contentsline {section}{\numberline {2.3}Conclusion}{34}
+\contentsline {section}{\numberline {2.4}Data}{34}
+\contentsline {subsection}{\numberline {2.4.1}Four simulated reads data sets with different species abundance distribution}{34}
+\contentsline {subsection}{\numberline {2.4.2}Simulated sequencing reads of e.coli}{34}
+\contentsline {chapter}{\numberline {3}Conclusion}{38}
+\contentsline {section}{\numberline {3.1}Summary}{38}
+\contentsline {section}{\numberline {3.2}Future Work}{38}

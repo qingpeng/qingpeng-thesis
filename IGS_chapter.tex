@@ -1,6 +1,7 @@
 
 \documentclass[12pt]{report}
 \usepackage{graphicx}
+\usepackage{amsmath}
 \begin{document}
 
 \tableofcontents
@@ -109,56 +110,120 @@ to deal with the highly diverse samples, while we are facing large amount of
 
 \section{The concept of IGS(informational genomic segment)}
 
-In classic ecology dealing with macroorganisms, diversity measurement is based on the concept of species. For 16S rRNA amplicon metagenomics data set, it is based on the concept of ?OTUs?. When the concept of OTUs does not work for large shotgun metagenomics data set, in the beginning we proposed that the concept of k-mers(a DNA segment with the leng of k) can be used to measure diversity. K-mers can be considered as the atom of information in DNA sequences. One of the composition-based approaches to binning is to use the k-mer as the signature. Suppose the sizes of microbial genomes are similar and the difference between genomic content of microbial genomes is similar, the number of distinct k-mers in the sequence data set is related to the number of species in a sample. However, because of sequencing error, which is unavoidable due to the limit of sequencing technology, this k-mer based analysis doe not work well. One sequencing error on a read will generate at most k erroneous k-mers. In metagenomics data set with low coverage, most of the distinct observed k-mers are from sequencing errors.
+In classic ecology dealing with macroorganisms, diversity measurement is based 
+on the concept of species. For 16S rRNA amplicon metagenomics data set, it is 
+based on the concept of OTUs. While the concept of OTUs can be used to analyze
+large shotgun metagenomics data set, normally assembly, binning and annotation
+are required before doing diversity analysis. However these are difficult
+tasks, lacking of necessary reference genome or being computationally
+expensive. So we are interested in finding an approach to bypass the difficult
+tasks like assembly, binning, annotation and use raw reads to make diversity
+analysis to large metagenomic data possibile. In the beginning we proposed that
+ the concept of k-mers(a DNA segment with the leng of k) can be used to measure
+ diversity. K-mers can be considered as the atom of information in DNA 
+sequences. One of the composition-based approaches to binning is to use the 
+k-mer as the signatures. Suppose the sizes of microbial genomes are similar and
+ the difference between genomic content of microbial genomes is similar, the 
+number of distinct k-mers in the sequence data set correlates to the number of 
+species in a sample. However, because of sequencing error, which is unavoidable
+ due to the limit of sequencing technology, this k-mer based analysis doe not 
+work well. One sequencing error on a read will generate at most k erroneous 
+k-mers. In metagenomics data set, especially with high coverage, most of the 
+distinct observed k-mers are from sequencing errors.
 %add citation about k-mer based diversity analysis ,entropy...
 % add some results /figures
 
+Next we looked at the upper level - reads. A novel method termed as digital 
+normalization was developed to remove abundant reads before assembly. However 
+it also supplies a novel way to distil information from reads by reducing the
+ bad effect of sequencing errors so that we can use those informative reads to 
+measure the microbial diversity. We term those informative reads as 
+IGS(informative genomic segment), which can be considered as a segment of DNA 
+on a microbial genome. Those IGSs should be different enough to represent the 
+abstract information a genome contains. Suppose microbial genomes contain 
+similar number of those IGSs, as they contain similar number of distinct 
+k-mers, the number of IGSs will correlates with the species richness in a 
+sample, and the abundance distribution of IGSs will be related to species 
+evenness in a sample. Furthermore, we can get the abundance of the IGSs across
+different samples. Many classic diversity estimation methods based on OTUs 
+ described in sections above can be applied to estimate the diversity of IGSs 
+and the diversity of actual species subsequently.
 
-
-
-Next we turned our gaze to the upper level - reads. A novel method termed as ?digital normalization? was developed to remove abundant reads before assembly. However it also supplies a novel way to distil information from reads by decreasing the bad influence of sequencing errors so that we can use those informative reads to measure the microbial diversity. We term those informative reads as IGS(informative genomic segment), which can be considered as a segment of DNA on a microbial genome. Those IGSs should be different enough to represent the abstract information a genome contains. Suppose microbial genomes contain similar number of those IGSs, as they contain similar number of distinct k-mers, the number of IGSs will be related to the species richness in a sample, and the abundance distribution of IGSs will be related to species evenness in a sample. Many classic diversity estimation methods based on OTUs level described in sections above can be borrowed to estimate the diversity of IGSs and the diversity of actual species subsequently.
-
-IGS may be a good concept in whole genome shotgun metagenomic diversity analysis, especially while facing large amount of "dark matters", unknown species. We don't care about species, we only care about how much information there is in the sample.
-
-
-For alpha diversity, we can generate a list of IGSs and the respective abundance in a sample. Then existing estimators like Chao's can be used to estimate total number of IGSs in the sample. Rarefaction curve based on number of IGSs can also be generated. 
+The concept of IGS can be the foundation of a novel statistical framwork to
+evaluate microbial diversity using whole genome shotgun metagenomic data, 
+especially while facing large amount of "dark matters", unknown species. It is
+almost impossible to do annotation to those "dark matters", since we do not
+have much information about them. 
+% need expanding
+For alpha diversity, we can generate a list of IGSs and the respective 
+abundance in a sample. Then existing estimators like Chao's can be used to 
+estimate the total number of IGSs in the sample. Rarefaction curve based on 
+number of IGSs can also be generated. 
 
 % need expand the discussion from IGS in one sample to IGS in different samples.
-For beta diversity, here we will generate a samples-by-IGS data matrix, as a replacement of samples-by-OTU data matrix in 16s based analysis and samples-by-species data matrix in traditional ecology. 
-
-
-From that samples-by-IGS data matrix, we can use existing methods to calculate similarity/disimilarity/distance between samples and do further analysis like clustering and ordination. QIIME and Mother can do this kind of jobs pretty well.
+For beta diversity, we can generate a samples-by-IGS data matrix from the
+abundance of IGSs across samples, as a replacement of samples-by-OTU data 
+matrix in OTU-based analysis and samples-by-species data matrix in traditional 
+ecology. From that samples-by-IGS data matrix, we can use existing methods to 
+calculate similarity/disimilarity/distance between samples and do further 
+analysis like clustering and ordination. 
 
 % further application
 % With the samples-by-IGS data matrix, it is also possible to calculate similarity between IGSs and do ordination, which is a potential approach to classify IGS( reads).
-
-Using median k-mer frequency can decrease the influence of sequencing error, but can not eliminate the influence of errors. This can cause some problems in the following analysis, which will be discussed in details.
-
 
 %Using simulated and real genomic data sets, with the help of khmer to get median k- mer abundance, we find that median k-mer abundance correlates well with mapping-based coverage.
 
 %Side note: We can also see that the coverage by median k-mer count is generally lower than the read coverage by mapping. So estimation of sequencing coverage by median k-mer count is underestimated. This can cause some problems in later analysis, which will be discussed later.
 
 
-\subsection{IGS(informative genomic segment) can represent the novel information of a genome}
+\subsection{IGS(informative genomic segment) can represent the novel 
+information of a genome}
 
-Median k-mer abundance can represent sequencing depth of a read(cite diginorm). For a sequencing reads data set with multiple species, the sequencing depth of a read is related to the abundance of species where the read originates. 
+Median k-mer abundance can represent sequencing depth of a read(cite diginorm).
+ For a sequencing reads data set with multiple species, the sequencing depth of
+ a read is related to the abundance of species where the read originates. 
 
 % figure 1a should be marked 
-The Figure \ref{fig:reads_to_IGS}a  shows the abundance distribution of reads from 4 simulated sequencing data sets with different sequencing depth - 3 sequencing data sets generated with different sequencing coverage(1x, 10x, 40x) from 3 simulated random genomes respectively and 1 combined data set with all the previously mentioned data sets. No error is introduced in these simulated data sets. Obviously the reads from the three data sets can be separated by estimated sequencing depth. The combined data set can be considered as a sequencing data set with three species with different abundance.
+The Figure \ref{fig:reads_to_IGS}a  shows the abundance distribution of reads 
+from 4 simulated sequencing data sets with different sequencing depth - 3 
+sequencing data sets generated with different sequencing coverage(1x, 10x, 40x)
+ from 3 simulated random genomes respectively and 1 combined data set with all 
+the previously mentioned data sets. No error is introduced in these simulated 
+data sets. Obviously the reads from the three data sets can be separated by 
+estimated sequencing depth. The combined data set can be considered as a 
+sequencing data set with three species with different abundance.
 
-Each point on the curve shows that there are Y reads with a sequencing depth of X. In other word, for each of those Y reads, there are X-1 other reads that cover the same DNA segment in a genome that single read originates. So we can estimate that there are Y/X distinct DNA segments with reads coverage as X. We term these distinct DNA segments in species genome as IGS(informative genomic segment). We can transform the figure in upper position to show the number of IGSs and their respective reads coverage, as shown in figure in lower position. We sum up the numbers of IGSs with different reads coverage for each data set and get the result as shown in below. The sum numbers of IGSs here essentially are the areas below each curve in the figure.
+Each point on the curve shows that there are Y reads with a sequencing depth of
+ X. In other word, for each of those Y reads, there are X-1 other reads that 
+cover the same DNA segment in a genome that single read originates. So we can 
+estimate that there are Y/X distinct DNA segments with reads coverage as X. 
+We term these distinct DNA segments in species genome as 
+IGS(informative genomic segment). We can transform the figure in upper 
+position to show the number of IGSs and their respective reads coverage, as 
+shown in figure in lower position. We sum up the numbers of IGSs with 
+different reads coverage for each data set and get the result as shown in 
+below. The sum numbers of IGSs here essentially are the areas below each curve 
+in the figure.
 
-Even though the datasets have different sequencing depth like 10X and 40X, they have similar numbers of IGSs. Dataset with 1X sequencing depth has fewer IGSs because the depth is not enough to cover all the content of the genome(63.2\%) Essentially it is the maximum number of segments with length L on a genome out of which no two segments share any single k-mer. See Figure below. Assume the species genome is totally random, which is the case in the simulated data set, the number of IGSs(N) in a species genome is related to the size of genome(G), read length(L) and k size(k), which can be denoted as
+Even though the datasets have different sequencing depth like 10X and 40X, 
+they have similar numbers of IGSs. Dataset with 1X sequencing depth has fewer 
+IGSs because the depth is not enough to cover all the content of the 
+genome(63.2\%). The IGSs can be seen as the
+genomic segment on a genome with the length of reads.(Figure \ref{fig:IGS}  
+Assume the species 
+genome is totally random, which is the case in the simulated data set, the 
+number of IGSs(N) in a species genome is related to the size of genome(G), 
+read length(L) and k size(k), which can be denoted as
 
-N =G/(L-k+1)
-
-For the simulated genome with size of 1M bps, read length as 80bps, k-mer size as 22bps,expected number of IGSs is 
+\[N =\frac{G}{L}  \]
+which is the number of reads that can have a 1X coverage of the genome.
+For the simulated genome with size of 1M bps, read length as 80bps, expected 
+number of IGSs is 
 
 1000000/(80 - 22 + 1) = 16949, 
 
 which is pretty close to observed value. See Table \ref{table:IGSs}
-
+((((((( This needs rewrite, the table will be replaced)))))))))))
 
 \begin{figure}[!ht]
 \centerline{\includegraphics[width=4in]{./figures/from_reads_to_IGS.png}}
@@ -186,7 +251,7 @@ Data set & total number of IGSs \\
 
 
 \begin{figure}[!ht]
-\centerline{\includegraphics[width=4in]{./figures/IGSs_figure.jpg}}
+\centerline{\includegraphics[width=4in]{./figures/IGSs_figure.pdf}}
 \caption{\bf the concept of IGS}
 \label{fig:IGS}
 \end{figure}
@@ -353,31 +418,175 @@ From these results, we show the IGS method can work well to a simplest scenario,
 \subsection{Improving the accuracy of this method in real world analysis}
 
 
-Previously we have shown the IGS method generally works to a simple simulated data sets, with high sequencing depth and no sequencing error. In real world,
-in many situations we have to deal with the metagenomic data sets with relatively low sequencing depth, like soil or sea water samples. 
-Also it is a fact that all sequencing technology will generate some errors. As discussed in the background 
-section, one of the reasons we develop the IGS method is that based on the abundance counting of reads rather than k-mers, it is expected that the IGS method 
-is less prone to sequencing error. However the effect of those factors jeopardizing the accuracy is still observable. 
+Previously we have shown the IGS method generally works to a simple simulated
+ data sets, with high sequencing depth and no sequencing error. In real world,
+in many situations we have to deal with the metagenomic data sets with 
+relatively low sequencing depth, like soil or sea water samples. 
+Also it is a fact that all sequencing technology will generate some errors. As 
+discussed in the background 
+section, one of the reasons we develop the IGS method is that based on the 
+abundance counting of reads rather than k-mers, it is expected that the IGS 
+method is less prone to sequencing error. However the effect of those factors 
+jeopardizing the accuracy is still observable. 
 
-In this section, we will analyze the effect of these factors to the accuracy of the IGS method and investigate the ways to reduce the effect to increase the accuracy
-of analysis.
+In this section, we will analyze the effect of these factors to the accuracy of
+ the IGS method and investigate the ways to reduce the effect to increase the 
+accuracy of analysis.
 
-As in last section, six synthetic samples are generated with the same species composition . For each sample, sequencing reads data sets with different
-sequencing depth(0.1X, 1X, and 10X) and different sequencing error rate (0.5\%, 1.0\%, 1.5\%, and 0\% - no error at all) are simulated.
 
-As an example to show the effect of sequencing error to accuracy of the analysis, we compare the richness estimation using reads with different sequencing 
-error rate. (Figure \ref{fig:IGS_richness_no_adjustment}) 
+As in last section, six synthetic samples were generated with the same species 
+composition . For each sample, sequencing reads data sets with different
+sequencing depth(0.1X, 1X, and 10X) and different sequencing error rate (0.5\%,
+ 1.0\%, 1.5\%, and 0\% - no error at all) are simulated.
 
+To show the effect of sequencing error to accuracy of the 
+analysis, we compared the richness estimation using reads with different 
+sequencing error rate, as shown in Figure \ref{fig:IGS_richness_no_adjustment}. 
+For data set without error (error rate = 0), the esimated size of metagenome
+matches real size perfectly. With increasing error rate, the size of metagenome
+is over estimated more and more seriously. This is due to several factors,which
+will be discussed below. 
 \begin{figure}[!ht]
  \centerline{\includegraphics[width=4in]{./figures/IGS_richness_no_adjustment.png}}
-\caption{\bf Richness estimation of the 6 synthetic samples using IGS method}
+\caption{\bf Richness estimation using IGS method without adjustment}
 \label{fig:IGS_richness_no_adjustment}
 \end{figure}
 
+\subsubsection{the effect of sequencing error to the accuracy of analysis}
+The first factor to take into account is sequencing error. One sequencing error
+will generate k erroneous k-mers. This is the reason why it is difficult to use
+k-mer counting only to do diversity analysis, as a large proportion of k-mers
+in a reads data set are erroneous, especially for low coverage reads data. As
+discussed in the section about digital normalization, using median k-mer count
+to retrieve the coverage of a read is less prone to sequencing error, because
+sequencing error will decrease the count of some reads to 1 incorrectly, but
+this does not always affect the median k-mer count. 
+
+Take the experiment we did
+previously as an example, for read length as 100bp and k as 19, one sequencing
+error will affect the count of 19 k-mers at the most, two sequencing errors
+will affect the count of at most 38 k-mers. The count of these k-mers will be
+retrieved as 1 incorrectly, suppose it is highly impossible that an erroneous
+k-mer is the same as another real k-mer in the data set accidently, as long as
+the k is large enough compared to the size of data set. So out of the 82 k-mers
+in the 100bp read, at most 38 k-mers will have count as 1 incorrectly, but this
+will not affect the median k-mer count, which is the count of the 41th k-mer if
+ranked by count. However, if there are three or more errors in the read, the 
+situation is more complicated. For 3 errors in a read, 3 to 57 k-mers
+will be affected by the errors to have an incorrect count as 1. The 
+distribution of the probability about the number of affected k-mers can be
+acquired by a model similar to Lander-Waterman model used in genome sequencing
+ theory. Here we got the distribution using simulation, as shown in Figure
+\ref{fig:IGS_affected_k_kmers}. From this probability distribution, we can get
+the probability that 3 errors will affect more than 40 k-mers is 0.43. In this
+case, 3 errors will affect the median k-mer count of a read. We can also get 
+such probability for 4 errors or more. Combining to the probability that a
+certain number of errors occur in a read with a specific sequencing error rate,
+which is easy to derive from binomial distribution, we can get the probability
+that the coverage of a read is incorrectly assessed as 1. Still for the example
+here, this probability is the probability that 3 erorrs occur in a read
+multiplied by the probability that 3 errors will affect median k-mer count,
+plus the probability that 4 erorrs occur in a read multiplied by the 
+probability that 4 errors will affect median k-mer count,and so on.
+
+Generally, let $P\_error(n,e,L)$ is the probability that $n$ errors occur in a 
+read with length as $L$, with error rate as $e$ and $P\_effect(n,k,L)$ is the 
+probability that $n$ 
+errors in a read with length of $L$ affect median k-mer count. The probability 
+that the coverage of a read is incorrectly assessed as 1 is 
+\[\sum_{n=3}^{\infty} P\_error(n,e,L) \times P\_effect(n,k,L)  \],
+and by binomial distribution,
+
+\[P\_error(n,e,L) = f(n;L,e) = Pr(X=n) = {L \choose n}e^n(1-e)^{L-n} \] 
+
+Practically, when $n>5$ and $e<0.015$, $P\_error(n,e,L)$ is very small, we only consider
+number of errors in a read as 3, 4 and 5.
+
+\begin{figure}[!ht]
+ \centerline{\includegraphics[width=4in]{./figures/IGS_affected_k_kmers.png}}
+\caption{\bf Richness estimation using IGS method without adjustment }
+\label{fig:IGS_affected_k_kmers}
+\end{figure}
+
+From the discussion above, the sequencing errors reduce the coverage of some
+reads incorrectly to 1 and the probability this occurs to a read can be
+estimated. So to reduce the effect of sequencing error on this aspect, we can
+calculate the expected number of reads that are affected and remove those reads
+from the set of reads with coverage as 1 before generating list of IGS from the
+reads abundance distribution.
+
+Also, we want to make sure 2 errors in a read will not affect median k-mer 
+count, since it is more common to have 2 errors in a read practically. 
+In this case, 
+\[2 \times k < \lfloor \frac{L-k+1}{2}\rfloor \],
+we can get $k<L/5$,basically. For $L$ as 100, $k$ will be 19, which is what we 
+choose in the testing. However, the $k$ should not be too small, or the k-mers 
+can not handle the information of a large data set.
+
+Taking the sequencing error into account, we used the methods introduced above
+to adjust the estimation of metagenome size of the 6 synthetic samples. The
+estimation after adjustment is closer to real number, as shown in Figure
+\ref{fig:IGS_richness_error_adjustment}..
 
 
+\begin{figure}[!ht]
+ \centerline{\includegraphics[width=4in]{./figures/IGS_richness_error_adjustment.png}}
+\caption{\bf Richness estimation using IGS method adjusted by sequencing error rate}
+\label{fig:IGS_richness_error_adjustment}
+\end{figure}
+
+\subsubsection{the effect of collision in bloom filter to analysis accuracy}
+As discussed in the chapter about k-mer counting, the collision in bloom filter
+which we use for efficient k-mer counting will result in counting error. If the
+false positive rate for a specific bloom filter we use for k-mer counting is
+0.1, 10\% of the k-mers will have incorrect counts. When we use median k-mer
+count to get read coverage, such incorrect count has the effect on two aspects.
+On one hand, some k-mers in a read will have incorrect higher count. But if the
+ false
+positive rate is low, this will not affect median k-mer count. This shows the
+method of using median k-mer count to get read coverage is not only less prone
+to sequencing error, but also less prone to the inaccuracy characteristics of
+underlying data structure. One the other hand, this inaccurate count also
+affects the counts of those erroneous k-mers generated by sequencing error. For
+example, 3 errors in a read affect the count of 43 k-mers, the counts for these
+43 k-mers are supposed to be 1. But because of the collision in bloom filter
+and the resulting incorrect k-mer counting, if the false positive rate is 0.1,
+about 4 out of the 43 k-mers will have inflated count, mostly as 2. So the
+combined effect of sequencing error and collision in bloom filter is that some
+reads will have incorrect coverage as 1 and some reads will have incorrect as
+2. We can get the percentage of total reads that will have such incorrect
+coverage, using statistical model similar to that discussed in last section.
+Using same example, 3 errors occur in a read, if the 3 errors affect 41-45
+k-mers(with a chance of 0.20), the median k-mer count will be 2, due to the 
+collison in bloom filter, while if he 3 errors affect more than 45 k-mers(with 
+a chance of 0.24), the median k-mer count will be 1, purely due to sequencing 
+errors. 
+
+We did the same experiment but also adjusted the estimation according to the 
+false positive rate of bloom filter and got better estimation, as shown in
+Figure \ref{fig:IGS_richness_adjustment}.
+
+With adjustment to estimation taking sequencing error and collision in bloom
+filter into account, as shown in Figure \ref{fig:IGS_richness_adjustment}, the 
+estimated genome size is closer to real number. With error rate as 1\%,
+false positiver rate as 0.1, with 10X coverage data, the estimated genome size
+is about 20-25\% more than real number. However the estimation is still 
+increasing with higher
+error rate. This means there are still other factors influencing this
+accuracy of the estimation but we failed to take into account.
+
+The other problem is that the result of low coverage data(0.1x) is worse than
+before adjustment. This may be due to the smaller number of reads with 
+abundance of 2 after adjustment. It may also be due to small size of simulated 
+data (with only hundreds of reads).
 
 
+\begin{figure}[!ht]
+ \centerline{\includegraphics[width=4in]{./figures/IGS_richness_adjustment.png}}
+\caption{\bf Richness estimation using IGS method adjusted by sequencing error
+rate and false positive rate of bloom filter}
+\label{fig:IGS_richness_adjustment}
+\end{figure}
 
 \subsubsection{comparison of dissimilarity matrix from beta diversity analysis}
 
