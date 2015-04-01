@@ -1,32 +1,33 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces \bf {Benchmark soil metagenome data sets for k-mer counting performance, taken from \cite {Howe2012}.}\relax }}{39}
+\contentsline {table}{\numberline {3.1}{\ignorespaces \bf {Benchmark soil metagenome data sets for k-mer counting performance, taken from \cite {Howe2012}.}\relax }}{40}
 \addvspace {1.2\baselineskip }
-\contentsline {table}{\numberline {3.2}{\ignorespaces \bf {Data sets used for analyzing miscounts.}\relax }}{39}
+\contentsline {table}{\numberline {3.2}{\ignorespaces \bf {Data sets used for analyzing miscounts.}\relax }}{40}
 \addvspace {1.2\baselineskip }
-\contentsline {table}{\numberline {3.3}{\ignorespaces \bf {Iterative low-memory k-mer trimming. The results of trimming reads at unique (erroneous) k-mers from a 5m read {\em E. coli} data set (1.4 GB) in under 30 MB of RAM. After each iteration, we measured the total number of distinct k-mers in the data set, the total number of unique (and likely erroneous) k-mers remaining, and the number of unique k-mers present at the 3' end of reads.}\relax }}{40}
+\contentsline {table}{\numberline {3.3}{\ignorespaces \bf {Iterative low-memory k-mer trimming. The results of trimming reads at unique (erroneous) k-mers from a 5m read {\em E. coli} data set (1.4 GB) in under 30 MB of RAM. After each iteration, we measured the total number of distinct k-mers in the data set, the total number of unique (and likely erroneous) k-mers remaining, and the number of unique k-mers present at the 3' end of reads.}\relax }}{41}
 \addvspace {1.2\baselineskip }
-\contentsline {table}{\numberline {3.4}{\ignorespaces \bf {Low-memory digital normalization. The results of digitally normalizing a 5m read {\em E. coli} data set (1.4 GB) to C=20 with k=20 under several memory usage/false positive rates. The false positive rate (column 1) is empirically determined. We measured reads remaining, number of ``true'' k-mers missing from the data at each step, and the number of total k-mers remaining. Note: at high false positive rates, reads are erroneously removed due to inflation of k-mer counts.}\relax }}{40}
+\contentsline {table}{\numberline {3.4}{\ignorespaces \bf {Low-memory digital normalization. The results of digitally normalizing a 5m read {\em E. coli} data set (1.4 GB) to C=20 with k=20 under several memory usage/false positive rates. The false positive rate (column 1) is empirically determined. We measured reads remaining, number of ``true'' k-mers missing from the data at each step, and the number of total k-mers remaining. Note: at high false positive rates, reads are erroneously removed due to inflation of k-mer counts.}\relax }}{41}
 \addvspace {1.2\baselineskip }
-\contentsline {table}{\numberline {3.5}{\ignorespaces \bf {{\em E. coli} genome assembly after low-memory digital normalization. A comparison of assembling reads digitally normalized with low memory/high false positive rates. The reads were digitally normalized to C=20 (see \cite {Brown2012} for more information) and were assembled using Velvet. We measured total length of assembly, as well as percent of true MG1655 genome covered by the assembly using QUAST.}\relax }}{41}
+\contentsline {table}{\numberline {3.5}{\ignorespaces \bf {{\em E. coli} genome assembly after low-memory digital normalization. A comparison of assembling reads digitally normalized with low memory/high false positive rates. The reads were digitally normalized to C=20 (see \cite {Brown2012} for more information) and were assembled using Velvet. We measured total length of assembly, as well as percent of true MG1655 genome covered by the assembly using QUAST.}\relax }}{42}
 \addvspace {1.2\baselineskip }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces \bf {Digital normalization to C=20 removes many erroneous k-mers from sequencing data sets. Numbers in parentheses indicate number of true k-mers lost at each step, based on reference.}\relax }}{64}
+\contentsline {table}{\numberline {4.1}{\ignorespaces \bf {Digital normalization to C=20 removes many erroneous k-mers from sequencing data sets. Numbers in parentheses indicate number of true k-mers lost at each step, based on reference.}\relax }}{65}
 \addvspace {1.2\baselineskip }
-\contentsline {table}{\numberline {4.2}{\ignorespaces \bf {Three-pass digital normalization removes most erroneous k-mers. Numbers in parentheses indicate number of true k-mers lost at each step, based on known reference.}\relax }}{65}
+\contentsline {table}{\numberline {4.2}{\ignorespaces \bf {Three-pass digital normalization removes most erroneous k-mers. Numbers in parentheses indicate number of true k-mers lost at each step, based on known reference.}\relax }}{66}
 \addvspace {1.2\baselineskip }
-\contentsline {table}{\numberline {4.3}{\ignorespaces \bf {Three-pass digital normalization reduces computational requirements for contig assembly of genomic data.}\relax }}{67}
+\contentsline {table}{\numberline {4.3}{\ignorespaces \bf {Three-pass digital normalization reduces computational requirements for contig assembly of genomic data.}\relax }}{68}
 \addvspace {1.2\baselineskip }
-\contentsline {table}{\numberline {4.4}{\ignorespaces \bf {Single-pass digital normalization to C=20 reduces computational requirements for transcriptome assembly.}\relax }}{68}
+\contentsline {table}{\numberline {4.4}{\ignorespaces \bf {Single-pass digital normalization to C=20 reduces computational requirements for transcriptome assembly.}\relax }}{69}
 \addvspace {1.2\baselineskip }
-\contentsline {table}{\numberline {4.5}{\ignorespaces \bf {Digital normalization has assembler-specific effects on transcriptome assembly.}\relax }}{68}
+\contentsline {table}{\numberline {4.5}{\ignorespaces \bf {Digital normalization has assembler-specific effects on transcriptome assembly.}\relax }}{69}
 \addvspace {1.2\baselineskip }
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {5.1}{\ignorespaces \bf {Total number of IGSs in different simulated reads data sets.} \relax }}{75}
 \addvspace {1.2\baselineskip }
-\contentsline {table}{\numberline {5.2}{\ignorespaces \bf {Simulated sequencing reads data sets of e.coli} \relax }}{93}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {6.1}{\ignorespaces \bf {Simulated sequencing reads data sets of e.coli} \relax }}{107}
 \addvspace {1.2\baselineskip }
-\contentsline {table}{\numberline {5.3}{\ignorespaces GPGC Data sets\relax }}{93}
+\contentsline {table}{\numberline {6.2}{\ignorespaces GPGC Data sets\relax }}{107}
 \addvspace {1.2\baselineskip }
 \addvspace {10\p@ }

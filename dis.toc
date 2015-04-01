@@ -2,101 +2,106 @@
 \contentsline {chapter}{\textbf {LIST OF FIGURES}\vspace {\baselineskip }}{x}
 \contentsline {chapter}{\numberline {Chapter 1} Introduction}{1}
 \contentsline {section}{\numberline {1.1}Overview}{1}
-\contentsline {section}{\numberline {1.2}Problem Statement}{1}
-\contentsline {section}{\numberline {1.3}Significance of Research}{1}
-\contentsline {section}{\numberline {1.4}Outline of Dissertation}{1}
-\contentsline {chapter}{\numberline {Chapter 2} Review of Relevant Literature}{2}
-\contentsline {section}{\numberline {2.1}Next-generation sequencing and metagenomics}{2}
-\contentsline {subsection}{\numberline {2.1.1}Next-generation sequencing}{2}
-\contentsline {subsection}{\numberline {2.1.2}Metagenomics}{2}
-\contentsline {section}{\numberline {2.2}Challenges in counting k-mers efficiently}{4}
-\contentsline {section}{\numberline {2.3}Tackling large and error-prone short- read shotgun data sets}{4}
-\contentsline {section}{\numberline {2.4}Challenges in measuring diversity of metagenomics}{5}
-\contentsline {subsection}{\numberline {2.4.1}Concept of Diversity}{5}
-\contentsline {subsection}{\numberline {2.4.2}Diversity measurement in Microbial Ecology}{6}
-\contentsline {subsubsection}{\numberline {2.4.2.1}Concept of Species and OTU Identification using sequence markers}{7}
-\contentsline {subsubsection}{\numberline {2.4.2.2}Binning of Metagenomic Reads into OTUs}{7}
-\contentsline {paragraph}{\numberline {2.4.2.2.1}Composition-based approach}{8}
-\contentsline {paragraph}{\numberline {2.4.2.2.2}Similarity-based approach}{8}
-\contentsline {subsubsection}{\numberline {2.4.2.3}Statistics for Diversity Estimation}{9}
-\contentsline {subsection}{\numberline {2.4.3}Novel methods required for diversity measurement of large metagenomics sample}{12}
-\contentsline {chapter}{\numberline {Chapter 3} khmer-efficient online k-mer counting using a probabilistic data structure}{14}
-\contentsline {section}{\numberline {3.1}Introduction}{14}
-\contentsline {section}{\numberline {3.2}Results}{17}
-\contentsline {subsection}{\numberline {3.2.1}Implementing a Count-Min Sketch for k-mers}{17}
-\contentsline {subsection}{\numberline {3.2.2}Choosing number and size of hash tables used for k-mer counting}{18}
-\contentsline {subsection}{\numberline {3.2.3}khmer efficiently calculates k-mer abundance histograms}{19}
-\contentsline {subsection}{\numberline {3.2.4}khmer accesses k-mer counts efficiently}{21}
-\contentsline {subsection}{\numberline {3.2.5}The measured counting error is low on short-read data}{21}
-\contentsline {subsection}{\numberline {3.2.6}Sequencing error profiles can be measured with k-mer abundance profiles}{22}
-\contentsline {subsection}{\numberline {3.2.7}khmer can be applied iteratively to read trimming}{23}
-\contentsline {subsection}{\numberline {3.2.8}Using khmer for digital normalization, a streaming algorithm}{25}
-\contentsline {section}{\numberline {3.3}Discussion}{26}
-\contentsline {subsection}{\numberline {3.3.1}khmer enables fast, memory-efficient online counting}{26}
-\contentsline {subsection}{\numberline {3.3.2}khmer is a generally useful k-mer counting approach}{27}
-\contentsline {subsection}{\numberline {3.3.3}khmer memory usage is fixed and low}{27}
-\contentsline {subsection}{\numberline {3.3.4}False positive rates in k-mer counting are low and predictable}{29}
-\contentsline {subsection}{\numberline {3.3.5}Real-world applications for khmer}{30}
-\contentsline {subsection}{\numberline {3.3.6}Conclusion}{31}
-\contentsline {subsection}{\numberline {3.3.7}Future considerations}{31}
-\contentsline {section}{\numberline {3.4}Methods}{32}
-\contentsline {subsection}{\numberline {3.4.1}Code and data set availability}{32}
-\contentsline {subsection}{\numberline {3.4.2}Sequence Data}{33}
-\contentsline {subsection}{\numberline {3.4.3}Count-Min Sketch implementation}{33}
-\contentsline {subsection}{\numberline {3.4.4}Hash function and khmer implementation}{34}
-\contentsline {subsection}{\numberline {3.4.5}Comparing with other k-mer counting programs}{34}
-\contentsline {paragraph}{\numberline {3.4.5.0.1}khmer:}{35}
-\contentsline {paragraph}{\numberline {3.4.5.0.2}Tallymer:}{35}
-\contentsline {paragraph}{\numberline {3.4.5.0.3}Jellyfish:}{35}
-\contentsline {paragraph}{\numberline {3.4.5.0.4}DSK:}{36}
-\contentsline {paragraph}{\numberline {3.4.5.0.5}BFCounter:}{36}
-\contentsline {paragraph}{\numberline {3.4.5.0.6}KMC:}{36}
-\contentsline {paragraph}{\numberline {3.4.5.0.7}Turtle:}{36}
-\contentsline {paragraph}{\numberline {3.4.5.0.8}KAnalyze:}{36}
-\contentsline {chapter}{\numberline {Chapter 4} diginorm: need rewriting, plan: only keep the materilas that are more relevant to IGS }{42}
-\contentsline {section}{\numberline {4.1}Introduction}{42}
-\contentsline {section}{\numberline {4.2}Results}{45}
-\contentsline {subsection}{\numberline {4.2.1}Estimating sequencing depth without a reference assembly}{45}
-\contentsline {subsection}{\numberline {4.2.2}Eliminating redundant reads reduces variation in sequencing depth}{46}
-\contentsline {subsection}{\numberline {4.2.3}Digital normalization retains information while discarding both data and errors}{48}
-\contentsline {subsection}{\numberline {4.2.4}Digital normalization scales assembly of microbial genomes}{51}
-\contentsline {subsection}{\numberline {4.2.5}Digital normalization scales assembly of transcriptomes}{52}
-\contentsline {section}{\numberline {4.3}Discussion}{54}
-\contentsline {subsection}{\numberline {4.3.1}Digital normalization dramatically scales {\em de novo} assembly}{54}
-\contentsline {subsection}{\numberline {4.3.2}A general strategy for normalizing coverage}{54}
-\contentsline {subsection}{\numberline {4.3.3}Digital normalization drops terminal k-mers and removes isoforms}{56}
-\contentsline {subsection}{\numberline {4.3.4}Applying assembly algorithms to digitally normalized data}{58}
-\contentsline {section}{\numberline {4.4}Conclusions}{59}
-\contentsline {subsection}{\numberline {4.4.1}Digital normalization is widely applicable and computationally convenient}{59}
-\contentsline {section}{\numberline {4.5}Methods}{61}
-\contentsline {subsection}{\numberline {4.5.1}Data sets}{61}
-\contentsline {subsection}{\numberline {4.5.2}Scripts and software}{61}
-\contentsline {subsection}{\numberline {4.5.3}Analysis parameters}{62}
-\contentsline {subsection}{\numberline {4.5.4}Normalization and assembly parameters}{63}
-\contentsline {subsection}{\numberline {4.5.5}Assembly overlap and analysis}{63}
-\contentsline {subsection}{\numberline {4.5.6}Compute requirement estimation}{63}
-\contentsline {section}{\numberline {4.6}Figure Legends}{64}
-\contentsline {section}{\numberline {4.7}Tables}{64}
-\contentsline {chapter}{\numberline {Chapter 5} IGS-based diversity analysis}{69}
-\contentsline {section}{\numberline {5.1}Introduction}{69}
-\contentsline {section}{\numberline {5.2}The concept of IGS(informational genomic segment)}{71}
-\contentsline {subsection}{\numberline {5.2.1}IGS(informative genomic segment) can represent the novel information of a genome}{73}
-\contentsline {subsection}{\numberline {5.2.2}IGS can be used to do alpha diversity analysis}{75}
-\contentsline {subsection}{\numberline {5.2.3}IGS can be used to do beta diversity analysis}{77}
-\contentsline {section}{\numberline {5.3}Evaluating IGS method using simulated data sets}{79}
-\contentsline {subsection}{\numberline {5.3.1}An experiment using a simple simulated data sets}{79}
-\contentsline {subsection}{\numberline {5.3.2}Evaluating the influence of variable sequencing depth and sequencing error}{81}
-\contentsline {subsubsection}{\numberline {5.3.2.1}comparison of dissimilarity matrix from beta diversity analysis}{83}
-\contentsline {subsubsection}{\numberline {5.3.2.2}Evaluate alpha diversity analysis by estimating size of metagenome}{85}
-\contentsline {subsection}{\numberline {5.3.3}The IGS method can provide a whole framework to do alpha or beta diversity, with good versatility.}{88}
-\contentsline {section}{\numberline {5.4}Applying IGS method to real metagenome data sets}{89}
-\contentsline {subsection}{\numberline {5.4.1}GOS data sets: Sorcerer II Global Ocean Sampling Expedition}{89}
-\contentsline {subsection}{\numberline {5.4.2}HMP metagenomics data set}{89}
-\contentsline {subsection}{\numberline {5.4.3}GPGC soil sample - new and old}{89}
-\contentsline {section}{\numberline {5.5}Conclusion}{90}
-\contentsline {section}{\numberline {5.6}Data}{93}
-\contentsline {subsection}{\numberline {5.6.1}Four simulated reads data sets with different species abundance distribution}{93}
-\contentsline {subsection}{\numberline {5.6.2}Simulated sequencing reads of e.coli}{93}
-\contentsline {chapter}{\numberline {Chapter 6} Conclusions}{94}
-\contentsline {chapter}{\textbf {APPENDIX}\textmd {\leaders \hbox to 1em{\hss .\hss }\hfill }}{96}
-\contentsline {chapter}{\textbf {BIBLIOGRAPHY}\textmd {\leaders \hbox to 1em{\hss .\hss }\hfill } \vspace {\baselineskip }}{97}
+\contentsline {section}{\numberline {1.2}Problem Statement}{2}
+\contentsline {section}{\numberline {1.3}Significance of Research}{2}
+\contentsline {section}{\numberline {1.4}Outline of Dissertation}{2}
+\contentsline {chapter}{\numberline {Chapter 2} Review of Relevant Literature}{3}
+\contentsline {section}{\numberline {2.1}Next-generation sequencing and metagenomics}{3}
+\contentsline {subsection}{\numberline {2.1.1}Next-generation sequencing}{3}
+\contentsline {subsection}{\numberline {2.1.2}Metagenomics}{3}
+\contentsline {section}{\numberline {2.2}Challenges in counting k-mers efficiently}{5}
+\contentsline {section}{\numberline {2.3}Tackling large and error-prone short- read shotgun data sets}{5}
+\contentsline {section}{\numberline {2.4}Challenges in measuring diversity of metagenomics}{6}
+\contentsline {subsection}{\numberline {2.4.1}Concept of Diversity}{6}
+\contentsline {subsection}{\numberline {2.4.2}Diversity measurement in Microbial Ecology}{7}
+\contentsline {subsubsection}{\numberline {2.4.2.1}Concept of Species and OTU Identification using sequence markers}{8}
+\contentsline {subsubsection}{\numberline {2.4.2.2}Binning of Metagenomic Reads into OTUs}{8}
+\contentsline {paragraph}{\numberline {2.4.2.2.1}Composition-based approach}{9}
+\contentsline {paragraph}{\numberline {2.4.2.2.2}Similarity-based approach}{9}
+\contentsline {subsubsection}{\numberline {2.4.2.3}Statistics for Diversity Estimation}{10}
+\contentsline {subsection}{\numberline {2.4.3}Novel methods required for diversity measurement of large metagenomics sample}{13}
+\contentsline {chapter}{\numberline {Chapter 3} khmer-efficient online k-mer counting using a probabilistic data structure}{15}
+\contentsline {section}{\numberline {3.1}Introduction}{15}
+\contentsline {section}{\numberline {3.2}Results}{18}
+\contentsline {subsection}{\numberline {3.2.1}Implementing a Count-Min Sketch for k-mers}{18}
+\contentsline {subsection}{\numberline {3.2.2}Choosing number and size of hash tables used for k-mer counting}{19}
+\contentsline {subsection}{\numberline {3.2.3}khmer efficiently calculates k-mer abundance histograms}{20}
+\contentsline {subsection}{\numberline {3.2.4}khmer accesses k-mer counts efficiently}{22}
+\contentsline {subsection}{\numberline {3.2.5}The measured counting error is low on short-read data}{22}
+\contentsline {subsection}{\numberline {3.2.6}Sequencing error profiles can be measured with k-mer abundance profiles}{23}
+\contentsline {subsection}{\numberline {3.2.7}khmer can be applied iteratively to read trimming}{24}
+\contentsline {subsection}{\numberline {3.2.8}Using khmer for digital normalization, a streaming algorithm}{26}
+\contentsline {section}{\numberline {3.3}Discussion}{27}
+\contentsline {subsection}{\numberline {3.3.1}khmer enables fast, memory-efficient online counting}{27}
+\contentsline {subsection}{\numberline {3.3.2}khmer is a generally useful k-mer counting approach}{28}
+\contentsline {subsection}{\numberline {3.3.3}khmer memory usage is fixed and low}{28}
+\contentsline {subsection}{\numberline {3.3.4}False positive rates in k-mer counting are low and predictable}{30}
+\contentsline {subsection}{\numberline {3.3.5}Real-world applications for khmer}{31}
+\contentsline {subsection}{\numberline {3.3.6}Conclusion}{32}
+\contentsline {subsection}{\numberline {3.3.7}Future considerations}{32}
+\contentsline {section}{\numberline {3.4}Methods}{33}
+\contentsline {subsection}{\numberline {3.4.1}Code and data set availability}{33}
+\contentsline {subsection}{\numberline {3.4.2}Sequence Data}{34}
+\contentsline {subsection}{\numberline {3.4.3}Count-Min Sketch implementation}{34}
+\contentsline {subsection}{\numberline {3.4.4}Hash function and khmer implementation}{35}
+\contentsline {subsection}{\numberline {3.4.5}Comparing with other k-mer counting programs}{35}
+\contentsline {paragraph}{\numberline {3.4.5.0.1}khmer:}{36}
+\contentsline {paragraph}{\numberline {3.4.5.0.2}Tallymer:}{36}
+\contentsline {paragraph}{\numberline {3.4.5.0.3}Jellyfish:}{36}
+\contentsline {paragraph}{\numberline {3.4.5.0.4}DSK:}{37}
+\contentsline {paragraph}{\numberline {3.4.5.0.5}BFCounter:}{37}
+\contentsline {paragraph}{\numberline {3.4.5.0.6}KMC:}{37}
+\contentsline {paragraph}{\numberline {3.4.5.0.7}Turtle:}{37}
+\contentsline {paragraph}{\numberline {3.4.5.0.8}KAnalyze:}{37}
+\contentsline {chapter}{\numberline {Chapter 4} diginorm: need rewriting, plan: only keep the materilas that are more relevant to IGS }{43}
+\contentsline {section}{\numberline {4.1}Introduction}{43}
+\contentsline {section}{\numberline {4.2}Results}{46}
+\contentsline {subsection}{\numberline {4.2.1}Estimating sequencing depth without a reference assembly}{46}
+\contentsline {subsection}{\numberline {4.2.2}Eliminating redundant reads reduces variation in sequencing depth}{47}
+\contentsline {subsection}{\numberline {4.2.3}Digital normalization retains information while discarding both data and errors}{49}
+\contentsline {subsection}{\numberline {4.2.4}Digital normalization scales assembly of microbial genomes}{52}
+\contentsline {subsection}{\numberline {4.2.5}Digital normalization scales assembly of transcriptomes}{53}
+\contentsline {section}{\numberline {4.3}Discussion}{55}
+\contentsline {subsection}{\numberline {4.3.1}Digital normalization dramatically scales {\em de novo} assembly}{55}
+\contentsline {subsection}{\numberline {4.3.2}A general strategy for normalizing coverage}{55}
+\contentsline {subsection}{\numberline {4.3.3}Digital normalization drops terminal k-mers and removes isoforms}{57}
+\contentsline {subsection}{\numberline {4.3.4}Applying assembly algorithms to digitally normalized data}{59}
+\contentsline {section}{\numberline {4.4}Conclusions}{60}
+\contentsline {subsection}{\numberline {4.4.1}Digital normalization is widely applicable and computationally convenient}{60}
+\contentsline {section}{\numberline {4.5}Methods}{62}
+\contentsline {subsection}{\numberline {4.5.1}Data sets}{62}
+\contentsline {subsection}{\numberline {4.5.2}Scripts and software}{62}
+\contentsline {subsection}{\numberline {4.5.3}Analysis parameters}{63}
+\contentsline {subsection}{\numberline {4.5.4}Normalization and assembly parameters}{64}
+\contentsline {subsection}{\numberline {4.5.5}Assembly overlap and analysis}{64}
+\contentsline {subsection}{\numberline {4.5.6}Compute requirement estimation}{64}
+\contentsline {section}{\numberline {4.6}Figure Legends}{65}
+\contentsline {section}{\numberline {4.7}Tables}{65}
+\contentsline {chapter}{\numberline {Chapter 5} concept and simulation}{70}
+\contentsline {section}{\numberline {5.1}Introduction}{70}
+\contentsline {section}{\numberline {5.2}The concept of IGS(informational genomic segment)}{72}
+\contentsline {subsection}{\numberline {5.2.1}IGS(informative genomic segment) can represent the novel information of a genome}{74}
+\contentsline {subsection}{\numberline {5.2.2}IGS can be used to do alpha diversity analysis}{76}
+\contentsline {subsection}{\numberline {5.2.3}IGS can be used to do beta diversity analysis}{78}
+\contentsline {section}{\numberline {5.3}Evaluating IGS method using simulated data sets}{81}
+\contentsline {subsection}{\numberline {5.3.1}An experiment using a simple simulated data sets}{81}
+\contentsline {subsection}{\numberline {5.3.2}Improving the accuracy of this method in real world analysis}{82}
+\contentsline {subsubsection}{\numberline {5.3.2.1}the effect of sequencing error to the accuracy of analysis}{84}
+\contentsline {subsubsection}{\numberline {5.3.2.2}the effect of collision in bloom filter to analysis accuracy}{87}
+\contentsline {subsubsection}{\numberline {5.3.2.3}comparison of dissimilarity matrix from beta diversity analysis}{90}
+\contentsline {subsubsection}{\numberline {5.3.2.4}Evaluate alpha diversity analysis by estimating size of metagenome}{92}
+\contentsline {subsection}{\numberline {5.3.3}The IGS method can provide a whole framework to do alpha or beta diversity, with good versatility.}{95}
+\contentsline {chapter}{\numberline {Chapter 6} real data sets}{97}
+\contentsline {section}{\numberline {6.1}Applying IGS method to real metagenome data sets}{97}
+\contentsline {subsection}{\numberline {6.1.1}GOS data sets: Sorcerer II Global Ocean Sampling Expedition}{97}
+\contentsline {subsection}{\numberline {6.1.2}HMP metagenomics data set}{101}
+\contentsline {subsection}{\numberline {6.1.3}GPGC - Great Prairie Soil Metagenome Grand Challenge}{102}
+\contentsline {subsection}{\numberline {6.1.4}more soil metagenomic samples}{104}
+\contentsline {section}{\numberline {6.2}Data}{105}
+\contentsline {subsection}{\numberline {6.2.1}Four simulated reads data sets with different species abundance distribution}{105}
+\contentsline {subsection}{\numberline {6.2.2}Simulated sequencing reads of e.coli}{105}
+\contentsline {chapter}{\numberline {Chapter 7} Conclusion}{108}
+\contentsline {section}{\numberline {7.1}Summary}{109}
+\contentsline {section}{\numberline {7.2}Future Work}{111}
+\contentsline {chapter}{\textbf {APPENDIX}\textmd {\leaders \hbox to 1em{\hss .\hss }\hfill }}{116}
+\contentsline {chapter}{\textbf {BIBLIOGRAPHY}\textmd {\leaders \hbox to 1em{\hss .\hss }\hfill } \vspace {\baselineskip }}{117}

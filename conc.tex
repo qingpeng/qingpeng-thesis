@@ -1,11 +1,3 @@
-\chapter{Conclusions}
-
-
-
-%\section{khmer - k-mer counting}
-%
-%\section{diginorm - }
-%
 %check the reads coverage in the sample where it is from
 %
 %\section{de bruijn graph mapping}
@@ -14,3 +6,225 @@
 %
 %\section{IGS-based diversity analysis}
 %
+
+
+\chapter{Conclusion}
+
+%Advantage:
+
+%not only HMP, high depth, data
+%but also low depth data, like soil metagenomics, which is impossible to use traditional method 
+
+
+We have developed a novel statistical framework for enabling microbial diversty
+ analysis using whole genome shotgun metagenomic reads data set without the
+requirement of assembly, binning, reference or annotation. This dissertation
+covers an overview of existing approaches of doing microbial diversity analysis
+ of metagenomic samples, especially based on the concept of OTU, including the
+steps in the procedure, like metagenomic assembly, contig binning, statistical
+analysis of OTU abundance information to estimate the microbial diversity. Next
+the statistical framwork based on the novel concept of IGS was discussed. As
+the foundation of the framework, we described a novel method to count k-mers
+efficiently and a scalable approache to retrieve the coverage of a read in a 
+data set based on efficient and online k-mer counting. We also introduced the
+application of this approach in reducing the redundancy of metagenomic reads
+dataset, which is beneficialf to other tasks in metagenomic data analysis, like
+assembly or error trimming. Finally, we discussed how we developed the concept 
+of IGS based on the method of efficient k-mer counting and digital
+normalization discussed before.  
+The application of IGS to analyze microbial diversity of metagenomic data sets 
+was discussed and the performance of the IGS method on simulated data sets and
+real data sets were demonstrated in the final chapters. In this chapter, we
+summarize how the novel statistical framwork based on IGS makes a difference to
+ the diversity analysis in current microbial ecology research. 
+Finally the possible avenues for future work will be discussed.
+
+  
+
+\section{Summary}
+
+Diversity analysis is a key part of the microbial ecological research, like of
+macroorganism ecology. However due to the obscure definition of the term
+"species" in microbial ecology, we can virtually never measure the diversity of
+species directly, rather we use other taxonomic concepts like operational
+taxonomic unit (OTU) to evaluate the diversity of microbial community, instead
+of species. rRNA sequencing reads may be classified into different OTUs.
+Shotgun whole genome sequencing reads can also be classified into OTUs. But
+most if not all
+the existing methods based on the concept of OTU rely on some kinds of
+preprocessing of original reads data like assembly or some kinds of external 
+information like reference sequences for annotation. Both of the prerequisites
+are not satisfied for many metagenomic project. For some low coverage
+metagenomic reads data, assembly can only extract partial information from the
+species with higher sequencing depth. It is common only a small proportion of
+reads can be used in assembly. The reference sequence database is far from
+completion enough especially for environmental sample from soil or sea water.
+So applying these methods can only yield a partial picture of diversity of
+the microbial community the metagenomic sequencing data covers. 
+
+The IGS based
+method discussed in this dissertation offers a brand new framework that
+bypasses the difficult tasks like assembly, binning, or annotation whthout the
+requirement of reference sequence database. It can take advanrage of all the 
+information in the metagenomic reads data and gain a full picture of the
+diversity of the microbial community. The fact that this is a whole new
+framework with the concept of IGS to replace OTU as the taxinomic unit to
+analyze diversity means that this framework can be used to do all the possible
+diversity analysis that OTU-based framework can do. This is a more thorough
+solution than many other methods that are developed to solve some specific
+problems in the field of diversity analysis. For example, there are several
+methods developed to estimate the richness of a metagenomic sample or the size 
+of metagenome (cite nonparel,etc.) Our IGS based framework can not only
+estimate the richness or size of metagenome as shown in the section above, but
+also it can estimate the evenness or species abundance distribution of a
+metagenomic sample, which is also an important aspect of alpha diversity
+analysis. For beta diversity or compositional similarity analysis between
+metagenomic samples, there are several methods developed to compare metagenomic
+samples based on reads mapping or counting shared reads. (cite compareads)
+But basically they only estimate abundance-based similarity, similar to
+the Bray-Curtis indices used in the experiment discussed in the section above.
+Actually what is not shown in the result in the section above is that the 
+IGS-based framework can also be used to estimate incidence-based similarity, if
+such information is interesting to the researcher.
+
+Besides the advantage of the IGS based framework that it has a broad
+application with its versatile potential, this freamework is also efficient and
+highly scalable enough to handle extremely large metagenomic sequencing data
+sets. We have discussed the efficiency of the novel k-mer counting method and
+the following method of digital normalization, with the ability to retrieve the
+coverage of a read accurately and efficiently. We also did thorough analysis
+to the effect of the size of used data structure to the accuracy. We can take
+advantage of the probabilitic characteristics of the data structure to make a
+trade-off between expected analysis accuracy and expected usage of
+computational power. In this way, we make the analysis highly scalable to
+the increasing size of metagenomic sequencing data.  
+
+Also, for the purpose of estimating microbial diversity of metagenomic samples,
+we analyzed the effect of sequencing depth to the accuracy of the estimation.
+It is obvious and expected that using more reads data with higher sequencing
+depth increases the accuracy of such diversity estimation. Especially for beta
+diversity or similarity analysis between samples, reads data with relatively
+low sequencing depth can still yield decent result, as shown in the experiment
+with synthetic data and real soil data set. For alpha diversity like richness
+estimation, using reads data with lower sequencing depth gets the estimation
+farther from the real number, but although the absolute value of such species
+richness of a sample is not that accurate, the relative relationship of species
+richness between samples are less prone to smaller reads data with lower
+sequencing depth. These analysis and observation convince that for specific
+purpose, only a subset of the large metagenomic reads data can be enough to
+achieve reasonably satisfying result. Under certain circumstance, this feature
+is quite helpful and can reduce the computational expense dramatically. 
+
+
+\section{Future Work}
+
+
+Though this dissertation detailed a new approach to analyze microbial diversity
+using whole genome shotgun sequencing data without the requirement of assembly,
+binning, or annotation, there is still plenty of room for improvement.  
+
+Basically we question the IGS based method is developed to answer is how many
+species there are in the sample or how similar the samples are between each
+other, mostly focusing on the quantitative aspect. Admittedy these are 
+important questions the microbial ecologists want to answer, they are also
+curious to the qualitative questions, like if two samples are different, what
+are the stuffs that attribute to the diffence,and what are the function of
+those stuffs.cite rob knight's new paper.  A natural expansion of the IGS based framework will lead to
+answer questions like this. 
+
+Now we have an efficient and scalable approach to get the coverage of a read in
+a sample, it is straightforward to extract the reads according to its coverage
+profile across samples so we can get a subset of reads that have specific
+characteristics, like the reads are common to all the samples. In this way we
+may collect these "common" reads from samples together and try to co-assemble
+them since now they should have higher coverage. Or we can get a subset of
+reads that are common in a group of samples but do not exist in another group
+of samples, like the samples from patients and healthy persons. These
+"signiture" reads may offer important insights to understand what happens
+to the microbial community while the environment changes. Admittedly these
+kinds of "extraction" can be implimented using other methods like reads 
+alignment method. But they may not be as efficient and scalable as the IGS
+based method, especially for extremely large metagenomic data thanks to sliding
+cost of sequencing.
+
+
+One advantage of the IGS based method is that binning is not required in this
+procedure. Firstly traditionally binning is used to classify contigs after some
+kinds of assembly effort. The similarity based binning method relies on
+sequence alignment, which is not efficient, especially infeasible for large
+metagenomic data. Also, reference sequences normally are required for
+similarity based binning approach. The composition-based approach relies on the
+frequency profile of sequence signatures and machine learning approach on that
+profile, which is computationally expensive. As reviewed in the second chapter,
+the third approach based on coverage profile across samples was developed
+recently. (cite concoct, groopm, etc.), although mostly often, the coverage
+profile is used with the companion of composition frequency profile to classify
+contigs. The assumption on which the coverage profile based binning approaches
+are based on, that contigs with similar coverage profile across samples are
+more likely to be from the same microbial organism, is actually similar to the
+assumption on which using IGS to do beta diversity is based, that the IGSs with
+similar coverage profile across samples are likely to be frome the same
+microbial organism. It is promising to classify the IGSs by the coverage
+profile across samples. We have already overcome the challenge of retrieving the
+coverage profile efficiently based on the probabilistic data structure, while
+in those coverage profile based binning approaches the coverage profile is 
+normally retrieved by assembly of contigs and mapping
+reads back to contigs, which both require higher coverage reads to do assembly
+and are computationally expensive. 
+
+There are two problems to deal with about this coverage profile based
+IGS binning approach. First, with relatively small number of samples, the
+resolution will be limited, since the total number of different coverage
+profiles will be limited. This is probably the reason most of those coverage
+profile based contig binning method integrate composition profile information
+also. Second, on the other hand, if there are large number of samples, there
+will be too many diferent coverage profiles. We can use more sophisticated
+clustering approach to the coverage profiles to reduce the number of bins,
+as in those coverage profile based contig binning methods. Another approach
+worthy of note is that there is a method termed partitioning developed in
+our lab as a divide and conque approach to scale metagenome assembly. It can be 
+considered as a rough binning approach also, where the reads in the same
+partition are more likely to originate from the same microbial organism. We can
+try to integrate the paritioning and IGS coverage profile to improve the
+accuracy of the binning. In summary, this will be one of the first attempts to
+do reads binning. After the IGS/reads binning,  we expect to do better assembly
+ and annotation expected to be more accurate to gain more knowledge about the
+function and phylogenetical information.  
+
+As shown in Figure, after adjustment according to sequencing error and collison
+rate of the bloom filter, the estimated size of metagenome is close to real
+number for synthetic data sets. But the difference between the estimation and
+real number is still increasing with higher error rate, which means there is
+other factor that affect the accuracy of estimaiton. This is worthy of further
+investigation. This kind of estimation of metagenome is extremely important in
+metagenomic data analysis and it is closely related to the estimation of
+sequencing depth or how much more effort is required to gain enough sequencing
+depth. As shown in the result, we are confident that the relative relationship 
+between the richness of different samples are reliable from the IGS based alpha
+diversity analysis. How accurate the absolute value of the richness or the size
+of metagenome in a real data requires further research and new  
+statistical model may be needed to adapt to the abundance distribution of IGSs.    
+Furthermore, any information about the richness of a sample is beneficial to
+the optimal choice of parameter for digital normalization.
+
+The analysis of the effect of sequencing depth to the accuracy of beta
+diversity shows that using a relatively small subset of the whole data set may
+get reasonably good result showing the separation of samples after clustering
+or ordination. However how good the seperation is seems to be related to the
+characteristic of samples and can not be determined easily before starting the
+analysis. So a potential approach is to do such beta analysis in an iterative
+fasion. We already know that using more data will yield better result or better
+separation for the purpose of comparing metagenomic samples. So in such
+iteration procedure, how good the separation is can be monitored as more reads
+are loaded into the analysis and the procedure can be stopped as long as the
+pattern of the separation of samples is significant enough. This way, we may
+save lots of computational expense and still have enough information about the
+relationship between samples. 
+ 
+    
+    
+    
+    
+    
+    
+

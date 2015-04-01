@@ -904,34 +904,6 @@ lower richness than prairie.  (Figure \ref{fig:ARMO_alpha})
 \label{fig:ARMO_alpha}
 \end{figure}
 
-\section{Future Direction}
-
-    - Extract reads that are unique/common between samples and do annotation to those reads.
-    
-    - sequencing depth evaluation
-    
-    - genome size estimation
-    
-    - better choosing diginorm parameters(size of hashtables, etc.) with genome size estimation as upper limit. 
-    
-    - reads binning/classification (after clustering)(if number of samples is small, may not be effective)
-    
-    - co assembly (by extracting the reads with total coverage across samples greater than 10, for example)
-    
-    - iterative diversity analysis - loading more reads to get higher accuracy, but  stops as pattern/clustering is significant enough
-    (only for diversity analysis)
-    
-    
-\section{Conclusion}
-
-%Advantage:
-
-%not only HMP, high depth, data
-%but also low depth data, like soil metagenomics, which is impossible to use traditional method 
-
-
-
-    
 
 \section{Data}
 
@@ -979,9 +951,48 @@ wisconsin\_switchgrass & 310966735 & 13G & 40259619921 & 129.5 \\ \hline
 
 \chapter{Conclusion}
 
+%Advantage:
+
+%not only HMP, high depth, data
+%but also low depth data, like soil metagenomics, which is impossible to use traditional method 
+
+
+
 \section{Summary}
 
+no assembly, binning, reference, annotation
+
+discuss about the advantage of the igs method
+
+beta robust , also incidence based metric
+
+alpha diversity, not only richness, but also evenness
+
+comparing with aligment methods
+
+benchmark, practical usage.
+
+disadvantage /further to do
+
+function  related
+
 \section{Future Work}
+
+    - Extract reads that are unique/common between samples and do annotation to those reads.
+    
+    - sequencing depth evaluation
+    
+    - genome size estimation
+    
+    - better choosing diginorm parameters(size of hashtables, etc.) with genome size estimation as upper limit. 
+    
+    - reads binning/classification (after clustering)(if number of samples is small, may not be effective)
+    
+    - co assembly (by extracting the reads with total coverage across samples greater than 10, for example)
+    
+    - iterative diversity analysis - loading more reads to get higher accuracy, but  stops as pattern/clustering is significant enough
+    (only for diversity analysis)
+    
 
 
 \bibliography{dis}
