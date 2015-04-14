@@ -24,7 +24,7 @@ showed this was a promising new approach to estimate the metagenome size.
 Since this method is totally binning-free, 
 assembly-free, annotation-free, reference-free, it is specifically promising 
 to deal with the highly diverse samples, while we are facing large amount of 
-‚Äúdark matters‚Äù in it, like soil.
+"Äúdark matters" in it, like soil.
 
 
 
@@ -39,11 +39,11 @@ project these are difficult
 tasks, lacking of necessary reference genome or being computationally
 expensive. So we are interested in finding an approach to bypass the difficult
 tasks like assembly, binning, annotation and use the raw reads to make the 
-diversity analysis of large shortgun whole genome metagenomic data possibile. 
+diversity analysis of large shotgun whole genome metagenomic data possible. 
 
 We began such efforts by proposing that
- the concept of k-mers(a DNA segment with the leng of k) could be used as the 
- basicto unit to measure
+ the concept of k-mer (a DNA segment with the length of k) could be used as the 
+ basic unit to measure
 the diversity. K-mers can be considered as the atom of information in DNA 
 sequences. One of the composition-based approaches to binning is to use the 
 k-mers as the signatures.\cite{Alneberg2014} \cite{Imelfort2014} Suppose the sizes of microbial genomes are similar and
@@ -80,7 +80,7 @@ and the diversity of actual species subsequently.
 
 % need expanding
 For alpha diversity, we can generate a list of IGSs and the respective 
-abundance in a sample. Then existing estimators like Chao's can be appled to 
+abundance in a sample. Then existing estimators like Chao's can be applied to 
 estimate the total number of IGSs in the sample. Rarefaction curve based on the
 number of IGSs can also be generated. 
 
@@ -89,7 +89,7 @@ For beta diversity, we can generate a samples-by-IGS data matrix from the
 abundance of IGSs across samples, as a replacement of samples-by-OTU data 
 matrix in OTU-based analysis and samples-by-species data matrix in traditional 
 ecology. From that samples-by-IGS data matrix, we can use existing methods to 
-calculate similarity/disimilarity/distance between samples and do further 
+calculate similarity/dissimilarity/distance between samples and do further 
 analysis like clustering and ordination. 
 
 
@@ -394,7 +394,7 @@ Chao1, since it uses more abundance information.
 Table \ref{table:alpha_simulated} shows the alpha diversity analysis result of the simple simulated data using IGS method. The estimated
 genome sizes of the samples are close to real size. This is not surprising since for this simple experiment, 
 there is no error introduced and the coverage is high (10x) to cover most of the genetic materials in the samples. 
-Also the simpson evenness shows the relative evenness of the samples correctly. 
+Also the Simpson evenness shows the relative evenness of the samples correctly. 
 Sample 1 is the least even with composed of two  species with abundance ratio as 1:3.
 This proves the IGS method can not only analyze the richness of samples but 
 also the evenness.
@@ -520,7 +520,7 @@ composition with same coverage as 10X but with different sequencing error rate (
 To show the influence of sequencing error to accuracy of the 
 analysis, we compared the richness estimation using reads with different 
 sequencing error rate, as shown in Figure \ref{fig:IGS_richness_no_adjustment}. 
-For data set without error (error rate = 0), the esimated size of metagenome
+For data set without error (error rate = 0), the estimated size of metagenome
 matches real size perfectly. With increasing error rate, the size of metagenome
 is over estimated more and more seriously. This is due to several factors,which
 will be discussed below. 
@@ -555,7 +555,7 @@ previously as an example, for read length as 100bp and k as 19, one sequencing
 error will affect the count of 19 k-mers at the most, two sequencing errors
 will affect the count of at most 38 k-mers. The count of these k-mers will be
 retrieved as 1 incorrectly, suppose it is highly impossible that an erroneous
-k-mer is the same as another real k-mer in the data set accidently, as long as
+k-mer is the same as another real k-mer in the data set accidentally, as long as
 the k is large enough compared to the size of data set. So out of the 82 k-mers
 in the 100bp read, at most 38 k-mers will have count as 1 incorrectly, but this
 will not affect the median k-mer count, which is the count of the 41th k-mer if
@@ -572,9 +572,9 @@ such probability for 4 errors or more. Combining to the probability that a
 certain number of errors occur in a read with a specific sequencing error rate,
 which is easy to derive from binomial distribution, we can get the probability
 that the coverage of a read is incorrectly assessed as 1. Still for the example
-here, this probability is the probability that 3 erorrs occur in a read
+here, this probability is the probability that 3 errors occur in a read
 multiplied by the probability that 3 errors will affect median k-mer count,
-plus the probability that 4 erorrs occur in a read multiplied by the 
+plus the probability that 4 errors occur in a read multiplied by the 
 probability that 4 errors will affect median k-mer count,and so on.
 
 Generally, let $P\_error(n,e,L)$ is the probability that $n$ errors occur in a 
@@ -646,7 +646,7 @@ reads will have incorrect coverage as 1 and some reads will have incorrect as
 coverage, using statistical model similar to that discussed in last section.
 Using same example, 3 errors occur in a read, if the 3 errors affect 41-45
 k-mers(with a chance of 0.20), the median k-mer count will be 2, due to the 
-collison in bloom filter, while if he 3 errors affect more than 45 k-mers(with 
+collision in bloom filter, while if he 3 errors affect more than 45 k-mers(with 
 a chance of 0.24), the median k-mer count will be 1, purely due to sequencing 
 errors. 
 
@@ -787,16 +787,16 @@ our IGS method works well and can give reliable results from data sets with
 error and low sequencing depth.
 
 The IGS method can provide a whole framework to do alpha or beta diversity. 
-Here we tested beta diversity using only bray-curtis metric and alpha 
+Here we tested beta diversity using only Bray-Curtis metric and alpha 
 diversity on richness only. Actually any metric can be applied to the 
 IGS-by-samples table, just as OTU-by-samples table, 
-no matter it is abundance-based or incidence-baserd, about richness or about 
+no matter it is abundance-based or incidence-based, about richness or about 
 evenness.
 
 Compareads(Commet) based on reads overlap between samples can get a matrix 
 reflecting the real relationship between samples but it is stuck with one 
 metric, which is based on the percentage of overlap reads between samples. 
-This metric is like bray curtis , but not exactly the same.
+This metric is like Bray-Curtis , but not exactly the same.
 
 
 \section{Applying IGS method to real metagenome data sets}
@@ -974,7 +974,7 @@ growth each spring, this new growth would be the fast growers with
 less diverse. Why Iowa is the least diverse is still difficult to explain for now.
 
  From the alpha diversity, we also have a rough estimation of the  total 
- size of metagenome in iowa soil, which is about 540G basepairs. This 
+ size of metagenome in Iowa soil, which is about 540G basepairs. This 
  proves the high complexity of soil sample and we still need more sequencing 
  effort to achieve a reasonable high coverage.
  
