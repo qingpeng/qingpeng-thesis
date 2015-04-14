@@ -1,0 +1,1067 @@
+\chapter{A framework for diversity analysis of whole shotgun metagenomic reads data}
+
+
+
+\section{Introduction}
+
+
+
+Here we propose a novel concept - IGS (informative genomic 
+segment) and use IGS as a replacement of OTUs to be the basic unit for 
+diversity analysis of whole shotgun metagenomics data sets. IGSs represent the 
+unique information in a metagenomics data set and the abundance of IGSs in 
+different samples can be retrieved by the reads coverage through an efficient 
+k-mer counting method, which was discussed in the previous two chapters.
+This samples-by-IGS abundance data matrix is a promising
+replacement of samples-by-OTU data matrix used in 16S rRNA based analysis and 
+many existing statistical methods can be applied to work on the samples-by-IGS 
+data matrix to investigate the diversity. We applied the IGS-based method to 
+several simulated data sets and several real metagenomic data sets from samples
+like human microbiome, sea water and soil. The results of beta diversity analysis
+showed that the samples were clustered with comparable or better accuracy than 
+existing alignment-based method. The results of alpha diversity analysis 
+showed this was a promising new approach to estimate the metagenome size.
+Since this method is totally binning-free, 
+assembly-free, annotation-free, reference-free, it is specifically promising 
+to deal with the highly diverse samples, while we are facing large amount of 
+“dark matters” in it, like soil.
+
+
+
+\section{The concept of IGS(informational genomic segment)}
+
+In classic ecology dealing with macroorganisms, diversity measurement is based 
+on the concept of species. For 16S rRNA amplicon metagenomics data set, it is 
+based on the concept of OTUs. While the concept of OTUs can be used to analyze
+large shotgun metagenomics data set, normally assembly, binning and annotation
+are required before doing diversity analysis. However for many metagenomics 
+project these are difficult
+tasks, lacking of necessary reference genome or being computationally
+expensive. So we are interested in finding an approach to bypass the difficult
+tasks like assembly, binning, annotation and use the raw reads to make the 
+diversity analysis of large shortgun whole genome metagenomic data possibile. 
+
+We began such efforts by proposing that
+ the concept of k-mers(a DNA segment with the leng of k) could be used as the 
+ basicto unit to measure
+the diversity. K-mers can be considered as the atom of information in DNA 
+sequences. One of the composition-based approaches to binning is to use the 
+k-mers as the signatures.\cite{Alneberg2014} \cite{Imelfort2014} Suppose the sizes of microbial genomes are similar and
+ the difference between genomic content of microbial genomes is similar, the 
+number of distinct k-mers in the sequence data set correlates to the number of 
+species in a sample. However, because of sequencing error, which is unavoidable
+ due to the limit of sequencing technology, this k-mer based analysis doe not 
+work well. One sequencing error on a read will generate at most k erroneous 
+k-mers. In metagenomics data set, especially with high coverage, most of the 
+distinct observed k-mers are from sequencing errors.
+%add citation about k-mer based diversity analysis ,entropy...
+% add some results /figures
+
+Next we shifted the focus from k-mers onto the upper level - reads. 
+In previous chapter, we have discussed a novel approach to use median k-mer 
+count in a read to estimate
+sequencing depth without a reference assembly, based on which the framework for
+streaming analysis of short DNA sequencing reads was developed.
+It also offers a novel way to distill information from reads by reducing the
+ bad effect of sequencing errors so that we can use those informative reads to 
+measure the microbial diversity. We term those informative reads as 
+IGSs(informative genomic segments), which can be considered as segments of DNA 
+on a microbial genome. Those IGSs should be different enough to represent the 
+abstract information a genome contains. Suppose microbial genomes contain 
+similar number of those IGSs, as they contain similar number of distinct 
+k-mers, the number of IGSs will correlate with the species richness in a 
+sample, and the abundance distribution of IGSs will be related to species 
+evenness in a sample. Furthermore, we can get the abundance of the IGSs across
+different samples. Many classic diversity estimation methods based on OTUs 
+ described in the literature review chapter can be applied to estimate 
+ the diversity of IGSs 
+and the diversity of actual species subsequently.
+
+
+% need expanding
+For alpha diversity, we can generate a list of IGSs and the respective 
+abundance in a sample. Then existing estimators like Chao's can be appled to 
+estimate the total number of IGSs in the sample. Rarefaction curve based on the
+number of IGSs can also be generated. 
+
+% need expand the discussion from IGS in one sample to IGS in different samples.
+For beta diversity, we can generate a samples-by-IGS data matrix from the
+abundance of IGSs across samples, as a replacement of samples-by-OTU data 
+matrix in OTU-based analysis and samples-by-species data matrix in traditional 
+ecology. From that samples-by-IGS data matrix, we can use existing methods to 
+calculate similarity/disimilarity/distance between samples and do further 
+analysis like clustering and ordination. 
+
+
+\subsection{IGS(informative genomic segment) can represent the novel 
+information of a genome}
+
+Median k-mer abundance can represent sequencing depth of a read, as discussed
+in last chapter.\cite{Brown2012}.
+ For a sequencing reads data set with multiple species, the sequencing depth of
+ a read is related to the abundance of species where the read originates from. 
+
+% figure 1a should be marked 
+The upper plot in Figure \ref{fig:reads_to_IGS} shows the abundance distribution of reads 
+from 4 simulated sequencing data sets with different sequencing depth - 3 
+sequencing data sets generated with different sequencing coverage(1x, 10x, 40x)
+ from 3 simulated random genomes respectively and 1 combined data set with all 
+the aforementioned data sets. No error is introduced in these simulated 
+data sets. Obviously the reads from the three data sets can be separated by 
+estimated sequencing depth. The combined data set can be considered as a 
+sequencing data set with three species with different abundance.
+
+Each point on the curve shows that there are $Y$ reads with a sequencing depth of
+ $X$. In other word, for each of those $Y$ reads, there are $X-1$ other reads that 
+cover the same DNA segment in a genome that single read originates. So we can 
+estimate that there are $Y/X$ distinct DNA segments with reads coverage as $X$. 
+We term these distinct DNA segments in species genome as 
+IGSs(informative genomic segments). We can transform the upper plot in 
+Figure \ref{fig:reads_to_IGS} to show the number of IGSs and their respective 
+reads coverage, as 
+shown in lower plot. We sum up the numbers of IGSs with 
+different reads coverage for each data set and get the result as shown in 
+Table \ref{table:IGSs}. The sum numbers of IGSs here essentially are the areas below each curve 
+in the figure.
+
+Even though the datasets have different sequencing depth like 10X and 40X, 
+they have similar numbers of IGSs. Dataset with 1X sequencing depth has fewer 
+IGSs because the depth is not enough to cover all the content of the 
+genome(63.2\%). The IGSs can be seen as the
+genomic segments on a genome with the length of reads.(Figure \ref{fig:IGS}  
+Assume the composition of species 
+genome is totally random, which is the case in the simulated data sets, the 
+number of IGSs(N) in a species genome is related to the size of genome(G), 
+read length(L) and k size(k), which can be denoted as
+
+\[N =\frac{G}{L}  \]
+which is the number of reads that can have a 1X coverage of the genome.
+For the simulated genome with size of 1M bps, read length as 80bps, expected 
+number of IGSs is 
+
+\[1000000/80 = 12500 \], 
+
+which is pretty close to the observed value. See Table \ref{table:IGSs}
+
+
+\begin{figure}[!ht]
+\centerline{\includegraphics[width=4in]{./figures/from_reads_to_IGS.png}}
+%\caption{\bf cluster of GOS samples using IGS method}
+\caption{\bf from reads to IGS}
+\label{fig:reads_to_IGS}
+\end{figure}
+
+\begin{table}[!ht]
+\caption{
+\bf{Total number of IGSs in different simulated reads data sets.}
+}
+\begin{tabular}{ |c | c |c| c|c| }
+Data set & total number of IGSs \\
+\hline \\
+1X depth                   & 6419  \\
+10X depth                  & 12022  \\
+40X depth                  & 12371 \\
+1X,10X,40X combined        & 30748 \\
+\end{tabular}
+\begin{flushleft}
+\end{flushleft}
+\label{table:IGSs}
+\end{table}
+
+
+\begin{figure}[!ht]
+\centerline{\includegraphics[width=4in]{./figures/IGSs_figure.pdf}}
+\caption{\bf the concept of IGS}
+\label{fig:IGS}
+\end{figure}
+
+
+
+
+
+\subsection{IGS can be used to do alpha diversity analysis}
+
+Basically the abundance distribution of IGSs with different coverage in a 
+sample data set can be acquired using the method shown above.
+
+
+
+\begin{table}[!ht]
+\caption{
+\bf{coverage distribution of reads}
+}
+\begin{tabular}{ |c | c |c| c|c| }
+coverage & number of reads \\
+\hline \\
+3                   & 69  \\
+4                  & 96  \\
+5                  & 125 \\
+6        & 150 \\
+...        & ... \\
+\end{tabular}
+\begin{flushleft}
+\end{flushleft}
+\label{table:coverage_reads}
+\end{table}
+
+
+\begin{table}[!ht]
+\caption{
+\bf{abundance distribution of IGSs}
+}
+\begin{tabular}{ |c | c |c| c|c| }
+abundance & number of IGS \\
+\hline \\
+3                   & 23  \\
+4                  & 24  \\
+5                  & 25 \\
+6        & 25 \\
+...        & ... \\
+\end{tabular}
+\begin{flushleft}
+\end{flushleft}
+\label{table:coverage_IGS}
+\end{table}
+
+Suppose from a reads data set, the coverage distribution of reads is as 
+shown in Table \ref{table:coverage_reads}. We transform this coverage distribution
+of reads into abundance distribution of IGSs, as shown in Table \ref{table:coverage_IGS}.
+For example, there are 23 IGSs with abundance as 3. This is calculated by dividing  
+total number of reads with coverage as 3, which is 69, by the coverage 3.
+Similarly there are 24 IGSs with abundance as 4. 
+If we draw an analogy between IGSs and OTUs, this is like there are 23 
+different OTUs with 3 reads mapped to, and 24 different OTUs with 4 reads mapped to, and so on.
+Next all the different IGSs and the corresponding abundance can be listed,
+as shown in Table \ref{table:list_IGS}. This list is the counterpart of an 
+OTU table in OTU based diversity analysis.
+With such table at hand, existing statistical methods and software 
+packages can be used to investigate the alpha diversity.  
+
+
+\begin{table}[!ht]
+\caption{
+\bf{list of IGSs with abundance information}
+}
+\begin{tabular}{ |c | c |c| c|c| }
+IGS ID & abundance \\
+\hline \\
+1                   & 3  \\
+1                 & 3  \\
+1                  & 3 \\
+...        & ... \\
+23        & 3 \\
+24        & 4 \\
+25        & 4 \\
+...        & ... \\
+47        & 4 \\
+48        & 5 \\
+...        & ... \\
+\end{tabular}
+\begin{flushleft}
+\end{flushleft}
+\label{table:list_IGS}
+\end{table}
+
+
+
+
+\subsection{IGS can be used to do beta diversity analysis}
+
+As in alpha diversity analysis, OTU table is also a foundation for beta 
+diversity analysis. As long as we get a reliable OTU table, there are existing 
+pipelines to do the beta diversity analysis. 
+
+A typical OTU table across different samples is like this, which is also 
+called samples-by-OTU data matrix.
+\\
+OTU\_ID Sample1\_ID Sample2\_ID Sample3\_ID\\
+OTU1   3          4          2\\
+OTU2   2          5          0\\
+OTU3   3          1          4\\
+\\
+    
+Like a OTU table, we hope to have the IGS table for the IGSs:
+\\
+    IGS\_ID SampleA SampleB SampleC SampleD\\
+    IGS1   5       1       2       1\\
+    IGS2   5       1       2       1\\
+\\
+    
+    So now the problem is how we can generate a sample-by-IGS data matrix as 
+    the counterpart of samples-by-OTU data matrix so many of  the existing 
+    tools/methods used for OTU-based diversity can be borrowed for this kind 
+    of IGS-based analysis, just as what is shown above for alpha diversity analysis.
+
+Firstly, as how we get the coverage of a read from a sample dataset in this 
+sample dataset, we can get the coverage of a read from a sample A dataset in 
+another sample B dataset. We can still use the median k-mer count to represent 
+the coverage. The basic idea is the same. 
+
+Because a read must derive from a segment in the genome of some species in a 
+sample, if a read R from sample A with a coverage C\_A in sample A has a 
+coverage as C\_B in sample B, that means that segment of genome in sample A 
+from which read R derive also exists in sample B. That genomic segment has 
+a coverage as C\_A in sample A and has a coverage as C\_B in sample B. 
+Roughly there should be about C\_A reads (read R should be one of them) 
+in sampleA covering that genomic segment and C\_B reads in sampleB covering 
+that genomic segment. Meanwhile, the C\_A reads in sampleA should all have 
+a coverage as C\_B in sampleB, just like read R as one of them. Similarly,
+the C\_B reads in sampleB should all have a coverage as C\_A in sampleA.
+
+Suppose there are 6 reads in sample A, all have a coverage as 3 in sampleA, 
+and have a coverage as 2 in sampleB.According to the discussion about IGS in previous section, the 6 reads cover 
+2 IGSs with a coverage as 3 for each IGSs. There should be 4 reads in sampleB 
+covering the exact same 2 IGSs, with a coverage as 2 in sampleB.
+Now we have 2 distinct IGSs with redundancy as 3 and 2 in the two samples 
+respectively. Small numbers are used in the analysis here as an example. It should
+be noted that the analysis is based on large number statistically.
+
+We can expand this example from 2 samples to 4 samples(A,B,C,D), as in the samples-
+by-OTU(IGS) matrix above. If we find 10 reads in sampleA, with coverage as 5-1-2-1 in samples 
+A-B-C-D respectively. (We call "5-1-2-1" "coverage  spectrum" across samples.)
+So there should be about 2 reads in sampleB, 4 reads in sampleC, 2 reads 
+in sampleD, all of which have a "coverage spectrum" as "5-1-2-1". Basically 
+these 18 reads altogether cover 2 distinct IGSs, which apparently exist in 
+all the 4 samples. The 2 distinct IGSs has a coverage as 5,1,2,1 in the 
+4 samples respectively.If we draw an analogy between IGSs and OTUs, this is like there are 2 OTUs, 
+both with 5,1,2,1 reads mapped to in sample A,B,C,D respectively.
+
+Like a OTU table, here we can have the IGS table for the two IGSs:
+\\
+    IGS\_ID SampleA SampleB SampleC SampleD\\
+    IGS1   5       1       2       1\\
+    IGS2   5       1       2       1\\
+\\
+    
+    
+    
+ % should all include alpha and beta diversity results
+\section{Evaluating IGS method using simulated data sets}
+\subsection{Using a simple simulated data set to evaluate the IGS method}
+
+
+For this experiment, firstly we create 6 synthetic samples (Sample 1-6) 
+based on 9 synthetic 100K genomes (genome A-I), with different composition of species and diversity. 
+(Table \ref{table:simulated_metag})For sample1, there are two species - A and B, with abundance distribution as 3:1.
+The sequencing depth of all the synthetic data sets is 10X. 
+As a simple experiment to demonstrate the effectiveness of the IGS based method, 
+there is no sequencing error introduced in the 
+synthetic reads data sets.
+
+\begin{table}[!ht]
+\caption{
+\bf{6 synthetic simple metagenomes}
+}
+\begin{tabular}{ |c | c |c| c|c| }
+sample ID & species composition & sequencing depth & abundance of species & size of metagenome (bp)\\
+\hline \\
+sample1        & AAAB & 10 & A:30 B:10 & 200K\\
+sample2        & AABC & 10 & A:20 B:10 C:10 & 300K\\
+sample3        & ABCD & 10 & A:10 B:10 C:10 D:10 & 400K\\
+sample4        & ABCE & 10 & A:10 B:10 C:10 E:10 & 400K\\
+sample5        & AFGH & 10 & A:10 F:10 G:10 H:10 & 400K\\
+sample6        & IFGH & 10 & I:10 F:10 G:10 H:10 & 400K\\
+
+\end{tabular}
+\begin{flushleft}
+\end{flushleft}
+\label{table:simulated_metag}
+\end{table}
+
+To evaluate the effectiveness of alpha diversity analysis using IGS based method,
+we can use statistic metric to estimate the total number of IGSs in a sample, 
+which can be used to calculate the estimated genome size of a sample using the 
+formula below: size of genome = number of IGS $*$ reads\_length
+
+In this experiment, we use ACE metric since we find it is more accurate than 
+Chao1, since it uses more abundance information.
+
+
+\begin{table}[h]
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+\textbf{} & \textbf{\begin{tabular}[c]{@{}l@{}}observed \\ IGS\end{tabular}} & \textbf{ACE} & \textbf{\begin{tabular}[c]{@{}l@{}}simpson \\ evenness\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}estimated \\ genome size\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}real \\ genome size\end{tabular}} \\ \hline
+\textbf{sample1} & 2002 & 2002.0 & 0.76 & 200200.0 & 200000 \\ \hline
+\textbf{sample2} & 3038 & 3038.0 & 0.83 & 303800.0 & 300000 \\ \hline
+\textbf{sample3} & 4076 & 4076.0 & 0.91 & 407600.0 & 400000 \\ \hline
+\textbf{sample4} & 4078 & 4078.0 & 0.91 & 407800.0 & 400000 \\ \hline
+\textbf{sample5} & 4069 & 4069.0 & 0.91 & 406900.0 & 400000 \\ \hline
+\textbf{sample6} & 4087 & 4087.0 & 0.91 & 408700.0 & 400000 \\ \hline
+\end{tabular}
+\label{table:alpha_simulated}
+\end{table}
+
+Table \ref{table:alpha_simulated} shows the alpha diversity analysis result of the simple simulated data using IGS method. The estimated
+genome sizes of the samples are close to real size. This is not surprising since for this simple experiment, 
+there is no error introduced and the coverage is high (10x) to cover most of the genetic materials in the samples. 
+Also the simpson evenness shows the relative evenness of the samples correctly. 
+Sample 1 is the least even with composed of two  species with abundance ratio as 1:3.
+This proves the IGS method can not only analyze the richness of samples but 
+also the evenness.
+
+
+
+To evaluate the effectiveness of beta diversity analysis using IGS based method, 
+we compared the dissimilarity matrix generated by IGS based method with the 
+true matrix,since we know exactly the species composition of the 
+simulated data set.
+
+
+\begin{table}[h]
+\begin{tabular}{|l|l|l|l|l|l|l|}
+\hline
+                  & \textbf{sample 1} & \textbf{sample2} & \textbf{sample 3} & \textbf{sample 4} & \textbf{sample 5} & \textbf{sample 6} \\ \hline
+\textbf{sample 1} & 0.00              & 0.25             & 0.50              & 0.50              & 0.75              & 1.00              \\ \hline
+\textbf{sample 2} & 0.25              & 0.00             & 0.25              & 0.25              & 0.75              & 1.00              \\ \hline
+\textbf{sample 3} & 0.50              & 0.25             & 0.00              & 0.25              & 0.75              & 1.00              \\ \hline
+\textbf{sample 4} & 0.50              & 0.25             & 0.25              & 0.00              & 0.75              & 1.00              \\ \hline
+\textbf{sample 5} & 0.75              & 0.75             & 0.75              & 0.75              & 0.00              & 0.25              \\ \hline
+\textbf{sample 6} & 1.00              & 1.00             & 1.00              & 1.00              & 0.25              & 0.00              \\ \hline
+\end{tabular}
+\caption{\bf Dissimilarity matrix between synthetic samples using Bray-curtis from species composition directly }
+\label{table:simulated_real_matrix}
+\end{table}
+
+\begin{table}[h]
+\begin{tabular}{|l|l|l|l|l|l|l|}
+\hline
+                  & \textbf{sample 1} & \textbf{sample2} & \textbf{sample 3} & \textbf{sample 4} & \textbf{sample 5} & \textbf{sample 6} \\ \hline
+\textbf{sample 1} & 0.00              & 0.35             & 0.60              & 0.66              & 0.80              & 1.00              \\ \hline
+\textbf{sample 2} & 0.35              & 0.00             & 0.42              & 0.51              & 0.84              & 1.00              \\ \hline
+\textbf{sample 3} & 0.60              & 0.42             & 0.00              & 0.56              & 0.89              & 1.00              \\ \hline
+\textbf{sample 4} & 0.66              & 0.51             & 0.56              & 0.00              & 0.89              & 1.00              \\ \hline
+\textbf{sample 5} & 0.80              & 0.84             & 0.89              & 0.89              & 0.00              & 0.42              \\ \hline
+\textbf{sample 6} & 1.00              & 1.00             & 1.00              & 1.00              & 0.25              & 0.00              \\ \hline
+\end{tabular}
+\caption{\bf Dissimilarity matrix between synthetic samples using Bray-cutis from sequencing reads using IGS method }
+\label{table:simulated_matrix1}
+\end{table}
+
+
+The true dissimilarity matrix of the 6 simulated samples using bray-cutis 
+metric from species composition directly is shown in Table \ref{table:simulated_real_matrix}.
+For a simulated data set with 10x coverage and no error introduced 
+(which will tell us the optimal performance of IGS method), the dissimilarity 
+matrix can be calculated by using IGS method, as shown in Table 
+\ref{table:simulated_matrix1}. We can see the absolute values in the matrix 
+are not very close to that in the real matrix.But the relative values 
+correspond to that in the real matrix well to show the relative distance 
+between each pair of samples. To get a objective metric, we use 
+Mantel (citing)test to calculate the correlation value between the two 
+matrixes. The correlation is 0.9714, which means a very positive correlation 
+between the two matrices. We are confident that the dissimilarity matrix from IGS method 
+can reflect the true relationship between samples effectively.
+
+
+If the matrix can reflect the real 
+relationship between samples reliably, the clustering and ordination
+will only be routine tasks.
+
+
+\begin{figure}[!ht]
+ \centerline{\includegraphics[width=4in]{./figures/simple_PCA_3d.png}}
+\caption{\bf Ordination of the 6 synthetic samples using IGS method}
+\label{fig:simple_pcoa}
+\end{figure}
+
+
+\begin{figure}[!ht]
+ \centerline{\includegraphics[width=4in]{./figures/simple_tree.png}}
+\caption{\bf Clustering of the 6 synthetic samples using IGS method}
+\label{fig:simple_cluster}
+\end{figure}
+
+
+
+Figure \ref{fig:simple_pcoa} and Figure \ref{fig:simple_cluster} show that 
+IGS method can yield similarity between samples correctly. Sample 5 and sample 6 and very 
+close to each other on the figure, which 
+is true if we check the species composition of the two samples shown above.
+
+
+The clustering and ordination are all from the dissimilarity matrix. 
+We think comparing matrix directly makes more sense than comparing the 
+clustering and ordination plots. So we will not show the clustering and 
+ordination figure in other evaluation in this section. Mantel correlation will 
+be used to measure the accuracy of beta diversity analysis.
+
+
+These results show that the IGS method can work well to a simplest 
+scenario, with high sequencing depth (10X) and no sequencing error. Next 
+we will check the influence to the analysis accuracy of variable sequencing 
+depth and sequencing error and introduce new ways to preprocess the data 
+to decrease the influence of sequencing error. 
+
+
+
+\subsection{Improving the accuracy of this method in real world analysis}
+
+
+Previously we have shown the IGS method generally works to a simple simulated
+ data set, with high sequencing depth and no sequencing error. In real world,
+in many situations we have to deal with the metagenomic data sets with 
+relatively low sequencing depth, like soil or sea water samples. 
+Also it is a fact that all sequencing technology will generate some errors. As 
+discussed in the introduction 
+chapter, one of the reasons why we develop the IGS method is that 
+it is expected that the IGS 
+method is less prone to sequencing error based on the 
+abundance counting of reads rather than k-mers, . However the effect of those factors 
+jeopardizing the accuracy is still observable. 
+
+In this section, we will analyze the effect of these factors to the accuracy of
+ the IGS method and investigate the ways to reduce the effect to increase the 
+accuracy of analysis.
+
+As in last section, six synthetic samples were generated with the same species 
+composition with same coverage as 10X but with different sequencing error rate (0.5\%,
+ 1.0\%, 1.5\%, and 0\% - no error at all).
+ 
+To show the influence of sequencing error to accuracy of the 
+analysis, we compared the richness estimation using reads with different 
+sequencing error rate, as shown in Figure \ref{fig:IGS_richness_no_adjustment}. 
+For data set without error (error rate = 0), the esimated size of metagenome
+matches real size perfectly. With increasing error rate, the size of metagenome
+is over estimated more and more seriously. This is due to several factors,which
+will be discussed below. 
+\begin{figure}[!ht]
+ \centerline{\includegraphics[width=4in]{./figures/alpha_by_error_no_adjust.pdf}}
+\caption{\bf Richness estimation using IGS method without adjustment}
+\label{fig:IGS_richness_no_adjustment}
+\end{figure}
+
+\begin{figure}[!ht]
+ \centerline{\includegraphics[width=4in]{./figures/beta_by_error.pdf}}
+\caption{\bf Beta diversity analysis using IGS method without adjustment}
+\label{fig:beta_no_adjustment}
+\end{figure}
+
+We also check the beta diversity analysis with different error rate and notice
+that the beta diversity is less prone to increasing sequencing error rate. We 
+will focus on alpha diversity in the discussion below.
+
+\subsubsection{the effect of sequencing error to the accuracy of analysis}
+The first factor to take into account is sequencing error. One sequencing error
+will generate k erroneous k-mers. This is the reason why it is difficult to use
+k-mer counting only to do diversity analysis, as a large proportion of k-mers
+in a reads data set are erroneous, especially for low coverage reads data. As
+discussed in the section about digital normalization, using median k-mer count
+to retrieve the coverage of a read is less prone to sequencing error, because
+sequencing error will decrease the count of some reads to 1 incorrectly, but
+this does not always affect the median k-mer count. 
+
+Take the experiment we did
+previously as an example, for read length as 100bp and k as 19, one sequencing
+error will affect the count of 19 k-mers at the most, two sequencing errors
+will affect the count of at most 38 k-mers. The count of these k-mers will be
+retrieved as 1 incorrectly, suppose it is highly impossible that an erroneous
+k-mer is the same as another real k-mer in the data set accidently, as long as
+the k is large enough compared to the size of data set. So out of the 82 k-mers
+in the 100bp read, at most 38 k-mers will have count as 1 incorrectly, but this
+will not affect the median k-mer count, which is the count of the 41th k-mer if
+ranked by count. However, if there are three or more errors in the read, the 
+situation is more complicated. For 3 errors in a read, 3 to 57 k-mers
+will be affected by the errors to have an incorrect count as 1. The 
+distribution of the probability about the number of affected k-mers can be
+acquired by a model similar to Lander-Waterman model used in genome sequencing
+ theory. Here we got the distribution using simulation, as shown in Figure
+\ref{fig:IGS_affected_k_kmers}. From this probability distribution, we can get
+the probability that 3 errors will affect more than 40 k-mers is 0.43. In this
+case, 3 errors will affect the median k-mer count of a read. We can also get 
+such probability for 4 errors or more. Combining to the probability that a
+certain number of errors occur in a read with a specific sequencing error rate,
+which is easy to derive from binomial distribution, we can get the probability
+that the coverage of a read is incorrectly assessed as 1. Still for the example
+here, this probability is the probability that 3 erorrs occur in a read
+multiplied by the probability that 3 errors will affect median k-mer count,
+plus the probability that 4 erorrs occur in a read multiplied by the 
+probability that 4 errors will affect median k-mer count,and so on.
+
+Generally, let $P\_error(n,e,L)$ is the probability that $n$ errors occur in a 
+read with length as $L$, with error rate as $e$ and $P\_effect(n,k,L)$ is the 
+probability that $n$ 
+errors in a read with length of $L$ affect median k-mer count. The probability 
+that the coverage of a read is incorrectly assessed as 1 is 
+\[\sum_{n=3}^{\infty} P\_error(n,e,L) \times P\_effect(n,k,L)  \],
+and by binomial distribution,
+
+\[P\_error(n,e,L) = f(n;L,e) = Pr(X=n) = {L \choose n}e^n(1-e)^{L-n} \] 
+
+Practically, when $n>5$ and $e<0.015$, $P\_error(n,e,L)$ is very small, we only consider
+number of errors in a read as 3, 4 and 5.
+
+\begin{figure}[!ht]
+ \centerline{\includegraphics[width=4in]{./figures/IGS_affected_k_kmers.png}}
+\caption{\bf Richness estimation using IGS method without adjustment }
+\label{fig:IGS_affected_k_kmers}
+\end{figure}
+
+From the discussion above, the sequencing errors reduce the coverage of some
+reads incorrectly to 1 and the probability this occurs to a read can be
+estimated. So to reduce the effect of sequencing error on this aspect, we can
+calculate the expected number of reads that are affected and remove those reads
+from the set of reads with coverage as 1 before generating list of IGS from the
+reads abundance distribution.
+
+Also, we want to make sure 2 errors in a read will not affect median k-mer 
+count, since it is more common to have 2 errors in a read practically. 
+In this case, 
+\[2 \times k < \lfloor \frac{L-k+1}{2}\rfloor \],
+we can get $k<L/5$,basically. For $L$ as 100, $k$ will be 19, which is what we 
+choose in the testing. However, the $k$ should not be too small, or the k-mers 
+can not handle the information of a large data set.
+
+Taking the sequencing error into account, we used the methods introduced above
+to adjust the estimation of metagenome size of the 6 synthetic samples. The
+estimation after adjustment is closer to real number, as shown in Figure
+\ref{fig:IGS_richness_error_adjustment}..
+
+
+\begin{figure}[!ht]
+ \centerline{\includegraphics[width=4in]{./figures/alpha_by_error_erroronly_adjust.pdf}}
+\caption{\bf Richness estimation using IGS method adjusted by sequencing error rate}
+\label{fig:IGS_richness_error_adjustment}
+\end{figure}
+
+\subsubsection{the effect of collision in bloom filter to the accuracy of analysis}
+As discussed in the chapter about k-mer counting, the collision in bloom filter
+which we use for efficient k-mer counting will result in counting error. If the
+false positive rate for a specific bloom filter we use for k-mer counting is
+0.1, 10\% of the k-mers will have incorrect counts. When we use median k-mer
+count to get read coverage, such incorrect count has the effect on two aspects.
+On one hand, some k-mers in a read will have incorrect higher count. But if the
+ false
+positive rate is low, this will not affect median k-mer count. This shows the
+method of using median k-mer count to get read coverage is not only less prone
+to sequencing error, but also less prone to the inaccuracy characteristics of
+underlying data structure. One the other hand, this inaccurate count also
+affects the counts of those erroneous k-mers generated by sequencing error. For
+example, 3 errors in a read affect the count of 43 k-mers, the counts for these
+43 k-mers are supposed to be 1. But because of the collision in bloom filter
+and the resulting incorrect k-mer counting, if the false positive rate is 0.1,
+about 4 out of the 43 k-mers will have inflated count, mostly as 2. So the
+combined effect of sequencing error and collision in bloom filter is that some
+reads will have incorrect coverage as 1 and some reads will have incorrect as
+2. We can get the percentage of total reads that will have such incorrect
+coverage, using statistical model similar to that discussed in last section.
+Using same example, 3 errors occur in a read, if the 3 errors affect 41-45
+k-mers(with a chance of 0.20), the median k-mer count will be 2, due to the 
+collison in bloom filter, while if he 3 errors affect more than 45 k-mers(with 
+a chance of 0.24), the median k-mer count will be 1, purely due to sequencing 
+errors. 
+
+We did the same experiment but also adjusted the estimation according to the 
+false positive rate of bloom filter and got better estimation, as shown in
+Figure \ref{fig:IGS_richness_adjustment}.
+
+With adjustment to estimation taking sequencing error and collision in bloom
+filter into account, as shown in Figure \ref{fig:IGS_richness_adjustment}, the 
+estimated genome size is closer to real number. With error rate as 1\%,
+false positiver rate as 0.1, with 10X coverage data, the estimated genome size
+is about 20-25\% more than real number. However the estimation is still 
+increasing with higher
+error rate. This means there are still other factors influencing this
+accuracy of the estimation but we failed to take into account.
+
+
+\begin{figure}[!ht]
+ \centerline{\includegraphics[width=4in]{./figures/alpha_by_error_full_adjust.pdf}}
+\caption{\bf Richness estimation using IGS method adjusted by sequencing error
+rate and false positive rate of bloom filter}
+\label{fig:IGS_richness_adjustment}
+\end{figure}
+
+
+\subsection{the effect of sequencing depth to the accuracy of IGS method}
+
+
+We have shown that the IGS method can generate good result from relatively
+high coverage data (like 10X). It is expected that the higher the coverage
+of data is, the more accurate analysis we can conduct. However for many 
+metagenomics project,especially about the environmental samples, it is difficult
+to yield high enough sequencing depth. We investigated the effect of 
+sequencing depth to the accuracy of the IGS method.
+
+
+Figure \ref{fig:IGS_correlation_coverage} shows how well the matrix 
+calculated from data set with variable coverage can 
+reflect the real relationship between samples. It is as expected that 
+higher coverage data will yield better/more accurate distance matrix.
+Note even with a coverage as low as 0.1, the correlation is 0.89. 
+This can  give us the hint about how reliable the result will be if 
+we only use a small proportion of data from a large metagenomic data set.
+So the beta diversity analysis using IGS method not only is less prone to
+sequencing error, but also less prone to sequencing depth.
+
+
+% what if lower?? 0.01 for soil ?? 
+% relationship between ordination/clustering and correlation??? 0.89, is it good enough to do ordination/clustering?
+
+
+\begin{figure}[!ht]
+ \centerline{\includegraphics[width=4in]{./figures/beta_by_coverage.pdf}}
+\caption{\bf Correlation between calculated distance matrix and true matrix from different dat sets with different sequencing depth}
+\label{fig:IGS_correlation_coverage}
+\end{figure}
+
+
+
+Figure \ref{fig:alpha_by_coverage_0e} \ref{fig:alpha_by_coverage_0005e} \ref{fig:alpha_by_coverage_001e} 
+shows the estimated genome size 
+from data sets with variable coverage with different error rate.
+It's interesting that the estimated genome size is very high with extremely low 
+coverage. This is probably due to the limit of statistical model to estimate
+the total size of information with limited observed information.
+After all, only a small proportion of the genomes in the sample is covered by
+reads and be observed. 
+
+We can see the pattern again here that higher error rate will influence the accuracy
+of genome size estimation,especially when the coverage is low. However for error rate
+from 0\% to 1\%, as long as the coverage is higher than 1X, the estimation of 
+genome size starts to be stable. 
+It is important to point that even though the absolute value of estimated 
+genome size may be overestimated. The relative relationship between samples 
+are reliable, as shown in the figures. Sample3,4,5,6 all have 4 species, while 
+sample 2 has 3 species, and sample 1 has 2 species. 
+They can be separately effectively.
+
+The estimation of genome size does not increase much with increasing coverage, 
+even for the data set with error rate as 1\%. This proves that the adjustment method discussed
+previously does eliminate most of the bad effect of sequencing errors. 
+That being said, it is still beneficial to do some preprocessing to the data
+to reduce the error rate. If only the error rate can reduce from 1\% to 0.5\%, the 
+estimated size of genome will be more accurate. This again demonstrates the importance of
+the streaming method doing error profile analysis discussed in chapter 4 above.
+
+\begin{figure}[!ht]
+ \centerline{\includegraphics[width=4in]{./figures/alpha_by_coverage_0e.pdf}}
+\caption{\bf estimated genome size from data sets with variable coverage, no error rate}
+\label{fig:alpha_by_coverage_0e}
+\end{figure}
+
+\begin{figure}[!ht]
+ \centerline{\includegraphics[width=4in]{./figures/alpha_by_coverage_0005e.pdf}}
+\caption{\bf estimated genome size from data sets with variable coverage, no error rate}
+\label{fig:alpha_by_coverage_0005e}
+\end{figure}
+
+\begin{figure}[!ht]
+ \centerline{\includegraphics[width=4in]{./figures/alpha_by_coverage_001e.pdf}}
+\caption{\bf estimated genome size from data sets with variable coverage, no error rate}
+\label{fig:alpha_by_coverage_001e}
+\end{figure}
+
+
+\subsection{Compare IGS method to Commet in beta diversity analysis}
+
+
+Next we test how well the matrix calculated by various methods can reflect the
+real relationship between samples. 
+The simulated data set with sequencing depth as 0.1X and 10X, with 
+sequencing error as 1\% and without sequencing error was used in this experiment.
+This data set has the same species composition as that used in other experiment previously.
+
+As shown in Figure \ref{fig:compare_commet}, firstly, for 
+all data sets, the matrix from IGS method has a higher 
+correlation to golden standard than that from Comet.  As expected, 
+the matrix from data sets with sequencing error has a lower correlation 
+than that from error-free
+data sets. Comet is more prone to sequencing error rate, compared to 
+IGS method, for high coverage data or low coverage data.
+Also higher coverage will yield more accurate matrix, which is not surprising.
+
+In the experiment below with real metagenomic dataset, we will see more evidence
+that IGS method has better performance than other metagenome comparing methods.
+
+\begin{figure}[!ht]
+ \centerline{\includegraphics[width=4in]{./figures/compare_commet.pdf}}
+\caption{\bf Correlation between calculated distance matrix and true matrix from different data sets and using different methods}
+\label{fig:compare_commet}
+\end{figure}
+
+\subsection{The IGS method can provide a whole framework to do alpha or 
+beta diversity, with good versatility.}
+
+From the testing using simulated data sets shown here, we are confident that 
+our IGS method works well and can give reliable results from data sets with 
+error and low sequencing depth.
+
+The IGS method can provide a whole framework to do alpha or beta diversity. 
+Here we tested beta diversity using only bray-curtis metric and alpha 
+diversity on richness only. Actually any metric can be applied to the 
+IGS-by-samples table, just as OTU-by-samples table, 
+no matter it is abundance-based or incidence-baserd, about richness or about 
+evenness.
+
+Compareads(Commet) based on reads overlap between samples can get a matrix 
+reflecting the real relationship between samples but it is stuck with one 
+metric, which is based on the percentage of overlap reads between samples. 
+This metric is like bray curtis , but not exactly the same.
+
+
+\section{Applying IGS method to real metagenome data sets}
+
+Having shown that the IGS method delivered good results about microbial diversity 
+from simulated synthetic data sets, 
+we will now evaluate the novel method on several published metagenomic 
+datasets, with samples 
+from ocean, human microbiome and soil. For the ocean sample and human microbiome 
+data sets, we will compare the result from IGS method
+with that from original publication. For soil sample, since there is no other 
+diversity analysis that has been conducted
+to these data sets, we will show the result we got from IGS and try to 
+interpret the ecological meaning.
+
+
+\subsection{GOS data sets: Sorcerer II Global Ocean Sampling Expedition}
+
+We tested the IGS method on a famous public dataset from the Sorcerer II 
+Global Ocean Sampling expedition.
+During the expedition, 44 water samples were collected from different locations across
+Atlantic Ocean and Pacific Ocean and were sequenced using Sanger technology. 
+The whole dataset is composed of XXXX reads, out of 44 samples.
+A whole metagenomic comparison of the samples has been done
+using a sequence alignment method in original research. 
+
+The IGS method took XX hours on a XXX hardware to generate the dissimilarity 
+matrix of the samples. After clustering, 
+Figure \ref{fig:GOS-beta} shows that, consistently with the original study, 
+the samples are clustered according to their 
+geographical origin. The group with yellow color contains samples from 
+Tropical- Galapogas. The group with light purple color
+contains samples from Tropical -Open Ocean. The group with dark purple 
+color contains samples from Sargasso. The group 
+with green color contains samples from Temperate. 
+
+If we compare the cluster we got from IGS method with the cluster in original 
+study, we can see the IGS method yield a
+cluster with better resolution and accuracy than the method used in original 
+study. For example, in original study,
+sample 14,21 and 22 from Tropical - Galapogas are separated from other 
+Tropical- Galapagos samples, while in Figure \ref{fig:GOS-beta} 
+they are grouped together. Also, samples 00a,00b,00c,00d, obviously from the 
+same location, are grouped together in our result,while
+in original research, sample 00a is separated from the other three samples.
+
+Compared with the cluster by Compareads, our method is comparable, with some 
+distinct differences. For example, sample 16 is clustered together with 15,17,
+18,19 in our result, but in the result by Compareads, sample 16 is clustered 
+with 23,26 inaccurately, considering the geographical origin.
+
+Next we used IGS method to analyze the alpha diversity.
+Figure \ref{fig:GOS-rarefaction} shows the rarefaction curve of IGSs of the samples.
+As expected, we can not see the saturation,which means the sequencing data 
+set is still far from having enough coverage. 
+Because the data sets for different samples have dramatically different sizes, 
+we estimated the total number of IGSs using Chao1 estimator with limited 
+number of reads in each sample(50000) to make sure the smallest data set 
+has enough reads for comparison, as shown in Figure \ref{fig:GOS-chao1} .
+
+It is obvious that the richness of samples is related to the geographical 
+origin. The sample from tropical area has a higher richness than
+the samples from northern area. The relationship between samples is 
+consistent to the cluster in beta diversity analysis shown above.
+
+As discussed in the section above about alpha diversity analysis 
+to synthetic data, such number of total IGSs may over-estimated but
+the relative relationship between samples on richness should be reliable.
+
+(This is not discussed in original research of GOS)
+
+\begin{figure}[!ht]
+ \centerline{\includegraphics[width=7in]{./figures/GOS_cluster.png}}
+\caption{\bf cluster of GOS samples using IGS method}
+\label{fig:GOS-beta}
+\end{figure}
+
+\begin{figure}[!ht]
+ \centerline{\includegraphics[width=7in]{./figures/GOS_observed.png}}
+\caption{\bf Rarefaction curve of IGSs of the GOS samples}
+\label{fig:GOS-rarefaction}
+\end{figure}
+
+\begin{figure}[!ht]
+ \centerline{\includegraphics[width=7in]{./figures/GOS_chao.png}}
+\caption{\bf Estimated number of IGSs of the GOS samples}
+\label{fig:GOS-chao1}
+\end{figure}
+
+
+% result not good, remove it?
+%\subsection{MetHit Human Gut metagenomics data set}
+
+
+\subsection{HMP metagenomics data set}
+% now have alpha and beta, smallest samples
+% full sample 110 .... good for binning?
+
+We tested IGS method on 12 HMP(Human Microbiome Project) samples from 
+different body parts like skin, oral or vaginal. 
+Principal component analysis(Figure \ref{fig:HMP_beta}) shows the samples are 
+separated well by the body parts where they are collected. (P value: XX)
+
+Rarefaction curve and estimated number of IGSs show that the richness of 
+samples is related to the body part where they are collected. The 
+oral samples have higher richness than skin or vaginal samples, 
+which is consistent  to other research. \cite{Human-Microbiome-Project-Consortium:2012aa}
+
+
+
+\begin{figure}[!ht]
+ \centerline{\includegraphics[width=4in]{./figures/HMP_beta.png}}
+\caption{\bf PCoA of HMP, red: anterior nares- skin, green: throat -oral, blue: buccal mucosa -oral, orange: 
+posterior fornix -vaginal}
+\label{fig:HMP_beta}
+\end{figure}
+
+\begin{figure}[!ht]
+ \centerline{\includegraphics[width=4in]{./figures/HMP_alpha.png}}
+\caption{\bf alpha diversity of HMP: estimation of metagenome size of HMP samples,
+red: anterior nares- skin, green: throat -oral, blue: buccal mucosa -oral, orange: 
+posterior fornix -vaginal}
+\label{fig:HMP_alpha}
+\end{figure}
+
+
+
+
+
+% ARMO subset 1m, Gpgc only 1m/2m subset, scalable??
+\subsection{GPGC - Great Prairie Soil Metagenome Grand Challenge}
+
+Having tested the IGS method on two relatively smaller metagenomic data sets, 
+we will now use it to analyze 
+a larger data set from soil samples collected from fields with different treatments and
+different locations across the great prairie region in the US. 
+(Table \ref{table:gpgc}). 
+
+
+%new GPGC has better understanding??
+
+% should be enough??
+As discussed above with simulated data sets, using reads data sets with lower sequencing coverage will reduce
+the accuracy of the analysis. But as shown in Figure \ref{fig:IGS_correlation_coverage}, with sequencing depth
+as 0.1x, the calculated distance matrix using IGS method still has a reasonably high correlation with golden standard
+distance matrix. So we can use subset of a large data set to acquire the diversity information, with the trade-off of
+lower accuracy. 
+
+For the GPGC datasets, we made a subset with 2 million reads from each sample 
+and conducted the diversity analysis
+using IGS method. 
+
+Principal component analysis(Figure \ref{fig:GPGC_beta}) shows the samples are 
+separated well by location where they are collected. (P value: XX)
+This proves that the geographical origin plays a more important part in 
+determining the similarity of genomic composition of samples, compared to 
+different treatments.
+
+Figure \ref{fig:GPGC-alpha} shows the rarefaction curve and estimated number 
+of IGSs of the samples. Basically the "corn" and "switchgrass' samples
+have higher richness than "restored" and "prairie" samples. This observation 
+that cultivation increases the richness of soil 
+is consistent with the intermediate disturbance hypothesis.(citation) The disturbance 
+from treatment like cultivation opens more niches and the stable 
+community like prairie eliminates some populations by the principle of 
+competitive exclusion. . 
+
+Its harder to explain the rank by state. 
+The Kansas site experiences more drought stress and higher temps. 
+The Iowa and 
+Wisconsin sites experience more cold, especially freezing conditions arresting 
+their biology for 3-4 months, but the freeze-thaw cycles also kill off 
+some each cycle, which is similar to intermediate disturbance. With new 
+growth each spring, this new growth would be the fast growers with 
+less diverse. Why Iowa is the least diverse is still difficult to explain for now.
+
+ From the alpha diversity, we also have a rough estimation of the  total 
+ size of metagenome in iowa soil, which is about 540G basepairs. This 
+ proves the high complexity of soil sample and we still need more sequencing 
+ effort to achieve a reasonable high coverage.
+ 
+
+\begin{figure}[!ht]
+ \centerline{\includegraphics[width=4in]{./figures/GPGC_old_subset1M.png}}
+\caption{\bf PCoA  of GPGC samples}
+\label{fig:GPGC_beta}
+\end{figure}
+
+
+
+\begin{figure}[!ht]
+ \centerline{\includegraphics[width=7in]{./figures/GPGC_1m_old.png}}
+\caption{\bf alpha diversity of GPGC samples}
+\label{fig:GPGC-alpha}
+\end{figure}
+
+
+
+%\section{iterated diversity analysis}
+
+%As we load more reads, we will see the separation more clearly. 
+
+%simulated data sets. 
+
+\subsection{more soil metagenomic samples}
+
+Additionally we test the IGS method on two other unpublished data sets. 
+One is a series of soil samples
+collected from KBS with different treatment. Figure \ref{fig:KBS_beta}
+shows the IGS method can separate
+the samples by treatment well. 
+
+The other data set is a series of soil samples from Amazon rainforest. 
+The samples are separated well
+by the treatment. (Figure \ref{fig:ARMO_beta} ) It is also obvious 
+that samples from forest have 
+lower richness than prairie.  (Figure \ref{fig:ARMO_alpha})
+
+
+
+
+\begin{figure}[!ht]
+ \centerline{\includegraphics[width=4in]{./figures/IGS_KBS_beta.png}}
+\caption{\bf PCoA of soil samples collected from KBS}
+\label{fig:KBS_beta}
+\end{figure}
+
+\begin{figure}[!ht]
+ \centerline{\includegraphics[width=4in]{./figures/IGS_ARMO_beta.png}}
+\caption{\bf PCoA of soil samples collected from Amazon rainforest}
+\label{fig:ARMO_beta}
+\end{figure}
+
+\begin{figure}[!ht]
+ \centerline{\includegraphics[width=7in]{./figures/IGS_ARMO_alpha.png}}
+\caption{\bf PCoA of soil samples collected from Amazon rainforest}
+\label{fig:ARMO_alpha}
+\end{figure}
+
+
+\section{Data}
+
+
+\subsection{Four simulated reads data sets with different species abundance distribution}
+
+\subsection{Simulated sequencing reads of e.coli}
+
+
+
+
+\begin{table}[h]
+\caption{GPGC Data sets}
+\label{my-label}
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+sample & \# of reads & size of .gz file & \# of bps & ave. length \\ \hline
+iowa corn & 1514290825 & 46G & 144202427079 & 95.2 \\ \hline
+iowa prairie & 2597093273 & 74G & 226815059143 & 87.3 \\ \hline
+kansas\_corn & 2029883371 & 66G & 206933829048 & 101.9 \\ \hline
+kansas\_prairie & 4987358734 & 145G & 499387223498 & 100.3 \\ \hline
+wisconsin\_corn & 1616440116 & 51G & 162257698471 & 100.4 \\ \hline
+wisconsin\_prairie & 1653557590 & 53G & 166467901724 & 100.7 \\ \hline
+wisconsin\_restored & 226830595 & 11G & 34241520930 & 151.0 \\ \hline
+wisconsin\_switchgrass & 310966735 & 13G & 40259619921 & 129.5 \\ \hline
+\end{tabular}
+\label{table:gpgc}
+\end{table}
+
