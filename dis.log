@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  14 APR 2015 06:54
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  14 APR 2015 14:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -426,10 +426,19 @@ mers from
 
  [14] (./chap1-introduction.tex
 Chapter 1.
+
+LaTeX Warning: Citation `Zarraonaindia:2013aa' on page 1 undefined on input lin
+e 29.
+
 [1
 
 
-] [2] [3] [4] [5] [6] [7]) (./chap2-litreview.tex [8]
+] [2] [3] [4] [5] [6]
+
+LaTeX Warning: Citation `Zarraonaindia:2013aa' on page 7 undefined on input lin
+e 176.
+
+[7]) (./chap2-litreview.tex [8]
 Chapter 2.
 [9
 
@@ -1075,35 +1084,28 @@ s/IGS_ARMO_alpha.png>]
 Chapter 6.
 [110
 
-] [111] [112]
+] [111] [112] [113] [114] [115]) [116] [117
 
-LaTeX Warning: Citation `Xu2014' on page 113 undefined on input line 133.
-
-[113] [114] [115]) [116] [117
-
-] (./gloss.tex) (./dis.bbl [118
+] (./gloss.tex) (./dis.bbl
+[118
 
 
 ] [119
 
-] [120]
-[121] [122] [123] [124] [125] [126] [127] [128] [129] [130] [131]) [132]
-(./dis.aux)
+] [120] [121] [122] [123] [124] [125] [126] [127] [128] [129]
+[130] [131]) [132] (./dis.aux)
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 5177 strings out of 493315
- 80154 string characters out of 6137904
- 143082 words of memory out of 5000000
- 8466 multiletter control sequences out of 15000+600000
+ 5178 strings out of 493315
+ 80176 string characters out of 6137904
+ 143087 words of memory out of 5000000
+ 8467 multiletter control sequences out of 15000+600000
  9119 words of font info for 34 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 51i,14n,45p,770b,382s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 51i,14n,45p,770b,386s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pf
 b></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
@@ -1114,7 +1116,7 @@ sr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
 /local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
 local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/l
 ocal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on dis.pdf (146 pages, 1823828 bytes).
+Output written on dis.pdf (146 pages, 1823905 bytes).
 PDF statistics:
  1605 PDF objects out of 1728 (max. 8388607)
  518 compressed objects within 6 object streams
