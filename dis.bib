@@ -2,12 +2,419 @@
 %% http://bibdesk.sourceforge.net/
 
 
-%% Created for Qingpeng Zhang at 2015-03-16 21:48:07 -0400 
+%% Created for Qingpeng Zhang at 2015-04-14 06:54:31 -0400 
 
 
 %% Saved with string encoding Unicode (UTF-8) 
 
 
+
+@article{Xu2014,
+	Author = {Xu, Zhenjiang and Malmer, Daniel and Langille, Morgan G I and Way, Samuel F and Knight, Rob},
+	Date-Added = {2015-04-14 10:53:39 +0000},
+	Date-Modified = {2015-04-14 10:53:39 +0000},
+	Doi = {10.1038/ismej.2014.157},
+	Journal = {ISME J},
+	Journal-Full = {The ISME journal},
+	Mesh = {Metagenomics; Phylogeny},
+	Month = {Dec},
+	Number = {12},
+	Pages = {2357-9},
+	Pmc = {PMC4260698},
+	Pmid = {25171332},
+	Pst = {ppublish},
+	Title = {Which is more important for classifying microbial communities: who's there or what they can do?},
+	Volume = {8},
+	Year = {2014},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1038/ismej.2014.157}}
+
+@article{Rodriguez-R2014,
+	Abstract = {MOTIVATION: Determining the fraction of the diversity within a microbial community sampled and the amount of sequencing required to cover the total diversity represent challenging issues for metagenomics studies. Owing to these limitations, central ecological questions with respect to the global distribution of microbes and the functional diversity of their communities cannot be robustly assessed.
+RESULTS: We introduce Nonpareil, a method to estimate and project coverage in metagenomes. Nonpareil does not rely on high-quality assemblies, operational taxonomic unit calling or comprehensive reference databases; thus, it is broadly applicable to metagenomic studies. Application of Nonpareil on available metagenomic datasets provided estimates on the relative complexity of soil, freshwater and human microbiome communities, and suggested that ∼200 Gb of sequencing data are required for 95% abundance-weighted average coverage of the soil communities analyzed.
+AVAILABILITY AND IMPLEMENTATION: Nonpareil is available at https://github.com/lmrodriguezr/nonpareil/ under the Artistic License 2.0.},
+	Author = {Rodriguez-R, Luis M and Konstantinidis, Konstantinos T},
+	Date-Added = {2015-04-14 10:39:06 +0000},
+	Date-Modified = {2015-04-14 10:39:06 +0000},
+	Doi = {10.1093/bioinformatics/btt584},
+	Journal = {Bioinformatics},
+	Journal-Full = {Bioinformatics (Oxford, England)},
+	Mesh = {Algorithms; Metagenome; Metagenomics; Microbiota; Soil Microbiology},
+	Month = {Mar},
+	Number = {5},
+	Pages = {629-35},
+	Pmid = {24123672},
+	Pst = {ppublish},
+	Title = {Nonpareil: a redundancy-based approach to assess the level of coverage in metagenomic datasets},
+	Volume = {30},
+	Year = {2014},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1093/bioinformatics/btt584}}
+
+@article{Imelfort2014,
+	Abstract = {Metagenomic binning methods that leverage differential population abundances in microbial communities (differential coverage) are emerging as a complementary approach to conventional composition-based binning. Here we introduce GroopM, an automated binning tool that primarily uses differential coverage to obtain high fidelity population genomes from related metagenomes. We demonstrate the effectiveness of GroopM using synthetic and real-world metagenomes, and show that GroopM produces results comparable with more time consuming, labor-intensive methods.},
+	Author = {Imelfort, Michael and Parks, Donovan and Woodcroft, Ben J and Dennis, Paul and Hugenholtz, Philip and Tyson, Gene W},
+	Date-Added = {2015-04-14 10:35:18 +0000},
+	Date-Modified = {2015-04-14 10:35:18 +0000},
+	Doi = {10.7717/peerj.603},
+	Journal = {PeerJ},
+	Journal-Full = {PeerJ},
+	Keywords = {Bioinformatics; Metagenomics; Microbial ecology; Population genome binning},
+	Pages = {e603},
+	Pmc = {PMC4183954},
+	Pmid = {25289188},
+	Pst = {epublish},
+	Title = {GroopM: an automated tool for the recovery of population genomes from related metagenomes},
+	Volume = {2},
+	Year = {2014},
+	Bdsk-Url-1 = {http://dx.doi.org/10.7717/peerj.603}}
+
+@article{Alneberg2014,
+	Abstract = {Shotgun sequencing enables the reconstruction of genomes from complex microbial communities, but because assembly does not reconstruct entire genomes, it is necessary to bin genome fragments. Here we present CONCOCT, a new algorithm that combines sequence composition and coverage across multiple samples, to automatically cluster contigs into genomes. We demonstrate high recall and precision on artificial as well as real human gut metagenome data sets.},
+	Author = {Alneberg, Johannes and Bjarnason, Brynjar Sm{\'a}ri and de Bruijn, Ino and Schirmer, Melanie and Quick, Joshua and Ijaz, Umer Z and Lahti, Leo and Loman, Nicholas J and Andersson, Anders F and Quince, Christopher},
+	Date-Added = {2015-04-14 10:34:25 +0000},
+	Date-Modified = {2015-04-14 10:34:25 +0000},
+	Doi = {10.1038/nmeth.3103},
+	Journal = {Nat Methods},
+	Journal-Full = {Nature methods},
+	Mesh = {Algorithms; Bifidobacterium; Contig Mapping; Escherichia coli K12; Feces; Gastrointestinal Tract; Genome, Bacterial; Humans; Metagenome; Metagenomics; Microbiota; Sequence Analysis, DNA; Shiga-Toxigenic Escherichia coli; Software},
+	Month = {Nov},
+	Number = {11},
+	Pages = {1144-6},
+	Pmid = {25218180},
+	Pst = {ppublish},
+	Title = {Binning metagenomic contigs by coverage and composition},
+	Volume = {11},
+	Year = {2014},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1038/nmeth.3103}}
+
+@article{Kurtz2008,
+	Abstract = {BACKGROUND: The challenges of accurate gene prediction and enumeration are further aggravated in large genomes that contain highly repetitive transposable elements (TEs). Yet TEs play a substantial role in genome evolution and are themselves an important subject of study. Repeat annotation, based on counting occurrences of k-mers, has been previously used to distinguish TEs from low-copy genic regions; but currently available software solutions are impractical due to high memory requirements or specialization for specific user-tasks.
+RESULTS: Here we introduce the Tallymer software, a flexible and memory-efficient collection of programs for k-mer counting and indexing of large sequence sets. Unlike previous methods, Tallymer is based on enhanced suffix arrays. This gives a much larger flexibility concerning the choice of the k-mer size. Tallymer can process large data sizes of several billion bases. We used it in a variety of applications to study the genomes of maize and other plant species. In particular, Tallymer was used to index a set of whole genome shotgun sequences from maize (B73) (total size 109 bp.). We analyzed k-mer frequencies for a wide range of k. At this low genome coverage ( approximately 0.45x) highly repetitive 20-mers constituted 44% of the genome but represented only 1% of all possible k-mers. Similar low-complexity was seen in the repeat fractions of sorghum and rice. When applying our method to other maize data sets, High-C0t derived sequences showed the greatest enrichment for low-copy sequences. Among annotated TEs, the most highly repetitive were of the Ty3/gypsy class of retrotransposons, followed by the Ty1/copia class, and DNA transposons. Among expressed sequence tags (EST), a notable fraction contained high-copy k-mers, suggesting that transposons are still active in maize. Retrotransposons in Mo17 and McC cultivars were readily detected using the B73 20-mer frequency index, indicating their conservation despite extensive rearrangement across cultivars. Among one hundred annotated bacterial artificial chromosomes (BACs), k-mer frequency could be used to detect transposon-encoded genes with 92% sensitivity, compared to 96% using alignment-based repeat masking, while both methods showed 92% specificity.
+CONCLUSION: The Tallymer software was effective in a variety of applications to aid genome annotation in maize, despite limitations imposed by the relatively low coverage of sequence available. For more information on the software, see http://www.zbh.uni-hamburg.de/Tallymer.},
+	Author = {Kurtz, Stefan and Narechania, Apurva and Stein, Joshua C and Ware, Doreen},
+	Date-Added = {2015-04-14 10:30:52 +0000},
+	Date-Modified = {2015-04-14 10:30:52 +0000},
+	Doi = {10.1186/1471-2164-9-517},
+	Journal = {BMC Genomics},
+	Journal-Full = {BMC genomics},
+	Mesh = {Computational Biology; DNA Transposable Elements; Genome, Plant; Genomics; Methods; Oryza sativa; Software; Sorghum; Zea mays},
+	Pages = {517},
+	Pmc = {PMC2613927},
+	Pmid = {18976482},
+	Pst = {epublish},
+	Title = {A new method to compute K-mer frequencies and its application to annotate large repetitive plant genomes},
+	Volume = {9},
+	Year = {2008},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1186/1471-2164-9-517}}
+
+@article{jellyfish,
+	Author = {Marcais, G. and Kingsford, C.},
+	Date-Added = {2015-04-08 05:05:51 +0000},
+	Date-Modified = {2015-04-08 05:05:51 +0000},
+	Journal = {Bioinformatics},
+	Month = {Mar},
+	Number = {6},
+	Pages = {764--770},
+	Title = {{{A} fast, lock-free approach for efficient parallel counting of occurrences of k-mers}},
+	Volume = {27},
+	Year = {2011}}
+
+@article{Melsted2014,
+	Author = {Melsted, P. and Halldorsson, B. V.},
+	Date-Added = {2015-04-08 05:05:51 +0000},
+	Date-Modified = {2015-04-08 05:05:51 +0000},
+	Journal = {Bioinformatics},
+	Month = {Dec},
+	Number = {24},
+	Pages = {3541--3547},
+	Title = {{{K}mer{S}tream: streaming algorithms for k-mer abundance estimation}},
+	Volume = {30},
+	Year = {2014}}
+
+@article{hll,
+	Author = {Flajolet, Philippe and Fusy, {\'E}ric and Gandouet, Olivier and Meunier, Fr{\'e}d{\'e}ric},
+	Date-Added = {2015-04-08 05:05:51 +0000},
+	Date-Modified = {2015-04-08 05:05:51 +0000},
+	Journal = {DMTCS Proceedings},
+	Number = {1},
+	Title = {HyperLogLog: the analysis of a near-optimal cardinality estimation algorithm},
+	Year = {2008}}
+
+@article{podar,
+	Author = {Shakya, M. and Quince, C. and Campbell, J. H. and Yang, Z. K. and Schadt, C. W. and Podar, M.},
+	Date-Added = {2015-04-08 05:05:51 +0000},
+	Date-Modified = {2015-04-08 05:05:51 +0000},
+	Journal = {Environ. Microbiol.},
+	Month = {Jun},
+	Number = {6},
+	Pages = {1882--1899},
+	Title = {{{C}omparative metagenomic and r{R}{N}{A} microbial diversity characterization using archaeal and bacterial synthetic communities}},
+	Volume = {15},
+	Year = {2013}}
+
+@article{lighter,
+	Author = {Song, L. and Florea, L. and Langmead, B.},
+	Date-Added = {2015-04-08 05:05:51 +0000},
+	Date-Modified = {2015-04-08 05:05:51 +0000},
+	Journal = {Genome Biol.},
+	Number = {11},
+	Pages = {509},
+	Title = {{{L}ighter: fast and memory-efficient sequencing error correction without counting}},
+	Volume = {15},
+	Year = {2014}}
+
+@article{Roberts2011,
+	Author = {Roberts, A. and Pachter, L.},
+	Date-Added = {2015-04-08 05:05:51 +0000},
+	Date-Modified = {2015-04-08 05:05:51 +0000},
+	Journal = {Genome Med},
+	Number = {11},
+	Pages = {74},
+	Title = {{{R}{N}{A}-{S}eq and find: entering the {R}{N}{A} deep field}},
+	Volume = {3},
+	Year = {2011}}
+
+@article{freclu,
+	Author = {Qu, W. and Hashimoto, S. and Morishita, S.},
+	Date-Added = {2015-04-08 05:05:51 +0000},
+	Date-Modified = {2015-04-08 05:05:51 +0000},
+	Journal = {Genome Res.},
+	Month = {Jul},
+	Number = {7},
+	Pages = {1309--1315},
+	Title = {{{E}fficient frequency-based de novo short-read clustering for error trimming in next-generation sequencing}},
+	Volume = {19},
+	Year = {2009}}
+
+@article{waterman,
+	Author = {Lander, E. S. and Waterman, M. S.},
+	Date-Added = {2015-04-08 05:05:51 +0000},
+	Date-Modified = {2015-04-08 05:05:51 +0000},
+	Journal = {Genomics},
+	Month = {Apr},
+	Number = {3},
+	Pages = {231--239},
+	Title = {{{G}enomic mapping by fingerprinting random clones: a mathematical analysis}},
+	Volume = {2},
+	Year = {1988}}
+
+@article{Shi2010,
+	Author = {Shi, Haixiang and Schmidt, Bertil and Liu, Weiguo and M\"{u}ller-Wittig, Wolfgang},
+	Date-Added = {2015-04-08 05:05:51 +0000},
+	Date-Modified = {2015-04-08 05:05:51 +0000},
+	Journal = {Journal of computational biology a journal of computational molecular cell biology},
+	Number = {4},
+	Pages = {603--615},
+	Title = {{A parallel algorithm for error correction in high-throughput short-read data on CUDA-enabled graphics hardware.}},
+	Volume = {17},
+	Year = {2010}}
+
+@article{chitsaz,
+	Author = {Chitsaz, H. and Yee-Greenbaum, J. L. and Tesler, G. and Lombardo, M. J. and Dupont, C. L. and Badger, J. H. and Novotny, M. and Rusch, D. B. and Fraser, L. J. and Gormley, N. A. and Schulz-Trieglaff, O. and Smith, G. P. and Evers, D. J. and Pevzner, P. A. and Lasken, R. S.},
+	Date-Added = {2015-04-08 05:05:51 +0000},
+	Date-Modified = {2015-04-08 05:05:51 +0000},
+	Journal = {Nat. Biotechnol.},
+	Month = {Oct},
+	Number = {10},
+	Pages = {915--921},
+	Title = {{{E}fficient de novo assembly of single-cell bacterial genomes from short-read data sets}},
+	Volume = {29},
+	Year = {2011}}
+
+@article{nanopore,
+	Author = {Howorka, S. and Cheley, S. and Bayley, H.},
+	Date-Added = {2015-04-08 05:05:51 +0000},
+	Date-Modified = {2015-04-08 05:05:51 +0000},
+	Journal = {Nat. Biotechnol.},
+	Month = {Jul},
+	Number = {7},
+	Pages = {636--639},
+	Title = {{{S}equence-specific detection of individual {D}{N}{A} strands using engineered nanopores}},
+	Volume = {19},
+	Year = {2001}}
+
+@article{trinityrna,
+	Author = {Grabherr, M. G. and Haas, B. J. and Yassour, M. and Levin, J. Z. and Thompson, D. A. and Amit, I. and Adiconis, X. and Fan, L. and Raychowdhury, R. and Zeng, Q. and Chen, Z. and Mauceli, E. and Hacohen, N. and Gnirke, A. and Rhind, N. and di Palma, F. and Birren, B. W. and Nusbaum, C. and Lindblad-Toh, K. and Friedman, N. and Regev, A.},
+	Date-Added = {2015-04-08 05:05:51 +0000},
+	Date-Modified = {2015-04-08 05:05:51 +0000},
+	Journal = {Nat. Biotechnol.},
+	Month = {Jul},
+	Number = {7},
+	Pages = {644--652},
+	Title = {{{F}ull-length transcriptome assembly from {R}{N}{A}-{S}eq data without a reference genome}},
+	Volume = {29},
+	Year = {2011}}
+
+@article{bowtie2,
+	Author = {Langmead, B. and Salzberg, S. L.},
+	Date-Added = {2015-04-08 05:05:51 +0000},
+	Date-Modified = {2015-04-08 05:05:51 +0000},
+	Journal = {Nat. Methods},
+	Month = {Apr},
+	Number = {4},
+	Pages = {357--359},
+	Title = {{{F}ast gapped-read alignment with {B}owtie 2}},
+	Volume = {9},
+	Year = {2012}}
+
+@article{biases,
+	Author = {Dohm, J. C. and Lottaz, C. and Borodina, T. and Himmelbauer, H.},
+	Date-Added = {2015-04-08 05:05:51 +0000},
+	Date-Modified = {2015-04-08 05:05:51 +0000},
+	Journal = {Nucleic Acids Res.},
+	Month = {Sep},
+	Number = {16},
+	Pages = {e105},
+	Title = {{{S}ubstantial biases in ultra-short read data sets from high-throughput {D}{N}{A} sequencing}},
+	Volume = {36},
+	Year = {2008}}
+
+@article{seecer,
+	Author = {Le, H. S. and Schulz, M. H. and McCauley, B. M. and Hinman, V. F. and Bar-Joseph, Z.},
+	Date-Added = {2015-04-08 05:05:51 +0000},
+	Date-Modified = {2015-04-08 05:05:51 +0000},
+	Journal = {Nucleic Acids Res.},
+	Month = {May},
+	Number = {10},
+	Pages = {e109},
+	Title = {{{P}robabilistic error correction for {R}{N}{A} sequencing}},
+	Volume = {41},
+	Year = {2013}}
+
+@article{Lowe2015,
+	Author = {Lowe, E. K. and Swalla, B.J. and Brown, C.T.},
+	Date-Added = {2015-04-08 05:05:51 +0000},
+	Date-Modified = {2015-04-08 05:05:51 +0000},
+	Journal = {PeerJ Preprints},
+	Title = {{{E}valuating a lightweight transcriptome assembly pipeline on two closely related ascidian species.}},
+	Url = {http://dx.doi.org/10.7287/peerj.preprints.505v1},
+	Volume = {2},
+	Year = {2014},
+	Bdsk-Url-1 = {http://dx.doi.org/10.7287/peerj.preprints.505v1}}
+
+@article{drisee,
+	Author = {Keegan, K. P. and Trimble, W. L. and Wilkening, J. and Wilke, A. and Harrison, T. and D'Souza, M. and Meyer, F.},
+	Date-Added = {2015-04-08 05:05:51 +0000},
+	Date-Modified = {2015-04-08 05:05:51 +0000},
+	Journal = {PLoS Comput. Biol.},
+	Number = {6},
+	Pages = {e1002541},
+	Title = {{{A} platform-independent method for detecting errors in metagenomic sequencing data: {D}{R}{I}{S}{E}{E}}},
+	Volume = {8},
+	Year = {2012}}
+
+@article{Woyke2010,
+	Author = {Woyke, Tanja and Tighe, Damon and Mavromatis, Konstantinos and Clum, Alicia and Copeland, Alex and Schackwitz, Wendy and Lapidus, Alla and Wu, Dongying and McCutcheon, John P and McDonald, Bradon R and Moran, Nancy A and Bristow, James and Cheng, Jan-Fang},
+	Date-Added = {2015-04-08 05:05:51 +0000},
+	Date-Modified = {2015-04-08 05:05:51 +0000},
+	Journal = {PLoS ONE},
+	Number = {4},
+	Pages = {8},
+	Title = {{One Bacterial Cell, One Complete Genome}},
+	Volume = {5},
+	Year = {2010}}
+
+@article{Zhang2014,
+	Author = {Qingpeng Zhang and Jason Pell and Rosangela Canino-Koning and Adina Chuang Howe and C. Titus Brown},
+	Date-Added = {2015-04-08 05:05:51 +0000},
+	Date-Modified = {2015-04-08 05:05:51 +0000},
+	Journal = {PLoS ONE},
+	Number = {9},
+	Title = {These are not the k-mers you are looking for: efficient online k-mer counting using a probabilistic data structure.},
+	Volume = {7},
+	Year = {2014}}
+
+@article{Howe2014,
+	Abstract = {The large volumes of sequencing data required to sample deeply the microbial communities of complex environments pose new challenges to sequence analysis. De novo metagenomic assembly effectively reduces the total amount of data to be analyzed but requires substantial computational resources. We combine two preassembly filtering approaches-digital normalization and partitioning-to generate previously intractable large metagenome assemblies. Using a human-gut mock community dataset, we demonstrate that these methods result in assemblies nearly identical to assemblies from unprocessed data. We then assemble two large soil metagenomes totaling 398 billion bp (equivalent to 88,000 Escherichia coli genomes) from matched Iowa corn and native prairie soils. The resulting assembled contigs could be used to identify molecular interactions and reaction networks of known metabolic pathways using the Kyoto Encyclopedia of Genes and Genomes Orthology database. Nonetheless, more than 60% of predicted proteins in assemblies could not be annotated against known databases. Many of these unknown proteins were abundant in both corn and prairie soils, highlighting the benefits of assembly for the discovery and characterization of novelty in soil biodiversity. Moreover, 80% of the sequencing data could not be assembled because of low coverage, suggesting that considerably more sequencing data are needed to characterize the functional content of soil.},
+	Author = {Howe, Adina Chuang and Jansson, Janet K and Malfatti, Stephanie A and Tringe, Susannah G and Tiedje, James M and Brown, C Titus},
+	Date-Added = {2015-04-08 05:05:51 +0000},
+	Date-Modified = {2015-04-08 05:05:51 +0000},
+	Doi = {10.1073/pnas.1402564111},
+	Journal = {Proc Natl Acad Sci U S A},
+	Journal-Full = {Proceedings of the National Academy of Sciences of the United States of America},
+	Month = {Apr},
+	Number = {13},
+	Pages = {4904-9},
+	Pmid = {24632729},
+	Pst = {ppublish},
+	Title = {Tackling soil diversity with the assembly of large, complex metagenomes},
+	Volume = {111},
+	Year = {2014},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1073/pnas.1402564111}}
+
+@article{pacbio,
+	Author = {Eid, J. and Fehr, A. and Gray, J. and Luong, K. and Lyle, J. and Otto, G. and Peluso, P. and Rank, D. and Baybayan, P. and Bettman, B. and Bibillo, A. and Bjornson, K. and Chaudhuri, B. and Christians, F. and Cicero, R. and Clark, S. and Dalal, R. and Dewinter, A. and Dixon, J. and Foquet, M. and Gaertner, A. and Hardenbol, P. and Heiner, C. and Hester, K. and Holden, D. and Kearns, G. and Kong, X. and Kuse, R. and Lacroix, Y. and Lin, S. and Lundquist, P. and Ma, C. and Marks, P. and Maxham, M. and Murphy, D. and Park, I. and Pham, T. and Phillips, M. and Roy, J. and Sebra, R. and Shen, G. and Sorenson, J. and Tomaney, A. and Travers, K. and Trulson, M. and Vieceli, J. and Wegener, J. and Wu, D. and Yang, A. and Zaccarin, D. and Zhao, P. and Zhong, F. and Korlach, J. and Turner, S.},
+	Date-Added = {2015-04-08 05:05:51 +0000},
+	Date-Modified = {2015-04-08 05:05:51 +0000},
+	Journal = {Science},
+	Month = {Jan},
+	Number = {5910},
+	Pages = {133--138},
+	Title = {{{R}eal-time {D}{N}{A} sequencing from single polymerase molecules}},
+	Volume = {323},
+	Year = {2009}}
+
+@article{Feigenbaum2005,
+	Acmid = {1132638},
+	Address = {Essex, UK},
+	Author = {Feigenbaum, Joan and Kannan, Sampath and McGregor, Andrew and Suri, Siddharth and Zhang, Jian},
+	Date-Added = {2015-04-08 05:05:51 +0000},
+	Date-Modified = {2015-04-08 05:05:51 +0000},
+	Doi = {10.1016/j.tcs.2005.09.013},
+	Issn = {0304-3975},
+	Issue_Date = {8 December 2005},
+	Journal = {Theor. Comput. Sci.},
+	Keywords = {articulation point, girth, graph, matching, spanner, streaming},
+	Month = dec,
+	Number = {2},
+	Numpages = {10},
+	Pages = {207--216},
+	Publisher = {Elsevier Science Publishers Ltd.},
+	Title = {On Graph Problems in a Semi-streaming Model},
+	Url = {http://dx.doi.org/10.1016/j.tcs.2005.09.013},
+	Volume = {348},
+	Year = {2005},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1016/j.tcs.2005.09.013}}
+
+@proceedings{DBLP:conf/sdm/2005,
+	Bibsource = {DBLP, http://dblp.uni-trier.de},
+	Booktitle = {SDM},
+	Date-Added = {2015-04-08 05:05:51 +0000},
+	Date-Modified = {2015-04-08 05:05:51 +0000},
+	Editor = {Hillol Kargupta and Jaideep Srivastava and Chandrika Kamath and Arnold Goodman},
+	Isbn = {978-0-89871-593-4, 978-1-61197-275-7},
+	Publisher = {SIAM},
+	Title = {Proceedings of the 2005 SIAM International Conference on Data Mining, SDM 2005, Newport Beach, CA, USA, April 21-23, 2005},
+	Year = {2005},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1137/1.9781611972757}}
+
+@book{schaling2011boost,
+	Author = {Sch{\"a}ling, Boris},
+	Date-Added = {2015-04-08 05:05:51 +0000},
+	Date-Modified = {2015-04-08 05:05:51 +0000},
+	Publisher = {Boris Sch{\"a}ling},
+	Title = {The boost C++ libraries},
+	Year = {2011}}
+
+@article{Lou2013,
+	Abstract = {A major limitation of high-throughput DNA sequencing is the high rate of erroneous base calls produced. For instance, Illumina sequencing machines produce errors at a rate of ~0.1-1 × 10(-2) per base sequenced. These technologies typically produce billions of base calls per experiment, translating to millions of errors. We have developed a unique library preparation strategy, "circle sequencing," which allows for robust downstream computational correction of these errors. In this strategy, DNA templates are circularized, copied multiple times in tandem with a rolling circle polymerase, and then sequenced on any high-throughput sequencing machine. Each read produced is computationally processed to obtain a consensus sequence of all linked copies of the original molecule. Physically linking the copies ensures that each copy is independently derived from the original molecule and allows for efficient formation of consensus sequences. The circle-sequencing protocol precedes standard library preparations and is therefore suitable for a broad range of sequencing applications. We tested our method using the Illumina MiSeq platform and obtained errors in our processed sequencing reads at a rate as low as 7.6 × 10(-6) per base sequenced, dramatically improving the error rate of Illumina sequencing and putting error on par with low-throughput, but highly accurate, Sanger sequencing. Circle sequencing also had substantially higher efficiency and lower cost than existing barcode-based schemes for correcting sequencing errors.},
+	Author = {Lou, Dianne I and Hussmann, Jeffrey A and McBee, Ross M and Acevedo, Ashley and Andino, Raul and Press, William H and Sawyer, Sara L},
+	Date-Added = {2015-04-01 16:58:20 +0000},
+	Date-Modified = {2015-04-01 16:58:20 +0000},
+	Doi = {10.1073/pnas.1319590110},
+	Journal = {Proc Natl Acad Sci U S A},
+	Journal-Full = {Proceedings of the National Academy of Sciences of the United States of America},
+	Keywords = {barcoding; next-generation sequencing; rare variants},
+	Mesh = {Computational Biology; DNA, Circular; Gene Library; High-Throughput Nucleotide Sequencing; Research Design},
+	Month = {Dec},
+	Number = {49},
+	Pages = {19872-7},
+	Pmc = {PMC3856802},
+	Pmid = {24243955},
+	Pst = {ppublish},
+	Title = {High-throughput DNA sequencing errors are reduced by orders of magnitude using circle sequencing},
+	Volume = {110},
+	Year = {2013},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1073/pnas.1319590110}}
 
 @article{HMScience,
 	Abstract = {The human microbiome refers to the community of microorganisms, including prokaryotes, viruses, and microbial eukaryotes, that populate the human body. The National Institutes of Health launched an initiative that focuses on describing the diversity of microbial species that are associated with health and disease. The first phase of this initiative includes the sequencing of hundreds of microbial reference genomes, coupled to metagenomic sequencing from multiple body sites. Here we present results from an initial reference genome sequencing of 178 microbial genomes. From 547,968 predicted polypeptides that correspond to the gene complement of these strains, previously unidentified ("novel") polypeptides that had both unmasked sequence length greater than 100 amino acids and no BLASTP match to any nonreference entry in the nonredundant subset were defined. This analysis resulted in a set of 30,867 polypeptides, of which 29,987 (approximately 97%) were unique. In addition, this set of microbial genomes allows for approximately 40% of random sequences from the microbiome of the gastrointestinal tract to be associated with organisms based on the match criteria used. Insights into pan-genome analysis suggest that we are still far from saturating microbial species genetic data sets. In addition, the associated metrics and standards used by our group for quality assurance are presented.},
@@ -49,17 +456,6 @@
 	Year = {2009},
 	Bdsk-Url-1 = {http://dx.doi.org/10.1038/nature07540}}
 
-@article{Marcais2011,
-	Author = {Mar\c{c}ais, Guillaume and Kingsford, Carl},
-	Date-Added = {2015-03-17 01:47:58 +0000},
-	Date-Modified = {2015-03-17 01:47:58 +0000},
-	Journal = {Bioinformatics},
-	Number = {6},
-	Pages = {764--770},
-	Title = {{A fast, lock-free approach for efficient parallel counting of occurrences of k-mers.}},
-	Volume = {27},
-	Year = {2011}}
-
 @article{Qin:2010aa,
 	Abstract = {To understand the impact of gut microbes on human health and well-being it is crucial to assess their genetic potential. Here we describe the Illumina-based metagenomic sequencing, assembly and characterization of 3.3 million non-redundant microbial genes, derived from 576.7 gigabases of sequence, from faecal samples of 124 European individuals. The gene set, approximately 150 times larger than the human gene complement, contains an overwhelming majority of the prevalent (more frequent) microbial genes of the cohort and probably includes a large proportion of the prevalent human intestinal microbial genes. The genes are largely shared among individuals of the cohort. Over 99% of the genes are bacterial, indicating that the entire cohort harbours between 1,000 and 1,150 prevalent bacterial species and each individual at least 160 such species, which are also largely shared. We define and describe the minimal gut metagenome and the minimal gut bacterial genome in terms of functions present in all individuals and most bacteria, respectively.},
 	Author = {Qin, Junjie and Li, Ruiqiang and Raes, Jeroen and Arumugam, Manimozhiyan and Burgdorf, Kristoffer Solvsten and Manichanh, Chaysavanh and Nielsen, Trine and Pons, Nicolas and Levenez, Florence and Yamada, Takuji and Mende, Daniel R and Li, Junhua and Xu, Junming and Li, Shaochuan and Li, Dongfang and Cao, Jianjun and Wang, Bo and Liang, Huiqing and Zheng, Huisong and Xie, Yinlong and Tap, Julien and Lepage, Patricia and Bertalan, Marcelo and Batto, Jean-Michel and Hansen, Torben and Le Paslier, Denis and Linneberg, Allan and Nielsen, H Bj{\o}rn and Pelletier, Eric and Renault, Pierre and Sicheritz-Ponten, Thomas and Turner, Keith and Zhu, Hongmei and Yu, Chang and Li, Shengting and Jian, Min and Zhou, Yan and Li, Yingrui and Zhang, Xiuqing and Li, Songgang and Qin, Nan and Yang, Huanming and Wang, Jian and Brunak, S{\o}ren and Dor{\'e}, Joel and Guarner, Francisco and Kristiansen, Karsten and Pedersen, Oluf and Parkhill, Julian and Weissenbach, Jean and {MetaHIT Consortium} and Bork, Peer and Ehrlich, S Dusko and Wang, Jun},
@@ -79,17 +475,6 @@
 	Volume = {464},
 	Year = {2010},
 	Bdsk-Url-1 = {http://dx.doi.org/10.1038/nature08821}}
-
-@article{Qin2010,
-	Author = {Qin, Junjie and Li, Ruiqiang and Raes, Jeroen and Arumugam, Manimozhiyan and Burgdorf, Kristoffer Solvsten and Manichanh, Chaysavanh and Nielsen, Trine and Pons, Nicolas and Levenez, Florence and Yamada, Takuji and Mende, Daniel R and Li, Junhua and Xu, Junming and Li, Songgang Shaochuan Shengting and Li, Dongfang and Cao, Jianjun and Wang, Bo and Liang, Huiqing and Zheng, Huisong and Xie, Yinlong and Tap, Julien and Lepage, Patricia and Bertalan, Marcelo and Batto, Jean-Michel and Hansen, Torben and {Le Paslier}, Denis and Linneberg, Allan and Nielsen, H Bj\o rn and Pelletier, Eric and Renault, Pierre and Sicheritz-Ponten, Thomas and Turner, Keith and Zhu, Hongmei and Yu, Chang and Jian, Min and Zhou, Yan and Li, Yingrui and Zhang, Xiuqing and Qin, Nan and Yang, Huanming and Wang, Jun Jian and Brunak, S\o ren and Dor\'{e}, Joel and Guarner, Francisco and Kristiansen, Karsten and Pedersen, Oluf and Parkhill, Julian and Weissenbach, Jean and Bork, Peer and Ehrlich, S Dusko},
-	Date-Added = {2015-03-17 01:47:58 +0000},
-	Date-Modified = {2015-03-17 01:47:58 +0000},
-	Journal = {Nature},
-	Number = {7285},
-	Pages = {59--65},
-	Title = {{A human gut microbial gene catalogue established by metagenomic sequencing.}},
-	Volume = {464},
-	Year = {2010}}
 
 @article{shannon2001mathematical,
 	Author = {Shannon, Claude Elwood},
@@ -121,28 +506,6 @@
 	Volume = {490},
 	Year = {2012},
 	Bdsk-Url-1 = {http://dx.doi.org/10.1038/nature11450}}
-
-@article{Kurtz2008,
-	Author = {Kurtz, Stefan and Narechania, Apurva and Stein, Joshua C and Ware, Doreen},
-	Date-Added = {2015-03-17 01:47:58 +0000},
-	Date-Modified = {2015-03-17 01:47:58 +0000},
-	Journal = {BMC Genomics},
-	Number = {1},
-	Pages = {517},
-	Title = {{A new method to compute K-mer frequencies and its application to annotate large repetitive plant genomes}},
-	Volume = {9},
-	Year = {2008}}
-
-@article{Shi2010,
-	Author = {Shi, Haixiang and Schmidt, Bertil and Liu, Weiguo and M\"{u}ller-Wittig, Wolfgang},
-	Date-Added = {2015-03-17 01:47:58 +0000},
-	Date-Modified = {2015-03-17 01:47:58 +0000},
-	Journal = {Journal of computational biology a journal of computational molecular cell biology},
-	Number = {4},
-	Pages = {603--615},
-	Title = {{A parallel algorithm for error correction in high-throughput short-read data on CUDA-enabled graphics hardware.}},
-	Volume = {17},
-	Year = {2010}}
 
 @article{Wu:2009aa,
 	Abstract = {Sequencing of bacterial and archaeal genomes has revolutionized our understanding of the many roles played by microorganisms. There are now nearly 1,000 completed bacterial and archaeal genomes available, most of which were chosen for sequencing on the basis of their physiology. As a result, the perspective provided by the currently available genomes is limited by a highly biased phylogenetic distribution. To explore the value added by choosing microbial genomes for sequencing on the basis of their evolutionary relationships, we have sequenced and analysed the genomes of 56 culturable species of Bacteria and Archaea selected to maximize phylogenetic coverage. Analysis of these genomes demonstrated pronounced benefits (compared to an equivalent set of genomes randomly selected from the existing database) in diverse areas including the reconstruction of phylogenetic history, the discovery of new protein families and biological properties, and the prediction of functions for known genes from other organisms. Our results strongly support the need for systematic 'phylogenomic' efforts to compile a phylogeny-driven 'Genomic Encyclopedia of Bacteria and Archaea' in order to derive maximum knowledge from existing microbial genome data as well as from genome sequences to come.},
@@ -232,29 +595,6 @@ CONCLUSION: The ability to accurately classify the origin of individual genes an
 	Year = {2006},
 	Bdsk-Url-1 = {http://dx.doi.org/10.1111/j.1541-0420.2005.00489.x}}
 
-@article{Davenport2010,
-	Author = {Davenport, Colin F and T\"{u}mmler, Burkhard},
-	Date-Added = {2015-03-17 01:47:58 +0000},
-	Date-Modified = {2015-03-17 01:47:58 +0000},
-	Journal = {PLoS ONE},
-	Number = {3},
-	Pages = {8},
-	Title = {{Abundant Oligonucleotides Common to Most Bacteria}},
-	Volume = {5},
-	Year = {2010}}
-
-@article{Simpson2009,
-	Author = {Simpson, Jared T and Wong, Kim and Jackman, Shaun D and Schein, Jacqueline E and Jones, Steven J M and Birol, Inan{\c c}},
-	Date-Added = {2015-03-17 01:47:58 +0000},
-	Date-Modified = {2015-03-17 01:47:58 +0000},
-	Journal = {Genome Res},
-	Month = {Jun},
-	Number = {6},
-	Pages = {1117-23},
-	Title = {ABySS: a parallel assembler for short read sequence data},
-	Volume = {19},
-	Year = {2009}}
-
 @article{Liu:2011aa,
 	Abstract = {BACKGROUND: A major goal of metagenomics is to characterize the microbial composition of an environment. The most popular approach relies on 16S rRNA sequencing, however this approach can generate biased estimates due to differences in the copy number of the gene between even closely related organisms, and due to PCR artifacts. The taxonomic composition can also be determined from metagenomic shotgun sequencing data by matching individual reads against a database of reference sequences. One major limitation of prior computational methods used for this purpose is the use of a universal classification threshold for all genes at all taxonomic levels.
 RESULTS: We propose that better classification results can be obtained by tuning the taxonomic classifier to each matching length, reference gene, and taxonomic level. We present a novel taxonomic classifier MetaPhyler (http://metaphyler.cbcb.umd.edu), which uses phylogenetic marker genes as a taxonomic reference. Results on simulated datasets demonstrate that MetaPhyler outperforms other tools commonly used in this context (CARMA, Megan and PhymmBL). We also present interesting results by analyzing a real metagenomic dataset.
@@ -275,18 +615,6 @@ CONCLUSIONS: We have introduced a novel taxonomic classification method for anal
 	Year = {2011},
 	Bdsk-Url-1 = {http://dx.doi.org/10.1186/1471-2164-12-S2-S4}}
 
-@article{Butler2008,
-	Author = {Butler, Jonathan and MacCallum, Iain and Kleber, Michael and Shlyakhter, Ilya A and Belmonte, Matthew K and Lander, Eric S and Nusbaum, Chad and Jaffe, David B},
-	Date-Added = {2015-03-17 01:47:58 +0000},
-	Date-Modified = {2015-03-17 01:47:58 +0000},
-	Journal = {Genome Res},
-	Month = {May},
-	Number = {5},
-	Pages = {810-20},
-	Title = {ALLPATHS: de novo assembly of whole-genome shotgun microreads},
-	Volume = {18},
-	Year = {2008}}
-
 @article{Rodriguez-Brito:2006aa,
 	Abstract = {BACKGROUND: Metagenomics, sequence analyses of genomic DNA isolated directly from the environments, can be used to identify organisms and model community dynamics of a particular ecosystem. Metagenomics also has the potential to identify significantly different metabolic potential in different environments.
 RESULTS: Here we use a statistical method to compare curated subsystems, to predict the physiology, metabolism, and ecology from metagenomes. This approach can be used to identify those subsystems that are significantly different between metagenome sequences. Subsystems that were overrepresented in the Sargasso Sea and Acid Mine Drainage metagenome when compared to non-redundant databases were identified.
@@ -306,39 +634,6 @@ CONCLUSION: The methodology described herein applies statistics to the compariso
 	Volume = {7},
 	Year = {2006},
 	Bdsk-Url-1 = {http://dx.doi.org/10.1186/1471-2105-7-162}}
-
-@article{Pevzner2001,
-	Author = {Pevzner, P A and Tang, H and Waterman, M S},
-	Date-Added = {2015-03-17 01:47:58 +0000},
-	Date-Modified = {2015-03-17 01:47:58 +0000},
-	Journal = {Proc Natl Acad Sci U S A},
-	Month = {Aug},
-	Number = {17},
-	Pages = {9748-53},
-	Title = {An Eulerian path approach to DNA fragment assembly},
-	Volume = {98},
-	Year = {2001}}
-
-@article{Cormode2005,
-	Author = {Cormode, Graham and Muthukrishnan, S},
-	Date-Added = {2015-03-17 01:47:58 +0000},
-	Date-Modified = {2015-03-17 01:47:58 +0000},
-	Journal = {Journal of Algorithms},
-	Month = apr,
-	Number = {1},
-	Pages = {58--75},
-	Title = {{An improved data stream summary: the count-min sketch and its applications}},
-	Volume = {55},
-	Year = {2005}}
-
-@article{Kane2010,
-	Author = {Kane, Daniel M and Nelson, Jelani and Woodruff, David P and Road, Harry and Jose, San},
-	Date-Added = {2015-03-17 01:47:58 +0000},
-	Date-Modified = {2015-03-17 01:47:58 +0000},
-	Journal = {PODS '10 P},
-	Pages = {41--52},
-	Title = {An Optimal Algorithm for the Distinct Elements Problem},
-	Year = {2010}}
 
 @article{Li:2012aa,
 	Abstract = {Analysis of human body microbial diversity is fundamental to understanding community structure, biology and ecology. The National Institutes of Health Human Microbiome Project (HMP) has provided an unprecedented opportunity to examine microbial diversity within and across body habitats and individuals through pyrosequencing-based profiling of 16 S rRNA gene sequences (16 S) from habits of the oral, skin, distal gut, and vaginal body regions from over 200 healthy individuals enabling the application of statistical techniques. In this study, two approaches were applied to elucidate the nature and extent of human microbiome diversity. First, bootstrap and parametric curve fitting techniques were evaluated to estimate the maximum number of unique taxa, S(max), and taxa discovery rate for habitats across individuals. Next, our results demonstrated that the variation of diversity within low abundant taxa across habitats and individuals was not sufficiently quantified with standard ecological diversity indices. This impact from low abundant taxa motivated us to introduce a novel rank-based diversity measure, the Tail statistic, ("τ"), based on the standard deviation of the rank abundance curve if made symmetric by reflection around the most abundant taxon. Due to τ's greater sensitivity to low abundant taxa, its application to diversity estimation of taxonomic units using taxonomic dependent and independent methods revealed a greater range of values recovered between individuals versus body habitats, and different patterns of diversity within habitats. The greatest range of τ values within and across individuals was found in stool, which also exhibited the most undiscovered taxa. Oral and skin habitats revealed variable diversity patterns, while vaginal habitats were consistently the least diverse. Collectively, these results demonstrate the importance, and motivate the introduction, of several visualization and analysis methods tuned specifically for next-generation sequence data, further revealing that low abundant taxa serve as an important reservoir of genetic diversity in the human microbiome.},
@@ -376,38 +671,6 @@ CONCLUSION: The methodology described herein applies statistics to the compariso
 	Title = {Analysis of a marine picoplankton community by 16S rRNA gene cloning and sequencing},
 	Volume = {173},
 	Year = {1991}}
-
-@article{Healy2003,
-	Author = {Healy, John and Thomas, Elizabeth E and Schwartz, Jacob T and Wigler, Michael},
-	Date-Added = {2015-03-17 01:47:58 +0000},
-	Date-Modified = {2015-03-17 01:47:58 +0000},
-	Journal = {Genome Research},
-	Number = {10},
-	Pages = {2306--2315},
-	Title = {{Annotating large genomes with exact word matches.}},
-	Volume = {13},
-	Year = {2003}}
-
-@article{Howe2012,
-	Author = {Adina Chuang Howe and Janet Jansson and Stephanie A. Malfatti and Susannah G. Tringe and James M. Tiedje and C. Titus Brown},
-	Date-Added = {2015-03-17 01:47:58 +0000},
-	Date-Modified = {2015-03-17 01:47:58 +0000},
-	Journal = {arXiv preprint},
-	Month = {12},
-	Title = {Assembling large, complex environmental metagenomes},
-	Year = {2012}}
-
-@article{Miller2010,
-	Author = {Miller, Jason R and Koren, Sergey and Sutton, Granger},
-	Date-Added = {2015-03-17 01:47:58 +0000},
-	Date-Modified = {2015-03-17 01:47:58 +0000},
-	Journal = {Genomics},
-	Month = {Jun},
-	Number = {6},
-	Pages = {315-27},
-	Title = {Assembly algorithms for next-generation sequencing data},
-	Volume = {95},
-	Year = {2010}}
 
 @article{Zarraonaindia:2013aa,
 	Abstract = {The development of culture-independent strategies to study microbial diversity and function has led to a revolution in microbial ecology, enabling us to address fundamental questions about the distribution of microbes and their influence on Earth's biogeochemical cycles. This article discusses some of the progress that scientists have made with the use of so-called "omic" techniques (metagenomics, metatranscriptomics, and metaproteomics) and the limitations and major challenges these approaches are currently facing. These 'omic methods have been used to describe the taxonomic structure of microbial communities in different environments and to discover new genes and enzymes of industrial and medical interest. However, microbial community structure varies in different spatial and temporal scales and none of the 'omic techniques are individually able to elucidate the complex aspects of microbial communities and ecosystems. In this article we highlight the importance of a spatiotemporal sampling design, together with a multilevel 'omic approach and a community analysis strategy (association networks and modeling) to examine and predict interacting microbial communities and their impact on the environment.},
@@ -578,13 +841,6 @@ CONCLUSIONS: Sequence signatures can successfully reveal major group and gradien
 	Year = {2013},
 	Bdsk-Url-1 = {http://dx.doi.org/10.1016/B978-0-12-407863-5.00018-6}}
 
-@article{Bar-yossef,
-	Author = {Bar-yossef, Ziv and Jayram, T S and Kumar, Ravi and Sivakumar, D},
-	Date-Added = {2015-03-17 01:47:58 +0000},
-	Date-Modified = {2015-03-17 01:47:58 +0000},
-	Journal = {Memory},
-	Title = {{Counting distinct elements in a data stream}}}
-
 @article{Wendl:2013aa,
 	Abstract = {Metagenomic project design has relied variously upon speculation, semi-empirical and ad hoc heuristic models, and elementary extensions of single-sample Lander-Waterman expectation theory, all of which are demonstrably inadequate. Here, we propose an approach based upon a generalization of Stevens' Theorem for randomly covering a domain. We extend this result to account for the presence of multiple species, from which are derived useful probabilities for fully recovering a particular target microbe of interest and for average contig length. These show improved specificities compared to older measures and recommend deeper data generation than the levels chosen by some early studies, supporting the view that poor assemblies were due at least somewhat to insufficient data. We assess predictions empirically by generating roughly 4.5 Gb of sequence from a twelve member bacterial community, comparing coverage for two particular members, Selenomonas artemidis and Enterococcus faecium, which are the least ([Formula: see text]3 %) and most ([Formula: see text]12 %) abundant species, respectively. Agreement is reasonable, with differences likely attributable to coverage biases. We show that, in some cases, bias is simple in the sense that a small reduction in read length to simulate less efficient covering brings data and theory into essentially complete accord. Finally, we describe two applications of the theory. One plots coverage probability over the relevant parameter space, constructing essentially a "metagenomic design map" to enable straightforward analysis and design of future projects. The other gives an overview of the data requirements for various types of sequencing milestones, including a desired number of contact reads and contig length, for detection of a rare viral species.},
 	Author = {Wendl, Michael C and Kota, Karthik and Weinstock, George M and Mitreva, Makedonka},
@@ -624,30 +880,6 @@ CONCLUSIONS: Sequence signatures can successfully reveal major group and gradien
 	Year = {2012},
 	Bdsk-Url-1 = {http://dx.doi.org/10.1093/bib/bbs039}}
 
-@article{Li2010,
-	Author = {Li, Ruiqiang and Zhu, Hongmei and Ruan, Jue and Qian, Wubin and Fang, Xiaodong and Shi, Zhongbin and Li, Yingrui and Li, Shengting and Shan, Gao and Kristiansen, Karsten and Li, Songgang and Yang, Huanming and Wang, Jian and Wang, Jun},
-	Date-Added = {2015-03-17 01:47:58 +0000},
-	Date-Modified = {2015-03-17 01:47:58 +0000},
-	Journal = {Genome Res},
-	Month = {Feb},
-	Number = {2},
-	Pages = {265-72},
-	Title = {De novo assembly of human genomes with massively parallel short read sequencing},
-	Volume = {20},
-	Year = {2010}}
-
-@article{Haas2013,
-	Author = {Haas, Brian J and Papanicolaou, Alexie and Yassour, Moran and Grabherr, Manfred and Blood, Philip D and Bowden, Joshua and Couger, Matthew Brian and Eccles, David and Li, Bo and Lieber, Matthias and Macmanes, Matthew D and Ott, Michael and Orvis, Joshua and Pochet, Nathalie and Strozzi, Francesco and Weeks, Nathan and Westerman, Rick and William, Thomas and Dewey, Colin N and Henschel, Robert and Leduc, Richard D and Friedman, Nir and Regev, Aviv},
-	Date-Added = {2015-03-17 01:47:58 +0000},
-	Date-Modified = {2015-03-17 01:47:58 +0000},
-	Journal = {Nat Protoc},
-	Month = {Aug},
-	Number = {8},
-	Pages = {1494-512},
-	Title = {De novo transcript sequence reconstruction from RNA-seq using the Trinity platform for reference generation and analysis},
-	Volume = {8},
-	Year = {2013}}
-
 @article{Luo:2012aa,
 	Abstract = {Next-generation sequencing (NGS) is commonly used in metagenomic studies of complex microbial communities but whether or not different NGS platforms recover the same diversity from a sample and their assembled sequences are of comparable quality remain unclear. We compared the two most frequently used platforms, the Roche 454 FLX Titanium and the Illumina Genome Analyzer (GA) II, on the same DNA sample obtained from a complex freshwater planktonic community. Despite the substantial differences in read length and sequencing protocols, the platforms provided a comparable view of the community sampled. For instance, derived assemblies overlapped in ~90% of their total sequences and in situ abundances of genes and genotypes (estimated based on sequence coverage) correlated highly between the two platforms (R(2)>0.9). Evaluation of base-call error, frameshift frequency, and contig length suggested that Illumina offered equivalent, if not better, assemblies than Roche 454. The results from metagenomic samples were further validated against DNA samples of eighteen isolate genomes, which showed a range of genome sizes and G+C% content. We also provide quantitative estimates of the errors in gene and contig sequences assembled from datasets characterized by different levels of complexity and G+C% content. For instance, we noted that homopolymer-associated, single-base errors affected ~1% of the protein sequences recovered in Illumina contigs of 10× coverage and 50% G+C; this frequency increased to ~3% when non-homopolymer errors were also considered. Collectively, our results should serve as a useful practical guide for choosing proper sampling strategies and data possessing protocols for future metagenomic studies.},
 	Author = {Luo, Chengwei and Tsementzi, Despina and Kyrpides, Nikos and Read, Timothy and Konstantinidis, Konstantinos T},
@@ -667,29 +899,6 @@ CONCLUSIONS: Sequence signatures can successfully reveal major group and gradien
 	Year = {2012},
 	Bdsk-Url-1 = {http://dx.doi.org/10.1371/journal.pone.0030087}}
 
-@article{Deorowicz2013,
-	Author = {Deorowicz, Sebastian and Debudaj-Grabysz, Agnieszka and Grabowski, Szymon},
-	Date-Added = {2015-03-17 01:47:58 +0000},
-	Date-Modified = {2015-03-17 01:47:58 +0000},
-	Journal = {BMC Bioinformatics},
-	Month = {May},
-	Number = {1},
-	Pages = {160},
-	Title = {Disk-based k-mer counting on a PC},
-	Volume = {14},
-	Year = {2013}}
-
-@article{Hampson2002,
-	Author = {Hampson, Steven and Kibler, Dennis and Baldi, Pierre},
-	Date-Added = {2015-03-17 01:47:58 +0000},
-	Date-Modified = {2015-03-17 01:47:58 +0000},
-	Journal = {Bioinformatics},
-	Number = {4},
-	Pages = {513--528},
-	Title = {{Distribution patterns of over-represented k-mers in non-coding yeast DNA.}},
-	Volume = {18},
-	Year = {2002}}
-
 @article{hill1973diversity,
 	Author = {Hill, Mark O},
 	Date-Added = {2015-03-17 01:47:58 +0000},
@@ -701,29 +910,6 @@ CONCLUSIONS: Sequence signatures can successfully reveal major group and gradien
 	Title = {Diversity and evenness: a unifying notation and its consequences},
 	Volume = {54},
 	Year = {1973}}
-
-@article{Rizk2013,
-	Author = {Rizk, Guillaume and Lavenier, Dominique and Chikhi, Rayan},
-	Date-Added = {2015-03-17 01:47:58 +0000},
-	Date-Modified = {2015-03-17 01:47:58 +0000},
-	Journal = {Bioinformatics},
-	Month = {Mar},
-	Number = {5},
-	Pages = {652-3},
-	Title = {DSK: k-mer counting with very low memory usage},
-	Volume = {29},
-	Year = {2013}}
-
-@article{Sindi2008,
-	Author = {Sindi, Suzanne S and Hunt, Brian R and Yorke, James A},
-	Date-Added = {2015-03-17 01:47:58 +0000},
-	Date-Modified = {2015-03-17 01:47:58 +0000},
-	Journal = {Physical Review E - Statistical, Nonlinear and Soft Matter Physics},
-	Number = {6 Pt 1},
-	Pages = {061912},
-	Title = {{Duplication count distributions in DNA sequences.}},
-	Volume = {78},
-	Year = {2008}}
 
 @article{Morgan:2012aa,
 	Abstract = {BACKGROUND: The inflammatory bowel diseases (IBD) Crohn's disease and ulcerative colitis result from alterations in intestinal microbes and the immune system. However, the precise dysfunctions of microbial metabolism in the gastrointestinal microbiome during IBD remain unclear. We analyzed the microbiota of intestinal biopsies and stool samples from 231 IBD and healthy subjects by 16S gene pyrosequencing and followed up a subset using shotgun metagenomics. Gene and pathway composition were assessed, based on 16S data from phylogenetically-related reference genomes, and associated using sparse multivariate linear modeling with medications, environmental factors, and IBD status.
@@ -746,28 +932,6 @@ CONCLUSIONS: This inferred functional metagenomic information provides the first
 	Year = {2012},
 	Bdsk-Url-1 = {http://dx.doi.org/10.1186/gb-2012-13-9-r79}}
 
-@article{Melsted2011,
-	Author = {Melsted, P\'{a}ll and Pritchard, Jonathan K},
-	Date-Added = {2015-03-17 01:47:58 +0000},
-	Date-Modified = {2015-03-17 01:47:58 +0000},
-	Journal = {BMC bioinformatics},
-	Month = jan,
-	Pages = {333},
-	Title = {{Efficient counting of k-mers in DNA sequences using a bloom filter.}},
-	Volume = {12},
-	Year = {2011}}
-
-@article{pubmed21926975,
-	Author = {H Chitsaz and JL Yee-Greenbaum and G Tesler and MJ Lombardo and CL Dupont and JH Badger and M Novotny and DB Rusch and LJ Fraser and NA Gormley and O Schulz-Trieglaff and GP Smith and DJ Evers and PA Pevzner and RS Lasken},
-	Date-Added = {2015-03-17 01:47:58 +0000},
-	Date-Modified = {2015-03-17 01:47:58 +0000},
-	Journal = {Nat Biotechnol},
-	Number = {10},
-	Pages = {915-21},
-	Title = {Efficient de novo assembly of single-cell bacterial genomes from short-read data sets.},
-	Volume = {29},
-	Year = {2011}}
-
 @article{Venter:2004aa,
 	Abstract = {We have applied "whole-genome shotgun sequencing" to microbial populations collected en masse on tangential flow and impact filters from seawater samples collected from the Sargasso Sea near Bermuda. A total of 1.045 billion base pairs of nonredundant sequence was generated, annotated, and analyzed to elucidate the gene content, diversity, and relative abundance of the organisms within these environmental samples. These data are estimated to derive from at least 1800 genomic species based on sequence relatedness, including 148 previously unknown bacterial phylotypes. We have identified over 1.2 million previously unknown genes represented in these samples, including more than 782 new rhodopsin-like photoreceptors. Variation in species present and stoichiometry suggests substantial oceanic microbial diversity.},
 	Author = {Venter, J Craig and Remington, Karin and Heidelberg, John F and Halpern, Aaron L and Rusch, Doug and Eisen, Jonathan A and Wu, Dongying and Paulsen, Ian and Nelson, Karen E and Nelson, William and Fouts, Derrick E and Levy, Samuel and Knap, Anthony H and Lomas, Michael W and Nealson, Ken and White, Owen and Peterson, Jeremy and Hoffman, Jeff and Parsons, Rachel and Baden-Tillson, Holly and Pfannkoch, Cynthia and Rogers, Yu-Hui and Smith, Hamilton O},
@@ -786,18 +950,6 @@ CONCLUSIONS: This inferred functional metagenomic information provides the first
 	Volume = {304},
 	Year = {2004},
 	Bdsk-Url-1 = {http://dx.doi.org/10.1126/science.1093857}}
-
-@article{Medvedev2011,
-	Author = {Medvedev, Paul and Scott, Eric and Kakaradov, Boyko and Pevzner, Pavel},
-	Date-Added = {2015-03-17 01:47:58 +0000},
-	Date-Modified = {2015-03-17 01:47:58 +0000},
-	Journal = {Bioinformatics},
-	Month = {Jul},
-	Number = {13},
-	Pages = {i137-41},
-	Title = {Error correction of high-throughput sequencing datasets with non-uniform coverage},
-	Volume = {27},
-	Year = {2011}}
 
 @article{colwellestimates,
 	Author = {Colwell, RK},
@@ -826,17 +978,6 @@ SUPPLEMENTARY INFORMATION: Supplementary data are available at Bioinformatics on
 	Volume = {26},
 	Year = {2010},
 	Bdsk-Url-1 = {http://dx.doi.org/10.1093/bioinformatics/btp687}}
-
-@article{Hooper2010,
-	Author = {Hooper, Sean D and Dalevi, Daniel and Pati, Amrita and Mavromatis, Konstantinos and Ivanova, Natalia N and Kyrpides, Nikos C},
-	Date-Added = {2015-03-17 01:47:58 +0000},
-	Date-Modified = {2015-03-17 01:47:58 +0000},
-	Journal = {Bioinformatics},
-	Number = {3},
-	Pages = {295--301},
-	Title = {{Estimating DNA coverage and abundance in metagenomes using a gamma approximation}},
-	Volume = {26},
-	Year = {2010}}
 
 @article{lee1994estimating,
 	Author = {Lee, Shen-Ming and Chao, Anne},
@@ -910,17 +1051,6 @@ SUPPLEMENTARY INFORMATION: Supplementary data are available at Bioinformatics on
 	Volume = {86},
 	Year = {2005}}
 
-@article{Minoche2011,
-	Author = {Minoche, Andr{\'e} E and Dohm, Juliane C and Himmelbauer, Heinz},
-	Date-Added = {2015-03-17 01:47:58 +0000},
-	Date-Modified = {2015-03-17 01:47:58 +0000},
-	Journal = {Genome Biol},
-	Number = {11},
-	Pages = {R112},
-	Title = {Evaluation of genomic high-throughput sequencing data generated on Illumina HiSeq and genome analyzer systems},
-	Volume = {12},
-	Year = {2011}}
-
 @article{seth2013exploration,
 	Author = {Seth, Sohan and V{\"a}lim{\"a}ki, Niko and Kaski, Samuel and Honkela, Antti},
 	Date-Added = {2015-03-17 01:47:58 +0000},
@@ -947,60 +1077,6 @@ SUPPLEMENTARY INFORMATION: Supplementary data are available at Bioinformatics on
 	Volume = {161},
 	Year = {2010},
 	Bdsk-Url-1 = {http://dx.doi.org/10.1016/j.resmic.2010.04.010}}
-
-@article{Charikar2004,
-	Author = {Charikar, M},
-	Date-Added = {2015-03-17 01:47:58 +0000},
-	Date-Modified = {2015-03-17 01:47:58 +0000},
-	Journal = {Theoretical Computer Science},
-	Month = jan,
-	Number = {1},
-	Pages = {3--15},
-	Title = {{Finding frequent items in data streams}},
-	Volume = {312},
-	Year = {2004}}
-
-@article{Trifonov2010,
-	Author = {Trifonov, Vladimir and Rabadan, Raul},
-	Date-Added = {2015-03-17 01:47:58 +0000},
-	Date-Modified = {2015-03-17 01:47:58 +0000},
-	Journal = {mBio},
-	Number = {3},
-	Pages = {1--8},
-	Title = {{Frequency Analysis Techniques for Identification of Viral Genetic Data}},
-	Volume = {1},
-	Year = {2010}}
-
-@article{Luo2009,
-	Author = {Luo, Weijun and Friedman, Michael S and Shedden, Kerby and Hankenson, Kurt D and Woolf, Peter J},
-	Date-Added = {2015-03-17 01:47:58 +0000},
-	Date-Modified = {2015-03-17 01:47:58 +0000},
-	Journal = {BMC Bioinformatics},
-	Pages = {161},
-	Title = {GAGE: generally applicable gene set enrichment for pathway analysis},
-	Volume = {10},
-	Year = {2009}}
-
-@article{McElroy2012,
-	Author = {McElroy, Kerensa E and Luciani, Fabio and Thomas, Torsten},
-	Date-Added = {2015-03-17 01:47:58 +0000},
-	Date-Modified = {2015-03-17 01:47:58 +0000},
-	Journal = {BMC Genomics},
-	Pages = {74},
-	Title = {GemSIM: general, error-model based simulator of next-generation sequencing data},
-	Volume = {13},
-	Year = {2012}}
-
-@article{Chor2009,
-	Author = {Chor, Benny and Horn, David and Goldman, Nick and Levy, Yaron and Massingham, Tim},
-	Date-Added = {2015-03-17 01:47:58 +0000},
-	Date-Modified = {2015-03-17 01:47:58 +0000},
-	Journal = {Genome Biology},
-	Number = {10},
-	Pages = {R108},
-	Title = {{Genomic DNA k-mer spectra: models and modalities}},
-	Volume = {10},
-	Year = {2009}}
 
 @article{Lander:1988aa,
 	Abstract = {Results from physical mapping projects have recently been reported for the genomes of Escherichia coli, Saccharomyces cerevisiae, and Caenorhabditis elegans, and similar projects are currently being planned for other organisms. In such projects, the physical map is assembled by first "fingerprinting" a large number of clones chosen at random from a recombinant library and then inferring overlaps between clones with sufficiently similar fingerprints. Although the basic approach is the same, there are many possible choices for the fingerprint used to characterize the clones and the rules for declaring overlap. In this paper, we derive simple formulas showing how the progress of a physical mapping project is affected by the nature of the fingerprinting scheme. Using these formulas, we discuss the analytic considerations involved in selecting an appropriate fingerprinting scheme for a particular project.},
@@ -1184,35 +1260,6 @@ SUPPLEMENTARY INFORMATION: Supplementary data are available at Bioinformatics on
 	Year = {2009},
 	Bdsk-Url-1 = {http://dx.doi.org/10.1128/AEM.01541-09}}
 
-@article{4160251,
-	Author = {P{\'e}rez, F. and Granger, B.E.},
-	Date-Added = {2015-03-17 01:47:58 +0000},
-	Date-Modified = {2015-03-17 01:47:58 +0000},
-	Journal = {Computing in Science Engineering},
-	Number = {3},
-	Pages = {21-29},
-	Title = {IPython: A System for Interactive Scientific Computing},
-	Volume = {9},
-	Year = {2007}}
-
-@article{McDonald2013,
-	Author = {Eric McDonald and C. Titus Brown},
-	Date-Added = {2015-03-17 01:47:58 +0000},
-	Date-Modified = {2015-03-17 01:47:58 +0000},
-	Journal = {arXiv preprint},
-	Month = {03},
-	Title = {khmer: Working with Big Data in Bioinformatics},
-	Year = {2013}}
-
-@article{Kirsch2006,
-	Author = {Kirsch, Adam and Mitzenmacher, Michael},
-	Date-Added = {2015-03-17 01:47:58 +0000},
-	Date-Modified = {2015-03-17 01:47:58 +0000},
-	Journal = {Building},
-	Pages = {456--467},
-	Title = {{Less Hashing , Same Performance : Building a Better Bloom Filter}},
-	Year = {2006}}
-
 @article{simpson1949measurement,
 	Author = {Simpson, Edward H},
 	Date-Added = {2015-03-17 01:47:58 +0000},
@@ -1319,18 +1366,6 @@ SUPPLEMENTARY INFORMATION: Supplementary data are available at Bioinformatics on
 	Year = {2011},
 	Bdsk-Url-1 = {http://dx.doi.org/10.1128/AEM.02345-10}}
 
-@article{Mackelprang2011,
-	Author = {Mackelprang, Rachel and Waldrop, Mark P and DeAngelis, Kristen M and David, Maude M and Chavarria, Krystle L and Blazewicz, Steven J and Rubin, Edward M and Jansson, Janet K},
-	Date-Added = {2015-03-17 01:47:58 +0000},
-	Date-Modified = {2015-03-17 01:47:58 +0000},
-	Journal = {Nature},
-	Month = {Dec},
-	Number = {7377},
-	Pages = {368-71},
-	Title = {Metagenomic analysis of a permafrost microbial community reveals a rapid response to thaw},
-	Volume = {480},
-	Year = {2011}}
-
 @article{Hess:2011aa,
 	Abstract = {The paucity of enzymes that efficiently deconstruct plant polysaccharides represents a major bottleneck for industrial-scale conversion of cellulosic biomass into biofuels. Cow rumen microbes specialize in degradation of cellulosic plant material, but most members of this complex community resist cultivation. To characterize biomass-degrading genes and genomes, we sequenced and analyzed 268 gigabases of metagenomic DNA from microbes adherent to plant fiber incubated in cow rumen. From these data, we identified 27,755 putative carbohydrate-active genes and expressed 90 candidate proteins, of which 57% were enzymatically active against cellulosic substrates. We also assembled 15 uncultured microbial genomes, which were validated by complementary methods including single-cell genome sequencing. These data sets provide a substantially expanded catalog of genes and genomes participating in the deconstruction of cellulosic biomass.},
 	Author = {Hess, Matthias and Sczyrba, Alexander and Egan, Rob and Kim, Tae-Wan and Chokhawala, Harshal and Schroth, Gary and Luo, Shujun and Clark, Douglas S and Chen, Feng and Zhang, Tao and Mackie, Roderick I and Pennacchio, Len A and Tringe, Susannah G and Visel, Axel and Woyke, Tanja and Wang, Zhong and Rubin, Edward M},
@@ -1349,17 +1384,6 @@ SUPPLEMENTARY INFORMATION: Supplementary data are available at Bioinformatics on
 	Volume = {331},
 	Year = {2011},
 	Bdsk-Url-1 = {http://dx.doi.org/10.1126/science.1200387}}
-
-@article{Hess2011,
-	Author = {Hess, M and Sczyrba, A and Egan, R and Kim, T W and Chokhawala, H and Schroth, G and Luo, S and Clark, D S and Chen, F and Zhang, T and Mackie, R I and Pennacchio, L A and Tringe, S G and Visel, A and Woyke, T and Wang, Z and Rubin, E M},
-	Date-Added = {2015-03-17 01:47:58 +0000},
-	Date-Modified = {2015-03-17 01:47:58 +0000},
-	Journal = {Science},
-	Number = {6016},
-	Pages = {463--467},
-	Title = {{Metagenomic Discovery of Biomass-Degrading Genes and Genomes from Cow Rumen}},
-	Volume = {331},
-	Year = {2011}}
 
 @article{Segata:2012aa,
 	Abstract = {Metagenomic shotgun sequencing data can identify microbes populating a microbial community and their proportions, but existing taxonomic profiling methods are inefficient for increasingly large data sets. We present an approach that uses clade-specific marker genes to unambiguously assign reads to microbial clades more accurately and >50× faster than current approaches. We validated our metagenomic phylogenetic analysis tool, MetaPhlAn, on terabases of short reads and provide the largest metagenomic profiling to date of the human gut. It can be accessed at http://huttenhower.sph.harvard.edu/metaphlan/.},
@@ -1416,17 +1440,6 @@ SUPPLEMENTARY INFORMATION: Supplementary data are available at Bioinformatics on
 	Volume = {24},
 	Year = {2008},
 	Bdsk-Url-1 = {http://dx.doi.org/10.1093/bioinformatics/btn355}}
-
-@article{Richter2008,
-	Author = {Richter, Daniel C and Ott, Felix and Auch, Alexander F and Schmid, Ramona and Huson, Daniel H},
-	Date-Added = {2015-03-17 01:47:58 +0000},
-	Date-Modified = {2015-03-17 01:47:58 +0000},
-	Journal = {PLoS ONE},
-	Number = {10},
-	Pages = {12},
-	Title = {{MetaSim---A Sequencing Simulator for Genomics and Metagenomics}},
-	Volume = {3},
-	Year = {2008}}
 
 @article{Su:2012aa,
 	Abstract = {BACKGROUND: It has long been intriguing scientists to effectively compare different microbial communities (also referred as 'metagenomic samples' here) in a large scale: given a set of unknown samples, find similar metagenomic samples from a large repository and examine how similar these samples are. With the current metagenomic samples accumulated, it is possible to build a database of metagenomic samples of interests. Any metagenomic samples could then be searched against this database to find the most similar metagenomic sample(s). However, on one hand, current databases with a large number of metagenomic samples mostly serve as data repositories that offer few functionalities for analysis; and on the other hand, methods to measure the similarity of metagenomic data work well only for small set of samples by pairwise comparison. It is not yet clear, how to efficiently search for metagenomic samples against a large metagenomic database.
@@ -1520,17 +1533,6 @@ SUPPLEMENTARY INFORMATION: Supplementary data are available at Bioinformatics on
 	Title = {Microbial metagenomics: beyond the genome},
 	Volume = {3},
 	Year = {2011}}
-
-@article{Chen2005,
-	Author = {Chen, Yaw-Hwang and Nyeo, Su-Long and Yeh, Chiung-Yuh},
-	Date-Added = {2015-03-17 01:47:58 +0000},
-	Date-Modified = {2015-03-17 01:47:58 +0000},
-	Journal = {Physical Review E},
-	Number = {1},
-	Pages = {1--7},
-	Title = {{Model for the distributions of k-mers in DNA sequences}},
-	Volume = {72},
-	Year = {2005}}
 
 @article{Handelsman:1998aa,
 	Abstract = {Cultured soil microorganisms have provided a rich source of natural-product chemistry. Because only a tiny fraction of soil microbes from soil are readily cultured, soil might be the greatest untapped resource for novel chemistry. The concept of cloning the metagenome to access the collective genomes and the biosynthetic machinery of soil microflora is explored here.},
@@ -1640,17 +1642,6 @@ SUPPLEMENTARY INFORMATION: Additional material is available in the online versio
 	Year = {2013},
 	Bdsk-Url-1 = {http://dx.doi.org/10.1093/bioinformatics/btt584}}
 
-@article{Woyke2010,
-	Author = {Woyke, Tanja and Tighe, Damon and Mavromatis, Konstantinos and Clum, Alicia and Copeland, Alex and Schackwitz, Wendy and Lapidus, Alla and Wu, Dongying and McCutcheon, John P and McDonald, Bradon R and Moran, Nancy A and Bristow, James and Cheng, Jan-Fang},
-	Date-Added = {2015-03-17 01:47:58 +0000},
-	Date-Modified = {2015-03-17 01:47:58 +0000},
-	Journal = {PLoS ONE},
-	Number = {4},
-	Pages = {8},
-	Title = {{One Bacterial Cell, One Complete Genome}},
-	Volume = {5},
-	Year = {2010}}
-
 @article{Wu:2012aa,
 	Abstract = {SUMMARY: With the explosive growth of bacterial and archaeal sequence data, large-scale phylogenetic analyses present both opportunities and challenges. Here we describe AMPHORA2, an automated phylogenomic inference tool that can be used for high-throughput, high-quality genome tree reconstruction and metagenomic phylotyping. Compared with its predecessor, AMPHORA2 has several major enhancements and new functions: it has a greatly expanded phylogenetic marker database and can analyze both bacterial and archaeal sequences; it incorporates probability-based sequence alignment masks that improve the phylogenetic accuracy; it can analyze DNA as well as protein sequences and is more sensitive in marker identification; finally, it is over 100× faster in metagenomic phylotyping.
 AVAILABILITY: http://wolbachia.biology.virginia.edu/WuLab/Software.html.
@@ -1749,17 +1740,6 @@ SUPPLEMENTARY INFORMATION: Supplementary data are available at Bioinformatics on
 	Year = {2010},
 	Bdsk-Url-1 = {http://dx.doi.org/10.1038/nmeth.f.303}}
 
-@article{Kelley2010,
-	Author = {Kelley, David R and Schatz, Michael C and Salzberg, Steven L},
-	Date-Added = {2015-03-17 01:47:58 +0000},
-	Date-Modified = {2015-03-17 01:47:58 +0000},
-	Journal = {Genome Biol},
-	Number = {11},
-	Pages = {R116},
-	Title = {Quake: quality-aware detection and correction of sequencing errors},
-	Volume = {11},
-	Year = {2010}}
-
 @article{gotelli2001quantifying,
 	Author = {Gotelli, Nicholas J and Colwell, Robert K},
 	Date-Added = {2015-03-17 01:47:58 +0000},
@@ -1790,17 +1770,6 @@ SUPPLEMENTARY INFORMATION: Supplementary data are available at Bioinformatics on
 	Year = {2013},
 	Bdsk-Url-1 = {http://dx.doi.org/10.1128/mBio.00324-13}}
 
-@article{Campagna2005,
-	Author = {Campagna, Davide and Romualdi, Chiara and Vitulo, Nicola and {Del Favero}, Micky and Lexa, Matej and Cannata, Nicola and Valle, Giorgio},
-	Date-Added = {2015-03-17 01:47:58 +0000},
-	Date-Modified = {2015-03-17 01:47:58 +0000},
-	Journal = {Bioinformatics},
-	Number = {5},
-	Pages = {582--588},
-	Title = {{RAP: a new computer program for de novo identification of repeated sequences in whole genomes.}},
-	Volume = {21},
-	Year = {2005}}
-
 @article{Dutilh:2012aa,
 	Abstract = {MOTIVATION: Metagenomes are often characterized by high levels of unknown sequences. Reads derived from known microorganisms can easily be identified and analyzed using fast homology search algorithms and a suitable reference database, but the unknown sequences are often ignored in further analyses, biasing conclusions. Nevertheless, it is possible to use more data in a comparative metagenomic analysis by creating a cross-assembly of all reads, i.e. a single assembly of reads from different samples. Comparative metagenomics studies the interrelationships between metagenomes from different samples. Using an assembly algorithm is a fast and intuitive way to link (partially) homologous reads without requiring a database of reference sequences.
 RESULTS: Here, we introduce crAss, a novel bioinformatic tool that enables fast simple analysis of cross-assembly files, yielding distances between all metagenomic sample pairs and an insightful image displaying the similarities.},
@@ -1821,17 +1790,6 @@ RESULTS: Here, we introduce crAss, a novel bioinformatic tool that enables fast 
 	Volume = {28},
 	Year = {2012},
 	Bdsk-Url-1 = {http://dx.doi.org/10.1093/bioinformatics/bts613}}
-
-@article{Yang2011,
-	Author = {Yang, Xiao and Aluru, Srinivas and Dorman, Karin S},
-	Date-Added = {2015-03-17 01:47:58 +0000},
-	Date-Modified = {2015-03-17 01:47:58 +0000},
-	Journal = {BMC Bioinformatics},
-	Number = {Suppl 1},
-	Pages = {S52},
-	Title = {{Repeat-aware modeling and correction of short read errors}},
-	Volume = {12},
-	Year = {2011}}
 
 @article{Stackebrandt:2002aa,
 	Abstract = {An ad hoc committee for the re-evaluation of the species definition in bacteriology met in Gent, Belgium, in February 2002. The committee made various recommendations regarding the species definition in the light of developments in methodologies available to systematists.},
@@ -1869,29 +1827,6 @@ RESULTS: Here, we introduce crAss, a novel bioinformatic tool that enables fast 
 	Year = {2013},
 	Bdsk-Url-1 = {http://dx.doi.org/10.1038/ismej.2013.10}}
 
-@article{Pell2012,
-	Author = {Pell, Jason and Hintze, Arend and Canino-Koning, Rosangela and Howe, Adina and Tiedje, James M and Brown, C Titus},
-	Date-Added = {2015-03-17 01:47:58 +0000},
-	Date-Modified = {2015-03-17 01:47:58 +0000},
-	Journal = {Proc Natl Acad Sci U S A},
-	Month = {Aug},
-	Number = {33},
-	Pages = {13272-7},
-	Title = {Scaling metagenome sequence assembly with probabilistic de Bruijn graphs},
-	Volume = {109},
-	Year = {2012}}
-
-@article{pubmed19997069,
-	Author = {ML Metzker},
-	Date-Added = {2015-03-17 01:47:58 +0000},
-	Date-Modified = {2015-03-17 01:47:58 +0000},
-	Journal = {Nat Rev Genet},
-	Number = {1},
-	Pages = {31-46},
-	Title = {Sequencing technologies - the next generation.},
-	Volume = {11},
-	Year = {2010}}
-
 @article{Kakirde:2010aa,
 	Abstract = {Metagenomic analyses can provide extensive information on the structure, composition, and predicted gene functions of diverse environmental microbial assemblages. Each environment presents its own unique challenges to metagenomic investigation and requires a specifically designed approach to accommodate physicochemical and biotic factors unique to each environment that can pose technical hurdles and/or bias the metagenomic analyses. In particular, soils harbor an exceptional diversity of prokaryotes that are largely undescribed beyond the level of ribotype and are a potentially vast resource for natural product discovery. The successful application of a soil metagenomic approach depends on selecting the appropriate DNA extraction, purification, and if necessary, cloning methods for the intended downstream analyses. The most important technical considerations in a metagenomic study include obtaining a sufficient yield of high-purity DNA representing the targeted microorganisms within an environmental sample or enrichment and (if required) constructing a metagenomic library in a suitable vector and host. Size does matter in the context of the average insert size within a clone library or the sequence read length for a high-throughput sequencing approach. It is also imperative to select the appropriate metagenomic screening strategy to address the specific question(s) of interest, which should drive the selection of methods used in the earlier stages of a metagenomic project (e.g., DNA size, to clone or not to clone). Here, we present both the promising and problematic nature of soil metagenomics and discuss the factors that should be considered when selecting soil sampling, DNA extraction, purification, and cloning methods to implement based on the ultimate study objectives.},
 	Author = {Kakirde, Kavita S and Parsley, Larissa C and Liles, Mark R},
@@ -1910,18 +1845,6 @@ RESULTS: Here, we introduce crAss, a novel bioinformatic tool that enables fast 
 	Volume = {42},
 	Year = {2010},
 	Bdsk-Url-1 = {http://dx.doi.org/10.1016/j.soilbio.2010.07.021}}
-
-@article{Rusu2008,
-	Author = {Rusu, Florin and Dobra, Alin},
-	Date-Added = {2015-03-17 01:47:58 +0000},
-	Date-Modified = {2015-03-17 01:47:58 +0000},
-	Journal = {ACM Transactions on Database Systems},
-	Month = aug,
-	Number = {3},
-	Pages = {1--46},
-	Title = {{Sketches for size of join estimation}},
-	Volume = {33},
-	Year = {2008}}
 
 @article{Bittner:2010aa,
 	Abstract = {BACKGROUND: Improving knowledge of biodiversity will benefit conservation biology, enhance bioremediation studies, and could lead to new medical treatments. However there is no standard approach to estimate and to compare the diversity of different environments, or to study its past, and possibly, future evolution.
@@ -1944,17 +1867,6 @@ IMPLICATIONS OF THE HYPOTHESIS: Evolutionary gene networks reduce the risk of pr
 	Volume = {5},
 	Year = {2010},
 	Bdsk-Url-1 = {http://dx.doi.org/10.1186/1745-6150-5-47}}
-
-@article{Bloom70,
-	Author = {Burton H. Bloom},
-	Date-Added = {2015-03-17 01:47:58 +0000},
-	Date-Modified = {2015-03-17 01:47:58 +0000},
-	Journal = {Commun. ACM},
-	Number = {7},
-	Pages = {422-426},
-	Title = {Space/Time Trade-offs in Hash Coding with Allowable Errors},
-	Volume = {13},
-	Year = {1970}}
 
 @article{Liu:2011ab,
 	Abstract = {MOTIVATION: Direct sequencing of microbes in human ecosystems (the human microbiome) has complemented single genome cultivation and sequencing to understand and explore the impact of commensal microbes on human health. As sequencing technologies improve and costs decline, the sophistication of data has outgrown available computational methods. While several existing machine learning methods have been adapted for analyzing microbiome data recently, there is not yet an efficient and dedicated algorithm available for multiclass classification of human microbiota.
@@ -1979,17 +1891,6 @@ SUPPLEMENTARY INFORMATION: Supplementary data are available at Bioinformatics on
 	Volume = {27},
 	Year = {2011},
 	Bdsk-Url-1 = {http://dx.doi.org/10.1093/bioinformatics/btr547}}
-
-@article{Do2008,
-	Author = {Do, Huy Hoang and Choi, Kwok Pui and Preparata, Franco P and Sung, Wing Kin and Zhang, Louxin},
-	Date-Added = {2015-03-17 01:47:58 +0000},
-	Date-Modified = {2015-03-17 01:47:58 +0000},
-	Journal = {Journal of computational biology a journal of computational molecular cell biology},
-	Number = {5},
-	Pages = {469--487},
-	Title = {{Spectrum-based de novo repeat detection in genomic sequences.}},
-	Volume = {15},
-	Year = {2008}}
 
 @article{Leach:2012aa,
 	Abstract = {MOTIVATION: Next-generation sequencing methods are generating increasingly massive datasets, yet still do not fully capture genetic diversity in the richest environments. To understand such complicated and elusive systems, effective tools are needed to assist with delineating the differences found in and between community datasets.
@@ -2044,38 +1945,6 @@ SUPPLEMENTARY INFORMATION: Supplemental materials are available at Bioinformatic
 	Year = {2012},
 	Bdsk-Url-1 = {http://dx.doi.org/10.1038/nature11234}}
 
-@article{Conway2011,
-	Author = {Conway, Thomas C and Bromage, Andrew J},
-	Date-Added = {2015-03-17 01:47:58 +0000},
-	Date-Modified = {2015-03-17 01:47:58 +0000},
-	Journal = {Bioinformatics},
-	Month = {Feb},
-	Number = {4},
-	Pages = {479-86},
-	Title = {Succinct data structures for assembling large genomes},
-	Volume = {27},
-	Year = {2011}}
-
-@incollection{CormodeM05,
-	Author = {Cormode, Graham},
-	Booktitle = {Proc. of the 2005 SIAM International Conference on Data Mining},
-	Date-Added = {2015-03-17 01:47:58 +0000},
-	Date-Modified = {2015-03-17 01:47:58 +0000},
-	Pages = {44--55},
-	Title = {Summarizing and mining skewed data streams},
-	Year = {2005}}
-
-@article{BroderM03,
-	Author = {Andrei Z. Broder and Michael Mitzenmacher},
-	Date-Added = {2015-03-17 01:47:58 +0000},
-	Date-Modified = {2015-03-17 01:47:58 +0000},
-	Journal = {Internet Mathematics},
-	Number = {4},
-	Pages = {485-509},
-	Title = {Survey: Network Applications of Bloom Filters: A Survey},
-	Volume = {1},
-	Year = {2003}}
-
 @article{Teeling:2004aa,
 	Abstract = {BACKGROUND: In the emerging field of environmental genomics, direct cloning and sequencing of genomic fragments from complex microbial communities has proven to be a valuable source of new enzymes, expanding the knowledge of basic biological processes. The central problem of this so called metagenome-approach is that the cloned fragments often lack suitable phylogenetic marker genes, rendering the identification of clones that are likely to originate from the same genome difficult or impossible. In such cases, the analysis of intrinsic DNA-signatures like tetranucleotide frequencies can provide valuable hints on fragment affiliation. With this application in mind, the TETRA web-service and the TETRA stand-alone program have been developed, both of which automate the task of comparative tetranucleotide frequency analysis. Availability: http://www.megx.net/tetra.
 RESULTS: TETRA provides a statistical analysis of tetranucleotide usage patterns in genomic fragments, either via a web-service or a stand-alone program. With respect to discriminatory power, such an analysis outperforms the assignment of genomic fragments based on the (G+C)-content, which is a widely-used sequence-based measure for assessing fragment relatedness. While the web-service is restricted to the calculation of correlation coefficients between tetranucleotide usage patterns of submitted DNA sequences, the stand-alone program generates a much more detailed output, comprising all raw data and graphical plots. The stand-alone program is controlled via a graphical user interface and can batch-process a multitude of sequences. Furthermore, it comes with pre-computed tetranucleotide usage patterns for 166 prokaryote chromosomes, providing a useful reference dataset and source for data-mining.
@@ -2096,17 +1965,6 @@ CONCLUSIONS: Up to now, the analysis of skewed oligonucleotide distributions wit
 	Volume = {5},
 	Year = {2004},
 	Bdsk-Url-1 = {http://dx.doi.org/10.1186/1471-2105-5-163}}
-
-@article{Stein2010,
-	Author = {Stein, Lincoln D},
-	Date-Added = {2015-03-17 01:47:58 +0000},
-	Date-Modified = {2015-03-17 01:47:58 +0000},
-	Journal = {Genome Biol},
-	Number = {5},
-	Pages = {207},
-	Title = {The case for cloud computing in genome informatics},
-	Volume = {11},
-	Year = {2010}}
 
 @article{Kembel:2011aa,
 	Abstract = {Phylogenetic diversity--patterns of phylogenetic relatedness among organisms in ecological communities--provides important insights into the mechanisms underlying community assembly. Studies that measure phylogenetic diversity in microbial communities have primarily been limited to a single marker gene approach, using the small subunit of the rRNA gene (SSU-rRNA) to quantify phylogenetic relationships among microbial taxa. In this study, we present an approach for inferring phylogenetic relationships among microorganisms based on the random metagenomic sequencing of DNA fragments. To overcome challenges caused by the fragmentary nature of metagenomic data, we leveraged fully sequenced bacterial genomes as a scaffold to enable inference of phylogenetic relationships among metagenomic sequences from multiple phylogenetic marker gene families. The resulting metagenomic phylogeny can be used to quantify the phylogenetic diversity of microbial communities based on metagenomic data sets. We applied this method to understand patterns of microbial phylogenetic diversity and community assembly along an oceanic depth gradient, and compared our findings to previous studies of this gradient using SSU-rRNA gene and metagenomic analyses. Bacterial phylogenetic diversity was highest at intermediate depths beneath the ocean surface, whereas taxonomic diversity (diversity measured by binning sequences into taxonomically similar groups) showed no relationship with depth. Phylogenetic diversity estimates based on the SSU-rRNA gene and the multi-gene metagenomic phylogeny were broadly concordant, suggesting that our approach will be applicable to other metagenomic data sets for which corresponding SSU-rRNA gene sequences are unavailable. Our approach opens up the possibility of using metagenomic data to study microbial diversity in a phylogenetic context.},
@@ -2164,17 +2022,6 @@ CONCLUSIONS: Up to now, the analysis of skewed oligonucleotide distributions wit
 	Volume = {2},
 	Year = {2008},
 	Bdsk-Url-1 = {http://dx.doi.org/10.1038/ismej.2008.69}}
-
-@article{Sboner2011,
-	Author = {Sboner, Andrea and Mu, Xinmeng Jasmine and Greenbaum, Dov and Auerbach, Raymond K and Gerstein, Mark B},
-	Date-Added = {2015-03-17 01:47:58 +0000},
-	Date-Modified = {2015-03-17 01:47:58 +0000},
-	Journal = {Genome Biol},
-	Number = {8},
-	Pages = {125},
-	Title = {The real cost of sequencing: higher than you think!},
-	Volume = {12},
-	Year = {2011}}
 
 @article{Bent:2008aa,
 	Abstract = {Molecular microbial community analysis methods have revolutionized our understanding of the diversity and distribution of bacteria, archaea and microbial eukaryotes. The information obtained has adequately demonstrated that the analysis of microbial model systems can provide important insights into ecosystem function and stability. However, the terminology and metrics used in macroecology must be applied cautiously because the methods available to characterize microbial diversity are inherently limited in their ability to detect the many numerically minor constituents of microbial communities. In this review, we focus on the use of indices to quantify the diversity found in microbial communities, and on the methods used to generate the data from which those indices are calculated. Useful conclusions regarding diversity can only be deduced if the properties of the various methods used are well understood. The commonly used diversity metrics differ in the weight they give to organisms that differ in abundance, so understanding the properties of these metrics is essential. In this review, we illustrate important methodological and metric-dependent differences using simulated communities. We conclude that the assessment of richness in complex communities is futile without extensive sampling, and that some diversity indices can be estimated with reasonable accuracy through the analysis of clone libraries, but not from community fingerprint data.},
@@ -2250,18 +2097,6 @@ CONCLUSIONS: Up to now, the analysis of skewed oligonucleotide distributions wit
 	Year = {2010},
 	Bdsk-Url-1 = {http://dx.doi.org/10.1101/pdb.prot5368}}
 
-@article{Zerbino2008,
-	Author = {Zerbino, Daniel R and Birney, Ewan},
-	Date-Added = {2015-03-17 01:47:58 +0000},
-	Date-Modified = {2015-03-17 01:47:58 +0000},
-	Journal = {Genome Res},
-	Month = {May},
-	Number = {5},
-	Pages = {821-9},
-	Title = {Velvet: algorithms for de novo short read assembly using de Bruijn graphs},
-	Volume = {18},
-	Year = {2008}}
-
 @article{Mitra:2009aa,
 	Abstract = {BACKGROUND: Metagenomics is the study of the genomic content of an environmental sample of microbes. Advances in the through-put and cost-efficiency of sequencing technology is fueling a rapid increase in the number and size of metagenomic datasets being generated. Bioinformatics is faced with the problem of how to handle and analyze these datasets in an efficient and useful way. One goal of these metagenomic studies is to get a basic understanding of the microbial world both surrounding us and within us. One major challenge is how to compare multiple datasets. Furthermore, there is a need for bioinformatics tools that can process many large datasets and are easy to use.
 RESULTS: This article describes two new and helpful techniques for comparing multiple metagenomic datasets. The first is a visualization technique for multiple datasets and the second is a new statistical method for highlighting the differences in a pairwise comparison. We have developed implementations of both methods that are suitable for very large datasets and provide these in Version 3 of our standalone metagenome analysis tool MEGAN.
@@ -2284,13 +2119,6 @@ SUPPLEMENTARY INFORMATION: Supplementary data are available at Bioinformatics on
 	Volume = {25},
 	Year = {2009},
 	Bdsk-Url-1 = {http://dx.doi.org/10.1093/bioinformatics/btp341}}
-
-@misc{Brown2012blog,
-	Author = {C. Titus Brown},
-	Date-Added = {2015-03-17 01:47:58 +0000},
-	Date-Modified = {2015-03-17 01:47:58 +0000},
-	Title = {What does Trinity's In Silico normalization do?},
-	Year = {2012}}
 
 @article{ipython,
 	Author = {P\'erez, Fernando and Granger, Brian E.},
@@ -2453,17 +2281,6 @@ SUPPLEMENTARY INFORMATION: Supplementary data are available at Bioinformatics on
 	Volume = {11},
 	Year = {2010}}
 
-@article{pubmed21114842,
-	Author = {DR Kelley and MC Schatz and SL Salzberg},
-	Date-Added = {2015-03-17 01:25:30 +0000},
-	Date-Modified = {2015-03-17 01:25:30 +0000},
-	Journal = {Genome Biol},
-	Number = {11},
-	Pages = {R116},
-	Title = {Quake: quality-aware detection and correction of sequencing errors.},
-	Volume = {11},
-	Year = {2010}}
-
 @article{pubmed21867570,
 	Author = {A Sboner and XJ Mu and D Greenbaum and RK Auerbach and MB Gerstein},
 	Date-Added = {2015-03-17 01:25:30 +0000},
@@ -2604,17 +2421,6 @@ SUPPLEMENTARY INFORMATION: Supplementary data are available at Bioinformatics on
 	Volume = {29},
 	Year = {2011}}
 
-@article{pubmed21926975,
-	Author = {H Chitsaz and JL Yee-Greenbaum and G Tesler and MJ Lombardo and CL Dupont and JH Badger and M Novotny and DB Rusch and LJ Fraser and NA Gormley and O Schulz-Trieglaff and GP Smith and DJ Evers and PA Pevzner and RS Lasken},
-	Date-Added = {2015-03-17 01:25:30 +0000},
-	Date-Modified = {2015-03-17 01:25:30 +0000},
-	Journal = {Nat Biotechnol},
-	Number = {10},
-	Pages = {915-21},
-	Title = {Efficient de novo assembly of single-cell bacterial genomes from short-read data sets.},
-	Volume = {29},
-	Year = {2011}}
-
 @article{pubmed22068540,
 	Author = {PE Compeau and PA Pevzner and G Tesler},
 	Date-Added = {2015-03-17 01:25:30 +0000},
@@ -2647,17 +2453,6 @@ SUPPLEMENTARY INFORMATION: Supplementary data are available at Bioinformatics on
 	Title = {Whole-genome multiple displacement amplification from single cells.},
 	Volume = {1},
 	Year = {2006}}
-
-@article{pubmed19997069,
-	Author = {ML Metzker},
-	Date-Added = {2015-03-17 01:25:30 +0000},
-	Date-Modified = {2015-03-17 01:25:30 +0000},
-	Journal = {Nat Rev Genet},
-	Number = {1},
-	Pages = {31-46},
-	Title = {Sequencing technologies - the next generation.},
-	Volume = {11},
-	Year = {2010}}
 
 @article{pubmed22139935,
 	Author = {AJ Pinho and D Pratas and SP Garcia},
@@ -2914,18 +2709,6 @@ CONTACT: rajatroy@cs.rutgers.edu or schliep@cs.rutgers.edu SUPPLEMENTARY INFORMA
 	Year = {2005},
 	Bdsk-Url-1 = {http://dx.doi.org/10.1137/1.9781611972757.5}}
 
-@proceedings{DBLP:conf/sdm/2005,
-	Bibsource = {DBLP, http://dblp.uni-trier.de},
-	Booktitle = {SDM},
-	Date-Added = {2014-04-18 20:43:06 +0000},
-	Date-Modified = {2014-04-18 20:43:06 +0000},
-	Editor = {Hillol Kargupta and Jaideep Srivastava and Chandrika Kamath and Arnold Goodman},
-	Isbn = {978-0-89871-593-4, 978-1-61197-275-7},
-	Publisher = {SIAM},
-	Title = {Proceedings of the 2005 SIAM International Conference on Data Mining, SDM 2005, Newport Beach, CA, USA, April 21-23, 2005},
-	Year = {2005},
-	Bdsk-Url-1 = {http://dx.doi.org/10.1137/1.9781611972757}}
-
 @article{Li2003,
 	Abstract = {In shotgun sequencing projects, the genome or BAC length is not always known. We approach estimating genome length by first estimating the repeat structure of the genome or BAC, sometimes of interest in its own right, on the basis of a set of random reads from a genome project. Moreover, we can find the consensus for repeat families before assembly. Our methods are based on the l-tuple content of the reads.},
 	Author = {Li, Xiaoman and Waterman, Michael S},
@@ -3098,23 +2881,6 @@ CONTACT: pashadag@cse.psu.edu.},
 	Volume = {27},
 	Year = {2011}}
 
-@article{Brown2012,
-	Author = {C. Titus Brown and Adina Howe and Qingpeng Zhang and Alexis B. Pyrkosz and Timothy H. Brom},
-	Date-Modified = {2014-06-10 21:23:40 +0000},
-	Journal = {arXiv},
-	Month = {03},
-	Pages = {1203.4802},
-	Title = {A Reference-Free Algorithm for Computational Normalization of Shotgun Sequencing Data},
-	Year = {2012}}
-
-@article{adina2013,
-	Author = {Adina Chuang Howe and Jason Pell and Rosangela Canino-Koning and Rachel Mackelprang and Susannah Tringe and Janet Jansson and James M. Tiedje and C. Titus Brown},
-	Date-Modified = {2014-06-10 21:26:01 +0000},
-	Journal = {arXiv},
-	Pages = {1212.0159},
-	Title = {Illumina Sequencing Artifacts Revealed by Connectivity Analysis of Metagenomic Datasets},
-	Year = {2012}}
-
 @article{Deorowicz2013,
 	Author = {Deorowicz, Sebastian and Debudaj-Grabysz, Agnieszka and Grabowski, Szymon},
 	Journal = {BMC Bioinformatics},
@@ -3238,24 +3004,6 @@ CONTACT: pashadag@cse.psu.edu.},
 	Pages = {59--65},
 	Title = {{A human gut microbial gene catalogue established by metagenomic sequencing.}},
 	Volume = {464},
-	Year = {2010}}
-
-@article{Kurtz2008,
-	Author = {Kurtz, Stefan and Narechania, Apurva and Stein, Joshua C and Ware, Doreen},
-	Journal = {BMC Genomics},
-	Number = {1},
-	Pages = {517},
-	Title = {{A new method to compute K-mer frequencies and its application to annotate large repetitive plant genomes}},
-	Volume = {9},
-	Year = {2008}}
-
-@article{Shi2010,
-	Author = {Shi, Haixiang and Schmidt, Bertil and Liu, Weiguo and M\"{u}ller-Wittig, Wolfgang},
-	Journal = {Journal of computational biology a journal of computational molecular cell biology},
-	Number = {4},
-	Pages = {603--615},
-	Title = {{A parallel algorithm for error correction in high-throughput short-read data on CUDA-enabled graphics hardware.}},
-	Volume = {17},
 	Year = {2010}}
 
 @article{Davenport2010,
@@ -3398,15 +3146,6 @@ CONTACT: pashadag@cse.psu.edu.},
 	Title = {{Model for the distributions of k-mers in DNA sequences}},
 	Volume = {72},
 	Year = {2005}}
-
-@article{Woyke2010,
-	Author = {Woyke, Tanja and Tighe, Damon and Mavromatis, Konstantinos and Clum, Alicia and Copeland, Alex and Schackwitz, Wendy and Lapidus, Alla and Wu, Dongying and McCutcheon, John P and McDonald, Bradon R and Moran, Nancy A and Bristow, James and Cheng, Jan-Fang},
-	Journal = {PLoS ONE},
-	Number = {4},
-	Pages = {8},
-	Title = {{One Bacterial Cell, One Complete Genome}},
-	Volume = {5},
-	Year = {2010}}
 
 @article{Kane2010,
 	Author = {Kane, Daniel M and Nelson, Jelani and Woodruff, David P and Road, Harry and Jose, San},

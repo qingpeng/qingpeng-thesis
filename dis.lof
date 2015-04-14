@@ -1,87 +1,87 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Description of k-mer counting packages\relax }}{20}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces \bf Comparison of the time it takes for k-mer counting tools to calculate k-mer abundance histograms, with time (y axis, in seconds) against data set size (in number of reads, x axis). All programs executed in time approximately linear with the number of input reads.\relax }}{38}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces \bf Comparison of the time it takes for k-mer counting tools to calculate k-mer abundance histograms, with time (y axis, in seconds) against data set size (in number of reads, x axis). All programs executed in time approximately linear with the number of input reads.\relax }}{26}
 \addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {3.2}{\ignorespaces \bf Memory usage of k-mer counting tools when calculating k-mer abundance histograms, with maximum resident program size (y axis, in GB) plotted against the total number of distinct k-mers in the data set (x axis, billions of k-mers). \relax }}{38}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces \bf Memory usage of k-mer counting tools when calculating k-mer abundance histograms, with maximum resident program size (y axis, in GB) plotted against the total number of distinct k-mers in the data set (x axis, billions of k-mers). \relax }}{27}
 \addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {3.3}{\ignorespaces \bf Disk storage usage of different k-mer counting tools to calculate k-mer abundance histograms in GB (y axis), plotted against the number of distinct k-mers in the data set (x axis). $^*$Note that khmer does not use the disk during counting or retrieval, although its hash tables can be saved for reuse.\relax }}{38}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces \bf Disk storage usage of different k-mer counting tools to calculate k-mer abundance histograms in GB (y axis), plotted against the number of distinct k-mers in the data set (x axis). $^*$Note that khmer does not use the disk during counting or retrieval, although its hash tables can be saved for reuse.\relax }}{28}
 \addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {3.4}{\ignorespaces \bf Time for several k-mer counting tools to retrieve the counts of 9.7m randomly chosen k-mers (y axis), plotted against the number of distinct k-mers in the data set being queried (x axis). BFCounter, DSK, Turtle, KAnalyze, and KMC do not support this functionality.\relax }}{38}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces \bf Time for several k-mer counting tools to retrieve the counts of 9.7m randomly chosen k-mers (y axis), plotted against the number of distinct k-mers in the data set being queried (x axis). BFCounter, DSK, Turtle, KAnalyze, and KMC do not support this functionality.\relax }}{31}
 \addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {3.5}{\ignorespaces \bf Relation between average miscount --- amount by which the count for k-mers is incorrect --- on the y axis, plotted against false positive rate (x axis), for five data sets. The five data sets were chosen to have the same total number of distinct k-mers: one metagenome data set; a set of randomly generated k-mers; a set of reads, chosen with 3x coverage and 1\% error, from a randomly generated genome; a simulated set of error-free reads (3x) chosen from a randomly generated genome and a set of {\em E. coli} reads.\relax }}{38}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces \bf Relation between average miscount --- amount by which the count for k-mers is incorrect --- on the y axis, plotted against false positive rate (x axis), for five data sets. The five data sets were chosen to have the same total number of distinct k-mers: one metagenome data set; a set of randomly generated k-mers; a set of reads, chosen with 3x coverage and 1\% error, from a randomly generated genome; a simulated set of error-free reads (3x) chosen from a randomly generated genome and a set of {\em E. coli} reads.\relax }}{33}
 \addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {3.6}{\ignorespaces \bf Relation between percent miscount --- amount by which the count for k-mers is incorrect relative to its true count --- on the y axis, plotted against false positive rate (x axis), for five data sets. The five data sets are the same as in Figure 3.5\hbox {}.\relax }}{38}
-\addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {3.7}{\ignorespaces \bf Number of unique k-mers (y axis) by starting position within read (x axis) in an untrimmed {\em E. coli} 100-bp Illumina shotgun data set, for k=17 and k=32. The increasing numbers of unique k-mers are a sign of the increasing sequencing error towards the 3' end of reads. Note that there are only 69 starting positions for 32-mers in a 100 base read.\relax }}{39}
-\addvspace {1.2\baselineskip }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces {\bf Representative rank-abundance distributions for 20-mers from 100-base reads with no errors, a read with a single substitution error, and a read with multiple substitution errors.}\relax }}{65}
-\addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {4.2}{\ignorespaces {\bf Mapping and k-mer coverage measures correlate for simulated genome data and a real {\em E. coli} data set (5m reads). Simulated data $r^2 = 0.79$; {\em E. coli} $r^2 = 0.80$.} \relax }}{66}
-\addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {4.3}{\ignorespaces {\bf Mapping and k-mer coverage measures correlate for simulated transcriptome data as well as real mouse transcriptome data. Simulated data $r^2 = 0.93$; mouse transcriptome $r^2 = 0.90$.} \relax }}{67}
-\addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {4.4}{\ignorespaces {\bf Coverage distribution of three microbial genome samples, calculated from mapped reads (a) before and (b) after digital normalization (k=20, C=20).}\relax }}{67}
-\addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {4.5}{\ignorespaces {\bf Fraction of reads kept when normalizing the {\em E. coli} dataset to C=20 at k=20.}\relax }}{68}
-\addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {4.6}{\ignorespaces {\bf K-mers at the ends of sequences are lost during digital normalization.}\relax }}{68}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces \bf Relation between percent miscount --- amount by which the count for k-mers is incorrect relative to its true count --- on the y axis, plotted against false positive rate (x axis), for five data sets. The five data sets are the same as in Figure 3.5\hbox {}.\relax }}{34}
 \addvspace {1.2\baselineskip }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces \bf from reads to IGS\relax }}{76}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces {\bf Representative rank-abundance distributions for 20-mers from 100-base reads with no errors, a read with a single substitution error, and a read with multiple substitution errors.}\relax }}{42}
 \addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {5.2}{\ignorespaces \bf the concept of IGS\relax }}{76}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces {\bf Mapping and k-mer coverage measures correlate for simulated genome data and a real {\em E. coli} data set (5m reads). Simulated data $r^2 = 0.79$; {\em E. coli} $r^2 = 0.80$.} \relax }}{43}
 \addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {5.3}{\ignorespaces \bf Ordination of the 6 synthetic samples using IGS method\relax }}{82}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces {\bf Mapping and k-mer coverage measures correlate for simulated transcriptome data as well as real mouse transcriptome data. Simulated data $r^2 = 0.93$; mouse transcriptome $r^2 = 0.90$.} \relax }}{44}
 \addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {5.4}{\ignorespaces \bf Clustering of the 6 synthetic samples using IGS method\relax }}{83}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces {\bf Coverage distribution of three microbial genome samples, calculated from mapped reads (a) before and (b) after digital normalization (k=20, C=20).}\relax }}{47}
 \addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {5.5}{\ignorespaces \bf Richness estimation of the 6 synthetic samples using IGS method\relax }}{83}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces {\bf Fraction of reads kept when normalizing the {\em E. coli} dataset to C=20 at k=20.}\relax }}{48}
 \addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {5.6}{\ignorespaces \bf Richness estimation using IGS method without adjustment\relax }}{84}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces \bf Number of unique k-mers (y axis) by starting position within read (x axis) in an untrimmed {\em E. coli} 100-bp Illumina shotgun data set, for k=17 and k=32. The increasing numbers of unique k-mers are a sign of the increasing sequencing error towards the 3' end of reads. Note that there are only 69 starting positions for 32-mers in a 100 base read.\relax }}{60}
 \addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {5.7}{\ignorespaces \bf Richness estimation using IGS method without adjustment \relax }}{86}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces \bf Diagram of semi-streaming error detection. In a first pass over the read data, reads are loaded in until the graph locus to which they belong is saturated. From that point on, reads are examined for errors and not loaded into the graph. In a second pass, only the subset of reads loaded into the graph are examined for errors.\relax }}{62}
 \addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {5.8}{\ignorespaces \bf Richness estimation using IGS method adjusted by sequencing error rate\relax }}{88}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces \bf Saturation curve of a real and a simulated {\em E. coli} read data set. Reads are collected when they have an estimated coverage of less than 20; in the early phase ($<$ 1m reads), almost all reads are collected, but by 2m reads into the data set, the majority of reads come from loci with an estimated sequencing depth of $>$ 20 and are rejected.\relax }}{63}
 \addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {5.9}{\ignorespaces \bf Richness estimation using IGS method adjusted by sequencing error rate and false positive rate of bloom filter\relax }}{89}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces {\bf Error spectrum of reads in the {\em E. coli} data set. The sublinear k-mer spectrum analysis is calculated based on saturation of a fraction of the data set, while the two-pass spectral analysis uses all of the data. bowtie2 mismatches are based on all mapped reads. The y values for the k-mer spectral analyses are scaled by a factor of four for ease of comparison.}\relax }}{67}
 \addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {5.10}{\ignorespaces \bf Dissimilarity matrix between synthetic samples using Bray-cutis from species composition directly \relax }}{91}
-\addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {5.11}{\ignorespaces \bf Dissimilarity matrix between synthetic samples using Bray-cutis from sequencing reads using IGS method \relax }}{92}
-\addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {5.12}{\ignorespaces \bf Correlation between calculated distance matrix and true matrix from different data sets and using different methods\relax }}{92}
-\addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {5.13}{\ignorespaces \bf Correlation between calculated distance matrix and true matrix from different dat sets with different sequencing depth\relax }}{93}
-\addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {5.14}{\ignorespaces \bf Coverage = 10x, No error\relax }}{94}
-\addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {5.15}{\ignorespaces \bf Coverage = 10x, error = 3\%, no error correction\relax }}{94}
-\addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {5.16}{\ignorespaces \bf Coverage = 10x, error = 3\%, with error correction\relax }}{95}
-\addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {5.17}{\ignorespaces \bf estimated genome size from data sets with variable coverage\relax }}{95}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces {\bf Error spectrum of reads in the mouse RNAseq data set. The sublinear k-mer spectrum analysis is calculated based on saturation of a fraction of the data set, while the two-pass spectral analysis uses all of the data, and bowtie2 mismatches are based on all mapped reads. The peak of errors at position 34 in the bowtie2 mapping reflects errors that in the first part of the data set are called as Ns, and hence are ignored by the sublinear error analysis; see text for details. Note, the bowtie2 mismatch rates are larger than the spectral rates, so for ease of comparison the y values for the k-mer spectral analyses are scaled by a factor of four.}\relax }}{67}
 \addvspace {1.2\baselineskip }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces \bf cluster of GOS samples using IGS method\relax }}{99}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces \bf from reads to IGS\relax }}{80}
 \addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {6.2}{\ignorespaces \bf Rarefaction curve of IGSs of the GOS samples\relax }}{100}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces \bf the concept of IGS\relax }}{80}
 \addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {6.3}{\ignorespaces \bf Estimated number of IGSs of the GOS samples\relax }}{100}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces \bf Ordination of the 6 synthetic samples using IGS method\relax }}{87}
 \addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {6.4}{\ignorespaces \bf PCoA of HMP\relax }}{101}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces \bf Clustering of the 6 synthetic samples using IGS method\relax }}{87}
 \addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {6.5}{\ignorespaces \bf alpha diversity of HMP\relax }}{102}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces \bf Richness estimation using IGS method without adjustment\relax }}{89}
 \addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {6.6}{\ignorespaces \bf PCoA of GPGC samples\relax }}{104}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces \bf Beta diversity analysis using IGS method without adjustment\relax }}{90}
 \addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {6.7}{\ignorespaces \bf alpha diversity of GPGC samples\relax }}{105}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces \bf Richness estimation using IGS method without adjustment \relax }}{92}
 \addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {6.8}{\ignorespaces \bf PCoA of soil samples collected from KBS\relax }}{106}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces \bf Richness estimation using IGS method adjusted by sequencing error rate\relax }}{93}
 \addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {6.9}{\ignorespaces \bf PCoA of soil samples collected from Amazon rainforest\relax }}{106}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces \bf Richness estimation using IGS method adjusted by sequencing error rate and false positive rate of bloom filter\relax }}{95}
 \addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {6.10}{\ignorespaces \bf PCoA of soil samples collected from Amazon rainforest\relax }}{107}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces \bf Correlation between calculated distance matrix and true matrix from different dat sets with different sequencing depth\relax }}{96}
+\addvspace {1.2\baselineskip }
+\contentsline {figure}{\numberline {5.11}{\ignorespaces \bf estimated genome size from data sets with variable coverage, no error rate\relax }}{97}
+\addvspace {1.2\baselineskip }
+\contentsline {figure}{\numberline {5.12}{\ignorespaces \bf estimated genome size from data sets with variable coverage, no error rate\relax }}{97}
+\addvspace {1.2\baselineskip }
+\contentsline {figure}{\numberline {5.13}{\ignorespaces \bf estimated genome size from data sets with variable coverage, no error rate\relax }}{98}
+\addvspace {1.2\baselineskip }
+\contentsline {figure}{\numberline {5.14}{\ignorespaces \bf Correlation between calculated distance matrix and true matrix from different data sets and using different methods\relax }}{99}
+\addvspace {1.2\baselineskip }
+\contentsline {figure}{\numberline {5.15}{\ignorespaces \bf cluster of GOS samples using IGS method\relax }}{102}
+\addvspace {1.2\baselineskip }
+\contentsline {figure}{\numberline {5.16}{\ignorespaces \bf Rarefaction curve of IGSs of the GOS samples\relax }}{103}
+\addvspace {1.2\baselineskip }
+\contentsline {figure}{\numberline {5.17}{\ignorespaces \bf Estimated number of IGSs of the GOS samples\relax }}{103}
+\addvspace {1.2\baselineskip }
+\contentsline {figure}{\numberline {5.18}{\ignorespaces \bf PCoA of HMP, red: anterior nares- skin, green: throat -oral, blue: buccal mucosa -oral, orange: posterior fornix -vaginal\relax }}{104}
+\addvspace {1.2\baselineskip }
+\contentsline {figure}{\numberline {5.19}{\ignorespaces \bf alpha diversity of HMP: estimation of metagenome size of HMP samples, red: anterior nares- skin, green: throat -oral, blue: buccal mucosa -oral, orange: posterior fornix -vaginal\relax }}{104}
+\addvspace {1.2\baselineskip }
+\contentsline {figure}{\numberline {5.20}{\ignorespaces \bf PCoA of GPGC samples\relax }}{106}
+\addvspace {1.2\baselineskip }
+\contentsline {figure}{\numberline {5.21}{\ignorespaces \bf alpha diversity of GPGC samples\relax }}{107}
+\addvspace {1.2\baselineskip }
+\contentsline {figure}{\numberline {5.22}{\ignorespaces \bf PCoA of soil samples collected from KBS\relax }}{108}
+\addvspace {1.2\baselineskip }
+\contentsline {figure}{\numberline {5.23}{\ignorespaces \bf PCoA of soil samples collected from Amazon rainforest\relax }}{108}
+\addvspace {1.2\baselineskip }
+\contentsline {figure}{\numberline {5.24}{\ignorespaces \bf PCoA of soil samples collected from Amazon rainforest\relax }}{109}
 \addvspace {1.2\baselineskip }
 \addvspace {10\p@ }

@@ -7,13 +7,14 @@
 \usepackage{amssymb, amsmath}
 %\usepackage{subcaption}
 \usepackage{graphicx}
+\usepackage{rotating}
 \usepackage{url}
 %% Insert packages you wish to use except setspace and subfig. 
 %% Those packages are loaded automatically.
 %% IMPORTANT: Load only those packages you know you will use.
 %% Some packages can cause conflicts resulting in improper formatting.
 \author{Qingpeng Zhang} %% Put your name in full as it is officially recognized by Michigan State University here.
-\title{Dissertation Title} %% Put the title of your dissertation here.
+\title{A Novel Computational Approach to Investigate Microbial Diversity using Whole-genome Shotgun Metagenomic Data} %% Put the title of your dissertation here.
 \unit{Computer Science} %% Put the name of your degree granting unit here. The complete
 %% list of these degree granting units can be found at
 %% http://grad.msu.edu/etd/docs/DegreeGrantingUnits.pdf
@@ -55,7 +56,50 @@
 
 \maketitlepage %%This command will produce the title page of your thesis.
 \begin{abstract}
-Abstract goes here
+
+In almost all the metagenomics projects, diversity analysis plays an important
+role to supply information about the richness of species, the species abundance
+distribution in a sample or the similarity and difference between different
+samples, all of which are crucial to draw insightful and reliable conclusion.
+Traditionally especially for amplicon metagenomics data set, OTUs(Operational
+Taxonomic Units) based on 16S rRNA genes are used as the foundation for
+diversity analysis. We have developed a novel statistical framework to enable microbial diversty
+ analysis using whole genome shotgun metagenomic reads data without the
+requirement of assembly, binning, reference or annotation. The novel concept
+we proposed - IGS represents the
+unique information in a metagenomics data set and the abundance of IGSs in
+different samples can be retrieved by the reads coverage through an efficient
+k-mer counting method. This samples-by-IGS abundance data matrix is a promising
+replacement of samples-by-OTU data matrix used in 16S rRNA based analysis and
+all existing statistical methods can be borrowed to work on the samples-by-IGS
+data matrix to investigate the diversity.
+
+ This dissertation
+covers an overview of existing approaches of doing microbial diversity analysis
+ of metagenomic samples, especially based on the concept of OTU, including the
+steps in the procedure, like contigs binning, statistical
+analysis of OTU abundance information to estimate the microbial diversity.  As
+the foundation of the IGS based framework, we described a novel method to count k-mers
+efficiently and a scalable approache to retrieve the coverage of a read in a 
+data set based on efficient and online k-mer counting. We also introduced the
+applications of this approach in reducing the redundancy of metagenomic reads
+dataset and analyzing sequencing error, which is beneficial to other tasks 
+in metagenomic data analysis, like
+assembly or error trimming. Next, we discussed how we developed the concept 
+of IGS based on the methods of efficient k-mer counting and digital
+normalization discussed before.  
+The application of IGS to analyze microbial diversity of metagenomic data sets 
+was discussed and the performance of the IGS method on simulated data sets and
+real data sets were demonstrated in the final chapters. 
+Since this method is totally binning-free,
+assembly-free, annotation-free, reference-free, it is specifically promising to
+deal with the highly diverse samples, while we are facing large amount of “dark
+matters” in it, like soil.
+
+  
+
+
+
 \end{abstract}
 
 %% If you wish to have a copyright page, remove the "%" in front of  \begin{copyrt}
@@ -118,13 +162,12 @@ Dedication goes here.
 %% Put the body of your dissertation here. 
 %% DO NOT include  the bibliography
 
-\input{background}
-\input{litreview}
-\input{chap1-khmer}
-\input{chap2-diginorm}
-\input{chap3-IGS}
-\input{chap4-realdata}
-\input{conc}
+\input{chap1-introduction}
+\input{chap2-litreview}
+\input{chap3-khmer}
+\input{chap4-diginorm}
+\input{chap5-IGS-theory}
+\input{chap7-conc}
 
 %%%%%%%    APPENDICES    %%%%%%%%%%
 %% If you wish to include one appendix, remove the "%" from the 

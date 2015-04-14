@@ -1,5 +1,11 @@
 \begin{thebibliography}{100}
 
+\bibitem{Alneberg2014}
+J.~Alneberg, B.~S. Bjarnason, I.~de~Bruijn, M.~Schirmer, J.~Quick, U.~Z. Ijaz,
+  L.~Lahti, N.~J. Loman, A.~F. Andersson, and C.~Quince.
+\newblock Binning metagenomic contigs by coverage and composition.
+\newblock {\em Nat Methods}, 11(11):1144--6, Nov 2014.
+
 \bibitem{Audano2014}
 P.~Audano and F.~Vannberg.
 \newblock Kanalyze: A fast versatile pipelined k-mer toolkit.
@@ -35,7 +41,8 @@ A.~Z. Broder and M.~Mitzenmacher.
 
 \bibitem{Brown2012blog}
 C.~T. Brown.
-\newblock What does trinity's in silico normalization do?, 2012.
+\newblock What does trinity's in silico normalization do?
+\newblock 2012.
 
 \bibitem{Brown2012}
 C.~T. Brown, A.~Howe, Q.~Zhang, A.~B. Pyrkosz, and T.~H. Brom.
@@ -80,6 +87,11 @@ A.~Chao and M.~C. Yang.
   failure rates.
 \newblock {\em Biometrika}, 80(1):193--201, 1993.
 
+\bibitem{Charikar2004}
+M.~Charikar.
+\newblock {Finding frequent items in data streams}.
+\newblock {\em Theoretical Computer Science}, 312(1):3--15, Jan. 2004.
+
 \bibitem{Chikhi:2014aa}
 R.~Chikhi and P.~Medvedev.
 \newblock Informed and automated k-mer size selection for genome assembly.
@@ -92,6 +104,15 @@ H.~Chitsaz, J.~Yee-Greenbaum, G.~Tesler, M.~Lombardo, C.~Dupont, J.~Badger,
 \newblock Efficient de novo assembly of single-cell bacterial genomes from
   short-read data sets.
 \newblock {\em Nat Biotechnol}, 29(10):915--21, 2011.
+
+\bibitem{chitsaz}
+H.~Chitsaz, J.~L. Yee-Greenbaum, G.~Tesler, M.~J. Lombardo, C.~L. Dupont, J.~H.
+  Badger, M.~Novotny, D.~B. Rusch, L.~J. Fraser, N.~A. Gormley,
+  O.~Schulz-Trieglaff, G.~P. Smith, D.~J. Evers, P.~A. Pevzner, and R.~S.
+  Lasken.
+\newblock {{E}fficient de novo assembly of single-cell bacterial genomes from
+  short-read data sets}.
+\newblock {\em Nat. Biotechnol.}, 29(10):915--921, Oct 2011.
 
 \bibitem{DBLP:conf/sigmod/CohenM03}
 S.~Cohen and Y.~Matias.
@@ -126,12 +147,6 @@ T.~C. Conway and A.~J. Bromage.
 \newblock Succinct data structures for assembling large genomes.
 \newblock {\em Bioinformatics}, 27(4):479--86, Feb 2011.
 
-\bibitem{CormodeM05}
-G.~Cormode.
-\newblock Summarizing and mining skewed data streams.
-\newblock In {\em Proc. of the 2005 SIAM International Conference on Data
-  Mining}, pages 44--55. 2005.
-
 \bibitem{countminsketch}
 G.~Cormode and S.~Muthukrishnan.
 \newblock {A}n improved data stream summary: the count-min sketch, and its
@@ -143,6 +158,11 @@ G.~Cormode and S.~Muthukrishnan.
 \newblock {An improved data stream summary: the count-min sketch and its
   applications}.
 \newblock {\em Journal of Algorithms}, 55(1):58--75, Apr. 2005.
+
+\bibitem{CormodeM05}
+G.~Cormode and S.~Muthukrishnan.
+\newblock Summarizing and mining skewed data streams.
+\newblock In {\em SDM}, pages 44--55, 2005.
 
 \bibitem{khmer}
 M.~Crusoe, G.~Edvenson, J.~Fish, A.~Howe, E.~McDonald, J.~Nahum, K.~Nanlohy,
@@ -161,10 +181,24 @@ S.~Deorowicz, A.~Debudaj-Grabysz, and S.~Grabowski.
 \newblock Disk-based k-mer counting on a pc.
 \newblock {\em BMC Bioinformatics}, 14(1):160, May 2013.
 
-\bibitem{pubmed18549302}
-H.~Do, K.~Choi, F.~Preparata, W.~Sung, and L.~Zhang.
-\newblock Spectrum-based de novo repeat detection in genomic sequences.
-\newblock {\em J Comput Biol}, 15(5):469--87, 2008.
+\bibitem{biases}
+J.~C. Dohm, C.~Lottaz, T.~Borodina, and H.~Himmelbauer.
+\newblock {{S}ubstantial biases in ultra-short read data sets from
+  high-throughput {D}{N}{A} sequencing}.
+\newblock {\em Nucleic Acids Res.}, 36(16):e105, Sep 2008.
+
+\bibitem{pacbio}
+J.~Eid, A.~Fehr, J.~Gray, K.~Luong, J.~Lyle, G.~Otto, P.~Peluso, D.~Rank,
+  P.~Baybayan, B.~Bettman, A.~Bibillo, K.~Bjornson, B.~Chaudhuri,
+  F.~Christians, R.~Cicero, S.~Clark, R.~Dalal, A.~Dewinter, J.~Dixon,
+  M.~Foquet, A.~Gaertner, P.~Hardenbol, C.~Heiner, K.~Hester, D.~Holden,
+  G.~Kearns, X.~Kong, R.~Kuse, Y.~Lacroix, S.~Lin, P.~Lundquist, C.~Ma,
+  P.~Marks, M.~Maxham, D.~Murphy, I.~Park, T.~Pham, M.~Phillips, J.~Roy,
+  R.~Sebra, G.~Shen, J.~Sorenson, A.~Tomaney, K.~Travers, M.~Trulson,
+  J.~Vieceli, J.~Wegener, D.~Wu, A.~Yang, D.~Zaccarin, P.~Zhao, F.~Zhong,
+  J.~Korlach, and S.~Turner.
+\newblock {{R}eal-time {D}{N}{A} sequencing from single polymerase molecules}.
+\newblock {\em Science}, 323(5910):133--138, Jan 2009.
 
 \bibitem{DBLP:conf/sigcomm/EstanV02}
 C.~Estan and G.~Varghese.
@@ -175,6 +209,11 @@ C.~Estan and G.~Varghese.
 L.~Fan, P.~Cao, J.~Almeida, and A.~Z. Broder.
 \newblock Summary cache: A scalable wide-area web cache sharing protocol.
 \newblock {\em IEEE/ACM Trans. Netw.}, 8(3):281--293, June 2000.
+
+\bibitem{Feigenbaum2005}
+J.~Feigenbaum, S.~Kannan, A.~McGregor, S.~Suri, and J.~Zhang.
+\newblock On graph problems in a semi-streaming model.
+\newblock {\em Theor. Comput. Sci.}, 348(2):207--216, Dec. 2005.
 
 \bibitem{flajolet2008hyperloglog}
 P.~Flajolet, {\'E}.~Fusy, O.~Gandouet, and F.~Meunier.
@@ -233,11 +272,14 @@ M.~Grabherr, B.~Haas, M.~Yassour, J.~Levin, D.~Thompson, I.~Amit, X.~Adiconis,
   reference genome.
 \newblock {\em Nat Biotechnol}, 29(7):644--52, 2011.
 
-\bibitem{pubmed18541131}
-W.~Gu, T.~Castoe, D.~Hedges, M.~Batzer, and D.~Pollock.
-\newblock Identification of repeat structure in large genomes using repeat
-  probability clouds.
-\newblock {\em Anal Biochem}, 380(1):77--83, 2008.
+\bibitem{trinityrna}
+M.~G. Grabherr, B.~J. Haas, M.~Yassour, J.~Z. Levin, D.~A. Thompson, I.~Amit,
+  X.~Adiconis, L.~Fan, R.~Raychowdhury, Q.~Zeng, Z.~Chen, E.~Mauceli,
+  N.~Hacohen, A.~Gnirke, N.~Rhind, F.~di~Palma, B.~W. Birren, C.~Nusbaum,
+  K.~Lindblad-Toh, N.~Friedman, and A.~Regev.
+\newblock {{F}ull-length transcriptome assembly from {R}{N}{A}-{S}eq data
+  without a reference genome}.
+\newblock {\em Nat. Biotechnol.}, 29(7):644--652, Jul 2011.
 
 \bibitem{Haas2013}
 B.~J. Haas, A.~Papanicolaou, M.~Yassour, M.~Grabherr, P.~D. Blood, J.~Bowden,
@@ -268,10 +310,11 @@ M.~O. Hill.
 \newblock {\em Ecology}, 54(2):427--432, 1973.
 
 \bibitem{Howe2012}
-A.~C. Howe, J.~Jansson, S.~A. Malfatti, S.~G. Tringe, J.~M. Tiedje, and C.~T.
-  Brown.
-\newblock Assembling large, complex environmental metagenomes.
-\newblock {\em arXiv preprint}, 12 2012.
+A.~C. Howe, J.~K. Jansson, S.~A. Malfatti, S.~G. Tringe, J.~M. Tiedje, and
+  C.~T. Brown.
+\newblock Tackling soil diversity with the assembly of large, complex
+  metagenomes.
+\newblock {\em Proc Natl Acad Sci U S A}, 111(13):4904--9, Apr 2014.
 
 \bibitem{adina2013}
 A.~C. Howe, J.~Pell, R.~Canino-Koning, R.~Mackelprang, S.~Tringe, J.~Jansson,
@@ -279,6 +322,12 @@ A.~C. Howe, J.~Pell, R.~Canino-Koning, R.~Mackelprang, S.~Tringe, J.~Jansson,
 \newblock Illumina sequencing artifacts revealed by connectivity analysis of
   metagenomic datasets.
 \newblock {\em PLoS ONE}, -.
+
+\bibitem{nanopore}
+S.~Howorka, S.~Cheley, and H.~Bayley.
+\newblock {{S}equence-specific detection of individual {D}{N}{A} strands using
+  engineered nanopores}.
+\newblock {\em Nat. Biotechnol.}, 19(7):636--639, Jul 2001.
 
 \bibitem{HMScience}
 {Human Microbiome Jumpstart Reference Strains Consortium}, K.~E. Nelson, G.~M.
@@ -300,10 +349,22 @@ A.~C. Howe, J.~Pell, R.~Canino-Koning, R.~Mackelprang, S.~Tringe, J.~Jansson,
 \newblock A catalog of reference genomes from the human microbiome.
 \newblock {\em Science}, 328(5981):994--9, May 2010.
 
+\bibitem{Human-Microbiome-Project-Consortium:2012aa}
+{Human Microbiome Project Consortium}.
+\newblock Structure, function and diversity of the healthy human microbiome.
+\newblock {\em Nature}, 486(7402):207--14, Jun 2012.
+
 \bibitem{Huson:2007aa}
 D.~H. Huson, A.~F. Auch, J.~Qi, and S.~C. Schuster.
 \newblock Megan analysis of metagenomic data.
 \newblock {\em Genome Res}, 17(3):377--86, Mar 2007.
+
+\bibitem{Imelfort2014}
+M.~Imelfort, D.~Parks, B.~J. Woodcroft, P.~Dennis, P.~Hugenholtz, and G.~W.
+  Tyson.
+\newblock Groopm: an automated tool for the recovery of population genomes from
+  related metagenomes.
+\newblock {\em PeerJ}, 2:e603, 2014.
 
 \bibitem{cortex}
 Z.~Iqbal, M.~Caccamo, I.~Turner, P.~Flicek, and G.~McVean.
@@ -322,32 +383,29 @@ A.~L. Kau, P.~P. Ahern, N.~W. Griffin, A.~L. Goodman, and J.~I. Gordon.
 \newblock Human nutrition, the gut microbiome and the immune system.
 \newblock {\em Nature}, 474(7351):327--36, Jun 2011.
 
-\bibitem{pubmed21114842}
-D.~Kelley, M.~Schatz, and S.~Salzberg.
-\newblock Quake: quality-aware detection and correction of sequencing errors.
-\newblock {\em Genome Biol}, 11(11):R116, 2010.
+\bibitem{drisee}
+K.~P. Keegan, W.~L. Trimble, J.~Wilkening, A.~Wilke, T.~Harrison, M.~D'Souza,
+  and F.~Meyer.
+\newblock {{A} platform-independent method for detecting errors in metagenomic
+  sequencing data: {D}{R}{I}{S}{E}{E}}.
+\newblock {\em PLoS Comput. Biol.}, 8(6):e1002541, 2012.
 
 \bibitem{Kelley2010}
 D.~R. Kelley, M.~C. Schatz, and S.~L. Salzberg.
 \newblock Quake: quality-aware detection and correction of sequencing errors.
 \newblock {\em Genome Biol}, 11(11):R116, 2010.
 
-\bibitem{pubmed21926123}
-S.~Koren, T.~Treangen, and M.~Pop.
-\newblock Bambus 2: scaffolding metagenomes.
-\newblock {\em Bioinformatics}, 27(21):2964--71, 2011.
-
 \bibitem{Kurtz2008}
 S.~Kurtz, A.~Narechania, J.~C. Stein, and D.~Ware.
-\newblock {A new method to compute K-mer frequencies and its application to
-  annotate large repetitive plant genomes}.
-\newblock {\em BMC Genomics}, 9(1):517, 2008.
+\newblock A new method to compute k-mer frequencies and its application to
+  annotate large repetitive plant genomes.
+\newblock {\em BMC Genomics}, 9:517, 2008.
 
-\bibitem{pubmed19261174}
-B.~Langmead, C.~Trapnell, M.~Pop, and S.~Salzberg.
-\newblock Ultrafast and memory-efficient alignment of short dna sequences to
-  the human genome.
-\newblock {\em Genome Biol}, 10(3):R25, 2009.
+\bibitem{waterman}
+E.~S. Lander and M.~S. Waterman.
+\newblock {{G}enomic mapping by fingerprinting random clones: a mathematical
+  analysis}.
+\newblock {\em Genomics}, 2(3):231--239, Apr 1988.
 
 \bibitem{lee1994estimating}
 S.-M. Lee and A.~Chao.
@@ -373,6 +431,12 @@ M.~Loreau, S.~Naeem, P.~Inchausti, J.~Bengtsson, J.~P. Grime, A.~Hector, D.~U.
 \newblock Biodiversity and ecosystem functioning: current knowledge and future
   challenges.
 \newblock {\em Science}, 294(5543):804--8, Oct 2001.
+
+\bibitem{Lowe2015}
+E.~K. Lowe, B.~Swalla, and C.~Brown.
+\newblock {{E}valuating a lightweight transcriptome assembly pipeline on two
+  closely related ascidian species.}
+\newblock {\em PeerJ Preprints}, 2, 2014.
 
 \bibitem{Luo:2012aa}
 C.~Luo, D.~Tsementzi, N.~Kyrpides, T.~Read, and K.~T. Konstantinidis.
@@ -428,20 +492,21 @@ R.~M. May.
 
 \bibitem{McDonald2013}
 E.~McDonald and C.~T. Brown.
-\newblock khmer: Working with big data in bioinformatics.
-\newblock {\em arXiv preprint}, 03 2013.
-
-\bibitem{Medvedev2011}
-P.~Medvedev, E.~Scott, B.~Kakaradov, and P.~Pevzner.
-\newblock Error correction of high-throughput sequencing datasets with
-  non-uniform coverage.
-\newblock {\em Bioinformatics}, 27(13):i137--41, Jul 2011.
+\newblock Working with big data in bioinformatics.
+\newblock In T.~Armstrong, editor, {\em The Performance of Open Source
+  Applications}, chapter~12, page 151. lulu.com, 2013.
 
 \bibitem{pubmed21685062}
 P.~Medvedev, E.~Scott, B.~Kakaradov, and P.~Pevzner.
 \newblock Error correction of high-throughput sequencing datasets with
   non-uniform coverage.
 \newblock {\em Bioinformatics}, 27(13):i137--41, 2011.
+
+\bibitem{Melsted2014}
+P.~Melsted and B.~V. Halldorsson.
+\newblock {{K}mer{S}tream: streaming algorithms for k-mer abundance
+  estimation}.
+\newblock {\em Bioinformatics}, 30(24):3541--3547, Dec 2014.
 
 \bibitem{Melsted2011}
 P.~Melsted and J.~K. Pritchard.
@@ -483,24 +548,12 @@ S.~Muthukrishnan.
 \newblock Foundations and trends in theoretical computer science. Now
   Publishers, 2005.
 
-\bibitem{pubmed19580519}
-N.~Nagarajan and M.~Pop.
-\newblock Parametric complexity of sequence assembly: theory and applications
-  to next generation sequencing.
-\newblock {\em J Comput Biol}, 16(7):897--908, 2009.
-
 \bibitem{metavelvet}
 T.~Namiki, T.~Hachiya, H.~Tanaka, and Y.~Sakakibara.
 \newblock {M}eta{V}elvet: {A}n extension of {V}elvet assembler to de novo
   metagenome assembly from short sequence reads.
 \newblock {\em ACM Conference on Bioinformatics, Computational Biology and
   Biomedicine}, 2011.
-
-\bibitem{pubmed20633259}
-P.~Novak, P.~Neumann, and J.~Macas.
-\newblock Graph-based clustering and characterization of repetitive sequences
-  in next-generation sequencing data.
-\newblock {\em BMC Bioinformatics}, 11:378, 2010.
 
 \bibitem{Patil:2012aa}
 K.~R. Patil, L.~Roune, and A.~C. McHardy.
@@ -523,11 +576,6 @@ Y.~Peng, H.~Leung, S.~Yiu, and F.~Chin.
 F.~P{\'e}rez and B.~Granger.
 \newblock Ipython: A system for interactive scientific computing.
 \newblock {\em Computing in Science Engineering}, 9(3):21--29, 2007.
-
-\bibitem{ipython}
-F.~P\'erez and B.~E. Granger.
-\newblock {IP}ython: a {S}ystem for {I}nteractive {S}cientific {C}omputing.
-\newblock {\em {C}omput. {S}ci. {E}ng.}, 9(3):21--29, May 2007.
 
 \bibitem{Pevzner2001}
 P.~A. Pevzner, H.~Tang, and M.~S. Waterman.
@@ -599,6 +647,18 @@ S.~Rodrigue, R.~Malmstrom, A.~Berlin, B.~Birren, M.~Henn, and S.~Chisholm.
   cells.
 \newblock {\em PLoS One}, 4(9):e6864, 2009.
 
+\bibitem{Rodriguez-R:2013aa}
+L.~M. Rodriguez-R and K.~T. Konstantinidis.
+\newblock Nonpareil: A redundancy-based approach to assess the level of
+  coverage in metagenomic datasets.
+\newblock {\em Bioinformatics}, Oct 2013.
+
+\bibitem{Rodriguez-R2014}
+L.~M. Rodriguez-R and K.~T. Konstantinidis.
+\newblock Nonpareil: a redundancy-based approach to assess the level of
+  coverage in metagenomic datasets.
+\newblock {\em Bioinformatics}, 30(5):629--35, Mar 2014.
+
 \bibitem{Roesch:2007aa}
 L.~F.~W. Roesch, R.~R. Fulthorpe, A.~Riva, G.~Casella, A.~K.~M. Hadwin, A.~D.
   Kent, S.~H. Daroub, F.~A.~O. Camargo, W.~G. Farmerie, and E.~W. Triplett.
@@ -631,11 +691,6 @@ D.~C. Savage.
 A.~Sboner, X.~Mu, D.~Greenbaum, R.~Auerbach, and M.~Gerstein.
 \newblock The real cost of sequencing: higher than you think!
 \newblock {\em Genome Biol}, 12(8):125, 2011.
-
-\bibitem{pubmed19357099}
-M.~Schatz.
-\newblock Cloudburst: highly sensitive read mapping with mapreduce.
-\newblock {\em Bioinformatics}, 25(11):1363--9, 2009.
 
 \bibitem{Schloss:2005aa}
 P.~D. Schloss and J.~Handelsman.
@@ -676,6 +731,12 @@ N.~Segata, L.~Waldron, A.~Ballarini, V.~Narasimhan, O.~Jousson, and
   marker genes.
 \newblock {\em Nat Methods}, 9(8):811--4, Aug 2012.
 
+\bibitem{podar}
+M.~Shakya, C.~Quince, J.~H. Campbell, Z.~K. Yang, C.~W. Schadt, and M.~Podar.
+\newblock {{C}omparative metagenomic and r{R}{N}{A} microbial diversity
+  characterization using archaeal and bacterial synthetic communities}.
+\newblock {\em Environ. Microbiol.}, 15(6):1882--1899, Jun 2013.
+
 \bibitem{shannon2001mathematical}
 C.~E. Shannon.
 \newblock A mathematical theory of communication.
@@ -715,6 +776,12 @@ M.~L. Sogin, H.~G. Morrison, J.~A. Huber, D.~Mark~Welch, S.~M. Huse, P.~R.
 \newblock Microbial diversity in the deep sea and the underexplored "rare
   biosphere".
 \newblock {\em Proc Natl Acad Sci U S A}, 103(32):12115--20, Aug 2006.
+
+\bibitem{lighter}
+L.~Song, L.~Florea, and B.~Langmead.
+\newblock {{L}ighter: fast and memory-efficient sequencing error correction
+  without counting}.
+\newblock {\em Genome Biol.}, 15(11):509, 2014.
 
 \bibitem{pubmed17487184}
 C.~Spits, C.~L. Caignec, M.~D. Rycke, L.~V. Haute, A.~V. Steirteghem,
@@ -809,10 +876,11 @@ M.~Wu and A.~J. Scott.
   amphora2.
 \newblock {\em Bioinformatics}, 28(7):1033--4, Apr 2012.
 
-\bibitem{Zarraonaindia:2013aa}
-I.~Zarraonaindia, D.~P. Smith, and J.~A. Gilbert.
-\newblock Beyond the genome: community-level analysis of the microbial world.
-\newblock {\em Biol Philos}, 28(2):261--282, Mar 2013.
+\bibitem{Xu2014}
+Z.~Xu, D.~Malmer, M.~G.~I. Langille, S.~F. Way, and R.~Knight.
+\newblock Which is more important for classifying microbial communities: who's
+  there or what they can do?
+\newblock {\em ISME J}, 8(12):2357--9, Dec 2014.
 
 \bibitem{pubmed18349386}
 D.~Zerbino and E.~Birney.
@@ -825,5 +893,11 @@ D.~R. Zerbino and E.~Birney.
 \newblock Velvet: algorithms for de novo short read assembly using de bruijn
   graphs.
 \newblock {\em Genome Res}, 18(5):821--9, May 2008.
+
+\bibitem{Zhang2014}
+Q.~Zhang, J.~Pell, R.~Canino-Koning, A.~C. Howe, and C.~T. Brown.
+\newblock These are not the k-mers you are looking for: efficient online k-mer
+  counting using a probabilistic data structure.
+\newblock {\em PLoS ONE}, 7(9), 2014.
 
 \end{thebibliography}
