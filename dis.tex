@@ -14,7 +14,7 @@
 %% IMPORTANT: Load only those packages you know you will use.
 %% Some packages can cause conflicts resulting in improper formatting.
 \author{Qingpeng Zhang} %% Put your name in full as it is officially recognized by Michigan State University here.
-\title{A Novel Computational Approach to Investigate Microbial Diversity using Whole-genome Shotgun Metagenomic Data} %% Put the title of your dissertation here.
+\title{Novel Computational Approaches to Investigate Microbial Diversity using Whole-genome Shotgun Metagenomic Data} %% Put the title of your dissertation here.
 \unit{Computer Science} %% Put the name of your degree granting unit here. The complete
 %% list of these degree granting units can be found at
 %% http://grad.msu.edu/etd/docs/DegreeGrantingUnits.pdf
@@ -57,22 +57,21 @@
 \maketitlepage %%This command will produce the title page of your thesis.
 \begin{abstract}
 
-In almost all the metagenomics projects, diversity analysis plays an important
-role to supply information about the richness of species, the species abundance
-distribution in a sample or the similarity and difference between different
-samples, all of which are crucial to draw insightful and reliable conclusion.
-Traditionally especially for amplicon metagenomics data set, OTUs(Operational
-Taxonomic Units) based on 16S rRNA genes are used as the foundation for
-diversity analysis. We have developed a novel statistical framework to enable microbial diversity
- analysis using whole genome shotgun metagenomic reads data without the
-requirement of assembly, binning, reference or annotation. The novel concept
-we proposed - IGS represents the
-unique information in a metagenomics data set and the abundance of IGSs in
-different samples can be retrieved by the reads coverage through an efficient
-k-mer counting method. This samples-by-IGS abundance data matrix is a promising
-replacement of samples-by-OTU data matrix used in 16S rRNA based analysis and
-all existing statistical methods can be borrowed to work on the samples-by-IGS
-data matrix to investigate the diversity.
+
+
+ Species diversity is an important measurement of ecological communities. Scientists 
+believe that there is a strong relationship between species diversity and ecosystem processes.
+ In almost all metagenomics projects, diversity analysis plays an important role in supplying information 
+ about the richness of species, the species abundance
+distribution in a sample, and the similarity/difference between 
+samples, all of which are crucial to draw insightful and reliable conclusions. Since we have limited
+ sequencing power and financial constraints, the metagenomics data sets from 
+ high diversity samples like soil only correspond to a tiny fraction of the actual genomic
+ content in the sample. The large size of data sets and low coverage make the assessment of microbial 
+ diversity in complex samples even harder. With novel applications of data structures and the development 
+ of novel algorithms, my research provides the necessary and highly desired computational methods to enable 
+ scalable microbial diversity analysis of the complex metagenomes, with further potential to facilitate other analysis like assembly, annotation.
+
 
  This dissertation
 covers an overview of existing approaches of doing microbial diversity analysis
@@ -93,8 +92,8 @@ was discussed and the performance of the IGS method on simulated data sets and
 real data sets were demonstrated in the final chapters. 
 Since this method is totally binning-free,
 assembly-free, annotation-free, reference-free, it is specifically promising to
-deal with the highly diverse samples, while we are facing large amount of “dark
-matters” in it, like soil.
+deal with the highly diverse samples, while we are facing large amount of dark
+matters in it, like soil.
 
   
 

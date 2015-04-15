@@ -195,24 +195,91 @@ the increasingly large metagenomics data set.
 
 \section{Significance of Research}
 
+
+We established a series of approaches enable scalable
+and effective investigation of microbial diversity using whole-genome shotgun
+metagenomic data.  Firstly a k-mer counting package - khmer was developed to
+enable fast and memory efficient k-mer-based analysis of sequencing data sets.
+Unlike previous methods based on data structures such as hash tables, suffix
+arrays, and trie structures, khmer relies 
+ entirely on a simple probabilistic data structure, a Count-Min Sketch. The
+ Count-Min Sketch permits online updating and retrieval of k-mer counts in
+ memory which is necessary to support online k-mer analysis algorithms. On
+ sparse data sets this data structure is considerably more  memory efficient
+ than any exact data structure.
+  We conducted extensive  analysis on the performance of the counting algorithm
+  and benchmark to compare the performance of the khmer to other k-mer counting
+  packages. 
+   The initial motivation of developing khmer was to count the  k-mers in
+   metagenomes for diversity analysis. Now khmer has been widely used for many
+   other purposes, from  
+      enabling large scale de novo metagenome assembly  to sequencing error
+      detection and correction.
+        
+         Based on the efficient k-mer counting package khmer, we developed
+         digital normalization, a single-pass  computational algorithm that
+         systematizes coverage in shotgun sequencing data sets, thereby
+         decreasing sampling  variation, discarding redundant data, and
+         removing the majority of errors. Digital normalization can
+         substantially reduce the size of shotgun data sets and decrease the
+         memory and time requirements for de novo sequence assembly, especially
+         for large complex metagenome samples, all without significantly
+             impacting content of the generated contigs.  The algorithm of
+             digital normalization has been used by many research groups to
+             facilitate their analysis and has been implemented in different
+             tools like Trinity and  Illumina's TruSeq pipeline. Like digital
+             normalization, based on the same approach to estimate sequencing
+             depth without a reference assembly, a streaming approach to
+             analyze and trim sequencing errors in short reads datasets was
+             developed. The approach offers a general framework for streaming
+             sequence analysis and could be used for error correction and
+             variant calling. Moreover, the approach can be applied generically
+             to data sets with variable sequencing coverage, such as
+             metagenomes especially.
+
+             Further    more, by integrating efficient k-mer counting and a
+             novel de Bruijn graph mapping method based on digital
+             normalization we developed a novel approach to allow for scalable
+             diversity analysis of large, complex metagenomes.  A novel concept
+             - IGS (informative genomic segment) is proposed to represent the
+             unique information in a metagenomics data set. The IGSs can be
+             used as a complement of OTUs to be the cornerstone for diversity
+             analysis of whole shotgun metagenomics data sets. The abundance of
+             IGSs in different samples can be retrieved by mapping the reads to
+             de Bruijn graphs. In this procedure, not like many other microbial
+             diversity analysis method, assembly or binning is not required any
+             more. This method was evaluated on multiple metagenomes from a
+             variety of environments (e.g., human body part, seawater, soil).
+             Given the velocity in growth of sequencing data, this method is 
+             promising for analyzing highly diverse samples with relatively low
+             computational requirements. Further, as the method does not depend
+             on reference genomes, it also provides opportunities to tackle the
+             large amounts of unknown "dark matter" we 
+             find in metagenomic datasets.
+
+
 \section{Outline of Dissertation}
 In this dissertation
-we will discuss a statistical framwork based on the novel concept of IGS to enable
-effective and efficient microbial diversity analysis using whole genome shotgun 
-data.As
-the foundation of the framework, we will describe a novel method to count k-mers
-efficiently and a scalable approache to retrieve the coverage of a read in a 
-data set based on efficient and online k-mer counting. We will also introduce the
-two applications of this approach, one to reduce the redundancy of metagenomic reads
-dataset and one to analyze sequencing error. Both are critically important to 
-facilitate the improvement of
+we will discuss the series of approaches enabling scalable
+and effective investigation of microbial diversity using whole-genome shotgun
+metagenomic data in details. In chapter 2, we will do a brief review of relevant
+ literature about the challenges
+we face to enable diversity analysis of metagenomic data. In chapter 3, we will 
+describe the novel approach to count k-mers
+efficiently and a scalable approach to retrieve the coverage of a read in a 
+data set based on efficient and online k-mer counting. In chapter 4, we will  introduce 
+the two applications of this approach, digital normalization to reduce the redundancy of metagenomic reads
+dataset and a streaming method to analyze sequencing error. Both are critically important to 
+the improvement of
 other metagenomic data analysis approaches, like
-assembly, error trimming or contigs/reads binning. Later, we will discuss
+assembly, error trimming or contigs/reads binning. In chapter 5, we will discuss
 how we developed the concept 
-of IGS based on the methods of efficient k-mer counting.  
-The application of IGS to analyze microbial diversity of metagenomic data sets 
+of IGS based on efficient k-mer counting and digital normalization.  
+The effort to increase the accuracy of IGS based method 
 will be discussed and the performance of the IGS method on simulated data sets and
-real data sets will be demonstrated in the final chapters.
-
+real data sets will be demonstrated. 
+We will give a summary about how the novel statistical framework based on IGS makes
+ a difference to the diversity analysis in current microbial ecology research and 
+ some directions of future work will be discussed in the last chapter.
 
 

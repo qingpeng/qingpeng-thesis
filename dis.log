@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  14 APR 2015 15:06
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  15 APR 2015 01:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -390,10 +390,8 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 
-{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Missing character: There is no Ò in font cmr12!
-Missing character: There is no Ó in font cmr12!
- [2] [3] [4]
+{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
+ [4]
 (./ack.tex) [5] (./dis.toc [6
 
 
@@ -426,43 +424,34 @@ mers from
 
  [14] (./chap1-introduction.tex
 Chapter 1.
-
-LaTeX Warning: Citation `Zarraonaindia:2013aa' on page 1 undefined on input lin
-e 29.
-
 [1
 
 
-] [2] [3] [4] [5] [6]
-
-LaTeX Warning: Citation `Zarraonaindia:2013aa' on page 7 undefined on input lin
-e 176.
-
-[7]) (./chap2-litreview.tex [8]
+] [2] [3] [4] [5] [6] [7] [8] [9]) (./chap2-litreview.tex [10]
 Chapter 2.
-[9
+[11
 
-] <./figures/kmer_counting.png, id=82, 1256.695pt x 318.18875pt>
+] <./figures/kmer_counting.png, id=89, 1256.695pt x 318.18875pt>
 File: ./figures/kmer_counting.png Graphic file (type png)
 
 <use ./figures/kmer_counting.png>
 Package pdftex.def Info: ./figures/kmer_counting.png used on input line 62.
 (pdftex.def)             Requested size: 722.7pt x 182.98137pt.
- [10] [11]
+ [12] [13]
 
-LaTeX Warning: Citation `pubmed21114842' on page 12 undefined on input line 134
+LaTeX Warning: Citation `pubmed21114842' on page 14 undefined on input line 134
 .
 
-[12]
+[14]
 
-LaTeX Warning: Citation `quake' on page 13 undefined on input line 149.
+LaTeX Warning: Citation `quake' on page 15 undefined on input line 149.
 
-[13] [14] [15] [16]
+[15] [16] [17] [18]
 Underfull \hbox (badness 10000) in paragraph at lines 292--304
 
  []
 
-[17]
+[19]
 Overfull \hbox (11.65549pt too wide) in paragraph at lines 304--310
 \OT1/cmr/m/n/12 where $\OML/cmm/m/it/12 S[]$ \OT1/cmr/m/n/12 is the num-ber of 
 species ob-served, $\OML/cmm/m/it/12 n[]$ \OT1/cmr/m/n/12 the num-ber of specie
@@ -474,28 +463,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 304--310
 
  []
 
-[18]) (./chap3-khmer.tex [19] [20 <./figures/kmer_counting.png>]
+[20]) (./chap3-khmer.tex [21] [22 <./figures/kmer_counting.png>]
 Chapter 3.
-[21
+[23
 
 ]
 Overfull \hbox (18.62268pt too wide) in paragraph at lines 51--51
 []\OT1/cmr/bx/n/17.28 Count-Min Sketch and its ap-pli-ca-tion in k-mer count-
  []
 
-[22]
+[24]
 Overfull \hbox (60.17036pt too wide) in paragraph at lines 79--83
 \OT1/cmr/m/n/12 The two ba-sic op-er-a-tions sup-ported by khmer are \OT1/cmtt/
 m/n/12 increment[]count(kmer)  \OT1/cmr/m/n/12 and \OT1/cmtt/m/n/12 c = get[]co
 unt(kmer).
  []
 
-[23] [24]
+[25] [26]
 Overfull \hbox (80.13019pt too wide) in paragraph at lines 171--182
 [][] 
  []
 
-[25]
+[27]
 Package epstopdf Info: Source file: <./figures/figure1_time_benchmark.eps>
 (epstopdf)                    date: 2014-07-01 02:31:07
 (epstopdf)                    size: 41209 bytes
@@ -508,7 +497,7 @@ chmark-eps-converted-to.pdf ./figures/figure1_time_benchmark.eps>
 (epstopdf)             \includegraphics on input line 190.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figures/figure1_time_benchmark-eps-converted-to.pdf, id=138, 722.7pt x 505.8
+<./figures/figure1_time_benchmark-eps-converted-to.pdf, id=144, 722.7pt x 505.8
 9pt>
 File: ./figures/figure1_time_benchmark-eps-converted-to.pdf Graphic file (type 
 pdf)
@@ -528,7 +517,7 @@ enchmark-eps-converted-to.pdf ./figures/figure2_memory_benchmark.eps>
 (epstopdf)             \includegraphics on input line 202.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figures/figure2_memory_benchmark-eps-converted-to.pdf, id=139, 722.7pt x 505
+<./figures/figure2_memory_benchmark-eps-converted-to.pdf, id=145, 722.7pt x 505
 .89pt>
 File: ./figures/figure2_memory_benchmark-eps-converted-to.pdf Graphic file (typ
 e pdf)
@@ -548,7 +537,7 @@ chmark-eps-converted-to.pdf ./figures/figure3_disk_benchmark.eps>
 (epstopdf)             \includegraphics on input line 213.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figures/figure3_disk_benchmark-eps-converted-to.pdf, id=140, 722.7pt x 505.8
+<./figures/figure3_disk_benchmark-eps-converted-to.pdf, id=146, 722.7pt x 505.8
 9pt>
 File: ./figures/figure3_disk_benchmark-eps-converted-to.pdf Graphic file (type 
 pdf)
@@ -556,9 +545,9 @@ pdf)
 Package pdftex.def Info: ./figures/figure3_disk_benchmark-eps-converted-to.pdf 
 used on input line 213.
 (pdftex.def)             Requested size: 361.34999pt x 252.94437pt.
- [26 <./figures/figure1_time_benchmark-eps-converted-to.pdf>] [27 <./figures/fi
-gure2_memory_benchmark-eps-converted-to.pdf>] [28 <./figures/figure3_disk_bench
-mark-eps-converted-to.pdf>] [29]
+ [28 <./figures/figure1_time_benchmark-eps-converted-to.pdf>] [29 <./figures/fi
+gure2_memory_benchmark-eps-converted-to.pdf>] [30 <./figures/figure3_disk_bench
+mark-eps-converted-to.pdf>] [31]
 Package epstopdf Info: Source file: <./figures/figure4_count_benchmark.eps>
 (epstopdf)                    date: 2014-06-18 16:04:14
 (epstopdf)                    size: 32834 bytes
@@ -571,7 +560,7 @@ nchmark-eps-converted-to.pdf ./figures/figure4_count_benchmark.eps>
 (epstopdf)             \includegraphics on input line 340.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figures/figure4_count_benchmark-eps-converted-to.pdf, id=301, 722.7pt x 505.
+<./figures/figure4_count_benchmark-eps-converted-to.pdf, id=308, 722.7pt x 505.
 89pt>
 File: ./figures/figure4_count_benchmark-eps-converted-to.pdf Graphic file (type
  pdf)
@@ -579,8 +568,8 @@ File: ./figures/figure4_count_benchmark-eps-converted-to.pdf Graphic file (type
 Package pdftex.def Info: ./figures/figure4_count_benchmark-eps-converted-to.pdf
  used on input line 340.
 (pdftex.def)             Requested size: 361.34999pt x 252.94437pt.
- [30]
-[31 <./figures/figure4_count_benchmark-eps-converted-to.pdf>] [32]
+ [32]
+[33 <./figures/figure4_count_benchmark-eps-converted-to.pdf>] [34]
 Overfull \hbox (74.8898pt too wide) in paragraph at lines 400--414
 [][] 
  []
@@ -599,7 +588,7 @@ offset_vs_fpr-eps-converted-to.pdf ./figures/figure5_average_offset_vs_fpr.eps>
 (epstopdf)             \includegraphics on input line 422.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figures/figure5_average_offset_vs_fpr-eps-converted-to.pdf, id=351, 722.7pt 
+<./figures/figure5_average_offset_vs_fpr-eps-converted-to.pdf, id=357, 722.7pt 
 x 505.89pt>
 File: ./figures/figure5_average_offset_vs_fpr-eps-converted-to.pdf Graphic file
  (type pdf)
@@ -621,7 +610,7 @@ offset_vs_fpr-eps-converted-to.pdf ./figures/figure6_percent_offset_vs_fpr.eps>
 (epstopdf)             \includegraphics on input line 435.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figures/figure6_percent_offset_vs_fpr-eps-converted-to.pdf, id=352, 722.7pt 
+<./figures/figure6_percent_offset_vs_fpr-eps-converted-to.pdf, id=358, 722.7pt 
 x 505.89pt>
 File: ./figures/figure6_percent_offset_vs_fpr-eps-converted-to.pdf Graphic file
  (type pdf)
@@ -630,18 +619,18 @@ Package pdftex.def Info: ./figures/figure6_percent_offset_vs_fpr-eps-converted-
 to.pdf used on input line 435.
 (pdftex.def)             Requested size: 361.34999pt x 252.94437pt.
 
-[33 <./figures/figure5_average_offset_vs_fpr-eps-converted-to.pdf>] [34 <./figu
-res/figure6_percent_offset_vs_fpr-eps-converted-to.pdf>] [35] [36] [37]
+[35 <./figures/figure5_average_offset_vs_fpr-eps-converted-to.pdf>] [36 <./figu
+res/figure6_percent_offset_vs_fpr-eps-converted-to.pdf>] [37] [38] [39]
 Overfull \hbox (62.31862pt too wide) in paragraph at lines 594--603
 []\OT1/cmr/m/n/12 The ver-sion of khmer used to gen-er-ate the re-sults in this
  chap-ter is avail-able at http://github.com/ged-
  []
 
-[38]) (./chap4-diginorm.tex [39]
+[40]) (./chap4-diginorm.tex [41]
 Chapter 4.
-[40
+[42
 
-] <diginorm-ranks.pdf, id=456, 433.62pt x 289.08pt>
+] <diginorm-ranks.pdf, id=463, 433.62pt x 289.08pt>
 File: diginorm-ranks.pdf Graphic file (type pdf)
 
 <use diginorm-ranks.pdf>
@@ -649,70 +638,70 @@ Package pdftex.def Info: diginorm-ranks.pdf used on input line 42.
 (pdftex.def)             Requested size: 289.07999pt x 192.72981pt.
 
 
-LaTeX Warning: Citation `pubmed21114842' on page 41 undefined on input line 58.
+LaTeX Warning: Citation `pubmed21114842' on page 43 undefined on input line 58.
 
 
-[41] <diginorm-sim-genome.pdf, id=461, 433.62pt x 289.08pt>
+[43] <diginorm-sim-genome.pdf, id=467, 433.62pt x 289.08pt>
 File: diginorm-sim-genome.pdf Graphic file (type pdf)
 
 <use diginorm-sim-genome.pdf>
 Package pdftex.def Info: diginorm-sim-genome.pdf used on input line 69.
 (pdftex.def)             Requested size: 216.81pt x 144.53964pt.
 
-<diginorm-ecoli-genome.pdf, id=462, 433.62pt x 289.08pt>
+<diginorm-ecoli-genome.pdf, id=468, 433.62pt x 289.08pt>
 File: diginorm-ecoli-genome.pdf Graphic file (type pdf)
 
 <use diginorm-ecoli-genome.pdf>
 Package pdftex.def Info: diginorm-ecoli-genome.pdf used on input line 70.
 (pdftex.def)             Requested size: 216.81pt x 144.53964pt.
 
-<diginorm-sim-transcr.pdf, id=463, 433.62pt x 289.08pt>
+<diginorm-sim-transcr.pdf, id=469, 433.62pt x 289.08pt>
 File: diginorm-sim-transcr.pdf Graphic file (type pdf)
 
 <use diginorm-sim-transcr.pdf>
 Package pdftex.def Info: diginorm-sim-transcr.pdf used on input line 79.
 (pdftex.def)             Requested size: 216.81pt x 144.53964pt.
 
-<diginorm-mouse-transcr.pdf, id=464, 433.62pt x 289.08pt>
+<diginorm-mouse-transcr.pdf, id=470, 433.62pt x 289.08pt>
 File: diginorm-mouse-transcr.pdf Graphic file (type pdf)
 
 <use diginorm-mouse-transcr.pdf>
 Package pdftex.def Info: diginorm-mouse-transcr.pdf used on input line 80.
 (pdftex.def)             Requested size: 216.81pt x 144.53964pt.
- [42 <./diginorm-ranks.pdf>] [43 <./diginorm-sim-genome.pdf> <./diginorm-ecoli-
-genome.pdf>] [44 <./diginorm-sim-transcr.pdf> <./diginorm-mouse-transcr.pdf>] [
-45] [46]
-<diginorm-coverage2-raw.png, id=647, 1016.79875pt x 658.46pt>
+ [44 <./diginorm-ranks.pdf>] [45 <./diginorm-sim-genome.pdf> <./diginorm-ecoli-
+genome.pdf>] [46 <./diginorm-sim-transcr.pdf> <./diginorm-mouse-transcr.pdf>] [
+47] [48]
+<diginorm-coverage2-raw.png, id=654, 1016.79875pt x 658.46pt>
 File: diginorm-coverage2-raw.png Graphic file (type png)
 
 <use diginorm-coverage2-raw.png>
 Package pdftex.def Info: diginorm-coverage2-raw.png used on input line 188.
 (pdftex.def)             Requested size: 289.07999pt x 187.20087pt.
 
-<diginorm-coverage2-dn.png, id=648, 1060.96375pt x 672.5125pt>
+<diginorm-coverage2-dn.png, id=655, 1060.96375pt x 672.5125pt>
 File: diginorm-coverage2-dn.png Graphic file (type png)
 
 <use diginorm-coverage2-dn.png>
 Package pdftex.def Info: diginorm-coverage2-dn.png used on input line 189.
 (pdftex.def)             Requested size: 289.07999pt x 183.23293pt.
- [47 <./diginorm-coverage2-raw.png> <./diginorm-coverage2-dn.png>] <diginorm-ac
-cumulation.pdf, id=655, 433.62pt x 289.08pt>
+ [49 <./diginorm-coverage2-raw.png> <./diginorm-coverage2-dn.png>] <diginorm-ac
+cumulation.pdf, id=661, 433.62pt x 289.08pt>
 File: diginorm-accumulation.pdf Graphic file (type pdf)
 
 <use diginorm-accumulation.pdf>
 Package pdftex.def Info: diginorm-accumulation.pdf used on input line 212.
 (pdftex.def)             Requested size: 289.07999pt x 192.72981pt.
- [48 <./diginorm-accumulation.pdf>] [49]
+ [50 <./diginorm-accumulation.pdf>] [51]
 Overfull \hbox (25.7723pt too wide) in paragraph at lines 293--302
 [][] 
  []
 
-[50]
+[52]
 Overfull \hbox (13.0406pt too wide) in paragraph at lines 341--351
 [][] 
  []
 
-[51]
+[53]
 Overfull \hbox (43.94307pt too wide) in paragraph at lines 393--402
 [][] 
  []
@@ -722,17 +711,17 @@ Overfull \hbox (58.9568pt too wide) in paragraph at lines 411--420
 [][] 
  []
 
-[52]
+[54]
 Overfull \hbox (45.21123pt too wide) in paragraph at lines 454--467
 [][] 
  []
 
-[53] [54] [55] [56]
+[55] [56] [57] [58]
 Overfull \hbox (111.53276pt too wide) in paragraph at lines 631--648
 [][] 
  []
 
-[57] [58]
+[59] [60]
 Package epstopdf Info: Source file: <./figures/figure7_perc_unique_pos.eps>
 (epstopdf)                    date: 2014-06-18 15:31:07
 (epstopdf)                    size: 33206 bytes
@@ -745,7 +734,7 @@ que_pos-eps-converted-to.pdf ./figures/figure7_perc_unique_pos.eps>
 (epstopdf)             \includegraphics on input line 698.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figures/figure7_perc_unique_pos-eps-converted-to.pdf, id=727, 722.7pt x 505.
+<./figures/figure7_perc_unique_pos-eps-converted-to.pdf, id=734, 722.7pt x 505.
 89pt>
 File: ./figures/figure7_perc_unique_pos-eps-converted-to.pdf Graphic file (type
  pdf)
@@ -753,41 +742,41 @@ File: ./figures/figure7_perc_unique_pos-eps-converted-to.pdf Graphic file (type
 Package pdftex.def Info: ./figures/figure7_perc_unique_pos-eps-converted-to.pdf
  used on input line 698.
 (pdftex.def)             Requested size: 361.34999pt x 252.94437pt.
- [59]
-[60 <./figures/figure7_perc_unique_pos-eps-converted-to.pdf>]
-<./figures/graph-saturation.pdf, id=770, 349.305pt x 296.10625pt>
+ [61]
+[62 <./figures/figure7_perc_unique_pos-eps-converted-to.pdf>]
+<./figures/graph-saturation.pdf, id=776, 349.305pt x 296.10625pt>
 File: ./figures/graph-saturation.pdf Graphic file (type pdf)
 
 <use ./figures/graph-saturation.pdf>
 Package pdftex.def Info: ./figures/graph-saturation.pdf used on input line 769.
 
 (pdftex.def)             Requested size: 289.07999pt x 245.0678pt.
- [61] [62 <./figures/graph-saturation.pdf>] <./figures/saturation.pdf, id=793, 
+ [63] [64 <./figures/graph-saturation.pdf>] <./figures/saturation.pdf, id=799, 
 433.62pt x 289.08pt>
 File: ./figures/saturation.pdf Graphic file (type pdf)
 
 <use ./figures/saturation.pdf>
 Package pdftex.def Info: ./figures/saturation.pdf used on input line 810.
 (pdftex.def)             Requested size: 289.07999pt x 192.72981pt.
- [63 <./figures/saturation.pdf>] [64] [65]
-<./figures/ecoli-errhist.pdf, id=841, 433.62pt x 289.08pt>
+ [65 <./figures/saturation.pdf>] [66] [67]
+<./figures/ecoli-errhist.pdf, id=847, 433.62pt x 289.08pt>
 File: ./figures/ecoli-errhist.pdf Graphic file (type pdf)
 
 <use ./figures/ecoli-errhist.pdf>
 Package pdftex.def Info: ./figures/ecoli-errhist.pdf used on input line 996.
 (pdftex.def)             Requested size: 289.07999pt x 192.72981pt.
 
-<./figures/rseq-errhist.pdf, id=842, 433.62pt x 289.08pt>
+<./figures/rseq-errhist.pdf, id=848, 433.62pt x 289.08pt>
 File: ./figures/rseq-errhist.pdf Graphic file (type pdf)
 
 <use ./figures/rseq-errhist.pdf>
 Package pdftex.def Info: ./figures/rseq-errhist.pdf used on input line 1007.
 (pdftex.def)             Requested size: 289.07999pt x 192.72981pt.
- [66]
+ [68]
 
-LaTeX Warning: Text page 67 contains only floats.
+LaTeX Warning: Text page 69 contains only floats.
 
-[67 <./figures/ecoli-errhist.pdf> <./figures/rseq-errhist.pdf
+[69 <./figures/ecoli-errhist.pdf> <./figures/rseq-errhist.pdf
 
 pdfTeX warning: pdflatex (file ./figures/rseq-errhist.pdf): PDF inclusion: mult
 iple pdfs with page group included in a single page
@@ -797,35 +786,35 @@ Overfull \hbox (13.55246pt too wide) in paragraph at lines 1032--1043
 nted a sub-lin-ear mem-ory/sublinear
  []
 
-[68] [69] [70]
+[70] [71] [72]
 Overfull \hbox (1.95824pt too wide) in paragraph at lines 1159--1175
 \OT1/cmr/m/n/12 Shotgun DNA se-quenc-ing gen-er-ates data as a stream of items 
 rep-re-sent-ing sen-tences (``reads'')
  []
 
-[71]
+[73]
 Overfull \hbox (15.3191pt too wide) in paragraph at lines 1201--1204
 \OT1/cmr/m/n/12 at github.com/ged-lab/2012-paper-diginorm/ and http://github.co
 m/ged-lab/2014-streaming/. 
  []
 
-[72] [73]
+[74] [75]
 
-LaTeX Warning: Reference `tab:data' on page 74 undefined on input line 1250.
+LaTeX Warning: Reference `tab:data' on page 76 undefined on input line 1250.
 
-) (./chap5-IGS-theory.tex [74]
+) (./chap5-IGS-theory.tex [76]
 Chapter 5.
 Missing character: There is no € in font cmr12!
 Missing character: There is no œ in font cmr12!
-[75
+[77
 
 ]
 Overfull \hbox (10.72264pt too wide) in paragraph at lines 31--31
 []\OT1/cmr/bx/n/17.28 The con-cept of IGS(informational ge-nomic seg-ment) 
  []
 
-[76] [77] [78]
-<./figures/from_reads_to_IGS.png, id=970, 685.56125pt x 797.98125pt>
+[78] [79] [80]
+<./figures/from_reads_to_IGS.png, id=976, 685.56125pt x 797.98125pt>
 File: ./figures/from_reads_to_IGS.png Graphic file (type png)
 
 <use ./figures/from_reads_to_IGS.png>
@@ -833,13 +822,13 @@ Package pdftex.def Info: ./figures/from_reads_to_IGS.png used on input line 148
 .
 (pdftex.def)             Requested size: 289.07999pt x 336.48921pt.
 
-<./figures/IGSs_figure.pdf, id=971, 715.67375pt x 422.57875pt>
+<./figures/IGSs_figure.pdf, id=977, 715.67375pt x 422.57875pt>
 File: ./figures/IGSs_figure.pdf Graphic file (type pdf)
 
 <use ./figures/IGSs_figure.pdf>
 Package pdftex.def Info: ./figures/IGSs_figure.pdf used on input line 173.
 (pdftex.def)             Requested size: 289.07999pt x 170.6921pt.
- [79] [80 <./figures/from_reads_to_IGS.png> <./figures/IGSs_figure.pdf>] [81]
+ [81] [82 <./figures/from_reads_to_IGS.png> <./figures/IGSs_figure.pdf>] [83]
 Underfull \hbox (badness 10000) in paragraph at lines 274--282
 
  []
@@ -859,7 +848,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 283--289
 
  []
 
-[82] [83]
+[84] [85]
 Underfull \hbox (badness 10000) in paragraph at lines 329--335
 
  []
@@ -880,30 +869,30 @@ Overfull \hbox (64.83589pt too wide) in paragraph at lines 355--366
 [][] 
  []
 
-[84]
+[86]
 
 Package caption Warning: \label without proper \caption on input line 391.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `table:alpha_simulated' on page 85 undefined on input 
+LaTeX Warning: Reference `table:alpha_simulated' on page 87 undefined on input 
 line 394.
 
-[85] [86] <./figures/simple_PCA_3d.png, id=1016, 1096.095pt x 636.3775pt>
+[87] [88] <./figures/simple_PCA_3d.png, id=1022, 1096.095pt x 636.3775pt>
 File: ./figures/simple_PCA_3d.png Graphic file (type png)
 
 <use ./figures/simple_PCA_3d.png>
 Package pdftex.def Info: ./figures/simple_PCA_3d.png used on input line 462.
 (pdftex.def)             Requested size: 289.07999pt x 167.83327pt.
 
-<./figures/simple_tree.png, id=1017, 611.28375pt x 612.2875pt>
+<./figures/simple_tree.png, id=1023, 611.28375pt x 612.2875pt>
 File: ./figures/simple_tree.png Graphic file (type png)
 
 <use ./figures/simple_tree.png>
 Package pdftex.def Info: ./figures/simple_tree.png used on input line 469.
 (pdftex.def)             Requested size: 289.07999pt x 289.5503pt.
- [87 <./figures/simple_PCA_3d.png> <./figures/simple_tree.png>] [88]
-<./figures/alpha_by_error_no_adjust.pdf, id=1026, 722.7pt x 578.16pt>
+ [89 <./figures/simple_PCA_3d.png> <./figures/simple_tree.png>] [90]
+<./figures/alpha_by_error_no_adjust.pdf, id=1033, 722.7pt x 578.16pt>
 File: ./figures/alpha_by_error_no_adjust.pdf Graphic file (type pdf)
 
 <use ./figures/alpha_by_error_no_adjust.pdf>
@@ -911,61 +900,61 @@ Package pdftex.def Info: ./figures/alpha_by_error_no_adjust.pdf used on input l
 ine 528.
 (pdftex.def)             Requested size: 289.07999pt x 231.2599pt.
 
-<./figures/beta_by_error.pdf, id=1027, 722.7pt x 578.16pt>
+<./figures/beta_by_error.pdf, id=1034, 722.7pt x 578.16pt>
 File: ./figures/beta_by_error.pdf Graphic file (type pdf)
 
 <use ./figures/beta_by_error.pdf>
 Package pdftex.def Info: ./figures/beta_by_error.pdf used on input line 534.
 (pdftex.def)             Requested size: 289.07999pt x 231.2599pt.
- [89 <./figures/alpha_by_error_no_adjust.pdf>] [90 <./figures/beta_by_error.pdf
+ [91 <./figures/alpha_by_error_no_adjust.pdf>] [92 <./figures/beta_by_error.pdf
 >]
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
 (amsmath)                 on input line 588.
 
-<./figures/IGS_affected_k_kmers.png, id=1120, 678.535pt x 508.90125pt>
+<./figures/IGS_affected_k_kmers.png, id=1126, 678.535pt x 508.90125pt>
 File: ./figures/IGS_affected_k_kmers.png Graphic file (type png)
 
 <use ./figures/IGS_affected_k_kmers.png>
 Package pdftex.def Info: ./figures/IGS_affected_k_kmers.png used on input line 
 594.
 (pdftex.def)             Requested size: 289.07999pt x 216.80432pt.
- [91]
-<./figures/alpha_by_error_erroronly_adjust.pdf, id=1125, 722.7pt x 578.16pt>
+ [93]
+<./figures/alpha_by_error_erroronly_adjust.pdf, id=1131, 722.7pt x 578.16pt>
 File: ./figures/alpha_by_error_erroronly_adjust.pdf Graphic file (type pdf)
 
 <use ./figures/alpha_by_error_erroronly_adjust.pdf>
 Package pdftex.def Info: ./figures/alpha_by_error_erroronly_adjust.pdf used on 
 input line 621.
 (pdftex.def)             Requested size: 289.07999pt x 231.2599pt.
- [92 <./figures/IGS_affected_k_kmers.png>] [93 <./figures/alpha_by_error_erroro
+ [94 <./figures/IGS_affected_k_kmers.png>] [95 <./figures/alpha_by_error_erroro
 nly_adjust.pdf>]
-<./figures/alpha_by_error_full_adjust.pdf, id=1179, 722.7pt x 578.16pt>
+<./figures/alpha_by_error_full_adjust.pdf, id=1186, 722.7pt x 578.16pt>
 File: ./figures/alpha_by_error_full_adjust.pdf Graphic file (type pdf)
 
 <use ./figures/alpha_by_error_full_adjust.pdf>
 Package pdftex.def Info: ./figures/alpha_by_error_full_adjust.pdf used on input
  line 668.
 (pdftex.def)             Requested size: 289.07999pt x 231.2599pt.
- [94]
-<./figures/beta_by_coverage.pdf, id=1183, 722.7pt x 578.16pt>
+ [96]
+<./figures/beta_by_coverage.pdf, id=1190, 722.7pt x 578.16pt>
 File: ./figures/beta_by_coverage.pdf Graphic file (type pdf)
 
 <use ./figures/beta_by_coverage.pdf>
 Package pdftex.def Info: ./figures/beta_by_coverage.pdf used on input line 702.
 
 (pdftex.def)             Requested size: 289.07999pt x 231.2599pt.
- [95 <./figures/alpha_by_error_full_adjust.pdf>] <./figures/alpha_by_coverage_0
-e.pdf, id=1234, 722.7pt x 578.16pt>
+ [97 <./figures/alpha_by_error_full_adjust.pdf>] <./figures/alpha_by_coverage_0
+e.pdf, id=1240, 722.7pt x 578.16pt>
 File: ./figures/alpha_by_coverage_0e.pdf Graphic file (type pdf)
 
 <use ./figures/alpha_by_coverage_0e.pdf>
 Package pdftex.def Info: ./figures/alpha_by_coverage_0e.pdf used on input line 
 737.
 (pdftex.def)             Requested size: 289.07999pt x 231.2599pt.
- [96 <./figures/beta_by_coverage.pdf>]
-<./figures/alpha_by_coverage_0005e.pdf, id=1276, 722.7pt x 578.16pt>
+ [98 <./figures/beta_by_coverage.pdf>]
+<./figures/alpha_by_coverage_0005e.pdf, id=1282, 722.7pt x 578.16pt>
 File: ./figures/alpha_by_coverage_0005e.pdf Graphic file (type pdf)
 
 <use ./figures/alpha_by_coverage_0005e.pdf>
@@ -973,66 +962,66 @@ Package pdftex.def Info: ./figures/alpha_by_coverage_0005e.pdf used on input li
 ne 743.
 (pdftex.def)             Requested size: 289.07999pt x 231.2599pt.
 
-<./figures/alpha_by_coverage_001e.pdf, id=1277, 722.7pt x 578.16pt>
+<./figures/alpha_by_coverage_001e.pdf, id=1283, 722.7pt x 578.16pt>
 File: ./figures/alpha_by_coverage_001e.pdf Graphic file (type pdf)
 
 <use ./figures/alpha_by_coverage_001e.pdf>
 Package pdftex.def Info: ./figures/alpha_by_coverage_001e.pdf used on input lin
 e 749.
 (pdftex.def)             Requested size: 289.07999pt x 231.2599pt.
- [97 <./figures/alpha_by_coverage_0e.pdf> <./figures/alpha_by_coverage_0005e.pd
+ [99 <./figures/alpha_by_coverage_0e.pdf> <./figures/alpha_by_coverage_0005e.pd
 f
 
 pdfTeX warning: pdflatex (file ./figures/alpha_by_coverage_0005e.pdf): PDF incl
 usion: multiple pdfs with page group included in a single page
->] <./figures/compare_commet.pdf, id=1360, 722.7pt x 578.16pt>
+>] <./figures/compare_commet.pdf, id=1366, 722.7pt x 578.16pt>
 File: ./figures/compare_commet.pdf Graphic file (type pdf)
 
 <use ./figures/compare_commet.pdf>
 Package pdftex.def Info: ./figures/compare_commet.pdf used on input line 777.
 (pdftex.def)             Requested size: 289.07999pt x 231.2599pt.
- [98 <./figures/alpha_by_coverage_001e.pdf>]
-[99 <./figures/compare_commet.pdf>] [100] [101]
-<./figures/GOS_cluster.png, id=1447, 779.91376pt x 570.13pt>
+ [100 <./figures/alpha_by_coverage_001e.pdf>] [101 <./figures/compare_commet.pd
+f>] [102] [103]
+<./figures/GOS_cluster.png, id=1453, 779.91376pt x 570.13pt>
 File: ./figures/GOS_cluster.png Graphic file (type png)
 
 <use ./figures/GOS_cluster.png>
 Package pdftex.def Info: ./figures/GOS_cluster.png used on input line 872.
 (pdftex.def)             Requested size: 505.89pt x 369.81456pt.
 
-<./figures/GOS_observed.png, id=1448, 850.17625pt x 473.77pt>
+<./figures/GOS_observed.png, id=1454, 850.17625pt x 473.77pt>
 File: ./figures/GOS_observed.png Graphic file (type png)
 
 <use ./figures/GOS_observed.png>
 Package pdftex.def Info: ./figures/GOS_observed.png used on input line 878.
 (pdftex.def)             Requested size: 505.89pt x 281.91472pt.
 
-<./figures/GOS_chao.png, id=1449, 1146.2825pt x 580.1675pt>
+<./figures/GOS_chao.png, id=1455, 1146.2825pt x 580.1675pt>
 File: ./figures/GOS_chao.png Graphic file (type png)
 
 <use ./figures/GOS_chao.png>
 Package pdftex.def Info: ./figures/GOS_chao.png used on input line 884.
 (pdftex.def)             Requested size: 505.89pt x 256.04465pt.
- [102 <./figures/GOS_cluster.png>]
+ [104 <./figures/GOS_cluster.png>]
 
-LaTeX Warning: Text page 103 contains only floats.
+LaTeX Warning: Text page 105 contains only floats.
 
-[103 <./figures/GOS_observed.png> <./figures/GOS_chao.png>]
-<./figures/HMP_beta.png, id=1459, 461.725pt x 350.30875pt>
+[105 <./figures/GOS_observed.png> <./figures/GOS_chao.png>]
+<./figures/HMP_beta.png, id=1466, 461.725pt x 350.30875pt>
 File: ./figures/HMP_beta.png Graphic file (type png)
 
 <use ./figures/HMP_beta.png>
 Package pdftex.def Info: ./figures/HMP_beta.png used on input line 911.
 (pdftex.def)             Requested size: 289.07999pt x 219.32195pt.
 
-<./figures/HMP_alpha.png, id=1460, 578.16pt x 433.62pt>
+<./figures/HMP_alpha.png, id=1467, 578.16pt x 433.62pt>
 File: ./figures/HMP_alpha.png Graphic file (type png)
 
 <use ./figures/HMP_alpha.png>
 Package pdftex.def Info: ./figures/HMP_alpha.png used on input line 918.
 (pdftex.def)             Requested size: 289.07999pt x 216.80946pt.
- [104 <./figures/HMP_beta.png> <./figures/HMP_alpha.png>] [105]
-<./figures/GPGC_old_subset1M.png, id=1470, 477.785pt x 437.635pt>
+ [106 <./figures/HMP_beta.png> <./figures/HMP_alpha.png>] [107]
+<./figures/GPGC_old_subset1M.png, id=1477, 477.785pt x 437.635pt>
 File: ./figures/GPGC_old_subset1M.png Graphic file (type png)
 
 <use ./figures/GPGC_old_subset1M.png>
@@ -1040,34 +1029,34 @@ Package pdftex.def Info: ./figures/GPGC_old_subset1M.png used on input line 983
 .
 (pdftex.def)             Requested size: 289.07999pt x 264.78668pt.
 
-<./figures/GPGC_1m_old.png, id=1471, 953.5625pt x 824.07875pt>
+<./figures/GPGC_1m_old.png, id=1478, 953.5625pt x 824.07875pt>
 File: ./figures/GPGC_1m_old.png Graphic file (type png)
 
 <use ./figures/GPGC_1m_old.png>
 Package pdftex.def Info: ./figures/GPGC_1m_old.png used on input line 991.
 (pdftex.def)             Requested size: 505.89pt x 437.19977pt.
- [106 <./figures/GPGC_old_subset1M.png>]
-<./figures/IGS_KBS_beta.png, id=1476, 652.4375pt x 538.01pt>
+ [108 <./figures/GPGC_old_subset1M.png>]
+<./figures/IGS_KBS_beta.png, id=1483, 652.4375pt x 538.01pt>
 File: ./figures/IGS_KBS_beta.png Graphic file (type png)
 
 <use ./figures/IGS_KBS_beta.png>
 Package pdftex.def Info: ./figures/IGS_KBS_beta.png used on input line 1022.
 (pdftex.def)             Requested size: 289.07999pt x 238.38342pt.
 
-<./figures/IGS_ARMO_beta.png, id=1477, 631.35875pt x 510.90875pt>
+<./figures/IGS_ARMO_beta.png, id=1484, 631.35875pt x 510.90875pt>
 File: ./figures/IGS_ARMO_beta.png Graphic file (type png)
 
 <use ./figures/IGS_ARMO_beta.png>
 Package pdftex.def Info: ./figures/IGS_ARMO_beta.png used on input line 1028.
 (pdftex.def)             Requested size: 289.07999pt x 233.92946pt.
 
-<./figures/IGS_ARMO_alpha.png, id=1478, 851.18pt x 428.60126pt>
+<./figures/IGS_ARMO_alpha.png, id=1485, 851.18pt x 428.60126pt>
 File: ./figures/IGS_ARMO_alpha.png Graphic file (type png)
 
 <use ./figures/IGS_ARMO_alpha.png>
 Package pdftex.def Info: ./figures/IGS_ARMO_alpha.png used on input line 1034.
 (pdftex.def)             Requested size: 505.89pt x 254.73642pt.
- [107 <./figures/GPGC_1m_old.png>]
+ [109 <./figures/GPGC_1m_old.png>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1075,32 +1064,29 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 Overfull \vbox (39.66585pt too high) has occurred while \output is active []
 
 
-[108 <./figures/IGS_KBS_beta.png> <./figures/IGS_ARMO_beta.png>] [109 <./figure
+[110 <./figures/IGS_KBS_beta.png> <./figures/IGS_ARMO_beta.png>] [111 <./figure
 s/IGS_ARMO_alpha.png>]
 Chapter 6.
-[110
+[112
 
-] [111] [112] [113] [114] [115]) [116] [117
+] [113] [114] [115] [116] [117]) [118] [119
 
 ] (./gloss.tex) (./dis.bbl
-[118
+[120
 
 
-] [119
+] [121
 
-] [120] [121] [122] [123] [124] [125] [126] [127] [128] [129]
-[130] [131]) [132] (./dis.aux)
+] [122] [123] [124] [125] [126] [127] [128] [129] [130] [131]
+[132] [133]) [134] (./dis.aux)
 
 LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
  5178 strings out of 493315
  80176 string characters out of 6137904
- 143087 words of memory out of 5000000
+ 143094 words of memory out of 5000000
  8467 multiletter control sequences out of 15000+600000
  9119 words of font info for 34 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
@@ -1115,10 +1101,10 @@ sr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
 /local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
 local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/l
 ocal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on dis.pdf (146 pages, 1824074 bytes).
+Output written on dis.pdf (148 pages, 1827441 bytes).
 PDF statistics:
- 1605 PDF objects out of 1728 (max. 8388607)
- 518 compressed objects within 6 object streams
+ 1611 PDF objects out of 1728 (max. 8388607)
+ 522 compressed objects within 6 object streams
  0 named destinations out of 1000 (max. 500000)
  221 words of extra memory for PDF output out of 10000 (max. 10000000)
 
