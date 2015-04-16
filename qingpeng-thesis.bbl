@@ -475,6 +475,12 @@ K.~Malde and B.~O'Sullivan.
 \newblock In A.~Gill and T.~Swift, editors, {\em PADL}, volume 5418 of {\em
   Lecture Notes in Computer Science}, pages 183--194. Springer, 2009.
 
+\bibitem{jellyfish}
+G.~Marcais and C.~Kingsford.
+\newblock {{A} fast, lock-free approach for efficient parallel counting of
+  occurrences of k-mers}.
+\newblock {\em Bioinformatics}, 27(6):764--770, Mar 2011.
+
 \bibitem{Marcais2011}
 G.~Mar\c{c}ais and C.~Kingsford.
 \newblock {A fast, lock-free approach for efficient parallel counting of

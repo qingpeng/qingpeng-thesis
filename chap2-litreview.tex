@@ -44,7 +44,7 @@ Figure \ref{fig:kmer_counting} shows a summary of existing k-mer counting
 packages.
 
 
- This data structure used in khmer package which will be discussed in detailes
+ This data structure used in khmer package which will be discussed in details
  in next chapter is based on a Count-Min Sketch \cite{Cormode2005}, a
  generalized probabilistic data structure for storing the frequency
  distributions of distinct elements. The implementation in khmer extends an earlier
@@ -58,11 +58,54 @@ packages.
  \cite{DBLP:conf/sigmod/CohenM03}, which are related to the Count-Min Sketch
  and our khmer implementation.
 
-\begin{sidewaysfigure}[ht]
-\centerline{\includegraphics[width=10in]{./figures/kmer_counting.png}}
 
-    \caption{Description of k-mer counting packages} \label{fig:kmer_counting}
-    \end{sidewaysfigure}
+\begin{sidewaystable}[h]
+\tiny
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|}
+\hline
+\textbf{software} & \textbf{Algorithms} & \textbf{multiple steps?} &
+\textbf{\begin{tabular}[c]{@{}l@{}}arbitrary\\ k-size?\end{tabular}} &
+\textbf{\begin{tabular}[c]{@{}l@{}}exact\\ count?\end{tabular}} &
+\textbf{\begin{tabular}[c]{@{}l@{}}(built in) get\\ k-mer\\ ccurrence\\
+histogram?\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}(built in)\\
+specific\\ k-mer\\ count retrieval?\end{tabular}} & \textbf{API?} &
+\textbf{multithreaded?} & \textbf{\begin{tabular}[c]{@{}l@{}}online\\
+counting?\end{tabular}} \\ \hline
+\textbf{BFCounter\cite{Melsted2011}} & \begin{tabular}[c]{@{}l@{}}bloom filter,filter out low\\
+abundance kmer\end{tabular} & \begin{tabular}[c]{@{}l@{}}Y\\ (count and
+dump)\end{tabular} & Y (compile time) & Y & N & N & N & Y & Y \\ \hline
+\textbf{DSK\cite{Rizk2013}} & \begin{tabular}[c]{@{}l@{}}fixed-memory and fixed-disk\\ space
+streaming algorithm\end{tabular} & \begin{tabular}[c]{@{}l@{}}N\\
+(dsk)\end{tabular} & Y & Y & Y & N & N & N & N \\ \hline
+\textbf{Jellyfish \cite{jellyfish}} & lock-free hash table & \begin{tabular}[c]{@{}l@{}}Y\\
+(count and histo/query)\end{tabular} & Y for 2.0, \textless=32 for 1.0 & Y & Y
+& Y & N & Y & Y \\ \hline
+\textbf{KAnalyze\cite{Audano2014}} & split to disk and merge & \begin{tabular}[c]{@{}l@{}}N\\
+(count)\end{tabular} & \textless=31 & Y & N & N & Y & Y & N \\ \hline
+\textbf{Khmer\cite{khmer}} & count-min sketch & \begin{tabular}[c]{@{}l@{}}Y\\
+(load\_counting,other)\end{tabular} & \textless=32 & N & Y & Y & Y & Y & Y \\
+\hline
+\textbf{KMC\cite{Deorowicz2013}} & \begin{tabular}[c]{@{}l@{}}parallel disk-based,similar\\ to
+DSK\end{tabular} & \begin{tabular}[c]{@{}l@{}}Y\\ (kmc and
+kmc\_dump)\end{tabular} & 10-256 & Y & N & N & N & Y & N \\ \hline
+\textbf{MSPKmerCounter} & \begin{tabular}[c]{@{}l@{}}Minimum Substring\\
+Partitioning\end{tabular} & \begin{tabular}[c]{@{}l@{}}Y\\
+(partition,count,dump,hist)\end{tabular} &  & Y & Y & Y & N & Y & N \\ \hline
+\textbf{Tallymer\cite{Kurtz2008}} & enhanced suffix arrays & \begin{tabular}[c]{@{}l@{}}Y\\
+(suffixerator and \\ tallymer mkindex)\end{tabular} & Y & Y & Y & Y & N & N &
+N? \\ \hline
+\textbf{Turtle\cite{Roy2014}} & \begin{tabular}[c]{@{}l@{}}pattern-blocked Bloom \\ filter,
+filter out low\\ bundance kmer\end{tabular} & \begin{tabular}[c]{@{}l@{}}N\\
+(one step \\ scTurtle/cTurtle)\end{tabular} & \textless=64 &
+\begin{tabular}[c]{@{}l@{}}Y for scTurtle\\ N for cTurtle\end{tabular} & N & N
+& N & Y & Y \\ \hline
+\end{tabular}
+\caption{Description of k-mer counting packages} 
+\label{table:kmer_counting}
+ 
+\end{sidewaystable}
+
+
 
 \section{Tackling large and error-prone short-read shotgun data sets}
 

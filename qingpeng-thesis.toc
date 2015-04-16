@@ -53,7 +53,7 @@
 \contentsline {section}{\numberline {4.7}Data}{74}
 \contentsline {subsection}{\numberline {4.7.1}Code availability}{74}
 \contentsline {subsection}{\numberline {4.7.2}Data sets used for digital normalization}{75}
-\contentsline {subsection}{\numberline {4.7.3}Synthetic data sets used for error analysis}{76}
+\contentsline {subsection}{\numberline {4.7.3}Synthetic data sets used for error analysis}{75}
 \contentsline {subsection}{\numberline {4.7.4}Real data sets used for error analysis}{76}
 \contentsline {chapter}{\numberline {Chapter 5} A framework for diversity analysis of whole shotgun metagenomic reads data}{77}
 \contentsline {section}{\numberline {5.1}Introduction}{77}

@@ -1,6 +1,5 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Description of k-mer counting packages\relax }}{22}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces \bf Comparison of the time it takes for k-mer counting tools to calculate k-mer abundance histograms, with time (y axis, in seconds) against data set size (in number of reads, x axis). All programs executed in time approximately linear with the number of input reads.\relax }}{28}
 \addvspace {1.2\baselineskip }
