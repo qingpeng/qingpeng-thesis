@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  16 APR 2015 00:49
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  16 APR 2015 01:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -793,8 +793,6 @@ LaTeX Warning: Reference `tab:data' on page 76 undefined on input line 1261.
 
 ) (./chap5-IGS-theory.tex [76]
 Chapter 5.
-Missing character: There is no € in font cmr12!
-Missing character: There is no œ in font cmr12!
 [77
 
 ]
@@ -1070,9 +1068,6 @@ Chapter 6.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
  5178 strings out of 493315
@@ -1092,7 +1087,7 @@ sr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
 /local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
 local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/l
 ocal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on dis.pdf (149 pages, 1828459 bytes).
+Output written on dis.pdf (149 pages, 1828494 bytes).
 PDF statistics:
  1614 PDF objects out of 1728 (max. 8388607)
  524 compressed objects within 6 object streams
