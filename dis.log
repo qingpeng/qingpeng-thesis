@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  15 APR 2015 01:23
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  16 APR 2015 00:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -621,11 +621,6 @@ to.pdf used on input line 435.
 
 [35 <./figures/figure5_average_offset_vs_fpr-eps-converted-to.pdf>] [36 <./figu
 res/figure6_percent_offset_vs_fpr-eps-converted-to.pdf>] [37] [38] [39]
-Overfull \hbox (62.31862pt too wide) in paragraph at lines 594--603
-[]\OT1/cmr/m/n/12 The ver-sion of khmer used to gen-er-ate the re-sults in this
- chap-ter is avail-able at http://github.com/ged-
- []
-
 [40]) (./chap4-diginorm.tex [41]
 Chapter 4.
 [42
@@ -792,15 +787,9 @@ Overfull \hbox (1.95824pt too wide) in paragraph at lines 1159--1175
 rep-re-sent-ing sen-tences (``reads'')
  []
 
-[73]
-Overfull \hbox (15.3191pt too wide) in paragraph at lines 1201--1204
-\OT1/cmr/m/n/12 at github.com/ged-lab/2012-paper-diginorm/ and http://github.co
-m/ged-lab/2014-streaming/. 
- []
+[73] [74] [75]
 
-[74] [75]
-
-LaTeX Warning: Reference `tab:data' on page 76 undefined on input line 1250.
+LaTeX Warning: Reference `tab:data' on page 76 undefined on input line 1261.
 
 ) (./chap5-IGS-theory.tex [76]
 Chapter 5.
@@ -1057,36 +1046,38 @@ File: ./figures/IGS_ARMO_alpha.png Graphic file (type png)
 Package pdftex.def Info: ./figures/IGS_ARMO_alpha.png used on input line 1034.
 (pdftex.def)             Requested size: 505.89pt x 254.73642pt.
  [109 <./figures/GPGC_1m_old.png>]
+Overfull \vbox (15.8159pt too high) has occurred while \output is active []
+
+
+[110 <./figures/IGS_KBS_beta.png> <./figures/IGS_ARMO_beta.png>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) (./chap7-conc.tex
-Overfull \vbox (39.66585pt too high) has occurred while \output is active []
-
-
-[110 <./figures/IGS_KBS_beta.png> <./figures/IGS_ARMO_beta.png>] [111 <./figure
-s/IGS_ARMO_alpha.png>]
+) (./chap7-conc.tex [111 <./figures/IGS_ARMO_alpha.png>] [112]
 Chapter 6.
-[112
+[113
 
-] [113] [114] [115] [116] [117]) [118] [119
+] [114] [115] [116] [117] [118]) [119] [120
 
 ] (./gloss.tex) (./dis.bbl
-[120
+[121
 
 
-] [121
+] [122
 
-] [122] [123] [124] [125] [126] [127] [128] [129] [130] [131]
-[132] [133]) [134] (./dis.aux)
+] [123] [124] [125] [126] [127] [128] [129] [130] [131] [132]
+[133] [134]) [135] (./dis.aux)
 
 LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
  5178 strings out of 493315
  80176 string characters out of 6137904
- 143094 words of memory out of 5000000
+ 143050 words of memory out of 5000000
  8467 multiletter control sequences out of 15000+600000
  9119 words of font info for 34 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
@@ -1101,10 +1092,10 @@ sr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
 /local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
 local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/l
 ocal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on dis.pdf (148 pages, 1827441 bytes).
+Output written on dis.pdf (149 pages, 1828459 bytes).
 PDF statistics:
- 1611 PDF objects out of 1728 (max. 8388607)
- 522 compressed objects within 6 object streams
+ 1614 PDF objects out of 1728 (max. 8388607)
+ 524 compressed objects within 6 object streams
  0 named destinations out of 1000 (max. 500000)
  221 words of extra memory for PDF output out of 10000 (max. 10000000)
 

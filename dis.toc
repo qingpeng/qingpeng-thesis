@@ -18,7 +18,7 @@
 \contentsline {paragraph}{\numberline {2.3.1.2.1}Composition-based approach}{17}
 \contentsline {paragraph}{\numberline {2.3.1.2.2}Similarity-based approach}{18}
 \contentsline {subsubsection}{\numberline {2.3.1.3}Statistics for Diversity Estimation}{18}
-\contentsline {chapter}{\numberline {Chapter 3} khmer-efficient online k-mer counting using a probabilistic data structure}{23}
+\contentsline {chapter}{\numberline {Chapter 3} Efficient online k-mer counting using a probabilistic data structure}{23}
 \contentsline {section}{\numberline {3.1}Introduction}{23}
 \contentsline {section}{\numberline {3.2}Count-Min Sketch and its application in k-mer counting}{24}
 \contentsline {subsection}{\numberline {3.2.1}Implementing a Count-Min Sketch for k-mers}{25}
@@ -51,9 +51,10 @@
 \contentsline {section}{\numberline {4.5}Time and space usage of the streaming algorithm for analyzing short DNA sequencing reads}{71}
 \contentsline {section}{\numberline {4.6}Conclusion}{73}
 \contentsline {section}{\numberline {4.7}Data}{74}
-\contentsline {subsection}{\numberline {4.7.1}Data sets used for digital normalization}{75}
-\contentsline {subsection}{\numberline {4.7.2}Synthetic data sets used for error analysis}{75}
-\contentsline {subsection}{\numberline {4.7.3}Real data sets used for error analysis}{76}
+\contentsline {subsection}{\numberline {4.7.1}Code availability}{74}
+\contentsline {subsection}{\numberline {4.7.2}Data sets used for digital normalization}{75}
+\contentsline {subsection}{\numberline {4.7.3}Synthetic data sets used for error analysis}{76}
+\contentsline {subsection}{\numberline {4.7.4}Real data sets used for error analysis}{76}
 \contentsline {chapter}{\numberline {Chapter 5} A framework for diversity analysis of whole shotgun metagenomic reads data}{77}
 \contentsline {section}{\numberline {5.1}Introduction}{77}
 \contentsline {section}{\numberline {5.2}The concept of IGS(informational genomic segment)}{78}
@@ -74,10 +75,10 @@
 \contentsline {subsection}{\numberline {5.4.3}GPGC - Great Prairie Soil Metagenome Grand Challenge}{107}
 \contentsline {subsection}{\numberline {5.4.4}more soil metagenomic samples}{108}
 \contentsline {section}{\numberline {5.5}Data}{110}
-\contentsline {subsection}{\numberline {5.5.1}Four simulated reads data sets with different species abundance distribution}{110}
-\contentsline {subsection}{\numberline {5.5.2}Simulated sequencing reads of e.coli}{110}
-\contentsline {chapter}{\numberline {Chapter 6} Conclusion}{112}
-\contentsline {section}{\numberline {6.1}Summary}{113}
-\contentsline {section}{\numberline {6.2}Future Work}{115}
-\contentsline {chapter}{\textbf {APPENDIX}\textmd {\leaders \hbox to 1em{\hss .\hss }\hfill }}{120}
-\contentsline {chapter}{\textbf {BIBLIOGRAPHY}\textmd {\leaders \hbox to 1em{\hss .\hss }\hfill } \vspace {\baselineskip }}{121}
+\contentsline {subsection}{\numberline {5.5.1}Code availability}{110}
+\contentsline {subsection}{\numberline {5.5.2}Simulated sequencing reads of e.coli}{111}
+\contentsline {chapter}{\numberline {Chapter 6} Conclusion}{113}
+\contentsline {section}{\numberline {6.1}Summary}{114}
+\contentsline {section}{\numberline {6.2}Future Work}{116}
+\contentsline {chapter}{\textbf {APPENDIX}\textmd {\leaders \hbox to 1em{\hss .\hss }\hfill }}{121}
+\contentsline {chapter}{\textbf {BIBLIOGRAPHY}\textmd {\leaders \hbox to 1em{\hss .\hss }\hfill } \vspace {\baselineskip }}{122}
