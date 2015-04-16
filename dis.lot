@@ -24,6 +24,8 @@
 \addvspace {1.2\baselineskip }
 \contentsline {table}{\numberline {4.9}{\ignorespaces {\bf Results of streaming error trimming on complete data sets. Error rates before and after trimming were estimated by mapping.}\relax }}{67}
 \addvspace {1.2\baselineskip }
+\contentsline {table}{\numberline {4.10}{\ignorespaces {\bf Data sets used for evaluation.}\relax }}{76}
+\addvspace {1.2\baselineskip }
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {5.1}{\ignorespaces \bf {Total number of IGSs in different simulated reads data sets.} \relax }}{81}
 \addvspace {1.2\baselineskip }
@@ -35,11 +37,12 @@
 \addvspace {1.2\baselineskip }
 \contentsline {table}{\numberline {5.5}{\ignorespaces \bf {6 synthetic simple metagenomes} \relax }}{87}
 \addvspace {1.2\baselineskip }
+\contentsline {table}{\numberline {5.6}{\ignorespaces \bf Alpha diversity analysis result of the simple simulated data using IGS method.\relax }}{87}
 \addvspace {1.2\baselineskip }
-\contentsline {table}{\numberline {5.6}{\ignorespaces \bf Dissimilarity matrix between synthetic samples using Bray-curtis from species composition directly \relax }}{88}
+\contentsline {table}{\numberline {5.7}{\ignorespaces \bf Dissimilarity matrix between synthetic samples using Bray-curtis from species composition directly. \relax }}{88}
 \addvspace {1.2\baselineskip }
-\contentsline {table}{\numberline {5.7}{\ignorespaces \bf Dissimilarity matrix between synthetic samples using Bray-cutis from sequencing reads using IGS method \relax }}{88}
+\contentsline {table}{\numberline {5.8}{\ignorespaces \bf Dissimilarity matrix between synthetic samples using Bray-cutis from sequencing reads using IGS method. \relax }}{88}
 \addvspace {1.2\baselineskip }
-\contentsline {table}{\numberline {5.8}{\ignorespaces GPGC Data sets\relax }}{112}
+\contentsline {table}{\numberline {5.9}{\ignorespaces GPGC Data sets\relax }}{112}
 \addvspace {1.2\baselineskip }
 \addvspace {10\p@ }

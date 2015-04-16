@@ -245,7 +245,7 @@
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{toc}{\contentsline {section}{\numberline {4.1}Introduction}{42}}
 \citation{pubmed21187386}
-\citation{pubmed21114842}
+\citation{Kelley2010}
 \@writefile{toc}{\contentsline {section}{\numberline {4.2}Estimating sequencing depth without a reference assembly}{43}}
 \citation{countminsketch}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces  {\bf  Representative rank-abundance distributions for 20-mers from 100-base reads with no errors, a read with a single substitution error, and a read with multiple substitution errors.}\relax }}{44}}
@@ -373,6 +373,12 @@
 \citation{chitsaz}
 \citation{trinityrna}
 \citation{podar}
+\citation{chitsaz}
+\citation{trinityrna}
+\citation{podar}
+\@writefile{lot}{\contentsline {table}{\numberline {4.10}{\ignorespaces {\bf  Data sets used for evaluation.}\relax }}{76}}
+\newlabel{tab:data}{{4.10}{76}}
+\@writefile{lot}{\addvspace {1.2\baselineskip }}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.7.3}Synthetic data sets used for error analysis}{76}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.7.4}Real data sets used for error analysis}{76}}
 \@writefile{toc}{\contentsline {chapter}{\numberline {Chapter 5} A framework for diversity analysis of whole shotgun metagenomic reads data}{77}}
@@ -409,98 +415,101 @@
 \@writefile{lot}{\contentsline {table}{\numberline {5.5}{\ignorespaces  \bf  {6 synthetic simple metagenomes} \relax }}{87}}
 \newlabel{table:simulated_metag}{{5.5}{87}}
 \@writefile{lot}{\addvspace {1.2\baselineskip }}
-\newlabel{table:alpha_simulated}{{\caption@xref {table:alpha_simulated}{ on input line 391}}{87}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.6}{\ignorespaces \bf  Alpha diversity analysis result of the simple simulated data using IGS method.\relax }}{87}}
+\newlabel{table:a_simulated}{{5.6}{87}}
 \@writefile{lot}{\addvspace {1.2\baselineskip }}
-\@writefile{lot}{\contentsline {table}{\numberline {5.6}{\ignorespaces \bf  Dissimilarity matrix between synthetic samples using Bray-curtis from species composition directly \relax }}{88}}
-\newlabel{table:simulated_real_matrix}{{5.6}{88}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.7}{\ignorespaces \bf  Dissimilarity matrix between synthetic samples using Bray-curtis from species composition directly. \relax }}{88}}
+\newlabel{table:simulated_real_matrix}{{5.7}{88}}
 \@writefile{lot}{\addvspace {1.2\baselineskip }}
-\@writefile{lot}{\contentsline {table}{\numberline {5.7}{\ignorespaces \bf  Dissimilarity matrix between synthetic samples using Bray-cutis from sequencing reads using IGS method \relax }}{88}}
-\newlabel{table:simulated_matrix1}{{5.7}{88}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.8}{\ignorespaces \bf  Dissimilarity matrix between synthetic samples using Bray-cutis from sequencing reads using IGS method. \relax }}{88}}
+\newlabel{table:simulated_matrix1}{{5.8}{88}}
 \@writefile{lot}{\addvspace {1.2\baselineskip }}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces \bf  Ordination of the 6 synthetic samples using IGS method\relax }}{89}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces \bf  Ordination of the 6 synthetic samples using IGS method.\relax }}{89}}
 \newlabel{fig:simple_pcoa}{{5.3}{89}}
 \@writefile{lof}{\addvspace {1.2\baselineskip }}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces \bf  Clustering of the 6 synthetic samples using IGS method\relax }}{89}}
-\newlabel{fig:simple_cluster}{{5.4}{89}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces \bf  Clustering of the 6 synthetic samples using IGS method\relax }}{90}}
+\newlabel{fig:simple_cluster}{{5.4}{90}}
 \@writefile{lof}{\addvspace {1.2\baselineskip }}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}Improving the accuracy of this method in real world analysis}{90}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces \bf  Richness estimation using IGS method without adjustment\relax }}{91}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces \bf  Richness estimation using IGS method without adjustment.\relax }}{91}}
 \newlabel{fig:IGS_richness_no_adjustment}{{5.5}{91}}
 \@writefile{lof}{\addvspace {1.2\baselineskip }}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.2.1}the effect of sequencing error to the accuracy of analysis}{91}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces \bf  Beta diversity analysis using IGS method without adjustment\relax }}{92}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces \bf  Beta diversity analysis using IGS method without adjustment.\relax }}{92}}
 \newlabel{fig:beta_no_adjustment}{{5.6}{92}}
 \@writefile{lof}{\addvspace {1.2\baselineskip }}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.7}{\ignorespaces \bf  Richness estimation using IGS method without adjustment \relax }}{94}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.2.1}the effect of sequencing error to the accuracy of analysis}{92}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.7}{\ignorespaces \bf  Richness estimation using IGS method without adjustment. \relax }}{94}}
 \newlabel{fig:IGS_affected_k_kmers}{{5.7}{94}}
 \@writefile{lof}{\addvspace {1.2\baselineskip }}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.8}{\ignorespaces \bf  Richness estimation using IGS method adjusted by sequencing error rate\relax }}{95}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.8}{\ignorespaces \bf  Richness estimation using IGS method adjusted by sequencing error rate.\relax }}{95}}
 \newlabel{fig:IGS_richness_error_adjustment}{{5.8}{95}}
 \@writefile{lof}{\addvspace {1.2\baselineskip }}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.2.2}the effect of collision in bloom filter to the accuracy of analysis}{95}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.3}the effect of sequencing depth to the accuracy of IGS method}{96}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.9}{\ignorespaces \bf  Richness estimation using IGS method adjusted by sequencing error rate and false positive rate of bloom filter\relax }}{97}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.9}{\ignorespaces \bf  Richness estimation using IGS method adjusted by sequencing error rate and false positive rate of bloom filter.\relax }}{97}}
 \newlabel{fig:IGS_richness_adjustment}{{5.9}{97}}
 \@writefile{lof}{\addvspace {1.2\baselineskip }}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.10}{\ignorespaces \bf  Correlation between calculated distance matrix and true matrix from different dat sets with different sequencing depth\relax }}{98}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.3}the effect of sequencing depth to the accuracy of IGS method}{97}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.10}{\ignorespaces \bf  Correlation between calculated distance matrix and true matrix from different data sets with different sequencing depth.\relax }}{98}}
 \newlabel{fig:IGS_correlation_coverage}{{5.10}{98}}
 \@writefile{lof}{\addvspace {1.2\baselineskip }}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.11}{\ignorespaces \bf  estimated genome size from data sets with variable coverage, no error rate\relax }}{99}}
+\citation{DBLP:conf/bibm/MailletCVLP14}
+\citation{Maillet2012}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.11}{\ignorespaces \bf  Estimated genome size from data sets with variable coverage, without error.\relax }}{99}}
 \newlabel{fig:alpha_by_coverage_0e}{{5.11}{99}}
 \@writefile{lof}{\addvspace {1.2\baselineskip }}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.12}{\ignorespaces \bf  estimated genome size from data sets with variable coverage, no error rate\relax }}{99}}
-\newlabel{fig:alpha_by_coverage_0005e}{{5.12}{99}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.4}Compare IGS method to COMMET in beta diversity analysis}{99}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.12}{\ignorespaces \bf  Estimated genome size from data sets with variable coverage, with error rate as 0.5\%.\relax }}{100}}
+\newlabel{fig:alpha_by_coverage_0005e}{{5.12}{100}}
 \@writefile{lof}{\addvspace {1.2\baselineskip }}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.13}{\ignorespaces \bf  estimated genome size from data sets with variable coverage, no error rate\relax }}{100}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.13}{\ignorespaces \bf  Estimated genome size from data sets with variable coverage, with error rate as 1.0\%. \relax }}{100}}
 \newlabel{fig:alpha_by_coverage_001e}{{5.13}{100}}
 \@writefile{lof}{\addvspace {1.2\baselineskip }}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.4}Compare IGS method to Commet in beta diversity analysis}{100}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.14}{\ignorespaces \bf  Correlation between calculated distance matrix and true matrix from different data sets and using different methods\relax }}{101}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.14}{\ignorespaces \bf  Correlation between calculated distance matrix and true distance matrix from different data sets and using different methods.\relax }}{101}}
 \newlabel{fig:compare_commet}{{5.14}{101}}
 \@writefile{lof}{\addvspace {1.2\baselineskip }}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.5}The IGS method can provide a whole framework to do alpha or beta diversity, with good versatility.}{101}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.5}The IGS method can provide a whole framework to do alpha or Tbeta diversity, with good versatility.}{102}}
 \@writefile{toc}{\contentsline {section}{\numberline {5.4}Applying IGS method to real metagenome data sets}{102}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.1}GOS data sets: Sorcerer II Global Ocean Sampling Expedition}{102}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.1}GOS data sets: Sorcerer II Global Ocean Sampling Expedition}{103}}
 \citation{Human-Microbiome-Project-Consortium:2012aa}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.15}{\ignorespaces \bf  cluster of GOS samples using IGS method\relax }}{104}}
-\newlabel{fig:GOS-beta}{{5.15}{104}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.2}Human Microbiome Project(HMP) metagenomics data set}{104}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.15}{\ignorespaces \bf  Clustering of Global Ocean Sampling Expedition samples using IGS method.\relax }}{105}}
+\newlabel{fig:GOS-beta}{{5.15}{105}}
 \@writefile{lof}{\addvspace {1.2\baselineskip }}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.2}HMP metagenomics data set}{104}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.16}{\ignorespaces \bf  Rarefaction curve of IGSs of the GOS samples\relax }}{105}}
-\newlabel{fig:GOS-rarefaction}{{5.16}{105}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.3}GPGC - Great Prairie Soil Metagenome Grand Challenge}{105}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.16}{\ignorespaces \bf  Rarefaction curve of IGSs of Global Ocean Sampling Expedition samples.\relax }}{106}}
+\newlabel{fig:GOS-rarefaction}{{5.16}{106}}
 \@writefile{lof}{\addvspace {1.2\baselineskip }}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.17}{\ignorespaces \bf  Estimated number of IGSs of the GOS samples\relax }}{105}}
-\newlabel{fig:GOS-chao1}{{5.17}{105}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.17}{\ignorespaces \bf  Estimated number of IGSs of Global Ocean Sampling Expedition samples.\relax }}{106}}
+\newlabel{fig:GOS-chao1}{{5.17}{106}}
 \@writefile{lof}{\addvspace {1.2\baselineskip }}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.18}{\ignorespaces \bf  PCoA of HMP, red: anterior nares- skin, green: throat -oral, blue: buccal mucosa -oral, orange: posterior fornix -vaginal\relax }}{106}}
-\newlabel{fig:HMP_beta}{{5.18}{106}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.18}{\ignorespaces \bf  Principal coordinates analysis of 12 Human Microbiome Project samples, red: anterior nares- skin, green: throat -oral, blue: buccal mucosa -oral, orange: posterior fornix -vaginal.\relax }}{107}}
+\newlabel{fig:HMP_beta}{{5.18}{107}}
 \@writefile{lof}{\addvspace {1.2\baselineskip }}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.19}{\ignorespaces \bf  alpha diversity of HMP: estimation of metagenome size of HMP samples, red: anterior nares- skin, green: throat -oral, blue: buccal mucosa -oral, orange: posterior fornix -vaginal\relax }}{106}}
-\newlabel{fig:HMP_alpha}{{5.19}{106}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.19}{\ignorespaces \bf  Alpha diversity of 12 Human Microbiome Project samples: estimation of metagenome size of HMP samples, red: anterior nares- skin, green: throat -oral, blue: buccal mucosa -oral, orange: posterior fornix -vaginal.\relax }}{107}}
+\newlabel{fig:HMP_alpha}{{5.19}{107}}
 \@writefile{lof}{\addvspace {1.2\baselineskip }}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.3}GPGC - Great Prairie Soil Metagenome Grand Challenge}{107}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.20}{\ignorespaces \bf  PCoA of GPGC samples\relax }}{108}}
-\newlabel{fig:GPGC_beta}{{5.20}{108}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.4}More soil metagenomic samples}{108}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.20}{\ignorespaces \bf  Principal coordinates analysis of 8 Great Prairie Soil Metagenome Grand Challenge (GPGC) samples.\relax }}{109}}
+\newlabel{fig:GPGC_beta}{{5.20}{109}}
 \@writefile{lof}{\addvspace {1.2\baselineskip }}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.4}more soil metagenomic samples}{108}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.21}{\ignorespaces \bf  alpha diversity of GPGC samples\relax }}{109}}
-\newlabel{fig:GPGC-alpha}{{5.21}{109}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.5}Data}{109}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.1}Code availability}{109}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.21}{\ignorespaces \bf  Alpha diversity analysis of 8 GPGC samples. Upper left, rarefaction curve of IGSs. Upper right, estimated number of IGSs in different samples. Lower left, estimated number of IGSs in samples grouped by location (Iowa, Kansas and wisconsin). Lower right, estimated number of IGSs in samples grouped by treatment (corn, prairie, restored, switchgrass).\relax }}{110}}
+\newlabel{fig:GPGC-alpha}{{5.21}{110}}
 \@writefile{lof}{\addvspace {1.2\baselineskip }}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.22}{\ignorespaces \bf  PCoA of soil samples collected from KBS\relax }}{110}}
-\newlabel{fig:KBS_beta}{{5.22}{110}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.22}{\ignorespaces \bf  Principal coordinates analysis of soil samples with different treatments collected from Kellogg Biological Station(KBS). Red, corn. Blue, miscanthus. Brown, switchgrass.\relax }}{111}}
+\newlabel{fig:KBS_beta}{{5.22}{111}}
 \@writefile{lof}{\addvspace {1.2\baselineskip }}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.23}{\ignorespaces \bf  PCoA of soil samples collected from Amazon rainforest\relax }}{110}}
-\newlabel{fig:ARMO_beta}{{5.23}{110}}
-\@writefile{lof}{\addvspace {1.2\baselineskip }}
-\@writefile{toc}{\contentsline {section}{\numberline {5.5}Data}{110}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.1}Code availability}{110}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.24}{\ignorespaces \bf  PCoA of soil samples collected from Amazon rainforest\relax }}{111}}
-\newlabel{fig:ARMO_alpha}{{5.24}{111}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.23}{\ignorespaces \bf  Principal coordinates analysis of soil samples collected from Amazon rainforest. Red, forest samples. Blue, prairie samples.\relax }}{111}}
+\newlabel{fig:ARMO_beta}{{5.23}{111}}
 \@writefile{lof}{\addvspace {1.2\baselineskip }}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.5.2}Simulated sequencing reads of e.coli}{111}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.8}{\ignorespaces GPGC Data sets\relax }}{112}}
-\newlabel{my-label}{{5.8}{112}}
-\newlabel{table:gpgc}{{5.8}{112}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.24}{\ignorespaces \bf  Estimated number of IGSs in metagenomic data from soil samples collected from Amazon rainforest. Grouped by treatment. Red, forest samples. Blue, prairie samples.\relax }}{112}}
+\newlabel{fig:ARMO_alpha}{{5.24}{112}}
+\@writefile{lof}{\addvspace {1.2\baselineskip }}
+\@writefile{lot}{\contentsline {table}{\numberline {5.9}{\ignorespaces GPGC Data sets\relax }}{112}}
+\newlabel{my-label}{{5.9}{112}}
+\newlabel{table:gpgc}{{5.9}{112}}
 \@writefile{lot}{\addvspace {1.2\baselineskip }}
 \@writefile{toc}{\contentsline {chapter}{\numberline {Chapter 6} Conclusion}{113}}
 \@writefile{lof}{\addvspace {10\p@ }}
@@ -588,74 +597,76 @@
 \bibcite{Luo:2012aa}{69}
 \bibcite{Luo2009}{70}
 \bibcite{magurran2011biological}{71}
-\bibcite{DBLP:conf/padl/MaldeO09}{72}
-\bibcite{Marcais2011}{73}
-\bibcite{Markowitz:2012aa}{74}
-\bibcite{Mason:2012aa}{75}
-\bibcite{May:1988aa}{76}
-\bibcite{McDonald2013}{77}
-\bibcite{pubmed21685062}{78}
-\bibcite{Melsted2014}{79}
-\bibcite{Melsted2011}{80}
-\bibcite{pubmed19997069}{81}
-\bibcite{pubmed20211242}{82}
-\bibcite{Minoche2011}{83}
-\bibcite{Mora:2011aa}{84}
-\bibcite{Morgan:2012aa}{85}
-\bibcite{muthukrishnan2005data}{86}
-\bibcite{metavelvet}{87}
-\bibcite{Patil:2012aa}{88}
-\bibcite{Pell2012}{89}
-\bibcite{pubmed21685107}{90}
-\bibcite{4160251}{91}
-\bibcite{Pevzner2001}{92}
-\bibcite{pubmed21151575}{93}
-\bibcite{pubmed22139935}{94}
-\bibcite{Qin:2010aa}{95}
-\bibcite{Qin2010}{96}
-\bibcite{Qin:2012aa}{97}
-\bibcite{Quince:2008aa}{98}
-\bibcite{Rizk2013}{99}
-\bibcite{pubmed19724646}{100}
-\bibcite{Rodriguez-R:2013aa}{101}
-\bibcite{Rodriguez-R2014}{102}
-\bibcite{Roesch:2007aa}{103}
-\bibcite{Rosen:2011aa}{104}
-\bibcite{Roy2014}{105}
-\bibcite{Rusu2008}{106}
-\bibcite{Savage:1977aa}{107}
-\bibcite{pubmed21867570}{108}
-\bibcite{Schloss:2005aa}{109}
-\bibcite{Schloss:2006aa}{110}
-\bibcite{Schloss:2009aa}{111}
-\bibcite{Schmidt:1991aa}{112}
-\bibcite{pubmed22368243}{113}
-\bibcite{Segata:2012aa}{114}
-\bibcite{podar}{115}
-\bibcite{shannon2001mathematical}{116}
-\bibcite{simpson1949measurement}{117}
-\bibcite{pubmed20529929}{118}
-\bibcite{pubmed22156294}{119}
-\bibcite{pubmed19251739}{120}
-\bibcite{pubmed7937745}{121}
-\bibcite{Sogin:2006aa}{122}
-\bibcite{lighter}{123}
-\bibcite{pubmed17487184}{124}
-\bibcite{Stackebrandt:2002aa}{125}
-\bibcite{pubmed20441614}{126}
-\bibcite{Teeling:2004aa}{127}
-\bibcite{pubmed19430453}{128}
-\bibcite{Turnbaugh:2009aa}{129}
-\bibcite{Tyson:2004aa}{130}
-\bibcite{Tzahor:2009aa}{131}
-\bibcite{Venter:2004aa}{132}
-\bibcite{Wang:2007aa}{133}
-\bibcite{Whitman:1998aa}{134}
-\bibcite{pubmed22028825}{135}
-\bibcite{Wu:2009aa}{136}
-\bibcite{Wu:2012aa}{137}
-\bibcite{Xu2014}{138}
-\bibcite{Zarraonaindia:2013aa}{139}
-\bibcite{pubmed18349386}{140}
-\bibcite{Zerbino2008}{141}
-\bibcite{Zhang2014}{142}
+\bibcite{DBLP:conf/bibm/MailletCVLP14}{72}
+\bibcite{Maillet2012}{73}
+\bibcite{DBLP:conf/padl/MaldeO09}{74}
+\bibcite{Marcais2011}{75}
+\bibcite{Markowitz:2012aa}{76}
+\bibcite{Mason:2012aa}{77}
+\bibcite{May:1988aa}{78}
+\bibcite{McDonald2013}{79}
+\bibcite{pubmed21685062}{80}
+\bibcite{Melsted2014}{81}
+\bibcite{Melsted2011}{82}
+\bibcite{pubmed19997069}{83}
+\bibcite{pubmed20211242}{84}
+\bibcite{Minoche2011}{85}
+\bibcite{Mora:2011aa}{86}
+\bibcite{Morgan:2012aa}{87}
+\bibcite{muthukrishnan2005data}{88}
+\bibcite{metavelvet}{89}
+\bibcite{Patil:2012aa}{90}
+\bibcite{Pell2012}{91}
+\bibcite{pubmed21685107}{92}
+\bibcite{4160251}{93}
+\bibcite{Pevzner2001}{94}
+\bibcite{pubmed21151575}{95}
+\bibcite{pubmed22139935}{96}
+\bibcite{Qin:2010aa}{97}
+\bibcite{Qin2010}{98}
+\bibcite{Qin:2012aa}{99}
+\bibcite{Quince:2008aa}{100}
+\bibcite{Rizk2013}{101}
+\bibcite{pubmed19724646}{102}
+\bibcite{Rodriguez-R:2013aa}{103}
+\bibcite{Rodriguez-R2014}{104}
+\bibcite{Roesch:2007aa}{105}
+\bibcite{Rosen:2011aa}{106}
+\bibcite{Roy2014}{107}
+\bibcite{Rusu2008}{108}
+\bibcite{Savage:1977aa}{109}
+\bibcite{pubmed21867570}{110}
+\bibcite{Schloss:2005aa}{111}
+\bibcite{Schloss:2006aa}{112}
+\bibcite{Schloss:2009aa}{113}
+\bibcite{Schmidt:1991aa}{114}
+\bibcite{pubmed22368243}{115}
+\bibcite{Segata:2012aa}{116}
+\bibcite{podar}{117}
+\bibcite{shannon2001mathematical}{118}
+\bibcite{simpson1949measurement}{119}
+\bibcite{pubmed20529929}{120}
+\bibcite{pubmed22156294}{121}
+\bibcite{pubmed19251739}{122}
+\bibcite{pubmed7937745}{123}
+\bibcite{Sogin:2006aa}{124}
+\bibcite{lighter}{125}
+\bibcite{pubmed17487184}{126}
+\bibcite{Stackebrandt:2002aa}{127}
+\bibcite{pubmed20441614}{128}
+\bibcite{Teeling:2004aa}{129}
+\bibcite{pubmed19430453}{130}
+\bibcite{Turnbaugh:2009aa}{131}
+\bibcite{Tyson:2004aa}{132}
+\bibcite{Tzahor:2009aa}{133}
+\bibcite{Venter:2004aa}{134}
+\bibcite{Wang:2007aa}{135}
+\bibcite{Whitman:1998aa}{136}
+\bibcite{pubmed22028825}{137}
+\bibcite{Wu:2009aa}{138}
+\bibcite{Wu:2012aa}{139}
+\bibcite{Xu2014}{140}
+\bibcite{Zarraonaindia:2013aa}{141}
+\bibcite{pubmed18349386}{142}
+\bibcite{Zerbino2008}{143}
+\bibcite{Zhang2014}{144}

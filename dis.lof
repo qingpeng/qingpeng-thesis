@@ -40,48 +40,48 @@
 \addvspace {1.2\baselineskip }
 \contentsline {figure}{\numberline {5.2}{\ignorespaces \bf the concept of IGS\relax }}{82}
 \addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {5.3}{\ignorespaces \bf Ordination of the 6 synthetic samples using IGS method\relax }}{89}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces \bf Ordination of the 6 synthetic samples using IGS method.\relax }}{89}
 \addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {5.4}{\ignorespaces \bf Clustering of the 6 synthetic samples using IGS method\relax }}{89}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces \bf Clustering of the 6 synthetic samples using IGS method\relax }}{90}
 \addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {5.5}{\ignorespaces \bf Richness estimation using IGS method without adjustment\relax }}{91}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces \bf Richness estimation using IGS method without adjustment.\relax }}{91}
 \addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {5.6}{\ignorespaces \bf Beta diversity analysis using IGS method without adjustment\relax }}{92}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces \bf Beta diversity analysis using IGS method without adjustment.\relax }}{92}
 \addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {5.7}{\ignorespaces \bf Richness estimation using IGS method without adjustment \relax }}{94}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces \bf Richness estimation using IGS method without adjustment. \relax }}{94}
 \addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {5.8}{\ignorespaces \bf Richness estimation using IGS method adjusted by sequencing error rate\relax }}{95}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces \bf Richness estimation using IGS method adjusted by sequencing error rate.\relax }}{95}
 \addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {5.9}{\ignorespaces \bf Richness estimation using IGS method adjusted by sequencing error rate and false positive rate of bloom filter\relax }}{97}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces \bf Richness estimation using IGS method adjusted by sequencing error rate and false positive rate of bloom filter.\relax }}{97}
 \addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {5.10}{\ignorespaces \bf Correlation between calculated distance matrix and true matrix from different dat sets with different sequencing depth\relax }}{98}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces \bf Correlation between calculated distance matrix and true matrix from different data sets with different sequencing depth.\relax }}{98}
 \addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {5.11}{\ignorespaces \bf estimated genome size from data sets with variable coverage, no error rate\relax }}{99}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces \bf Estimated genome size from data sets with variable coverage, without error.\relax }}{99}
 \addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {5.12}{\ignorespaces \bf estimated genome size from data sets with variable coverage, no error rate\relax }}{99}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces \bf Estimated genome size from data sets with variable coverage, with error rate as 0.5\%.\relax }}{100}
 \addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {5.13}{\ignorespaces \bf estimated genome size from data sets with variable coverage, no error rate\relax }}{100}
+\contentsline {figure}{\numberline {5.13}{\ignorespaces \bf Estimated genome size from data sets with variable coverage, with error rate as 1.0\%. \relax }}{100}
 \addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {5.14}{\ignorespaces \bf Correlation between calculated distance matrix and true matrix from different data sets and using different methods\relax }}{101}
+\contentsline {figure}{\numberline {5.14}{\ignorespaces \bf Correlation between calculated distance matrix and true distance matrix from different data sets and using different methods.\relax }}{101}
 \addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {5.15}{\ignorespaces \bf cluster of GOS samples using IGS method\relax }}{104}
+\contentsline {figure}{\numberline {5.15}{\ignorespaces \bf Clustering of Global Ocean Sampling Expedition samples using IGS method.\relax }}{105}
 \addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {5.16}{\ignorespaces \bf Rarefaction curve of IGSs of the GOS samples\relax }}{105}
+\contentsline {figure}{\numberline {5.16}{\ignorespaces \bf Rarefaction curve of IGSs of Global Ocean Sampling Expedition samples.\relax }}{106}
 \addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {5.17}{\ignorespaces \bf Estimated number of IGSs of the GOS samples\relax }}{105}
+\contentsline {figure}{\numberline {5.17}{\ignorespaces \bf Estimated number of IGSs of Global Ocean Sampling Expedition samples.\relax }}{106}
 \addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {5.18}{\ignorespaces \bf PCoA of HMP, red: anterior nares- skin, green: throat -oral, blue: buccal mucosa -oral, orange: posterior fornix -vaginal\relax }}{106}
+\contentsline {figure}{\numberline {5.18}{\ignorespaces \bf Principal coordinates analysis of 12 Human Microbiome Project samples, red: anterior nares- skin, green: throat -oral, blue: buccal mucosa -oral, orange: posterior fornix -vaginal.\relax }}{107}
 \addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {5.19}{\ignorespaces \bf alpha diversity of HMP: estimation of metagenome size of HMP samples, red: anterior nares- skin, green: throat -oral, blue: buccal mucosa -oral, orange: posterior fornix -vaginal\relax }}{106}
+\contentsline {figure}{\numberline {5.19}{\ignorespaces \bf Alpha diversity of 12 Human Microbiome Project samples: estimation of metagenome size of HMP samples, red: anterior nares- skin, green: throat -oral, blue: buccal mucosa -oral, orange: posterior fornix -vaginal.\relax }}{107}
 \addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {5.20}{\ignorespaces \bf PCoA of GPGC samples\relax }}{108}
+\contentsline {figure}{\numberline {5.20}{\ignorespaces \bf Principal coordinates analysis of 8 Great Prairie Soil Metagenome Grand Challenge (GPGC) samples.\relax }}{109}
 \addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {5.21}{\ignorespaces \bf alpha diversity of GPGC samples\relax }}{109}
+\contentsline {figure}{\numberline {5.21}{\ignorespaces \bf Alpha diversity analysis of 8 GPGC samples. Upper left, rarefaction curve of IGSs. Upper right, estimated number of IGSs in different samples. Lower left, estimated number of IGSs in samples grouped by location (Iowa, Kansas and wisconsin). Lower right, estimated number of IGSs in samples grouped by treatment (corn, prairie, restored, switchgrass).\relax }}{110}
 \addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {5.22}{\ignorespaces \bf PCoA of soil samples collected from KBS\relax }}{110}
+\contentsline {figure}{\numberline {5.22}{\ignorespaces \bf Principal coordinates analysis of soil samples with different treatments collected from Kellogg Biological Station(KBS). Red, corn. Blue, miscanthus. Brown, switchgrass.\relax }}{111}
 \addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {5.23}{\ignorespaces \bf PCoA of soil samples collected from Amazon rainforest\relax }}{110}
+\contentsline {figure}{\numberline {5.23}{\ignorespaces \bf Principal coordinates analysis of soil samples collected from Amazon rainforest. Red, forest samples. Blue, prairie samples.\relax }}{111}
 \addvspace {1.2\baselineskip }
-\contentsline {figure}{\numberline {5.24}{\ignorespaces \bf PCoA of soil samples collected from Amazon rainforest\relax }}{111}
+\contentsline {figure}{\numberline {5.24}{\ignorespaces \bf Estimated number of IGSs in metagenomic data from soil samples collected from Amazon rainforest. Grouped by treatment. Red, forest samples. Blue, prairie samples.\relax }}{112}
 \addvspace {1.2\baselineskip }
 \addvspace {10\p@ }

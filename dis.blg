@@ -11,45 +11,45 @@ Warning--I didn't find a database entry for "DBLP:conf/sdm/2005"
 Warning--empty note in Brown2012blog
 Warning--empty year in colwellestimates
 Warning--there's a number but no volume in flajolet2008hyperloglog
-You've used 142 entries,
+You've used 144 entries,
             2118 wiz_defined-function locations,
-            1350 strings with 39191 characters,
-and the built_in function-call counts, 69817 in all, are:
-= -- 6136
-> -- 5718
-< -- 13
-+ -- 2277
-- -- 2120
-* -- 6549
-:= -- 12205
-add.period$ -- 430
-call.type$ -- 142
-change.case$ -- 1480
+            1366 strings with 39922 characters,
+and the built_in function-call counts, 70829 in all, are:
+= -- 6223
+> -- 5800
+< -- 14
++ -- 2307
+- -- 2148
+* -- 6634
+:= -- 12380
+add.period$ -- 437
+call.type$ -- 144
+change.case$ -- 1496
 chr.to.int$ -- 0
-cite$ -- 145
-duplicate$ -- 1769
-empty$ -- 3686
-format.name$ -- 2120
-if$ -- 13545
+cite$ -- 147
+duplicate$ -- 1801
+empty$ -- 3747
+format.name$ -- 2148
+if$ -- 13752
 int.to.chr$ -- 0
-int.to.str$ -- 142
-missing$ -- 142
-newline$ -- 712
-num.names$ -- 290
-pop$ -- 1262
+int.to.str$ -- 144
+missing$ -- 144
+newline$ -- 722
+num.names$ -- 296
+pop$ -- 1278
 preamble$ -- 1
-purify$ -- 1341
+purify$ -- 1355
 quote$ -- 0
-skip$ -- 1314
+skip$ -- 1337
 stack$ -- 0
-substring$ -- 3199
-swap$ -- 354
-text.length$ -- 13
+substring$ -- 3242
+swap$ -- 364
+text.length$ -- 14
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 564
+type$ -- 572
 warning$ -- 3
-while$ -- 444
-width$ -- 145
-write$ -- 1556
+while$ -- 453
+width$ -- 147
+write$ -- 1579
 (There was 1 error message)

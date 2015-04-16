@@ -455,6 +455,19 @@ A.~E. Magurran and B.~J. McGill.
   volume~12.
 \newblock Oxford University Press Oxford, 2011.
 
+\bibitem{DBLP:conf/bibm/MailletCVLP14}
+N.~Maillet, G.~Collet, T.~Vannier, D.~Lavenier, and P.~Peterlongo.
+\newblock Commet: Comparing and combining multiple metagenomic datasets.
+\newblock In H.~J. Zheng, W.~Dubitzky, X.~Hu, J.~Hao, D.~P. Berrar, K.~Cho,
+  Y.~Wang, and D.~R. Gilbert, editors, {\em 2014 {IEEE} International
+  Conference on Bioinformatics and Biomedicine, {BIBM} 2014, Belfast, United
+  Kingdom, November 2-5, 2014}, pages 94--98. {IEEE}, 2014.
+
+\bibitem{Maillet2012}
+N.~Maillet, C.~Lemaitre, R.~Chikhi, D.~Lavenier, and P.~Peterlongo.
+\newblock Compareads: comparing huge metagenomic experiments.
+\newblock {\em BMC Bioinformatics}, 13 Suppl 19:S10, 2012.
+
 \bibitem{DBLP:conf/padl/MaldeO09}
 K.~Malde and B.~O'Sullivan.
 \newblock Using bloom filters for large scale gene sequence analysis in

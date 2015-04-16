@@ -380,18 +380,24 @@ Chao1, since it uses more abundance information.
 \begin{table}[h]
 \begin{tabular}{|l|l|l|l|l|l|}
 \hline
-\textbf{} & \textbf{\begin{tabular}[c]{@{}l@{}}observed \\ IGS\end{tabular}} & \textbf{ACE} & \textbf{\begin{tabular}[c]{@{}l@{}}simpson \\ evenness\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}estimated \\ genome size\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}real \\ genome size\end{tabular}} \\ \hline
-\textbf{sample1} & 2002 & 2002.0 & 0.76 & 200200.0 & 200000 \\ \hline
-\textbf{sample2} & 3038 & 3038.0 & 0.83 & 303800.0 & 300000 \\ \hline
-\textbf{sample3} & 4076 & 4076.0 & 0.91 & 407600.0 & 400000 \\ \hline
-\textbf{sample4} & 4078 & 4078.0 & 0.91 & 407800.0 & 400000 \\ \hline
-\textbf{sample5} & 4069 & 4069.0 & 0.91 & 406900.0 & 400000 \\ \hline
-\textbf{sample6} & 4087 & 4087.0 & 0.91 & 408700.0 & 400000 \\ \hline
+\textbf{} & \textbf{\begin{tabular}[c]{@{}l@{}}observed \\ IGS\end{tabular}} &
+\textbf{ACE} & \textbf{\begin{tabular}[c]{@{}l@{}}simpson \\
+evenness\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}estimated \\ genome
+size (Kbp)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}real \\ genome
+size (Kbp)\end{tabular}} \\ \hline
+\textbf{sample1} & 2002 & 2002.0 & 0.76 & 200.2 & 200 \\ \hline
+\textbf{sample2} & 3038 & 3038.0 & 0.83 & 303.8 & 300 \\ \hline
+\textbf{sample3} & 4076 & 4076.0 & 0.91 & 407.6 & 400 \\ \hline
+\textbf{sample4} & 4078 & 4078.0 & 0.91 & 407.8 & 400 \\ \hline
+\textbf{sample5} & 4069 & 4069.0 & 0.91 & 406.9 & 400 \\ \hline
+\textbf{sample6} & 4087 & 4087.0 & 0.91 & 408.7 & 400 \\ \hline
 \end{tabular}
-\label{table:alpha_simulated}
+\caption{\bf Alpha diversity analysis result of the simple simulated data using
+IGS method.}
+\label{table:a_simulated}
 \end{table}
 
-Table \ref{table:alpha_simulated} shows the alpha diversity analysis result of the simple simulated data using IGS method. The estimated
+Table~\ref{table:a_simulated} shows the alpha diversity analysis result of the simple simulated data using IGS method. The estimated
 genome sizes of the samples are close to real size. This is not surprising since for this simple experiment, 
 there is no error introduced and the coverage is high (10x) to cover most of the genetic materials in the samples. 
 Also the Simpson evenness shows the relative evenness of the samples correctly. 
@@ -418,7 +424,8 @@ simulated data set.
 \textbf{sample 5} & 0.75              & 0.75             & 0.75              & 0.75              & 0.00              & 0.25              \\ \hline
 \textbf{sample 6} & 1.00              & 1.00             & 1.00              & 1.00              & 0.25              & 0.00              \\ \hline
 \end{tabular}
-\caption{\bf Dissimilarity matrix between synthetic samples using Bray-curtis from species composition directly }
+\caption{\bf Dissimilarity matrix between synthetic samples using Bray-curtis
+from species composition directly. }
 \label{table:simulated_real_matrix}
 \end{table}
 
@@ -433,7 +440,8 @@ simulated data set.
 \textbf{sample 5} & 0.80              & 0.84             & 0.89              & 0.89              & 0.00              & 0.42              \\ \hline
 \textbf{sample 6} & 1.00              & 1.00             & 1.00              & 1.00              & 0.25              & 0.00              \\ \hline
 \end{tabular}
-\caption{\bf Dissimilarity matrix between synthetic samples using Bray-cutis from sequencing reads using IGS method }
+\caption{\bf Dissimilarity matrix between synthetic samples using Bray-cutis
+from sequencing reads using IGS method. }
 \label{table:simulated_matrix1}
 \end{table}
 
@@ -460,7 +468,7 @@ will only be routine tasks.
 
 \begin{figure}[!ht]
  \centerline{\includegraphics[width=4in]{./figures/simple_PCA_3d.png}}
-\caption{\bf Ordination of the 6 synthetic samples using IGS method}
+\caption{\bf Ordination of the 6 synthetic samples using IGS method.}
 \label{fig:simple_pcoa}
 \end{figure}
 
@@ -526,13 +534,13 @@ is over estimated more and more seriously. This is due to several factors,which
 will be discussed below. 
 \begin{figure}[!ht]
  \centerline{\includegraphics[width=4in]{./figures/alpha_by_error_no_adjust.pdf}}
-\caption{\bf Richness estimation using IGS method without adjustment}
+\caption{\bf Richness estimation using IGS method without adjustment.}
 \label{fig:IGS_richness_no_adjustment}
 \end{figure}
 
 \begin{figure}[!ht]
  \centerline{\includegraphics[width=4in]{./figures/beta_by_error.pdf}}
-\caption{\bf Beta diversity analysis using IGS method without adjustment}
+\caption{\bf Beta diversity analysis using IGS method without adjustment.}
 \label{fig:beta_no_adjustment}
 \end{figure}
 
@@ -592,7 +600,7 @@ number of errors in a read as 3, 4 and 5.
 
 \begin{figure}[!ht]
  \centerline{\includegraphics[width=4in]{./figures/IGS_affected_k_kmers.png}}
-\caption{\bf Richness estimation using IGS method without adjustment }
+\caption{\bf Richness estimation using IGS method without adjustment. }
 \label{fig:IGS_affected_k_kmers}
 \end{figure}
 
@@ -619,7 +627,8 @@ estimation after adjustment is closer to real number, as shown in Figure
 
 \begin{figure}[!ht]
  \centerline{\includegraphics[width=4in]{./figures/alpha_by_error_erroronly_adjust.pdf}}
-\caption{\bf Richness estimation using IGS method adjusted by sequencing error rate}
+\caption{\bf Richness estimation using IGS method adjusted by sequencing error
+rate.}
 \label{fig:IGS_richness_error_adjustment}
 \end{figure}
 
@@ -667,7 +676,7 @@ accuracy of the estimation but we failed to take into account.
 \begin{figure}[!ht]
  \centerline{\includegraphics[width=4in]{./figures/alpha_by_error_full_adjust.pdf}}
 \caption{\bf Richness estimation using IGS method adjusted by sequencing error
-rate and false positive rate of bloom filter}
+rate and false positive rate of bloom filter.}
 \label{fig:IGS_richness_adjustment}
 \end{figure}
 
@@ -700,7 +709,8 @@ sequencing error, but also less prone to sequencing depth.
 
 \begin{figure}[!ht]
  \centerline{\includegraphics[width=4in]{./figures/beta_by_coverage.pdf}}
-\caption{\bf Correlation between calculated distance matrix and true matrix from different dat sets with different sequencing depth}
+\caption{\bf Correlation between calculated distance matrix and true matrix
+from different data sets with different sequencing depth.}
 \label{fig:IGS_correlation_coverage}
 \end{figure}
 
@@ -735,38 +745,48 @@ the streaming method doing error profile analysis discussed in chapter 4 above.
 
 \begin{figure}[!ht]
  \centerline{\includegraphics[width=4in]{./figures/alpha_by_coverage_0e.pdf}}
-\caption{\bf estimated genome size from data sets with variable coverage, no error rate}
+\caption{\bf Estimated genome size from data sets with variable coverage,
+without error.}
 \label{fig:alpha_by_coverage_0e}
 \end{figure}
 
 \begin{figure}[!ht]
  \centerline{\includegraphics[width=4in]{./figures/alpha_by_coverage_0005e.pdf}}
-\caption{\bf estimated genome size from data sets with variable coverage, no error rate}
+\caption{\bf Estimated genome size from data sets with variable coverage, with
+error rate as 0.5\%.}
 \label{fig:alpha_by_coverage_0005e}
 \end{figure}
 
 \begin{figure}[!ht]
  \centerline{\includegraphics[width=4in]{./figures/alpha_by_coverage_001e.pdf}}
-\caption{\bf estimated genome size from data sets with variable coverage, no error rate}
+\caption{\bf Estimated genome size from data sets with variable coverage, with
+error rate as 1.0\%. }
 \label{fig:alpha_by_coverage_001e}
 \end{figure}
 
 
-\subsection{Compare IGS method to Commet in beta diversity analysis}
+\subsection{Compare IGS method to COMMET in beta diversity analysis}
 
 
 Next we test how well the matrix calculated by various methods can reflect the
-real relationship between samples. 
-The simulated data set with sequencing depth as 0.1X and 10X, with 
+real relationship between samples. COMMET\cite{DBLP:conf/bibm/MailletCVLP14}, 
+the successor of Compareads \cite{Maillet2012}, is one
+of few software packages for comparing metagenomes. It is based on the method to
+count shared reads between metagenomes. The higher percentage of reads are
+shared by two metagenomes, the more similar the two metagenomes are. So
+basically this is a straightforward abundance-based method to evaluate the
+similarity.
+
+We have the simulated data set with sequencing depth as 0.1X and 10X, with 
 sequencing error as 1\% and without sequencing error was used in this experiment.
 This data set has the same species composition as that used in other experiment previously.
 
 As shown in Figure \ref{fig:compare_commet}, firstly, for 
 all data sets, the matrix from IGS method has a higher 
-correlation to golden standard than that from Comet.  As expected, 
+correlation to golden standard than that from COMMET.  As expected, 
 the matrix from data sets with sequencing error has a lower correlation 
 than that from error-free
-data sets. Comet is more prone to sequencing error rate, compared to 
+data sets. COMMET is more prone to sequencing error rate, compared to 
 IGS method, for high coverage data or low coverage data.
 Also higher coverage will yield more accurate matrix, which is not surprising.
 
@@ -775,12 +795,13 @@ that IGS method has better performance than other metagenome comparing methods.
 
 \begin{figure}[!ht]
  \centerline{\includegraphics[width=4in]{./figures/compare_commet.pdf}}
-\caption{\bf Correlation between calculated distance matrix and true matrix from different data sets and using different methods}
+\caption{\bf Correlation between calculated distance matrix and true distance matrix
+from different data sets and using different methods.}
 \label{fig:compare_commet}
 \end{figure}
 
 \subsection{The IGS method can provide a whole framework to do alpha or 
-beta diversity, with good versatility.}
+Tbeta diversity, with good versatility.}
 
 From the testing using simulated data sets shown here, we are confident that 
 our IGS method works well and can give reliable results from data sets with 
@@ -793,7 +814,9 @@ IGS-by-samples table, just as OTU-by-samples table,
 no matter it is abundance-based or incidence-based, about richness or about 
 evenness.
 
-Compareads(Commet) based on reads overlap between samples can get a matrix 
+The other software package to do metagenome comparison - Compareads(COMMET as
+the successor) 
+based on reads overlap between samples can get a matrix 
 reflecting the real relationship between samples but it is stuck with one 
 metric, which is based on the percentage of overlap reads between samples. 
 This metric is like Bray-Curtis , but not exactly the same.
@@ -863,26 +886,29 @@ the samples from northern area. The relationship between samples is
 consistent to the cluster in beta diversity analysis shown above.
 
 As discussed in the section above about alpha diversity analysis 
-to synthetic data, such number of total IGSs may over-estimated but
+to synthetic data, such number of total IGSs may be over-estimated but
 the relative relationship between samples on richness should be reliable.
 
 (This is not discussed in original research of GOS)
 
 \begin{figure}[!ht]
  \centerline{\includegraphics[width=7in]{./figures/GOS_cluster.png}}
-\caption{\bf cluster of GOS samples using IGS method}
+\caption{\bf Clustering of Global Ocean Sampling Expedition samples using IGS
+method.}
 \label{fig:GOS-beta}
 \end{figure}
 
 \begin{figure}[!ht]
  \centerline{\includegraphics[width=7in]{./figures/GOS_observed.png}}
-\caption{\bf Rarefaction curve of IGSs of the GOS samples}
+\caption{\bf Rarefaction curve of IGSs of Global Ocean Sampling Expedition
+samples.}
 \label{fig:GOS-rarefaction}
 \end{figure}
 
 \begin{figure}[!ht]
  \centerline{\includegraphics[width=7in]{./figures/GOS_chao.png}}
-\caption{\bf Estimated number of IGSs of the GOS samples}
+\caption{\bf Estimated number of IGSs of Global Ocean Sampling Expedition
+ samples.}
 \label{fig:GOS-chao1}
 \end{figure}
 
@@ -891,7 +917,7 @@ the relative relationship between samples on richness should be reliable.
 %\subsection{MetHit Human Gut metagenomics data set}
 
 
-\subsection{HMP metagenomics data set}
+\subsection{Human Microbiome Project(HMP) metagenomics data set}
 % now have alpha and beta, smallest samples
 % full sample 110 .... good for binning?
 
@@ -909,16 +935,18 @@ which is consistent  to other research. \cite{Human-Microbiome-Project-Consortiu
 
 \begin{figure}[!ht]
  \centerline{\includegraphics[width=4in]{./figures/HMP_beta.png}}
-\caption{\bf PCoA of HMP, red: anterior nares- skin, green: throat -oral, blue: buccal mucosa -oral, orange: 
-posterior fornix -vaginal}
+\caption{\bf Principal coordinates analysis of 12 Human Microbiome Project
+samples, red: anterior nares- skin, green: throat -oral, blue: buccal mucosa -oral, orange: 
+posterior fornix -vaginal.}
 \label{fig:HMP_beta}
 \end{figure}
 
 \begin{figure}[!ht]
  \centerline{\includegraphics[width=4in]{./figures/HMP_alpha.png}}
-\caption{\bf alpha diversity of HMP: estimation of metagenome size of HMP samples,
+\caption{\bf Alpha diversity of 12 Human Microbiome Project samples:
+ estimation of metagenome size of HMP samples,
 red: anterior nares- skin, green: throat -oral, blue: buccal mucosa -oral, orange: 
-posterior fornix -vaginal}
+posterior fornix -vaginal.}
 \label{fig:HMP_alpha}
 \end{figure}
 
@@ -931,7 +959,7 @@ posterior fornix -vaginal}
 
 Having tested the IGS method on two relatively smaller metagenomic data sets, 
 we will now use it to analyze 
-a larger data set from soil samples collected from fields with different treatments and
+a larger data set from 8 soil samples collected from fields with different treatments and
 different locations across the great prairie region in the US. 
 (Table \ref{table:gpgc}). 
 
@@ -949,8 +977,8 @@ For the GPGC datasets, we made a subset with 2 million reads from each sample
 and conducted the diversity analysis
 using IGS method. 
 
-Principal component analysis(Figure \ref{fig:GPGC_beta}) shows the samples are 
-separated well by location where they are collected. (P value: XX)
+Principal coordinates analysis(Figure \ref{fig:GPGC_beta}) shows the samples are 
+separated well by location where they are collected.% (P value: XX)
 This proves that the geographical origin plays a more important part in 
 determining the similarity of genomic composition of samples, compared to 
 different treatments.
@@ -974,14 +1002,15 @@ growth each spring, this new growth would be the fast growers with
 less diverse. Why Iowa is the least diverse is still difficult to explain for now.
 
  From the alpha diversity, we also have a rough estimation of the  total 
- size of metagenome in Iowa soil, which is about 540G basepairs. This 
+ size of metagenome in Iowa soil, which is about 540G base pairs. This 
  proves the high complexity of soil sample and we still need more sequencing 
  effort to achieve a reasonable high coverage.
  
 
 \begin{figure}[!ht]
  \centerline{\includegraphics[width=4in]{./figures/GPGC_old_subset1M.png}}
-\caption{\bf PCoA  of GPGC samples}
+\caption{\bf Principal coordinates analysis of 8 Great Prairie Soil Metagenome
+Grand Challenge (GPGC) samples.}
 \label{fig:GPGC_beta}
 \end{figure}
 
@@ -989,7 +1018,11 @@ less diverse. Why Iowa is the least diverse is still difficult to explain for no
 
 \begin{figure}[!ht]
  \centerline{\includegraphics[width=7in]{./figures/GPGC_1m_old.png}}
-\caption{\bf alpha diversity of GPGC samples}
+\caption{\bf Alpha diversity analysis of 8 GPGC samples. Upper left,
+rarefaction curve of IGSs. Upper right, estimated number of IGSs in different
+samples. Lower left, estimated number of IGSs in samples grouped by
+location (Iowa, Kansas and wisconsin). Lower right, estimated number of IGSs in
+samples grouped by treatment (corn, prairie, restored, switchgrass).}
 \label{fig:GPGC-alpha}
 \end{figure}
 
@@ -1001,7 +1034,7 @@ less diverse. Why Iowa is the least diverse is still difficult to explain for no
 
 %simulated data sets. 
 
-\subsection{more soil metagenomic samples}
+\subsection{More soil metagenomic samples}
 
 Additionally we test the IGS method on two other unpublished data sets. 
 One is a series of soil samples
@@ -1020,19 +1053,26 @@ lower richness than prairie.  (Figure \ref{fig:ARMO_alpha})
 
 \begin{figure}[!ht]
  \centerline{\includegraphics[width=4in]{./figures/IGS_KBS_beta.png}}
-\caption{\bf PCoA of soil samples collected from KBS}
+\caption{\bf  Principal coordinates analysis of soil samples with different
+treatments collected from Kellogg Biological Station(KBS). Red, corn. Blue,
+miscanthus. Brown, switchgrass.}
 \label{fig:KBS_beta}
 \end{figure}
 
 \begin{figure}[!ht]
  \centerline{\includegraphics[width=4in]{./figures/IGS_ARMO_beta.png}}
-\caption{\bf PCoA of soil samples collected from Amazon rainforest}
+\caption{\bf Principal coordinates analysis of soil samples collected from
+Amazon rainforest. Red, forest samples. Blue, prairie
+samples.}
 \label{fig:ARMO_beta}
 \end{figure}
 
 \begin{figure}[!ht]
  \centerline{\includegraphics[width=7in]{./figures/IGS_ARMO_alpha.png}}
-\caption{\bf PCoA of soil samples collected from Amazon rainforest}
+\caption{\bf Estimated number of IGSs in metagenomic data from soil samples
+collected from Amazon rainforest. Grouped by treatment. Red, forest samples. Blue, prairie
+samples.}
+
 \label{fig:ARMO_alpha}
 \end{figure}
 

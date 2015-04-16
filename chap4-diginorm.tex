@@ -55,7 +55,7 @@ the depth of coverage for a particular read (Figure \ref{fig:rankabund}, ``no
 errors'' line).  However, when reads contain random substitution or indel
 errors from sequencing, the k-mers overlapping these errors will be of lower
 abundance; this feature is often used in k-mer based error correction
-approaches \cite{pubmed21114842}.  For example, a single substitution will
+approaches \cite{Kelley2010}.  For example, a single substitution will
 introduce $k$ low-abundance k-mers within a read.  (Figure \ref{fig:rankabund},
 ``single substitution error'' line).  However, for small $k$ and reads of
 length $L$ where $L > 3k-1$, a single substitution error will not skew the {\em
@@ -1251,12 +1251,36 @@ for comparison with predictions.
 
 \subsection{Real data sets used for error analysis}
 
+
+\begin{table}
+
+\centering
+\begin{tabular}{|l|c|c|l|}
+\hline
+Name & Number of reads & Description \\
+\hline
+simple genome & 1000 & 1kb genome; no repeats \\
+{\em E. coli} MG1655 & 4,863,836 & Subset of ERA000206 (\cite{chitsaz}) \\
+simple transcriptome & 568 & 300:1 high:low abundance; shared exons \\
+mouse mRNAseq & 7,915,339 & Subset of GSE29209 (\cite{trinityrna}) \\
+simple metagenome & 2,347 & 316:1 high:low abundance species \\
+mock metagenome & 18,805,251 & Subset of SRR606249 (\cite{podar}) \\
+\hline
+\end{tabular}
+
+\caption{{\bf Data sets used for evaluation.}}
+
+\label{tab:data}
+\end{table}
+
+
+
 We used three shotgun Illumina data sets: a genomic data set from {\em E.
 coli}, a mRNAseq data set from {\em Mus musculus}, and a mock community
 metagenome.  For {\em E. coli}, we took a 5m read subset of ERA000206 from
 \cite{chitsaz}.  For mRNAseq, we used a 10m read subset of GSE29209 from
 \cite{trinityrna}.  For the mock metagenome, we used a 20m read subset of
 SRR606249 from \cite{podar}.  Prior to analysis, we eliminated any read with an
-'N' in it and filtered the reads by mapping to the known references, yielding
+`N' in it and filtered the reads by mapping to the known references, yielding
 the read numbers in Table~\ref{tab:data}.
 

@@ -64,18 +64,18 @@
 \contentsline {section}{\numberline {5.3}Evaluating IGS method using simulated data sets}{86}
 \contentsline {subsection}{\numberline {5.3.1}Using a simple simulated data set to evaluate the IGS method}{86}
 \contentsline {subsection}{\numberline {5.3.2}Improving the accuracy of this method in real world analysis}{90}
-\contentsline {subsubsection}{\numberline {5.3.2.1}the effect of sequencing error to the accuracy of analysis}{91}
+\contentsline {subsubsection}{\numberline {5.3.2.1}the effect of sequencing error to the accuracy of analysis}{92}
 \contentsline {subsubsection}{\numberline {5.3.2.2}the effect of collision in bloom filter to the accuracy of analysis}{95}
-\contentsline {subsection}{\numberline {5.3.3}the effect of sequencing depth to the accuracy of IGS method}{96}
-\contentsline {subsection}{\numberline {5.3.4}Compare IGS method to Commet in beta diversity analysis}{100}
-\contentsline {subsection}{\numberline {5.3.5}The IGS method can provide a whole framework to do alpha or beta diversity, with good versatility.}{101}
+\contentsline {subsection}{\numberline {5.3.3}the effect of sequencing depth to the accuracy of IGS method}{97}
+\contentsline {subsection}{\numberline {5.3.4}Compare IGS method to COMMET in beta diversity analysis}{99}
+\contentsline {subsection}{\numberline {5.3.5}The IGS method can provide a whole framework to do alpha or Tbeta diversity, with good versatility.}{102}
 \contentsline {section}{\numberline {5.4}Applying IGS method to real metagenome data sets}{102}
-\contentsline {subsection}{\numberline {5.4.1}GOS data sets: Sorcerer II Global Ocean Sampling Expedition}{102}
-\contentsline {subsection}{\numberline {5.4.2}HMP metagenomics data set}{104}
-\contentsline {subsection}{\numberline {5.4.3}GPGC - Great Prairie Soil Metagenome Grand Challenge}{107}
-\contentsline {subsection}{\numberline {5.4.4}more soil metagenomic samples}{108}
-\contentsline {section}{\numberline {5.5}Data}{110}
-\contentsline {subsection}{\numberline {5.5.1}Code availability}{110}
+\contentsline {subsection}{\numberline {5.4.1}GOS data sets: Sorcerer II Global Ocean Sampling Expedition}{103}
+\contentsline {subsection}{\numberline {5.4.2}Human Microbiome Project(HMP) metagenomics data set}{104}
+\contentsline {subsection}{\numberline {5.4.3}GPGC - Great Prairie Soil Metagenome Grand Challenge}{105}
+\contentsline {subsection}{\numberline {5.4.4}More soil metagenomic samples}{108}
+\contentsline {section}{\numberline {5.5}Data}{109}
+\contentsline {subsection}{\numberline {5.5.1}Code availability}{109}
 \contentsline {subsection}{\numberline {5.5.2}Simulated sequencing reads of e.coli}{111}
 \contentsline {chapter}{\numberline {Chapter 6} Conclusion}{113}
 \contentsline {section}{\numberline {6.1}Summary}{114}
