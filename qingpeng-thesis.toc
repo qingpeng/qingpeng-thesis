@@ -73,11 +73,11 @@
 \contentsline {subsection}{\numberline {5.4.1}GOS data sets: Sorcerer II Global Ocean Sampling Expedition}{103}
 \contentsline {subsection}{\numberline {5.4.2}Human Microbiome Project(HMP) metagenomics data set}{104}
 \contentsline {subsection}{\numberline {5.4.3}GPGC - Great Prairie Soil Metagenome Grand Challenge}{105}
-\contentsline {subsection}{\numberline {5.4.4}More soil metagenomic samples}{108}
-\contentsline {section}{\numberline {5.5}Data}{109}
-\contentsline {subsection}{\numberline {5.5.1}Code availability}{109}
-\contentsline {subsection}{\numberline {5.5.2}Simulated sequencing reads of e.coli}{111}
-\contentsline {chapter}{\numberline {Chapter 6} Conclusion}{113}
-\contentsline {section}{\numberline {6.1}Summary}{114}
-\contentsline {section}{\numberline {6.2}Future Work}{116}
-\contentsline {chapter}{\textbf {Bibliography}\textmd {\leaders \hbox to 1em{\hss .\hss }\hfill } \vspace {\baselineskip }}{121}
+\contentsline {subsection}{\numberline {5.4.4}More soil metagenomic samples}{109}
+\contentsline {section}{\numberline {5.5}Data}{110}
+\contentsline {subsection}{\numberline {5.5.1}Code availability}{110}
+\contentsline {subsection}{\numberline {5.5.2}Simulated sequencing reads of e.coli}{112}
+\contentsline {chapter}{\numberline {Chapter 6} Conclusion}{114}
+\contentsline {section}{\numberline {6.1}Summary}{115}
+\contentsline {section}{\numberline {6.2}Future Work}{117}
+\contentsline {chapter}{\textbf {Bibliography}\textmd {\leaders \hbox to 1em{\hss .\hss }\hfill } \vspace {\baselineskip }}{122}

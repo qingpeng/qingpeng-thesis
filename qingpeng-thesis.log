@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  17 APR 2015 18:18
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  17 APR 2015 18:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -984,37 +984,37 @@ Package pdftex.def Info: ./figures/compare_commet.pdf used on input line 797.
 File: ./figures/GOS_cluster.png Graphic file (type png)
 
 <use ./figures/GOS_cluster.png>
-Package pdftex.def Info: ./figures/GOS_cluster.png used on input line 895.
+Package pdftex.def Info: ./figures/GOS_cluster.png used on input line 896.
 (pdftex.def)             Requested size: 505.89pt x 369.81456pt.
 
 <./figures/GOS_observed.png, id=1456, 850.17625pt x 473.77pt>
 File: ./figures/GOS_observed.png Graphic file (type png)
 
 <use ./figures/GOS_observed.png>
-Package pdftex.def Info: ./figures/GOS_observed.png used on input line 902.
+Package pdftex.def Info: ./figures/GOS_observed.png used on input line 903.
 (pdftex.def)             Requested size: 505.89pt x 281.91472pt.
 
 <./figures/GOS_chao.png, id=1457, 1146.2825pt x 580.1675pt>
 File: ./figures/GOS_chao.png Graphic file (type png)
 
 <use ./figures/GOS_chao.png>
-Package pdftex.def Info: ./figures/GOS_chao.png used on input line 909.
+Package pdftex.def Info: ./figures/GOS_chao.png used on input line 910.
 (pdftex.def)             Requested size: 505.89pt x 256.04465pt.
 
 <./figures/HMP_beta.png, id=1458, 461.725pt x 350.30875pt>
 File: ./figures/HMP_beta.png Graphic file (type png)
 
 <use ./figures/HMP_beta.png>
-Package pdftex.def Info: ./figures/HMP_beta.png used on input line 937.
+Package pdftex.def Info: ./figures/HMP_beta.png used on input line 938.
 (pdftex.def)             Requested size: 289.07999pt x 219.32195pt.
-
-<./figures/HMP_alpha.png, id=1459, 578.16pt x 433.62pt>
+ [104]
+<./figures/HMP_alpha.png, id=1462, 578.16pt x 433.62pt>
 File: ./figures/HMP_alpha.png Graphic file (type png)
 
 <use ./figures/HMP_alpha.png>
-Package pdftex.def Info: ./figures/HMP_alpha.png used on input line 945.
+Package pdftex.def Info: ./figures/HMP_alpha.png used on input line 946.
 (pdftex.def)             Requested size: 289.07999pt x 216.80946pt.
- [104] [105 <./figures/GOS_cluster.png>]
+ [105 <./figures/GOS_cluster.png>]
 
 LaTeX Warning: Text page 106 contains only floats.
 
@@ -1029,53 +1029,56 @@ File: ./figures/GPGC_old_subset1M.png Graphic file (type png)
 
 <use ./figures/GPGC_old_subset1M.png>
 Package pdftex.def Info: ./figures/GPGC_old_subset1M.png used on input line 101
-1.
+2.
 (pdftex.def)             Requested size: 289.07999pt x 264.78668pt.
 
 <./figures/GPGC_1m_old.png, id=1480, 953.5625pt x 824.07875pt>
 File: ./figures/GPGC_1m_old.png Graphic file (type png)
 
 <use ./figures/GPGC_1m_old.png>
-Package pdftex.def Info: ./figures/GPGC_1m_old.png used on input line 1020.
+Package pdftex.def Info: ./figures/GPGC_1m_old.png used on input line 1021.
 (pdftex.def)             Requested size: 505.89pt x 437.19977pt.
  [108]
 <./figures/IGS_KBS_beta.png, id=1484, 652.4375pt x 538.01pt>
 File: ./figures/IGS_KBS_beta.png Graphic file (type png)
 
 <use ./figures/IGS_KBS_beta.png>
-Package pdftex.def Info: ./figures/IGS_KBS_beta.png used on input line 1055.
+Package pdftex.def Info: ./figures/IGS_KBS_beta.png used on input line 1056.
 (pdftex.def)             Requested size: 289.07999pt x 238.38342pt.
 
 <./figures/IGS_ARMO_beta.png, id=1485, 631.35875pt x 510.90875pt>
 File: ./figures/IGS_ARMO_beta.png Graphic file (type png)
 
 <use ./figures/IGS_ARMO_beta.png>
-Package pdftex.def Info: ./figures/IGS_ARMO_beta.png used on input line 1063.
+Package pdftex.def Info: ./figures/IGS_ARMO_beta.png used on input line 1064.
 (pdftex.def)             Requested size: 289.07999pt x 233.92946pt.
 
 <./figures/IGS_ARMO_alpha.png, id=1486, 851.18pt x 428.60126pt>
 File: ./figures/IGS_ARMO_alpha.png Graphic file (type png)
 
 <use ./figures/IGS_ARMO_alpha.png>
-Package pdftex.def Info: ./figures/IGS_ARMO_alpha.png used on input line 1071.
+Package pdftex.def Info: ./figures/IGS_ARMO_alpha.png used on input line 1072.
 (pdftex.def)             Requested size: 505.89pt x 254.73642pt.
  [109 <./figures/GPGC_old_subset1M.png>]
-[110 <./figures/GPGC_1m_old.png>]
+Overfull \vbox (6.2028pt too high) has occurred while \output is active []
+
+
+[110 <./figures/GPGC_1m_old.png>] [111 <./figures/IGS_KBS_beta.png> <./figures/
+IGS_ARMO_beta.png>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) (./chap6-conc.tex [111 <./figures/IGS_KBS_beta.png> <./figures/IGS_ARMO_beta.
-png>] [112 <./figures/IGS_ARMO_alpha.png>]
+) (./chap6-conc.tex [112 <./figures/IGS_ARMO_alpha.png>] [113]
 Chapter 6.
-[113
+[114
 
-] [114] [115] [116] [117] [118]) (./qingpeng-thesis.bbl [119] [120
+] [115] [116] [117] [118] [119]) (./qingpeng-thesis.bbl [120] [121
 
 ]
-[121
+[122
 
-] [122] [123] [124] [125] [126] [127] [128] [129] [130] [131] [132]
-[133]) [134] (./qingpeng-thesis.aux) ) 
+] [123] [124] [125] [126] [127] [128] [129] [130] [131] [132] [133]
+[134]) [135] (./qingpeng-thesis.aux) ) 
 Here is how much of TeX's memory you used:
  5224 strings out of 493315
  80821 string characters out of 6137904
@@ -1099,10 +1102,10 @@ amsfonts/cm/cmsy10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmti10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmti12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmtt12.pfb>
-Output written on qingpeng-thesis.pdf (148 pages, 1809800 bytes).
+Output written on qingpeng-thesis.pdf (149 pages, 1809795 bytes).
 PDF statistics:
- 1625 PDF objects out of 1728 (max. 8388607)
- 534 compressed objects within 6 object streams
+ 1628 PDF objects out of 1728 (max. 8388607)
+ 536 compressed objects within 6 object streams
  0 named destinations out of 1000 (max. 500000)
  216 words of extra memory for PDF output out of 10000 (max. 10000000)
 
