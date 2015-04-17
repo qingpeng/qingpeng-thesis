@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  16 APR 2015 12:42
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  17 APR 2015 08:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -450,52 +450,70 @@ Chapter 1.
 Chapter 2.
 [11
 
-]
+] [12]
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no “ in font cmr12!
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 131.
 
-LaTeX Warning: Reference `fig:kmer_counting' on page 12 undefined on input line
- 43.
-
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 81.
-(/usr/local/texlive/2013/texmf-dist/tex/latex/base/omlcmr.fd
+ (/usr/local/texlive/2013/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <6> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 81.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 131.
 
-Overfull \hbox (52.0282pt too wide) in paragraph at lines 64--103
+Overfull \hbox (52.0282pt too wide) in paragraph at lines 114--153
 [][] 
  []
 
+[13]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[12] [13]
-
-LaTeX Warning: Citation `pubmed21114842' on page 14 undefined on input line 177
-.
-
 [14]
 
-LaTeX Warning: Citation `quake' on page 15 undefined on input line 192.
+LaTeX Warning: Citation `Iqbal2012' on page 15 undefined on input line 213.
 
-[15] [16] [17] [18]
-Underfull \hbox (badness 10000) in paragraph at lines 335--347
+
+LaTeX Warning: Citation `Namiki2012' on page 15 undefined on input line 216.
+
+
+LaTeX Warning: Citation `Afiahayati2015' on page 15 undefined on input line 216
+.
+
+
+LaTeX Warning: Citation `Guo2015' on page 15 undefined on input line 216.
+
+
+LaTeX Warning: Citation `Li2015' on page 15 undefined on input line 216.
+
+
+LaTeX Warning: Citation `Haider2014' on page 15 undefined on input line 216.
+
+[15]
+Overfull \hbox (26.22604pt too wide) in paragraph at lines 229--240
+[]\OT1/cmr/m/n/12 As nec-es-sary com-po-nents in NGS data anal-y-sis pipeline, 
+as-sem-bly and er-ror re-moval/correction
+ []
+
+[16] [17] [18] [19]
+Underfull \hbox (badness 10000) in paragraph at lines 369--381
 
  []
 
-[19]
-Overfull \hbox (11.65549pt too wide) in paragraph at lines 347--353
+[20]
+Overfull \hbox (11.65549pt too wide) in paragraph at lines 381--387
 \OT1/cmr/m/n/12 where $\OML/cmm/m/it/12 S[]$ \OT1/cmr/m/n/12 is the num-ber of 
 species ob-served, $\OML/cmm/m/it/12 n[]$ \OT1/cmr/m/n/12 the num-ber of specie
 s ob-served once(singletons,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 347--353
+Underfull \hbox (badness 10000) in paragraph at lines 381--387
 
  []
 
-[20]) (./chap3-khmer.tex [21] [22]
+) (./chap3-khmer.tex [21] [22]
 Chapter 3.
 [23
 
@@ -1078,19 +1096,19 @@ Chapter 6.
 ] [122
 
 ] [123] [124] [125] [126] [127] [128] [129]
-[130] [131] [132] [133] [134]) [135] (./qingpeng-thesis.aux)
+[130] [131] [132] [133]) [134] (./qingpeng-thesis.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 5234 strings out of 493315
- 81012 string characters out of 6137904
- 147037 words of memory out of 5000000
- 8506 multiletter control sequences out of 15000+600000
+ 5226 strings out of 493315
+ 80827 string characters out of 6137904
+ 146982 words of memory out of 5000000
+ 8498 multiletter control sequences out of 15000+600000
  15574 words of font info for 60 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 51i,17n,45p,786b,443s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 51i,17n,45p,786b,442s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb><
 /usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb>
@@ -1105,10 +1123,10 @@ texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/t
 exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/te
 xlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/tex
 live/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on qingpeng-thesis.pdf (150 pages, 1810553 bytes).
+Output written on qingpeng-thesis.pdf (149 pages, 1809706 bytes).
 PDF statistics:
- 1631 PDF objects out of 1728 (max. 8388607)
- 538 compressed objects within 6 object streams
+ 1628 PDF objects out of 1728 (max. 8388607)
+ 536 compressed objects within 6 object streams
  0 named destinations out of 1000 (max. 500000)
  216 words of extra memory for PDF output out of 10000 (max. 10000000)
 

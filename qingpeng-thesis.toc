@@ -10,14 +10,14 @@
 \contentsline {section}{\numberline {1.7}Outline of Dissertation}{10}
 \contentsline {chapter}{\numberline {Chapter 2} Review of Relevant Literature}{11}
 \contentsline {section}{\numberline {2.1}Challenges in counting k-mers accurately and efficiently}{11}
-\contentsline {section}{\numberline {2.2}Tackling large and error-prone short-read shotgun data sets}{13}
+\contentsline {section}{\numberline {2.2}Tackling large and error-prone short-read shotgun data sets}{14}
 \contentsline {section}{\numberline {2.3}Challenges in measuring diversity of metagenomics}{16}
 \contentsline {subsection}{\numberline {2.3.1}Diversity measurement in Microbial Ecology}{16}
-\contentsline {subsubsection}{\numberline {2.3.1.1}OTU Identification using sequence markers}{16}
+\contentsline {subsubsection}{\numberline {2.3.1.1}OTU Identification using sequence markers}{17}
 \contentsline {subsubsection}{\numberline {2.3.1.2}Binning of Metagenomic Reads into OTUs}{17}
-\contentsline {paragraph}{\numberline {2.3.1.2.1}Composition-based approach}{17}
+\contentsline {paragraph}{\numberline {2.3.1.2.1}Composition-based approach}{18}
 \contentsline {paragraph}{\numberline {2.3.1.2.2}Similarity-based approach}{18}
-\contentsline {subsubsection}{\numberline {2.3.1.3}Statistics for Diversity Estimation}{18}
+\contentsline {subsubsection}{\numberline {2.3.1.3}Statistics for Diversity Estimation}{19}
 \contentsline {chapter}{\numberline {Chapter 3} Efficient online k-mer counting using a probabilistic data structure}{23}
 \contentsline {section}{\numberline {3.1}Introduction}{23}
 \contentsline {section}{\numberline {3.2}Count-Min Sketch and its application in k-mer counting}{24}

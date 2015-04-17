@@ -12,11 +12,6 @@ P.~Audano and F.~Vannberg.
 \newblock {\em Bioinformatics: Advance Access published March 18, 2014}, page
   doi: 10.1093/bioinformatics/btu152, Mar 2014.
 
-\bibitem{Bloom70}
-B.~H. Bloom.
-\newblock Space/time trade-offs in hash coding with allowable errors.
-\newblock {\em Commun. ACM}, 13(7):422--426, 1970.
-
 \bibitem{pubmed8889548}
 M.~Bonaldo, G.~Lennon, and M.~Soares.
 \newblock Normalization and subtraction: two approaches to facilitate gene
@@ -34,11 +29,6 @@ A.~Broder and M.~Mitzenmacher.
 \newblock Network applications of bloom filters: A survey.
 \newblock {\em Internet mathematics}, 1(4):485--509, 2004.
 
-\bibitem{BroderM03}
-A.~Z. Broder and M.~Mitzenmacher.
-\newblock Survey: Network applications of bloom filters: A survey.
-\newblock {\em Internet Mathematics}, 1(4):485--509, 2003.
-
 \bibitem{Brown2012blog}
 C.~T. Brown.
 \newblock What does trinity's in silico normalization do?
@@ -54,6 +44,12 @@ C.~T. Brown, A.~Howe, Q.~Zhang, A.~B. Pyrkosz, and T.~H. Brom.
 J.~Bunge.
 \newblock Estimating the number of species with catchall.
 \newblock {\em Pac Symp Biocomput}, pages 121--30, 2011.
+
+\bibitem{Butler2008}
+J.~Butler, I.~MacCallum, M.~Kleber, I.~A. Shlyakhter, M.~K. Belmonte, E.~S.
+  Lander, C.~Nusbaum, and D.~B. Jaffe.
+\newblock Allpaths: de novo assembly of whole-genome shotgun microreads.
+\newblock {\em Genome Res}, 18(5):810--20, May 2008.
 
 \bibitem{Caporaso:2010aa}
 J.~G. Caporaso, J.~Kuczynski, J.~Stombaugh, K.~Bittinger, F.~D. Bushman, E.~K.
@@ -87,11 +83,6 @@ A.~Chao and M.~C. Yang.
   failure rates.
 \newblock {\em Biometrika}, 80(1):193--201, 1993.
 
-\bibitem{Charikar2004}
-M.~Charikar.
-\newblock {Finding frequent items in data streams}.
-\newblock {\em Theoretical Computer Science}, 312(1):3--15, Jan. 2004.
-
 \bibitem{Chikhi:2014aa}
 R.~Chikhi and P.~Medvedev.
 \newblock Informed and automated k-mer size selection for genome assembly.
@@ -114,12 +105,6 @@ H.~Chitsaz, J.~L. Yee-Greenbaum, G.~Tesler, M.~J. Lombardo, C.~L. Dupont, J.~H.
   short-read data sets}.
 \newblock {\em Nat. Biotechnol.}, 29(10):915--921, Oct 2011.
 
-\bibitem{DBLP:conf/sigmod/CohenM03}
-S.~Cohen and Y.~Matias.
-\newblock Spectral bloom filters.
-\newblock In A.~Y. Halevy, Z.~G. Ives, and A.~Doan, editors, {\em SIGMOD
-  Conference}, pages 241--252. ACM, 2003.
-
 \bibitem{colwellestimates}
 R.~Colwell.
 \newblock Estimates: statistical estimation of species richness and shared
@@ -141,11 +126,6 @@ P.~Compeau, P.~Pevzner, and G.~Tesler.
 T.~Conway and A.~Bromage.
 \newblock Succinct data structures for assembling large genomes.
 \newblock {\em Bioinformatics}, 27(4):479--86, 2011.
-
-\bibitem{Conway2011}
-T.~C. Conway and A.~J. Bromage.
-\newblock Succinct data structures for assembling large genomes.
-\newblock {\em Bioinformatics}, 27(4):479--86, Feb 2011.
 
 \bibitem{countminsketch}
 G.~Cormode and S.~Muthukrishnan.
@@ -199,16 +179,6 @@ J.~Eid, A.~Fehr, J.~Gray, K.~Luong, J.~Lyle, G.~Otto, P.~Peluso, D.~Rank,
   J.~Korlach, and S.~Turner.
 \newblock {{R}eal-time {D}{N}{A} sequencing from single polymerase molecules}.
 \newblock {\em Science}, 323(5910):133--138, Jan 2009.
-
-\bibitem{DBLP:conf/sigcomm/EstanV02}
-C.~Estan and G.~Varghese.
-\newblock New directions in traffic measurement and accounting.
-\newblock In {\em SIGCOMM}, pages 323--336. ACM, 2002.
-
-\bibitem{Fan:2000:SCS:343571.343572}
-L.~Fan, P.~Cao, J.~Almeida, and A.~Z. Broder.
-\newblock Summary cache: A scalable wide-area web cache sharing protocol.
-\newblock {\em IEEE/ACM Trans. Netw.}, 8(3):281--293, June 2000.
 
 \bibitem{Feigenbaum2005}
 J.~Feigenbaum, S.~Kannan, A.~McGregor, S.~Suri, and J.~Zhang.
@@ -316,6 +286,13 @@ A.~C. Howe, J.~K. Jansson, S.~A. Malfatti, S.~G. Tringe, J.~M. Tiedje, and
   metagenomes.
 \newblock {\em Proc Natl Acad Sci U S A}, 111(13):4904--9, Apr 2014.
 
+\bibitem{Howe2014}
+A.~C. Howe, J.~K. Jansson, S.~A. Malfatti, S.~G. Tringe, J.~M. Tiedje, and
+  C.~T. Brown.
+\newblock Tackling soil diversity with the assembly of large, complex
+  metagenomes.
+\newblock {\em Proc Natl Acad Sci U S A}, 111(13):4904--9, Apr 2014.
+
 \bibitem{adina2013}
 A.~C. Howe, J.~Pell, R.~Canino-Koning, R.~Mackelprang, S.~Tringe, J.~Jansson,
   J.~M. Tiedje, and C.~T. Brown.
@@ -366,18 +343,6 @@ M.~Imelfort, D.~Parks, B.~J. Woodcroft, P.~Dennis, P.~Hugenholtz, and G.~W.
   related metagenomes.
 \newblock {\em PeerJ}, 2:e603, 2014.
 
-\bibitem{cortex}
-Z.~Iqbal, M.~Caccamo, I.~Turner, P.~Flicek, and G.~McVean.
-\newblock De novo assembly and genotyping of variants using colored de bruijn
-  graphs.
-\newblock {\em Nat Genet}, 44(2):226--32, 2012.
-
-\bibitem{Jones:2012aa}
-D.~C. Jones, W.~L. Ruzzo, X.~Peng, and M.~G. Katze.
-\newblock Compression of next-generation sequencing reads aided by highly
-  efficient de novo assembly.
-\newblock {\em Nucleic Acids Res}, 40(22):e171, Dec 2012.
-
 \bibitem{Kau:2011aa}
 A.~L. Kau, P.~P. Ahern, N.~W. Griffin, A.~L. Goodman, and J.~I. Gordon.
 \newblock Human nutrition, the gut microbiome and the immune system.
@@ -412,6 +377,13 @@ S.-M. Lee and A.~Chao.
 \newblock Estimating population size via sample coverage for closed
   capture-recapture models.
 \newblock {\em Biometrics}, pages 88--97, 1994.
+
+\bibitem{Li2010}
+R.~Li, H.~Zhu, J.~Ruan, W.~Qian, X.~Fang, Z.~Shi, Y.~Li, S.~Li, G.~Shan,
+  K.~Kristiansen, S.~Li, H.~Yang, J.~Wang, and J.~Wang.
+\newblock De novo assembly of human genomes with massively parallel short read
+  sequencing.
+\newblock {\em Genome Res}, 20(2):265--72, Feb 2010.
 
 \bibitem{Li2003}
 X.~Li and M.~S. Waterman.
@@ -468,13 +440,6 @@ N.~Maillet, C.~Lemaitre, R.~Chikhi, D.~Lavenier, and P.~Peterlongo.
 \newblock Compareads: comparing huge metagenomic experiments.
 \newblock {\em BMC Bioinformatics}, 13 Suppl 19:S10, 2012.
 
-\bibitem{DBLP:conf/padl/MaldeO09}
-K.~Malde and B.~O'Sullivan.
-\newblock Using bloom filters for large scale gene sequence analysis in
-  haskell.
-\newblock In A.~Gill and T.~Swift, editors, {\em PADL}, volume 5418 of {\em
-  Lecture Notes in Computer Science}, pages 183--194. Springer, 2009.
-
 \bibitem{jellyfish}
 G.~Marcais and C.~Kingsford.
 \newblock {{A} fast, lock-free approach for efficient parallel counting of
@@ -515,11 +480,11 @@ E.~McDonald and C.~T. Brown.
 \newblock In T.~Armstrong, editor, {\em The Performance of Open Source
   Applications}, chapter~12, page 151. lulu.com, 2013.
 
-\bibitem{pubmed21685062}
+\bibitem{Medvedev2011}
 P.~Medvedev, E.~Scott, B.~Kakaradov, and P.~Pevzner.
 \newblock Error correction of high-throughput sequencing datasets with
   non-uniform coverage.
-\newblock {\em Bioinformatics}, 27(13):i137--41, 2011.
+\newblock {\em Bioinformatics}, 27(13):i137--41, Jul 2011.
 
 \bibitem{Melsted2014}
 P.~Melsted and B.~V. Halldorsson.
@@ -566,13 +531,6 @@ S.~Muthukrishnan.
 \newblock {\em Data streams: algorithms and applications}.
 \newblock Foundations and trends in theoretical computer science. Now
   Publishers, 2005.
-
-\bibitem{metavelvet}
-T.~Namiki, T.~Hachiya, H.~Tanaka, and Y.~Sakakibara.
-\newblock {M}eta{V}elvet: {A}n extension of {V}elvet assembler to de novo
-  metagenome assembly from short sequence reads.
-\newblock {\em ACM Conference on Bioinformatics, Computational Biology and
-  Biomedicine}, 2011.
 
 \bibitem{Patil:2012aa}
 K.~R. Patil, L.~Roune, and A.~C. McHardy.
@@ -660,12 +618,6 @@ G.~Rizk, D.~Lavenier, and R.~Chikhi.
 \newblock Dsk: k-mer counting with very low memory usage.
 \newblock {\em Bioinformatics}, 29(5):652--3, Mar 2013.
 
-\bibitem{pubmed19724646}
-S.~Rodrigue, R.~Malmstrom, A.~Berlin, B.~Birren, M.~Henn, and S.~Chisholm.
-\newblock Whole genome amplification and de novo assembly of single bacterial
-  cells.
-\newblock {\em PLoS One}, 4(9):e6864, 2009.
-
 \bibitem{Rodriguez-R:2013aa}
 L.~M. Rodriguez-R and K.~T. Konstantinidis.
 \newblock Nonpareil: A redundancy-based approach to assess the level of
@@ -705,11 +657,6 @@ F.~Rusu and A.~Dobra.
 D.~C. Savage.
 \newblock Microbial ecology of the gastrointestinal tract.
 \newblock {\em Annu Rev Microbiol}, 31:107--33, 1977.
-
-\bibitem{pubmed21867570}
-A.~Sboner, X.~Mu, D.~Greenbaum, R.~Auerbach, and M.~Gerstein.
-\newblock The real cost of sequencing: higher than you think!
-\newblock {\em Genome Biol}, 12(8):125, 2011.
 
 \bibitem{Schloss:2005aa}
 P.~D. Schloss and J.~Handelsman.
@@ -784,6 +731,12 @@ J.~Simpson, K.~Wong, S.~Jackman, J.~Schein, S.~Jones, and I.~Birol.
 \newblock Abyss: a parallel assembler for short read sequence data.
 \newblock {\em Genome Res}, 19(6):1117--23, 2009.
 
+\bibitem{Simpson2009}
+J.~T. Simpson, K.~Wong, S.~D. Jackman, J.~E. Schein, S.~J.~M. Jones, and
+  I.~Birol.
+\newblock Abyss: a parallel assembler for short read sequence data.
+\newblock {\em Genome Res}, 19(6):1117--23, Jun 2009.
+
 \bibitem{pubmed7937745}
 M.~Soares, M.~Bonaldo, P.~Jelene, L.~Su, L.~Lawton, and A.~Efstratiadis.
 \newblock Construction and characterization of a normalized cdna library.
@@ -827,11 +780,6 @@ H.~Teeling, J.~Waldmann, T.~Lombardot, M.~Bauer, and F.~O. Gl{\"o}ckner.
   comparison of tetranucleotide usage patterns in dna sequences.
 \newblock {\em BMC Bioinformatics}, 5:163, Oct 2004.
 
-\bibitem{pubmed19430453}
-C.~Trapnell and S.~Salzberg.
-\newblock How to map billions of short reads onto genomes.
-\newblock {\em Nat Biotechnol}, 27(5):455--7, 2009.
-
 \bibitem{Turnbaugh:2009aa}
 P.~J. Turnbaugh, M.~Hamady, T.~Yatsunenko, B.~L. Cantarel, A.~Duncan, R.~E.
   Ley, M.~L. Sogin, W.~J. Jones, B.~A. Roe, J.~P. Affourtit, M.~Egholm,
@@ -871,13 +819,6 @@ Q.~Wang, G.~M. Garrity, J.~M. Tiedje, and J.~R. Cole.
 W.~B. Whitman, D.~C. Coleman, and W.~J. Wiebe.
 \newblock Prokaryotes: the unseen majority.
 \newblock {\em Proc Natl Acad Sci U S A}, 95(12):6578--83, Jun 1998.
-
-\bibitem{pubmed22028825}
-T.~Woyke, A.~Sczyrba, J.~Lee, C.~Rinke, D.~Tighe, S.~Clingenpeel, R.~Malmstrom,
-  R.~Stepanauskas, and J.~Cheng.
-\newblock Decontamination of mda reagents for single cell whole genome
-  amplification.
-\newblock {\em PLoS One}, 6(10):e26161, 2011.
 
 \bibitem{Wu:2009aa}
 D.~Wu, P.~Hugenholtz, K.~Mavromatis, R.~Pukall, E.~Dalin, N.~N. Ivanova,

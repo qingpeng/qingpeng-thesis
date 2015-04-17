@@ -3,60 +3,110 @@
 
 \section{Challenges in counting k-mers accurately and efficiently}
 
-The goal of k-mer counting is to determine the number of occurrences for each
-fixed-length word of length k in a DNA data set \cite{Marcais2011}. Efficient
-k-mer counting plays an important role in many bioinformatics approaches,
-including data preprocessing for \textit{de novo} assembly, repeat detection, and
-sequencing coverage estimation \cite{Kurtz2008}.
+A k-mer is a substring with length k in a DNA sequence. K-mer counting is the
+problem to determine the occurrences of such k-mers in a DNA dataset 
+\cite{Marcais2011}. Efficient k-mer counting plays an important role in solving many
+bioinformatics problems. 
 
-Short-read shotgun sequencing data is both relatively sparse in k-mers and
-contains many erroneous k-mers.  For typical values of k such as 32 these data
-sets are sparse, as only a small fraction of the total possible number of
-k-mers ($4^{32}$) are actually present in any genome or read data sets derived
-from the genome.  The high error rate (e.g. Illumina has a ~0.1-1\% per-base
-error rate \cite{pubmed19997069}) generates many unique k-mers.  As the total
-number of generated reads increases, the total number of errors grows with it
-linearly. This leads to data sets where the erroneous k-mers vastly outnumber
-the true k-mers \cite{Conway2011}.  Tracking and counting the resulting large
-number of k-mers, most of which are erroneous, has become an unavoidable and
-challenging task in sequence analysis \cite{Minoche2011}.
+One important problem is \textit{de novo} assembly of very large number of short reads.
+With the development of next generation sequencing(NGS) technology, many research
+groups can afford the sequencing of the sample of specific species or even
+metagenomic samples with numerous different species\cite{pubmed19997069}. 
+Large amount of NGS short reads are generated and de novo assembly is
+required for these sequence data sets\cite{pubmed20211242}. Currently, de Bruijn graph method is
+popular in the attempts to do \textit{de novo} assembly because of its advantage in
+assembling next generation sequencing short reads\cite{Pevzner2001}. Several
+popular assemblers have been developed based on de Bruijn graph, such as
+Velvet\cite{Zerbino2008}, ALLPATHS\cite{Butler2008}, ABySS\cite{Simpson2009}
+and SOAPdenovo\cite{Li2010}. All the k-mers in a sequence
+data set are represented as nodes in the de Bruijn graph. If
+two k-mers have an overlap of (k-1)-mer, the two k-mers can be connected. Since
+k-mer is such a basic unit in \textit{de Bruijn} graph \textit{de novo}
+assembly, it is of
+great importance to determine the occurrence of k-mers. One example is that
+sequencing errors can generate many erroneous unique k-mers and we can filter
+out the reads with too many unique k-mers before doing the assembly. Similarly,
+we can also filter out the reads with k-mers that occur too many times for
+smoothing MDA-abundance reads dataset. Pre-filtering reads to reduce the size
+of reads data set to assemble is important to reduce the time and memory usage.
+Another application of k-mer counting is the evaluation of microbial diversity
+in metagenomic samples. Counting the number of k-mers and geting the k-mer
+abundance distribution can give us some hints about the richness and evenness
+of a metagenomic sample, although the erroneous k-mers from sequencing error
+will cause some problems. Also, one of the popular approaches to do metagenomic
+contigs binning is based on analyzing the k-mer abundance profile 
+\cite{Patil:2012aa} \cite{Brady:2011aa}\cite{Rosen:2011aa}.Actually this is 
+one of our motivations of the development of khmer, which
+will be discussed in next chapter. One more example of applications of 
+k-mer counting is the de novo detection of repetitive
+elements. K-mer frequency can give important information for predicting regions
+with  such repetitive elements as transposons with important biological
+function.\cite{Kurtz2008}
 
-A variety of k-mer counting approaches, and standalone software packages
-implementing them, have emerged in recent years; this includes Tallymer,
-Jellyfish, BFCounter, DSK, KMC, Turtle and KAnalyze \cite{Kurtz2008,
-Marcais2011, Melsted2011, Rizk2013, Deorowicz2013, Roy2014, Audano2014}.
+There are two specific characteristics of NGS shot reads that make k-mer
+counting complicated. One is that large size of NGS reads data means there are
+large number of
+k-mers to count. However the large number of k-mers in a NGS reads data set
+still only account for a small proportion of the total number of possible k-mers.
+For a typical value of k as 20, there are $4^{20}$ possible k-mers, which are
+far more than the actual number of k-mers present in any genome reads data set.
+Delicate choice of data structure to use is desired to accommodate to such
+sparseness of actual k-mers to enable efficient counting. Also, out of the
+large number of k-mers in a NGS reads data set, many of them, especially unique
+ones, are erroneous because of sequencing errors. Generally one sequencing error will
+introduces $k$ erroneous k-mers. With a relatively high error rate as ~0.1-1\%
+in Illumina reads data \cite{pubmed19997069}), as we do more sequencing and have
+more reads, there will be actually more erroneous k-mers than true k-mers in
+the data set. Effective and efficient methods to count the large number of
+k-mers with most of them as erroneous is highly required in NGS reads data
+analysis \cite{Minoche2011}.
 
-These approaches and implementations each offer different algorithmic
-trade-offs and enable a non-overlapping set of functionality. Tallymer uses a
-suffix tree to store k-mer counts in memory and on disk \cite{Kurtz2008}. 
-Jellyfish stores k-mer counts in in-memory hash tables, and makes use of disk
-storage to scale to larger data sets \cite{Marcais2011}.  BFCounter uses a
-Bloom filter as a pre-filter to avoid counting unique k-mers, and is the first
-published probabilistic approach to k-mer counting \cite{Melsted2011}.  DSK
-adopts an approach to k-mer counting that enables time- and memory-efficient
-k-mer counting with an explicit trade-off between disk and memory usage
-\cite{Rizk2013}.  KMC and KAnalyze rely primarily on fast and inexpensive disk
-access to count k-mers in low memory \cite{Deorowicz2013,Audano2014}.  Turtle
-provides several different containers that offer different false positive and
-false negative tradeoffs when counting k-mers \cite{Roy2014}.
+Current methods to do k-mer counting involve the data structures like hash
+tables, suffix arrays, binary trees or tries structures. If the size of
+sequence dataset to count is modest, a simple hash table will suffice,
+where the key is the k-mer and the value is the corresponding count. However
+there is an obvious obstacle. If the size of sequence dataset is larger, the
+efficiency of the counting using a simple hash table drops dramatically.
+Instead another k-mer counting tool - Tallymer, uses suffix array data
+structure\cite{Kurtz2008}. Admittedly it is more efficient than simple hash table in
+general, but the memory requirement is still linear to the number of
+unique k-mers. Thus this method is not very scalable. For example,
+the size of a soil metagenomic data set for one sample only have already 
+exceeded 400G bytes, with only a limited sequencing depth\cite{Howe2014}.
+ Reads dataset with size like this is difficult for Tallymer to
+handle. Jellyfish, \cite{Marcais2011} another popular k-mer counting tool,
+uses updated hash table data structure, which can reduce the memory usage
+to store k-mers and the "lock-free" feature of the hash table also enables the
+parallelism of Jellyfish to make it more efficient. But it still has the same
+problem as Tallymer – linear increase of memory usage with respect to the
+number of unique k-mers in the data set to count.
 
-Figure \ref{fig:kmer_counting} shows a summary of existing k-mer counting
-packages.
+Many more k-mer counting software packages based on different data structure
+and algorithms have been developed in recent years, including BFCounter, DSK, 
+KMC, Turtle and KAnalyze \cite{Melsted2011, Rizk2013, Deorowicz2013, Roy2014, 
+Audano2014}. These software packages differ with each other in algorithmic
+trade-offs and functionality, especially on how to deal with the trade-off
+between disk and memory usage, enabling online counting and retrieval or not,
+exact count or not, and others. 
+Table \ref{table:kmer_counting} shows a summary of most current k-mer counting
+packages with the function and limitation for each.
 
+% more discussion about bloom filter and count-min sketch
 
- This data structure used in khmer package which will be discussed in details
- in next chapter is based on a Count-Min Sketch \cite{Cormode2005}, a
- generalized probabilistic data structure for storing the frequency
- distributions of distinct elements. The implementation in khmer extends an earlier
- implementation of a Bloom filter \cite{Bloom70}, which has been previously
- used in bioinformatics applications, such as sequence matching
- \cite{DBLP:conf/padl/MaldeO09}, k-mer counting \cite{Melsted2011}, and de
- Bruijn graph storage and traversal \cite{Pell2012,Jones:2012aa}. Many other
- variations of Bloom filters have been proposed \cite{BroderM03}, including
- counting Bloom filters \cite{Fan:2000:SCS:343571.343572}, multistage filters
- \cite{DBLP:conf/sigcomm/EstanV02}, and spectral Bloom filters
- \cite{DBLP:conf/sigmod/CohenM03}, which are related to the Count-Min Sketch
- and our khmer implementation.
+%
+% This data structure used in khmer package which will be discussed in details
+% in next chapter is based on a Count-Min Sketch \cite{Cormode2005}, a
+% generalized probabilistic data structure for storing the frequency
+% distributions of distinct elements. The implementation in khmer extends an earlier
+% implementation of a Bloom filter \cite{Bloom70}, which has been previously
+% used in bioinformatics applications, such as sequence matching
+% \cite{DBLP:conf/padl/MaldeO09}, k-mer counting \cite{Melsted2011}, and de
+% Bruijn graph storage and traversal \cite{Pell2012,Jones:2012aa}. Many other
+% variations of Bloom filters have been proposed \cite{BroderM03}, including
+% counting Bloom filters \cite{Fan:2000:SCS:343571.343572}, multistage filters
+% \cite{DBLP:conf/sigcomm/EstanV02}, and spectral Bloom filters
+% \cite{DBLP:conf/sigmod/CohenM03}, which are related to the Count-Min Sketch
+% and our khmer implementation.
 
 
 \begin{sidewaystable}[h]
@@ -109,102 +159,86 @@ filter out low\\ bundance kmer\end{tabular} & \begin{tabular}[c]{@{}l@{}}N\\
 
 \section{Tackling large and error-prone short-read shotgun data sets}
 
-The ongoing improvements in DNA sequencing technologies have led to a new
-problem: how do we analyze the resulting large sequence data sets quickly and
-efficiently? These data sets contain millions to billions of short reads with
-high error rates and substantial sampling biases \cite{pubmed19997069}.  The
-vast quantities of deep sequenced data produced by these new sequencing
-technologies are driving computational biology to extend and adapt previous
-approaches to sequence analysis.  In particular, the widespread use of deep
-shotgun sequencing on previously unsequenced genomes, transcriptomes, and
-metagenomes, has resulted in the development of several new approaches to {\em
-de novo} sequence assembly \cite{pubmed20211242}.
+With the dramatic improvements of next generation sequencing(NGS) technologies
+and the dropping sequencing cost, more research groups can afford 
+sequencing the sample of specific species or even
+metagenomic samples with numerous different species in large scale\cite{pubmed19997069}. 
+This leads to the explosive growth of sequencing data to analyze. 
+Important biological insights will be drawn from mining the large genomic data.
+However serious challenges need to be overcome to enable efficient and effective
+analysis. 
 
-There are two major challenges in analyzing short-read sequences from shotgun
-sequencing. First, deep sequencing is needed for complete sampling. This is
-because shotgun sequencing samples randomly from a population of genomes;
-this sampling is biased by sample content and sample preparation, requiring
-even deeper sequencing. A human genome may require 100x coverage or more for
-near-complete sampling, leading to shotgun data sets 300 GB or larger in
-size\cite{pubmed21187386}. Since the lowest abundance genomes determines the
-depth of coverage required for complete sampling, transcriptomes and
-metagenomes containing rare population elements can also require similarly deep
-sequencing.
+Similar to the k-mer counting problem, the first obstacle to analyze large NGS data
+is the formidable size of 
+the NGS data from high sequencing depth. Higher sequencing depth is 
+required to assemble a genome successfully using NGS short reads than using 
+longer reads from traditional Sanger sequencing technology.For example, to get
+a decent coverage of human genome with by NGS short reads to get satisfying assembly, 
+100x sequencing depth is generally required, which leads to a 300 GB NGS reads 
+data set\cite{pubmed21187386}. For samples with variable abundance of genomic 
+contents such as transcriptome or metagenome, to get enough sequencing depth for
+the rarer genomic content, the overall sequencing depth will greatly increase, 
+which leads to dramatically large reads data sets, but with uneven
+abundance of genomic contents meanwhile. 
 
-The second challenge to analyzing short-read shotgun sequencing is the high
-error rate.  For example, the Illumina GAII sequencer has a 1-2\% error rate,
-yielding an average of one base error in every 100 bp of data
-\cite{pubmed19997069}.  The total number of errors grows linearly with the
-amount of data generated, so these errors usually dominate novelty in large
-data sets \cite{pubmed21245053}.  Tracking this novelty and resolving errors is
-computationally expensive.
+Still like the k-mer counting problem, sequencing errors bring significant troubles
+to effective and efficient analysis of large NGS data. With a relatively high 
+error rate as ~0.1-1\% in Illumina reads data \cite{pubmed19997069}), the more 
+sequencing we perform, the more sequencing errors we will have in the data, no 
+matter if the sequencing depth is high or low. So for deep sequencing, most
+of the novelty will be dominated by sequencing errors \cite{pubmed21245053}.
+As discussed previously, generally one sequencing error will
+introduce $k$ erroneous k-mers. So many sequencing errors will undermine the 
+effectiveness of many down-streaming analysis of such short reads data.
 
-These large data sets and high error rates combine to provide a third
-challenge: it is now straightforward to generate data sets that cannot easily
-be analyzed \cite{pubmed21867570}.  While hardware approaches to scaling
-existing algorithms are emerging, sequencing capacity continues to grow faster
-than computational capacity \cite{pubmed20441614}.  Therefore, new algorithmic
-approaches to analysis are needed.
+With the two characteristics of NGS short reads data - large size and error-prone,
+ combined with the dropped cost of sequencing, 
+we are facing the third challenge, that the increase of our capacity to analyze data can not
+catch up with the capacity of generating data \cite{pubmed20441614}.  It is difficult
+to easily manipulate and analyze the large genomic data without significant improvement
+of computational approaches.
 
-Many new algorithms and tools have been developed to tackle large and
-error-prone short-read shotgun data sets. A new class of alignment tools, most
-relying on the Burrows-Wheeler transform, has been created specifically to do
-ultra-fast short-read alignment to reference sequence \cite{pubmed19430453}. 
-In cases where a reference sequence does not exist and must be assembled {\em
-de novo} from the sequence data, a number of new assemblers have been written,
-including ABySS, Velvet, SOAPdenovo, ALLPATHS, SGA, and Cortex
+The approaches to overcome these problems, are straightforward, in a way. To deal
+with the large size of data, we try to decrease the size. To deal with the 
+errors in data, we try to remove or correct them. 
+
+Assembly can be seen as a solution to reduce the size of large data, with the 
+sacrifice of losing abundance information of genomic contents. There have
+been significant theoretical progress to store and analyze the big sequencing data
+efficiently
+\cite{pubmed22068540,pubmed20529929}. Based on the progress, a number of new 
+assemblers have been developed,
+such as ABySS, Velvet, SOAPdenovo, ALLPATHS, SGA, and Cortex
 \cite{pubmed19251739,pubmed18349386,pubmed20511140,pubmed21187386,
-pubmed22156294,cortex}. These assemblers rely on theoretical advances to store
-and assemble large amounts of data \cite{pubmed22068540,pubmed20529929}.  As
-short-read sequencing has been applied to single cell genomes, transcriptomes,
-and metagenomes, yet another generation of assemblers has emerged to handle
-reads from abundance-skewed populations of molecules; these tools, including
-Trinity, Oases, MetaVelvet, Meta-IDBA, and Velvet-SC, adopt local models of
-sequence coverage to help build assemblies
-\cite{pubmed21572440,pubmed22368243,metavelvet,pubmed21685107,pubmed21926975}.
-In addition, several ad hoc strategies have also been applied to reduce
-variation in sequence content from whole-genome amplification
-\cite{pubmed19724646,pubmed22028825}. Because these tools all rely on k-mer
-approaches and require exact matches to construct overlaps between sequences,
-their performance is very sensitive to the number of errors present in the
-underlying data. This sensitivity to errors has led to the development of a
-number of error removal and correction approaches that preprocess data prior to
-assembly or mapping \cite{pubmed21685062,pubmed15059830,Kelley2010}.
+pubmed22156294,Iqbal2012}. For sequencing data with uneven abundance of genomic contents
+like metagenome or transcriptome, novel assembler or 3rd party add-ons are developed
+specifically, such as Trinity, Oases, MetaVelvet, MetaVelvet-SL, Meta-IDBA, Velvet-SC, DIME, MEGAHIT, Omega
+\cite{pubmed21572440,pubmed22368243,Namiki2012,Afiahayati2015, pubmed21685107,pubmed21926975,Guo2015,Li2015,Haider2014}.
 
-One approach to error correction involves finding low-abundance fixed-length
-words, or k-mers, and treating them as likely errors; these errors can then be
-``corrected'' by changing them to similar k-mers that are in high abundance
-\cite{pubmed21114842}.  This approach requires two complete iterations across
-the data set: one iteration to collect abundance spectra, and a second to
-perform the trimming or correction.  For extremely large data sets, this is a
-significant problem: the ``noise'' from sequencing errors drives a supra-linear
-increase in the number of k-mers, so as data set size increases, the
-computation and memory needed to track k-mers increases dramatically
-\cite{pubmed21245053}.
+Assembly can be seen as a solution to decrease error rate either. There may still
+be errors in assembled contigs or genomes, but large amount of errors located in 
+numerous reads have been discarded in the procedure of assembly. 
+To remove or correct errors directly from reads, k-mer spectral analysis is 
+a popular approach\cite{Pevzner2001}. Basically low-abundance k-mers will be found and treated as 
+likely errors. Those likely errors can be removed, trimmed with other k-mers, 
+or corrected using statistical learning method \cite{Kelley2010}. More error
+removal and correction software packages were developed\cite{Medvedev2011,pubmed15059830,Kelley2010}.
+Such error removal or correction approaches can be applied to preprocess
+reads data before assembly.
+
+As necessary components in NGS data analysis pipeline, assembly and error removal/correction
+have proved to be effective to enable more accurate interrogation to the large,
+error-prone short-read data. However both assembly and error removal/correction are
+very compute intensive. The memory usage of assembly does not scale well to the size
+of data to assemble. The error removal/correction based on k-mer spectral analysis
+normally involves two iterations of examining the data, which is also memory intensive
+and time consuming. Streaming and semi-streaming algorithms, which examine the data 
+only once or less than twice and scale well to the size of input data in memory/time 
+requirements, are promising to be integrated with the pre-assembly preprocessing
+and error removal/correction to achieve higher efficiency of NGS data analysis finally.
+In this dissertation, we will discuss our efforts in this direction.
 
 
-K-mer spectral analysis is a powerful approach to error detection and
-correction in shotgun sequencing data that uses k-mer abundances to find likely
-errors in the data \cite{Pevzner2001}.  Approaches derived from spectral
-analysis can be very effective: spectral error correction achieves high
-accuracy, and Zhang et al. (2014) show that spectral k-mer trimming is
-considerably more effective at removing errors than quality score-based
-approaches \cite{quake,Zhang2014}.  However, spectral analysis is also very
-compute intensive: most implementations count all the k-mers in sequencing data
-sets, which can be memory- or I/O-intensive for large data sets
-\cite{Zhang2014}.
-
-Streaming and semi-streaming algorithms can offer improved algorithmic and
-computational efficiency in the analysis of large data sets \cite{Charikar2004,
-Cormode2005}.  Streaming algorithms typically examine the data only once, and
-have small, fixed memory usage. Semi-streaming algorithms may examine the data
-a few times, with memory requirements that scale sublinearly with the size of
-the input data \cite{Feigenbaum2005}.  Streaming algorithms have not been
-applied to k-mer spectral analysis of sequencing reads, although Melsted et al.
-developed an effective streaming algorithm for calculating {\em aggregate}
-statistics of k-mer distributions from sequencing data \cite{Melsted2014}, and
-the Lighter error corrector uses a low-memory semi-streaming multipass approach
-to do efficient error correction \cite{lighter}.
 
 
 \section{Challenges in measuring diversity of metagenomics}
