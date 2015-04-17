@@ -1,5 +1,5 @@
-\contentsline {chapter}{\textbf {LIST OF TABLES}\vspace {\baselineskip }}{ix}
-\contentsline {chapter}{\textbf {LIST OF FIGURES}\vspace {\baselineskip }}{xi}
+\contentsline {chapter}{\textbf {LIST OF TABLES}\vspace {\baselineskip }}{viii}
+\contentsline {chapter}{\textbf {LIST OF FIGURES}\vspace {\baselineskip }}{x}
 \contentsline {chapter}{\numberline {Chapter 1} Introduction}{1}
 \contentsline {section}{\numberline {1.1}Overview}{1}
 \contentsline {section}{\numberline {1.2}Next-generation sequencing}{2}
@@ -80,5 +80,4 @@
 \contentsline {chapter}{\numberline {Chapter 6} Conclusion}{113}
 \contentsline {section}{\numberline {6.1}Summary}{114}
 \contentsline {section}{\numberline {6.2}Future Work}{116}
-\contentsline {chapter}{\textbf {APPENDIX}\textmd {\leaders \hbox to 1em{\hss .\hss }\hfill }}{121}
-\contentsline {chapter}{\textbf {BIBLIOGRAPHY}\textmd {\leaders \hbox to 1em{\hss .\hss }\hfill } \vspace {\baselineskip }}{122}
+\contentsline {chapter}{\textbf {Bibliography}\textmd {\leaders \hbox to 1em{\hss .\hss }\hfill } \vspace {\baselineskip }}{121}
