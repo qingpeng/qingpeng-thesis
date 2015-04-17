@@ -5,55 +5,50 @@ The style file: abbrv.bst
 Database file #1: qingpeng-thesis.bib
 A bad cross reference---entry "CormodeM05"
 refers to entry "DBLP:conf/sdm/2005", which doesn't exist
-Warning--I didn't find a database entry for "Iqbal2012"
-Warning--I didn't find a database entry for "Namiki2012"
-Warning--I didn't find a database entry for "Afiahayati2015"
-Warning--I didn't find a database entry for "Guo2015"
-Warning--I didn't find a database entry for "Li2015"
-Warning--I didn't find a database entry for "Haider2014"
 Warning--I didn't find a database entry for "DBLP:conf/sdm/2005"
 Warning--empty note in Brown2012blog
 Warning--empty year in colwellestimates
 Warning--there's a number but no volume in flajolet2008hyperloglog
-You've used 134 entries,
+Warning--empty journal in zhang2015crossing
+You've used 141 entries,
             2118 wiz_defined-function locations,
-            1301 strings with 37949 characters,
-and the built_in function-call counts, 67466 in all, are:
-= -- 5885
-> -- 5678
+            1327 strings with 39168 characters,
+and the built_in function-call counts, 70037 in all, are:
+= -- 6117
+> -- 5854
 < -- 10
-+ -- 2261
-- -- 2113
-* -- 6414
-:= -- 11841
-add.period$ -- 404
-call.type$ -- 134
-change.case$ -- 1451
++ -- 2330
+- -- 2175
+* -- 6644
+:= -- 12296
+add.period$ -- 425
+call.type$ -- 141
+change.case$ -- 1503
 chr.to.int$ -- 0
-cite$ -- 137
-duplicate$ -- 1655
-empty$ -- 3456
-format.name$ -- 2113
-if$ -- 13009
+cite$ -- 145
+duplicate$ -- 1730
+empty$ -- 3618
+format.name$ -- 2175
+if$ -- 13514
 int.to.chr$ -- 0
-int.to.str$ -- 134
-missing$ -- 134
-newline$ -- 672
-num.names$ -- 272
-pop$ -- 1240
+int.to.str$ -- 141
+missing$ -- 141
+newline$ -- 707
+num.names$ -- 286
+pop$ -- 1282
 preamble$ -- 1
-purify$ -- 1320
+purify$ -- 1365
 quote$ -- 0
-skip$ -- 1225
+skip$ -- 1275
 stack$ -- 0
-substring$ -- 3019
-swap$ -- 322
+substring$ -- 3138
+swap$ -- 328
 text.length$ -- 10
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 532
-warning$ -- 3
-while$ -- 418
-width$ -- 137
-write$ -- 1466
+type$ -- 560
+warning$ -- 4
+while$ -- 437
+width$ -- 144
+write$ -- 1541
 (There was 1 error message)

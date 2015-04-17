@@ -1,5 +1,11 @@
 \begin{thebibliography}{100}
 
+\bibitem{Afiahayati2015}
+Afiahayati, K.~Sato, and Y.~Sakakibara.
+\newblock Metavelvet-sl: an extension of the velvet assembler to a de novo
+  metagenomic assembler utilizing supervised learning.
+\newblock {\em DNA Res}, 22(1):69--77, Feb 2015.
+
 \bibitem{Alneberg2014}
 J.~Alneberg, B.~S. Bjarnason, I.~de~Bruijn, M.~Schirmer, J.~Quick, U.~Z. Ijaz,
   L.~Lahti, N.~J. Loman, A.~F. Andersson, and C.~Quince.
@@ -251,6 +257,11 @@ M.~G. Grabherr, B.~J. Haas, M.~Yassour, J.~Z. Levin, D.~A. Thompson, I.~Amit,
   without a reference genome}.
 \newblock {\em Nat. Biotechnol.}, 29(7):644--652, Jul 2011.
 
+\bibitem{Guo2015}
+X.~Guo, N.~Yu, X.~Ding, J.~Wang, and Y.~Pan.
+\newblock Dime: a novel framework for de novo metagenomic sequence assembly.
+\newblock {\em J Comput Biol}, 22(2):159--77, Feb 2015.
+
 \bibitem{Haas2013}
 B.~J. Haas, A.~Papanicolaou, M.~Yassour, M.~Grabherr, P.~D. Blood, J.~Bowden,
   M.~B. Couger, D.~Eccles, B.~Li, M.~Lieber, M.~D. Macmanes, M.~Ott, J.~Orvis,
@@ -259,6 +270,11 @@ B.~J. Haas, A.~Papanicolaou, M.~Yassour, M.~Grabherr, P.~D. Blood, J.~Bowden,
 \newblock De novo transcript sequence reconstruction from rna-seq using the
   trinity platform for reference generation and analysis.
 \newblock {\em Nat Protoc}, 8(8):1494--512, Aug 2013.
+
+\bibitem{Haider2014}
+B.~Haider, T.-H. Ahn, B.~Bushnell, J.~Chai, A.~Copeland, and C.~Pan.
+\newblock Omega: an overlap-graph de novo assembler for metagenomics.
+\newblock {\em Bioinformatics}, 30(19):2717--22, Oct 2014.
 
 \bibitem{Handelsman:1998aa}
 J.~Handelsman, M.~R. Rondon, S.~F. Brady, J.~Clardy, and R.~M. Goodman.
@@ -343,6 +359,12 @@ M.~Imelfort, D.~Parks, B.~J. Woodcroft, P.~Dennis, P.~Hugenholtz, and G.~W.
   related metagenomes.
 \newblock {\em PeerJ}, 2:e603, 2014.
 
+\bibitem{Iqbal2012}
+Z.~Iqbal, M.~Caccamo, I.~Turner, P.~Flicek, and G.~McVean.
+\newblock De novo assembly and genotyping of variants using colored de bruijn
+  graphs.
+\newblock {\em Nat Genet}, 44(2):226--32, Feb 2012.
+
 \bibitem{Kau:2011aa}
 A.~L. Kau, P.~P. Ahern, N.~W. Griffin, A.~L. Goodman, and J.~I. Gordon.
 \newblock Human nutrition, the gut microbiome and the immune system.
@@ -377,6 +399,12 @@ S.-M. Lee and A.~Chao.
 \newblock Estimating population size via sample coverage for closed
   capture-recapture models.
 \newblock {\em Biometrics}, pages 88--97, 1994.
+
+\bibitem{Li2015}
+D.~Li, C.-M. Liu, R.~Luo, K.~Sadakane, and T.-W. Lam.
+\newblock Megahit: an ultra-fast single-node solution for large and complex
+  metagenomics assembly via succinct de bruijn graph.
+\newblock {\em Bioinformatics}, Jan 2015.
 
 \bibitem{Li2010}
 R.~Li, H.~Zhu, J.~Ruan, W.~Qian, X.~Fang, Z.~Shi, Y.~Li, S.~Li, G.~Shan,
@@ -531,6 +559,12 @@ S.~Muthukrishnan.
 \newblock {\em Data streams: algorithms and applications}.
 \newblock Foundations and trends in theoretical computer science. Now
   Publishers, 2005.
+
+\bibitem{Namiki2012}
+T.~Namiki, T.~Hachiya, H.~Tanaka, and Y.~Sakakibara.
+\newblock Metavelvet: an extension of velvet assembler to de novo metagenome
+  assembly from short sequence reads.
+\newblock {\em Nucleic Acids Res}, 40(20):e155, Nov 2012.
 
 \bibitem{Patil:2012aa}
 K.~R. Patil, L.~Roune, and A.~C. McHardy.
@@ -858,6 +892,11 @@ D.~R. Zerbino and E.~Birney.
 \newblock Velvet: algorithms for de novo short read assembly using de bruijn
   graphs.
 \newblock {\em Genome Res}, 18(5):821--9, May 2008.
+
+\bibitem{zhang2015crossing}
+Q.~Zhang, S.~Awad, and C.~T. Brown.
+\newblock Crossing the streams: a framework for streaming.
+\newblock https://peerj.com/preprints/890/, 2015.
 
 \bibitem{Zhang2014}
 Q.~Zhang, J.~Pell, R.~Canino-Koning, A.~C. Howe, and C.~T. Brown.

@@ -2,12 +2,137 @@
 %% http://bibdesk.sourceforge.net/
 
 
-%% Created for Qingpeng Zhang at 2015-04-16 02:36:32 -0400 
+%% Created for Qingpeng Zhang at 2015-04-17 16:44:09 -0400 
 
 
 %% Saved with string encoding Unicode (UTF-8) 
 
 
+
+@article{zhang2015crossing,
+	Author = {Zhang, Qingpeng and Awad, Sherine and Brown, C Titus},
+	Date-Added = {2015-04-17 20:39:47 +0000},
+	Date-Modified = {2015-04-17 20:44:03 +0000},
+	Title = {Crossing the streams: a framework for streaming},
+	Volume = {https://peerj.com/preprints/890/},
+	Year = {2015}}
+
+@article{Li2015,
+	Abstract = {SUMMARY: MEGAHIT is a NGS de novo assembler for assembling large and complex metagenomics data in a time- and cost-efficient manner. It finished assembling a soil metagenomics dataset with 252 Gbps in 44.1 and 99.6 h on a single computing node with and without a graphics processing unit, respectively. MEGAHIT assembles the data as a whole, i.e. no pre-processing like partitioning and normalization was needed. When compared with previous methods on assembling the soil data, MEGAHIT generated a three-time larger assembly, with longer contig N50 and average contig length; furthermore, 55.8% of the reads were aligned to the assembly, giving a fourfold improvement. Availability and implementation: The source code of MEGAHIT is freely available at https://github.com/voutcn/megahit under GPLv3 license.
+CONTACT: rb@l3-bioinfo.com or twlam@cs.hku.hk Supplementary information: Supplementary data are available at Bioinformatics online.},
+	Author = {Li, Dinghua and Liu, Chi-Man and Luo, Ruibang and Sadakane, Kunihiko and Lam, Tak-Wah},
+	Date-Added = {2015-04-17 10:58:01 +0000},
+	Date-Modified = {2015-04-17 10:58:01 +0000},
+	Doi = {10.1093/bioinformatics/btv033},
+	Journal = {Bioinformatics},
+	Journal-Full = {Bioinformatics (Oxford, England)},
+	Month = {Jan},
+	Pmid = {25609793},
+	Pst = {aheadofprint},
+	Title = {MEGAHIT: an ultra-fast single-node solution for large and complex metagenomics assembly via succinct de Bruijn graph},
+	Year = {2015},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1093/bioinformatics/btv033}}
+
+@article{Afiahayati2015,
+	Abstract = {The assembly of multiple genomes from mixed sequence reads is a bottleneck in metagenomic analysis. A single-genome assembly program (assembler) is not capable of resolving metagenome sequences, so assemblers designed specifically for metagenomics have been developed. MetaVelvet is an extension of the single-genome assembler Velvet. It has been proved to generate assemblies with higher N50 scores and higher quality than single-genome assemblers such as Velvet and SOAPdenovo when applied to metagenomic sequence reads and is frequently used in this research community. One important open problem for MetaVelvet is its low accuracy and sensitivity in detecting chimeric nodes in the assembly (de Bruijn) graph, which prevents the generation of longer contigs and scaffolds. We have tackled this problem of classifying chimeric nodes using supervised machine learning to significantly improve the performance of MetaVelvet and developed a new tool, called MetaVelvet-SL. A Support Vector Machine is used for learning the classification model based on 94 features extracted from candidate nodes. In extensive experiments, MetaVelvet-SL outperformed the original MetaVelvet and other state-of-the-art metagenomic assemblers, IDBA-UD, Ray Meta and Omega, to reconstruct accurate longer assemblies with higher N50 scores for both simulated data sets and real data sets of human gut microbial sequences.},
+	Author = {Afiahayati and Sato, Kengo and Sakakibara, Yasubumi},
+	Date-Added = {2015-04-17 10:57:25 +0000},
+	Date-Modified = {2015-04-17 10:57:25 +0000},
+	Doi = {10.1093/dnares/dsu041},
+	Journal = {DNA Res},
+	Journal-Full = {DNA research : an international journal for rapid publication of reports on genes and genomes},
+	Keywords = {de novo assembler; metagenomic; microbial community; short read; supervised learning},
+	Month = {Feb},
+	Number = {1},
+	Pages = {69-77},
+	Pmc = {PMC4379979},
+	Pmid = {25431440},
+	Pst = {ppublish},
+	Title = {MetaVelvet-SL: an extension of the Velvet assembler to a de novo metagenomic assembler utilizing supervised learning},
+	Volume = {22},
+	Year = {2015},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1093/dnares/dsu041}}
+
+@article{Haider2014,
+	Abstract = {MOTIVATION: Metagenomic sequencing allows reconstruction of microbial genomes directly from environmental samples. Omega (overlap-graph metagenome assembler) was developed for assembling and scaffolding Illumina sequencing data of microbial communities.
+RESULTS: Omega found overlaps between reads using a prefix/suffix hash table. The overlap graph of reads was simplified by removing transitive edges and trimming short branches. Unitigs were generated based on minimum cost flow analysis of the overlap graph and then merged to contigs and scaffolds using mate-pair information. In comparison with three de Bruijn graph assemblers (SOAPdenovo, IDBA-UD and MetaVelvet), Omega provided comparable overall performance on a HiSeq 100-bp dataset and superior performance on a MiSeq 300-bp dataset. In comparison with Celera on the MiSeq dataset, Omega provided more continuous assemblies overall using a fraction of the computing time of existing overlap-layout-consensus assemblers. This indicates Omega can more efficiently assemble longer Illumina reads, and at deeper coverage, for metagenomic datasets.
+AVAILABILITY AND IMPLEMENTATION: Implemented in C++ with source code and binaries freely available at http://omega.omicsbio.org.},
+	Author = {Haider, Bahlul and Ahn, Tae-Hyuk and Bushnell, Brian and Chai, Juanjuan and Copeland, Alex and Pan, Chongle},
+	Date-Added = {2015-04-17 10:56:52 +0000},
+	Date-Modified = {2015-04-17 10:56:52 +0000},
+	Doi = {10.1093/bioinformatics/btu395},
+	Journal = {Bioinformatics},
+	Journal-Full = {Bioinformatics (Oxford, England)},
+	Mesh = {Algorithms; Computational Biology; Computers; DNA, Bacterial; Genome, Bacterial; Internet; Metagenome; Metagenomics; Programming Languages; Sequence Analysis, DNA; Software},
+	Month = {Oct},
+	Number = {19},
+	Pages = {2717-22},
+	Pmid = {24947750},
+	Pst = {ppublish},
+	Title = {Omega: an overlap-graph de novo assembler for metagenomics},
+	Volume = {30},
+	Year = {2014},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1093/bioinformatics/btu395}}
+
+@article{Guo2015,
+	Abstract = {The recently developed next generation sequencing platforms not only decrease the cost for metagenomics data analysis, but also greatly enlarge the size of metagenomic sequence datasets. A common bottleneck of available assemblers is that the trade-off between the noise of the resulting contigs and the gain in sequence length for better annotation has not been attended enough for large-scale sequencing projects, especially for the datasets with low coverage and a large number of nonoverlapping contigs. To address this limitation and promote both accuracy and efficiency, we develop a novel metagenomic sequence assembly framework, DIME, by taking the DIvide, conquer, and MErge strategies. In addition, we give two MapReduce implementations of DIME, DIME-cap3 and DIME-genovo, on Apache Hadoop platform. For a systematic comparison of the performance of the assembly tasks, we tested DIME and five other popular short read assembly programs, Cap3, Genovo, MetaVelvet, SOAPdenovo, and SPAdes on four synthetic and three real metagenomic sequence datasets with various reads from fifty thousand to a couple million in size. The experimental results demonstrate that our method not only partitions the sequence reads with an extremely high accuracy, but also reconstructs more bases, generates higher quality assembled consensus, and yields higher assembly scores, including corrected N50 and BLAST-score-per-base, than other tools with a nearly theoretical speed-up. Results indicate that DIME offers great improvement in assembly across a range of sequence abundances and thus is robust to decreasing coverage.},
+	Author = {Guo, Xuan and Yu, Ning and Ding, Xiaojun and Wang, Jianxin and Pan, Yi},
+	Date-Added = {2015-04-17 10:56:14 +0000},
+	Date-Modified = {2015-04-17 10:56:14 +0000},
+	Doi = {10.1089/cmb.2014.0251},
+	Journal = {J Comput Biol},
+	Journal-Full = {Journal of computational biology : a journal of computational molecular cell biology},
+	Keywords = {algorithms; cloud computing; de novo assembly; metagenome; sequences},
+	Month = {Feb},
+	Number = {2},
+	Pages = {159-77},
+	Pmc = {PMC4326031},
+	Pmid = {25684202},
+	Pst = {ppublish},
+	Title = {DIME: a novel framework for de novo metagenomic sequence assembly},
+	Volume = {22},
+	Year = {2015},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1089/cmb.2014.0251}}
+
+@article{Namiki2012,
+	Abstract = {An important step in 'metagenomics' analysis is the assembly of multiple genomes from mixed sequence reads of multiple species in a microbial community. Most conventional pipelines use a single-genome assembler with carefully optimized parameters. A limitation of a single-genome assembler for de novo metagenome assembly is that sequences of highly abundant species are likely misidentified as repeats in a single genome, resulting in a number of small fragmented scaffolds. We extended a single-genome assembler for short reads, known as 'Velvet', to metagenome assembly, which we called 'MetaVelvet', for mixed short reads of multiple species. Our fundamental concept was to first decompose a de Bruijn graph constructed from mixed short reads into individual sub-graphs, and second, to build scaffolds based on each decomposed de Bruijn sub-graph as an isolate species genome. We made use of two features, the coverage (abundance) difference and graph connectivity, for the decomposition of the de Bruijn graph. For simulated datasets, MetaVelvet succeeded in generating significantly higher N50 scores than any single-genome assemblers. MetaVelvet also reconstructed relatively low-coverage genome sequences as scaffolds. On real datasets of human gut microbial read data, MetaVelvet produced longer scaffolds and increased the number of predicted genes.},
+	Author = {Namiki, Toshiaki and Hachiya, Tsuyoshi and Tanaka, Hideaki and Sakakibara, Yasubumi},
+	Date-Added = {2015-04-17 10:54:25 +0000},
+	Date-Modified = {2015-04-17 10:54:25 +0000},
+	Doi = {10.1093/nar/gks678},
+	Journal = {Nucleic Acids Res},
+	Journal-Full = {Nucleic acids research},
+	Mesh = {Algorithms; Bacteria; Gastrointestinal Tract; Genome, Bacterial; Humans; Metagenomics; Sequence Analysis, DNA; Software},
+	Month = {Nov},
+	Number = {20},
+	Pages = {e155},
+	Pmc = {PMC3488206},
+	Pmid = {22821567},
+	Pst = {ppublish},
+	Title = {MetaVelvet: an extension of Velvet assembler to de novo metagenome assembly from short sequence reads},
+	Volume = {40},
+	Year = {2012},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1093/nar/gks678}}
+
+@article{Iqbal2012,
+	Abstract = {Detecting genetic variants that are highly divergent from a reference sequence remains a major challenge in genome sequencing. We introduce de novo assembly algorithms using colored de Bruijn graphs for detecting and genotyping simple and complex genetic variants in an individual or population. We provide an efficient software implementation, Cortex, the first de novo assembler capable of assembling multiple eukaryotic genomes simultaneously. Four applications of Cortex are presented. First, we detect and validate both simple and complex structural variations in a high-coverage human genome. Second, we identify more than 3 Mb of sequence absent from the human reference genome, in pooled low-coverage population sequence data from the 1000 Genomes Project. Third, we show how population information from ten chimpanzees enables accurate variant calls without a reference sequence. Last, we estimate classical human leukocyte antigen (HLA) genotypes at HLA-B, the most variable gene in the human genome.},
+	Author = {Iqbal, Zamin and Caccamo, Mario and Turner, Isaac and Flicek, Paul and McVean, Gil},
+	Date-Added = {2015-04-17 10:47:32 +0000},
+	Date-Modified = {2015-04-17 10:47:32 +0000},
+	Doi = {10.1038/ng.1028},
+	Journal = {Nat Genet},
+	Journal-Full = {Nature genetics},
+	Mesh = {Algorithms; Animals; Base Sequence; Chromosome Mapping; Genome, Human; Genotyping Techniques; HLA-B Antigens; Humans; Pan troglodytes; Sequence Analysis, DNA; Software},
+	Month = {Feb},
+	Number = {2},
+	Pages = {226-32},
+	Pmc = {PMC3272472},
+	Pmid = {22231483},
+	Pst = {epublish},
+	Title = {De novo assembly and genotyping of variants using colored de Bruijn graphs},
+	Volume = {44},
+	Year = {2012},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1038/ng.1028}}
 
 @inproceedings{DBLP:conf/bibm/MailletCVLP14,
 	Author = {Nicolas Maillet and Guillaume Collet and Thomas Vannier and Dominique Lavenier and Pierre Peterlongo},

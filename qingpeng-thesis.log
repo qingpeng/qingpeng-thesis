@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  17 APR 2015 08:10
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  17 APR 2015 16:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -470,27 +470,7 @@ Overfull \hbox (52.0282pt too wide) in paragraph at lines 114--153
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[14]
-
-LaTeX Warning: Citation `Iqbal2012' on page 15 undefined on input line 213.
-
-
-LaTeX Warning: Citation `Namiki2012' on page 15 undefined on input line 216.
-
-
-LaTeX Warning: Citation `Afiahayati2015' on page 15 undefined on input line 216
-.
-
-
-LaTeX Warning: Citation `Guo2015' on page 15 undefined on input line 216.
-
-
-LaTeX Warning: Citation `Li2015' on page 15 undefined on input line 216.
-
-
-LaTeX Warning: Citation `Haider2014' on page 15 undefined on input line 216.
-
-[15]
+[14] [15]
 Overfull \hbox (26.22604pt too wide) in paragraph at lines 229--240
 []\OT1/cmr/m/n/12 As nec-es-sary com-po-nents in NGS data anal-y-sis pipeline, 
 as-sem-bly and er-ror re-moval/correction
@@ -1096,37 +1076,34 @@ Chapter 6.
 ] [122
 
 ] [123] [124] [125] [126] [127] [128] [129]
-[130] [131] [132] [133]) [134] (./qingpeng-thesis.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+[130] [131] [132] [133] [134]) [135] (./qingpeng-thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 5226 strings out of 493315
- 80827 string characters out of 6137904
- 146982 words of memory out of 5000000
- 8498 multiletter control sequences out of 15000+600000
+ 5227 strings out of 493315
+ 80846 string characters out of 6137904
+ 147017 words of memory out of 5000000
+ 8499 multiletter control sequences out of 15000+600000
  15574 words of font info for 60 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  51i,17n,45p,786b,442s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
-></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb><
-/usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb>
-</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
-/usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
-usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></u
-sr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr
-/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/l
-ocal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loc
-al/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/
-texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/t
-exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/te
-xlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/tex
-live/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on qingpeng-thesis.pdf (149 pages, 1809706 bytes).
+</usr/local/texli
+ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texliv
+e/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb></usr/local/texlive/
+2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive
+/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/
+2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2
+013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/20
+13/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2013
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2013/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2013/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2013/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2013/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2013/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2013/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on qingpeng-thesis.pdf (150 pages, 1811588 bytes).
 PDF statistics:
- 1628 PDF objects out of 1728 (max. 8388607)
- 536 compressed objects within 6 object streams
+ 1631 PDF objects out of 1728 (max. 8388607)
+ 538 compressed objects within 6 object streams
  0 named destinations out of 1000 (max. 500000)
  216 words of extra memory for PDF output out of 10000 (max. 10000000)
 
