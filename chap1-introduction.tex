@@ -5,75 +5,77 @@ Species diversity is an important measurement of ecological communities.
 Scientists believe that there is a relationship between species diversity and 
 ecosystem processes \cite{Loreau:2001aa}. Evaluating the species diversity in a
 community is a central research topic in macroorganism ecology. Many methods 
-have been developed since decades ago, which make the question such as ``how many 
-species of birds in this habitat'' easier to answer. Nevertheless, scientists 
-have not started to think seriously about underlying questions such as ``How many 
+have been developed over the last few decades, aimed at answering questions such as ``how many 
+species of birds are in this habitat''. Nevertheless, until recently scientists 
+had not started to think seriously about larger-scale questions such as ``How many 
 species are there on earth?'' \cite{May:1988aa} or ``How many species are there 
 in the ocean?'' \cite{Mora:2011aa} until recently. Why? The answer is 
 straightforward: Microorganisms represent the vast majority of the Earth's 
-biodiversity and the assessment of microbial diversity is simply difficult. 
-Actually it is believed that microbial diversity is the outermost frontier of 
+biodiversity and the assessment of microbial diversity is quite difficult. 
+
+It is believed that microbial diversity is the outermost frontier of 
 the exploration of diversity \cite{magurran2011biological}. Microorganisms are 
 ubiquitous. They were the first forms of life on the Earth. There are more 
-bacterial cells inhabiting our body than our own cells \cite{Savage:1977aa}.
-They are essential to all life, too. There are several reasons why assessment 
+bacterial cells in our body than human cells \cite{Savage:1977aa}.
+They are essential to all life, too, ... @add something here.
+
+There are several reasons why assessment 
 of microbial diversity is such a challenge. First, the concept of species is 
-ambiguous. Morphological examination is impossible.Less than 1\% of 
+ambiguous. Morphological examination is impossible: fewer than 1\% of 
 microorganisms  in the biosphere can not be cultivated by traditional cultivation
-techniques\cite{Curtis:2002aa}. To overcome these obstacles, 
-metagenomics emerges, with the boost given by the progress of next-generation 
-sequencing(NGS) technology. Lots of metagenomics projects have been performed on 
+techniques\cite{Curtis:2002aa}. To overcome this obstacle, 
+metagenomics has emerged, driven by the progress of next-generation 
+sequencing (NGS) technology. Lots of metagenomics projects have been performed on 
 samples ranging from acid mine drainage channels to human gut. For complex 
 environmental samples 
-such as soil, the resulting data set will be huge. There are approximately a 
+such as soil, the resulting data sets can be huge. There are approximately a 
 billion microbial cells, with about 4 petabase pairs of DNA($4*{10}^{12}$ bp) \cite{Zarraonaindia:2013aa}. 
-Since we have limited sequencing power and other financial strain, the 
-resulting metagenomics data set from highly complex sample (e.g. soil) only 
-corresponds to a tiny fraction of the actual genomic content in the sample. 
-The large size of data set and the low sequencing coverage make the assessment of 
-microbial diversity of high diversity sample even harder. Novel method is 
-highly needed. 
+Since we have limited sequencing power, the 
+resulting metagenomics data sets from highly complex samples (e.g. soil) only 
+correspond to a tiny fraction of the actual genomic content in the sample. 
+The large size of data sets and the low sequencing coverage make the assessment of 
+microbial diversity of high diversity sample even harder. Novel methods are
+needed. 
 
 
 \section{Next-generation sequencing}
-Sequencing technology is changing really fast. Over the past decade, next-generation sequencing(NGS)
- has been the overwhelming technology and almost replaced classic Sanger sequencing technology. 
- Illumina and Roche 454 are the two most popular platforms. Illumina can generate reads with shorter
- length, typically 100 base pairs(bp) for HiSeq and 150 bp for MiSeq platform\cite{Qin:2010aa, Mason:2012aa},   
- but with lower cost compared to Roche 454 sequencing technology, 
+Sequencing technology is changing quickly. Over the past decade, next-generation sequencing (NGS)
+ has become the dominant technology and almost replaced classic Sanger sequencing technology. 
+ Illumina and Roche 454 are the two most popular platforms. Illumina can generate reads of shorter
+ lengths, typically 100 base pairs(bp) for HiSeq and 150 bp for MiSeq platform\cite{Qin:2010aa, Mason:2012aa},   % @CTB up to 250 for MiSeq and 150 for Hiseq
+ but at a much lower cost compared to the Roche 454 sequencing technology, 
  which generates reads with a length of 500 to 1K bp. In fact a recent study comparing Illumina versus Roche 454 for metagenomics
  shows that both platforms agreed on over 90\% of the assembled contiguous reads (contigs) and 89\% of the unassembled reads\cite{Luo:2012aa}.
-Because of the advantage of low cost, there is an obvious trend that Illumina is dominating the sequencing market, which 
-means while designing any tool for metagenomics, a developer should take the relatively short length of Illumina reads
+Because of the advantage of the low cost, there is a trend towards Illumina is dominating the sequencing market, which 
+means that while designing any tool for metagenomics, a developer should take the relatively short length of Illumina reads
  into account.
 
 
 \section{Metagenomics}
-It is believed that the word ``metagenomics'' was coined in 1998 \cite{Handelsman:1998aa},
- which can be translated as 'beyond the genome' \cite{Gilbert:2011aa}. At that time, 
- it is the cloning technique of environmental DNA randomly and screening for genes of interest, 
+It is believed that the word ``metagenomics'' was coined in 1998 \cite{Handelsman:1998aa};
+it can be translated as 'beyond the genome' \cite{Gilbert:2011aa}. At that time, 
+ it was based on the technique of cloning environmental DNA randomly and screening for genes of interest, 
  especially 16S ribosomal RNA (rRNA) genes. This technique was firstly applied in practice by Schmidt et al. in 1991 \cite{Schmidt:1991aa}.
- This was a crucial step in the investigation to microbial world. Before that it was standard 
- protocol to culture and isolate microbes from cells or living organisms of any other species and 
- then do analysis. This resulted seriously narrow picture of the diversity of an ecosystem as only a
+ This was a crucial step in expanding sequence-based investigation to the microbial world. Before that it was standard 
+ protocol to culture and isolate microbes 
+ then do analysis. This resulted in a much narrower picture of the diversity of an ecosystem as only a
  small portion of the microbial species (5\% or less) in the biosphere can be cultured with traditional cultivation techniques \cite{Sogin:2006aa}.
- Metagenomics with the concept of cloning DNA directly from an environment without cultivation 
- brings the researchers the ability to explore whole genomes from entire spectrum of organisms in an environment
-.
+ Metagenomics, with the concept of cloning DNA directly from an environment without cultivation,
+ brought researchers the ability to explore the entire spectrum of organisms in an environment.
  
-The improvement of NGS technology with high throughput and low cost has been accelerating
-the metagenomics research recently. The number of microbial species in some ecological community is huge. 
+The improvement of NGS technology with ever higher throughput and ever lower costs has been accelerating
+metagenomics research recently. % @CTB transition?
+The number of microbial species in some ecological community is huge. 
 In soil, it is estimated that there exist millions of species with most of them in low abundance \cite{Gans:2005aa}. 
 Only high throughput NGS strategy can sample the contents of those populations deeply enough
 to examine rare species.
 
-Currently, there are two approaches in metagenomics. One is amplicon metagenomics, to amplify genes of interest, such as 
-16S rRNA genes as taxonomic markers
-and sequence the libraries \cite{Sogin:2006aa}, which is the traditional way dating back to 1991 experiment by Schmidt et al. Many microbial diversity studies have relied 
-rely on this approach. The other one is whole genome shotgun metagenomics, which sequences
-the libraries of randomly isolated DNA fragments without targeting certain genes. Since the whole genomes of organisms in a sample are available rather than the limited
- genes of interest like 16S/18S rRNA, this whole genome shotgun sequencing approach can provide better taxonomic resolution and
- more information benefiting other investigation \cite{Tyson:2004aa} \cite{Qin:2010aa}.  Now there have been thousands of metagenomic genomes available
+Currently, there are two approaches in metagenomics. One is amplicon metagenomics, in which genes of interest, such as 
+16S rRNA genes, are amplified and sequenced \cite{Sogin:2006aa}. This is the traditional way dating back to the 1991 work by Schmidt et al. Many microbial diversity studies have relied 
+on this approach. The other approach is whole genome shotgun metagenomics, which sequences
+randomly isolated DNA fragments without targeting specific genes. Since the whole genomes of organisms in a sample are available, and not just the limited
+ genes of interest like 16S/18S rRNA, this whole genome shotgun sequencing approach can in theory provide better taxonomic resolution and
+ more information benefiting other investigation \cite{Tyson:2004aa} \cite{Qin:2010aa}.  Now there are thousands of metagenomic samples available
 in online database, such as MG-RAST \cite{Glass:2010aa}.
  
 There have been many metagenomics projects focusing on the microbial samples of different kinds of 
@@ -81,84 +83,87 @@ habitat, from extreme environment such as acid mine drainage channels with low c
  samples like human gut \cite{Qin:2010aa} and cow rumen \cite{Hess:2011aa}, to high complexity samples like seawater \cite{Venter:2004aa} and 
  soil \cite{Gilbert:2010aa}.
  
-Metagenomics studies have expanded our knowledge of microbial world in different habitats.
-Some of them shed light on the explanation of some serious human diseases. Studies have shown the associations between
-human gut metagenomes and type II diabetes \cite{Qin:2012aa}, obesity \cite{Turnbaugh:2009aa, Kau:2011aa} or crohn's disease \cite{Morgan:2012aa}. 
+Metagenomics studies have expanded our knowledge of the microbial world in different habitats.
+Some of them shed light on the explanation of some serious human diseases. Studies have shown associations between
+human gut metagenomes and type II diabetes \cite{Qin:2012aa}, obesity \cite{Turnbaugh:2009aa, Kau:2011aa} or Crohn's disease \cite{Morgan:2012aa}. 
 
-In almost all of these metagenomics projects, diversity analysis plays an important role to supply information about the 
-richness of species, the species abundance distribution in a sample or the similarity and difference between different samples, 
-all of which are crucial to draw insightful and reliable conclusion. Next the challenges in the assessment of microbial diversity will 
-be elaborated.
+In almost all of these metagenomics projects, diversity analysis plays an important role in supplying information about the 
+richness of species, the species abundance distribution in a sample or the similarity and difference between samples, 
+all of which are crucial to draw insightful and reliable conclusions.
+
 
 
 
 \section{Concept of Diversity}
-When we characterize an ecological community, diversity measurement is often the first step.
-It is always desirable to know how many species there are in a sample, which is the concept of richness and how abundant each
- species is relative to others in the same sample, which is the concept of evenness. 
- They are straightforward conceptually. But in practice, there are a large number of quantities that was suggested
- to measure species diversity to adapt the different scenarios of sampling individuals. 
+When we characterize an ecological community, diversity measurements are often the first step.
+It is always desirable to know how many species there are in a sample -- its ``richness'' -- and how abundant each
+ species is relative to others in the same sample -- its ``evenness''. 
+ They are straightforward conceptually. But in practice, there are a large number of quantities that are used
+ to measure species diversity, for the many different approaches to sampling individuals. 
 
-In a higher level, three diversity indices are well established and used in ecology, $\alpha$-diversity, $\beta$-diversity, and 
+At a high level, three diversity indices are well established and used in ecology; these are $\alpha$-diversity, $\beta$-diversity, and 
 $\gamma$-diversity. $\alpha$-diversity is the diversity in one defined habitat or sample. $\beta$-diversity compares species 
 diversity between habitats or samples.$\gamma$-diversity is the total diversity over a large region containing multiple ecosystems.[cite book]
 
 The concept of diversity has two aspects, richness and evenness. Richness is the total number of species
 identified in a sample, which is the simplest descriptor of a community structure. Evenness is a measure 
 of how different the abundance of a species is compared to other species in a community. If all the species in a
- community has the same abundance, the community has a higher evenness diversity. However all natural communities 
- are highly uneven, which means community is dominated by relatively few species and a large number of species
+ community has the same abundance, the community has a higher evenness diversity. However almost all natural communities 
+ are highly uneven, which means the community is dominated by relatively few species and there are a large number of species
  with low abundance. This raises
  a question about the effectiveness of using the measurement of richness to represent species diversity. Is a community
  with 1 dominant species and 10 rare species more diverse than a community with 3 dominant species and 2 rare species?
-  Thus a new metrics taking both richness and evenness into account is suggested. Two most popular diversity indices are Shannon diversity \cite{shannon2001mathematical},
+  Thus new metrics taking both richness and evenness into account have been suggested. Two most popular diversity indices are Shannon diversity \cite{shannon2001mathematical},
   which is based on information theory and shows the information in a community as an estimate of diversity, and Simpson diversity \cite{simpson1949measurement},
   which basically shows the probability that two individuals picked randomly from a community belong to the same species.
 
-Besides these two, Hill \cite{hill1973diversity} proposed a new diversity index, which uses a weighted count of species to measure 
-diversity, based on the species abundance distribution. This can be considered as a generalized diversity index, 
-since both Shannon and Simpson index and richness can be seen as special cases of Hill diversity index.
-It is necessary to note that we cannot tell if any index is better than the others. It all depends on the characteristics
-of a community and the process of sampling and other factors. More often an index is used just because it has
-been used by many others before in the same scenario, it may be because it is more feasible in this scenario 
-but it is not necessarily because it is better or even provide useful information.
+Besides these two, Hill \cite{hill1973diversity} proposed a new diversity inde based on the species abundance distribution, which uses a weighted count of species to measure 
+diversity. This can be considered as a generalized diversity index, 
+since both Shannon and Simpson index and richness can be seen as special cases of the Hill diversity index.
+It is necessary to note that we cannot tell if any index is generically better than the others. It all depends on the characteristics
+of a community and the process of sampling, as well as other factors. Often an index is used just because it has
+been used by many others before in the same scenario. It may be used because it is more feasible in this scenario 
+but it is not necessarily because it is better or even provides useful information.
+% @CTB this last statement is pretty strong; rephrase?
 
 In microbial ecology, richness is simply the most popular index to measure microbial diversity, partially because of 
 the challenge raised by the different characteristics of microbial community. Lots of methods to estimate richness in classic 
 ecology were borrowed to tackle the problem of estimating microbial diversity, which will be discussed in the next section.
+%@ ``most popular index'' - how did you assess this?
 
 
 \section{Problem Statement}
 
 
 In almost all  metagenomics projects, diversity analysis plays an important
-role to supply information about the richness of species, the species abundance
-distribution in a sample or the similarity and difference between different 
-samples, all of which are crucial to draw insightful and reliable conclusion. 
+role in supplying information about the richness of species, the species abundance
+distribution in a sample, and the similarity and difference between different 
+samples.
 The topic of microbial diversity measurement
 has been investigated for a long time with many methods and software packages
-developed. However there still remains lots of room for more work to do.
+developed. However there still remains lots of room for more work.
 
 
-Traditionally especially for amplicon metagenomics data set, OTUs(Operational 
+Traditionally used for amplicon metagenomics data set, OTUs(Operational 
 Taxonomic Units) based on 16S rRNA genes are used as the basic units for 
-diversity analysis. OTUs can be good replacement of the concept of ``species'' in 
+diversity analysis on shotgun metagenomic data. OTUs can be good replacements of the concept of ``species'' in 
 metagenomics. Basically contigs are assembled from reads and are ``binned'' into
 OTUs using composition-based or similarity-based approaches. Then the diversity
 can be estimated by using the abundance information of the OTUs.
-Basically the mainstream methods to measure microbial diversity are still
+The mainstream methods to measure microbial diversity are still
 focusing on the use of 16S rRNA amplicon metagenomics data. 
 Many of the
 popular microbial diversity analysis software packages generally accept 
 16S rRNA data as
-input. This is understandable that after all the concept of OTU is from the
+input. This is understandable because the concept of OTU is from the
 similarity of 16S rRNA sequences. Using 16S rRNA data to measure diversity is
 popular but is not without problems. 16S rRNAs may not be that reliable to be
 OTU markers. The reliability is sensitive to potential horizontal gene transfer
 and the variance of gene copy in bacteria. There have been suggestions that
 alternative marker genes should be used, such as single copy housekeeping genes.
+% @CTB this last switch to 16s discussion is rather surprising...?
 
-% from proposal, need to be rewritten to be more precise.
+% from proposal, need to be rewritten to be more precise. @CTB yes ;)
 Recently there are many more projects generating whole genome shotgun
 metagenomics data sets. However they are 
 mainly used for assembly and annotation purpose. Less attention was paid to
@@ -195,8 +200,9 @@ the increasingly large metagenomics data set.
 
 \section{Significance of Research}
 
-
-We established a series of approaches enable scalable
+% @CTB I think this needs to be rewritten using language not copy/pasted
+% from other papers.
+We established a series of approaches to enable scalable
 and effective investigation of microbial diversity using whole-genome shotgun
 metagenomic data.  Firstly a k-mer counting package - khmer was developed to
 enable fast and memory efficient k-mer-based analysis of sequencing data sets.
@@ -259,13 +265,15 @@ arrays, and trie structures, khmer relies
 
 
 \section{Outline of Dissertation}
+
+% @CTB you should replace ``we'' with ``I'' here :)
 In this dissertation
-we will discuss the series of approaches enabling scalable
+we will discuss in detail a series of approaches enabling scalable
 and effective investigation of microbial diversity using whole-genome shotgun
-metagenomic data in details. In chapter 2, we will do a brief review of relevant
+metagenomic data. In chapter 2, we will do a brief review of relevant
  literature about the challenges
 we face to enable diversity analysis of metagenomic data. In chapter 3, we will 
-describe the novel approach to count k-mers
+describe a novel approach to count k-mers
 efficiently and a scalable approach to retrieve the coverage of a read in a 
 data set based on efficient and online k-mer counting. In chapter 4, we will  introduce 
 the two applications of this approach, digital normalization to reduce the redundancy of metagenomic reads
