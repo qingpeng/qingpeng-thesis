@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  17 APR 2015 18:41
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  18 APR 2015 16:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -657,65 +657,73 @@ res/figure6_percent_offset_vs_fpr-eps-converted-to.pdf>] [37] [38] [39]
 Chapter 4.
 [42
 
-] <diginorm-ranks.pdf, id=463, 433.62pt x 289.08pt>
-File: diginorm-ranks.pdf Graphic file (type pdf)
+] <./figures/diginorm-ranks.pdf, id=463, 433.62pt x 289.08pt>
+File: ./figures/diginorm-ranks.pdf Graphic file (type pdf)
 
-<use diginorm-ranks.pdf>
-Package pdftex.def Info: diginorm-ranks.pdf used on input line 42.
+<use ./figures/diginorm-ranks.pdf>
+Package pdftex.def Info: ./figures/diginorm-ranks.pdf used on input line 42.
 (pdftex.def)             Requested size: 289.07999pt x 192.72981pt.
  [43]
-<diginorm-sim-genome.pdf, id=467, 433.62pt x 289.08pt>
-File: diginorm-sim-genome.pdf Graphic file (type pdf)
+<./figures/diginorm-sim-genome.pdf, id=467, 433.62pt x 289.08pt>
+File: ./figures/diginorm-sim-genome.pdf Graphic file (type pdf)
 
-<use diginorm-sim-genome.pdf>
-Package pdftex.def Info: diginorm-sim-genome.pdf used on input line 69.
+<use ./figures/diginorm-sim-genome.pdf>
+Package pdftex.def Info: ./figures/diginorm-sim-genome.pdf used on input line 6
+9.
 (pdftex.def)             Requested size: 216.81pt x 144.53964pt.
 
-<diginorm-ecoli-genome.pdf, id=468, 433.62pt x 289.08pt>
-File: diginorm-ecoli-genome.pdf Graphic file (type pdf)
+<./figures/diginorm-ecoli-genome.pdf, id=468, 433.62pt x 289.08pt>
+File: ./figures/diginorm-ecoli-genome.pdf Graphic file (type pdf)
 
-<use diginorm-ecoli-genome.pdf>
-Package pdftex.def Info: diginorm-ecoli-genome.pdf used on input line 70.
+<use ./figures/diginorm-ecoli-genome.pdf>
+Package pdftex.def Info: ./figures/diginorm-ecoli-genome.pdf used on input line
+ 70.
 (pdftex.def)             Requested size: 216.81pt x 144.53964pt.
 
-<diginorm-sim-transcr.pdf, id=469, 433.62pt x 289.08pt>
-File: diginorm-sim-transcr.pdf Graphic file (type pdf)
+<./figures/diginorm-sim-transcr.pdf, id=469, 433.62pt x 289.08pt>
+File: ./figures/diginorm-sim-transcr.pdf Graphic file (type pdf)
 
-<use diginorm-sim-transcr.pdf>
-Package pdftex.def Info: diginorm-sim-transcr.pdf used on input line 79.
+<use ./figures/diginorm-sim-transcr.pdf>
+Package pdftex.def Info: ./figures/diginorm-sim-transcr.pdf used on input line 
+79.
 (pdftex.def)             Requested size: 216.81pt x 144.53964pt.
 
-<diginorm-mouse-transcr.pdf, id=470, 433.62pt x 289.08pt>
-File: diginorm-mouse-transcr.pdf Graphic file (type pdf)
+<./figures/diginorm-mouse-transcr.pdf, id=470, 433.62pt x 289.08pt>
+File: ./figures/diginorm-mouse-transcr.pdf Graphic file (type pdf)
 
-<use diginorm-mouse-transcr.pdf>
-Package pdftex.def Info: diginorm-mouse-transcr.pdf used on input line 80.
+<use ./figures/diginorm-mouse-transcr.pdf>
+Package pdftex.def Info: ./figures/diginorm-mouse-transcr.pdf used on input lin
+e 80.
 (pdftex.def)             Requested size: 216.81pt x 144.53964pt.
- [44 <./diginorm-ranks.pdf>] [45 <./diginorm-sim-genome.pdf> <./diginorm-ecoli-
-genome.pdf>] [46 <./diginorm-sim-transcr.pdf> <./diginorm-mouse-transcr.pdf>] [
-47] [48]
-<diginorm-coverage2-raw.png, id=654, 1016.79875pt x 658.46pt>
-File: diginorm-coverage2-raw.png Graphic file (type png)
+ [44 <./figures/diginorm-ranks.pdf>]
+[45 <./figures/diginorm-sim-genome.pdf> <./figures/diginorm-ecoli-genome.pdf>]
+[46 <./figures/diginorm-sim-transcr.pdf> <./figures/diginorm-mouse-transcr.pdf>
+] [47] [48]
+<./figures/diginorm-coverage2-raw.png, id=654, 1016.79875pt x 658.46pt>
+File: ./figures/diginorm-coverage2-raw.png Graphic file (type png)
 
-<use diginorm-coverage2-raw.png>
-Package pdftex.def Info: diginorm-coverage2-raw.png used on input line 188.
+<use ./figures/diginorm-coverage2-raw.png>
+Package pdftex.def Info: ./figures/diginorm-coverage2-raw.png used on input lin
+e 188.
 (pdftex.def)             Requested size: 289.07999pt x 187.20087pt.
 
-<diginorm-coverage2-dn.png, id=656, 1060.96375pt x 672.5125pt>
-File: diginorm-coverage2-dn.png Graphic file (type png)
+<./figures/diginorm-coverage2-dn.png, id=656, 1060.96375pt x 672.5125pt>
+File: ./figures/diginorm-coverage2-dn.png Graphic file (type png)
 
-<use diginorm-coverage2-dn.png>
-Package pdftex.def Info: diginorm-coverage2-dn.png used on input line 189.
+<use ./figures/diginorm-coverage2-dn.png>
+Package pdftex.def Info: ./figures/diginorm-coverage2-dn.png used on input line
+ 189.
 (pdftex.def)             Requested size: 289.07999pt x 183.23293pt.
- [49 <./diginorm-coverage2-raw.png> <./diginorm-coverage2-dn.png>] <diginorm-ac
-cumulation.pdf, id=662, 433.62pt x 289.08pt>
-File: diginorm-accumulation.pdf Graphic file (type pdf)
+ [49 <./figures/diginorm-coverage2-raw.png> <./figures/diginorm-coverage2-dn.pn
+g>]
+<./figures/diginorm-accumulation.pdf, id=662, 433.62pt x 289.08pt>
+File: ./figures/diginorm-accumulation.pdf Graphic file (type pdf)
 
-<use diginorm-accumulation.pdf>
-Package pdftex.def Info: diginorm-accumulation.pdf used on input line 212.
+<use ./figures/diginorm-accumulation.pdf>
+Package pdftex.def Info: ./figures/diginorm-accumulation.pdf used on input line
+ 212.
 (pdftex.def)             Requested size: 289.07999pt x 192.72981pt.
- [50 <./diginorm-accumulation.pdf>] [51]
-[52] [53]
+ [50 <./figures/diginorm-accumulation.pdf>] [51] [52] [53]
 Overfull \hbox (13.15874pt too wide) in paragraph at lines 396--405
 [][] 
  []
@@ -1081,7 +1089,7 @@ Chapter 6.
 [134]) [135] (./qingpeng-thesis.aux) ) 
 Here is how much of TeX's memory you used:
  5224 strings out of 493315
- 80821 string characters out of 6137904
+ 81141 string characters out of 6137904
  147017 words of memory out of 5000000
  8499 multiletter control sequences out of 15000+600000
  15574 words of font info for 60 fonts, out of 8000000 for 9000
@@ -1102,7 +1110,7 @@ amsfonts/cm/cmsy10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmti10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmti12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmtt12.pfb>
-Output written on qingpeng-thesis.pdf (149 pages, 1809795 bytes).
+Output written on qingpeng-thesis.pdf (149 pages, 1809845 bytes).
 PDF statistics:
  1628 PDF objects out of 1728 (max. 8388607)
  536 compressed objects within 6 object streams
