@@ -6,25 +6,25 @@
 
 
 
-Here we propose a novel concept - IGS (informative genomic 
-segment) and use IGS as a replacement of OTUs to be the basic unit for 
-diversity analysis of whole shotgun metagenomics data sets. IGSs represent the 
+Here we propose a novel concept, ``informative genomic segment'' or IGS,
+and use IGS as a replacement of OTUs as the basic unit for 
+diversity analysis of whole shotgun metagenome data sets. IGSs represent the 
 unique information in a metagenomics data set and the abundance of IGSs in 
-different samples can be retrieved by the reads coverage through an efficient 
-k-mer counting method, which was discussed in the previous two chapters.
-This samples-by-IGS abundance data matrix is a promising
+different samples can be retrieved by analyzing read coverage with an efficient 
+k-mer counting method (discussed in the previous two chapters).
+The samples-by-IGS abundance data matrix is a promising
 replacement of samples-by-OTU data matrix used in 16S rRNA based analysis and 
 many existing statistical methods can be applied to work on the samples-by-IGS 
-data matrix to investigate the diversity. We applied the IGS-based method to 
-several simulated data sets and several real metagenomic data sets from samples
-like human microbiome, sea water and soil. The results of beta diversity analysis
+data matrix to investigate diversity. We applied this method to
+several simulated data sets and several real metagenomic data sets, including
+human microbiome, sea water and soil data. The results of beta diversity analysis
 showed that the samples were clustered with comparable or better accuracy than 
 existing alignment-based method. The results of alpha diversity analysis 
-showed this was a promising new approach to estimate the metagenome size.
+showed this was a promising new approach to estimate metagenome sizes.
 Since this method is totally binning-free, 
-assembly-free, annotation-free, reference-free, it is specifically promising 
-to deal with the highly diverse samples, while we are facing large amount of 
-``dark matters'' in it, like soil.
+assembly-free, annotation-free, and reference-free, it is promising 
+for dealing with highly diverse environmental samples, where we are facing
+many unknowns.
 
 
 
@@ -35,29 +35,30 @@ on the concept of species. For 16S rRNA amplicon metagenomics data set, it is
 based on the concept of OTUs. While the concept of OTUs can be used to analyze
 large shotgun metagenomics data set, normally assembly, binning and annotation
 are required before doing diversity analysis. However for many metagenomics 
-project these are difficult
-tasks, lacking of necessary reference genome or being computationally
-expensive. So we are interested in finding an approach to bypass the difficult
+projects these are difficult
+tasks, lacking necessary reference genome or requiring expensive
+computation. So we are interested in finding an approach to bypass difficult
 tasks like assembly, binning, annotation and use the raw reads to make the 
 diversity analysis of large shotgun whole genome metagenomic data possible. 
+% @CTB citations for this paragraph?
 
 We began such efforts by proposing that
  the concept of k-mer (a DNA segment with the length of k) could be used as the 
  basic unit to measure
 the diversity. K-mers can be considered as the atom of information in DNA 
 sequences. One of the composition-based approaches to binning is to use the 
-k-mers as the signatures.\cite{Alneberg2014} \cite{Imelfort2014} Suppose the sizes of microbial genomes are similar and
+k-mers as the source of signatures\cite{Alneberg2014, Imelfort2014}. Suppose the sizes of microbial genomes are similar and
  the difference between genomic content of microbial genomes is similar, the 
 number of distinct k-mers in the sequence data set correlates to the number of 
 species in a sample. However, because of sequencing error, which is unavoidable
- due to the limit of sequencing technology, this k-mer based analysis doe not 
-work well. One sequencing error on a read will generate at most k erroneous 
-k-mers. In metagenomics data set, especially with high coverage, most of the 
+ due to the limit of sequencing technology, this k-mer based analysis does not 
+work well on unassembled data. One sequencing error on a read will generate up to  k erroneous 
+k-mers. In metagenomics data sets, especially with high coverage, most of the 
 distinct observed k-mers are from sequencing errors.
 %add citation about k-mer based diversity analysis ,entropy...
 % add some results /figures
 
-Next we shifted the focus from k-mers onto the upper level - reads. 
+Next we shifted the focus from k-mers onto a higher level - reads. 
 In previous chapter, we have discussed a novel approach to use median k-mer 
 count in a read to estimate
 sequencing depth without a reference assembly, based on which the framework for
@@ -65,11 +66,11 @@ streaming analysis of short DNA sequencing reads was developed.
 It also offers a novel way to distill information from reads by reducing the
  bad effect of sequencing errors so that we can use those informative reads to 
 measure the microbial diversity. We term those informative reads as 
-IGSs(informative genomic segments), which can be considered as segments of DNA 
+IGSs (informative genomic segments), which can be considered segments of DNA 
 on a microbial genome. Those IGSs should be different enough to represent the 
 abstract information a genome contains. Suppose microbial genomes contain 
 similar number of those IGSs, as they contain similar number of distinct 
-k-mers, the number of IGSs will correlate with the species richness in a 
+k-mers; then the number of IGSs will correlate with the species richness in a 
 sample, and the abundance distribution of IGSs will be related to species 
 evenness in a sample. Furthermore, we can get the abundance of the IGSs across
 different samples. Many classic diversity estimation methods based on OTUs 
@@ -81,7 +82,7 @@ and the diversity of actual species subsequently.
 % need expanding
 For alpha diversity, we can generate a list of IGSs and the respective 
 abundance in a sample. Then existing estimators like Chao's can be applied to 
-estimate the total number of IGSs in the sample. Rarefaction curve based on the
+estimate the total number of IGSs in the sample. Rarefaction curves based on the
 number of IGSs can also be generated. 
 
 % need expand the discussion from IGS in one sample to IGS in different samples.
@@ -97,13 +98,13 @@ analysis like clustering and ordination.
 information of a genome}
 
 Median k-mer abundance can represent sequencing depth of a read, as discussed
-in last chapter.\cite{Brown2012}.
+in last chapter (published as \cite{Brown2012}).
  For a sequencing reads data set with multiple species, the sequencing depth of
  a read is related to the abundance of species where the read originates from. 
 
 % figure 1a should be marked 
 The upper plot in Figure \ref{fig:reads_to_IGS} shows the abundance distribution of reads 
-from 4 simulated sequencing data sets with different sequencing depth - 3 
+from 4 simulated sequencing data sets with different sequencing depths - 3 
 sequencing data sets generated with different sequencing coverage(1x, 10x, 40x)
  from 3 simulated random genomes respectively and 1 combined data set with all 
 the aforementioned data sets. No error is introduced in these simulated 
@@ -116,7 +117,7 @@ Each point on the curve shows that there are $Y$ reads with a sequencing depth o
 cover the same DNA segment in a genome that single read originates. So we can 
 estimate that there are $Y/X$ distinct DNA segments with reads coverage as $X$. 
 We term these distinct DNA segments in species genome as 
-IGSs(informative genomic segments). We can transform the upper plot in 
+IGSs (informative genomic segments). We can transform the upper plot in 
 Figure \ref{fig:reads_to_IGS} to show the number of IGSs and their respective 
 reads coverage, as 
 shown in lower plot. We sum up the numbers of IGSs with 
@@ -131,7 +132,7 @@ genome(63.2\%). The IGSs can be seen as the
 genomic segments on a genome with the length of reads.(Figure \ref{fig:IGS}  
 Assume the composition of species 
 genome is totally random, which is the case in the simulated data sets, the 
-number of IGSs(N) in a species genome is related to the size of genome(G), 
+number of IGSs (N) in a species genome is related to the size of genome(G), 
 read length(L) and k size(k), which can be denoted as
 
 \[N =\frac{G}{L}  \]
@@ -141,7 +142,7 @@ number of IGSs is
 
 \[1000000/80 = 12500 \], 
 
-which is pretty close to the observed value. See Table \ref{table:IGSs}
+which is close to the observed value. See Table \ref{table:IGSs}
 
 
 \begin{figure}[!ht]
@@ -226,16 +227,16 @@ abundance & number of IGS \\
 Suppose from a reads data set, the coverage distribution of reads is as 
 shown in Table \ref{table:coverage_reads}. We transform this coverage distribution
 of reads into abundance distribution of IGSs, as shown in Table \ref{table:coverage_IGS}.
-For example, there are 23 IGSs with abundance as 3. This is calculated by dividing  
+For example, there are 23 IGSs with abundance 3. This is calculated by dividing  
 total number of reads with coverage as 3, which is 69, by the coverage 3.
-Similarly there are 24 IGSs with abundance as 4. 
-If we draw an analogy between IGSs and OTUs, this is like there are 23 
-different OTUs with 3 reads mapped to, and 24 different OTUs with 4 reads mapped to, and so on.
-Next all the different IGSs and the corresponding abundance can be listed,
+Similarly there are 24 IGSs with abundance 4. 
+If we draw an analogy between IGSs and OTUs, this is like saying there are 23 
+different OTUs with 3 reads mapped to each OTU, and 24 different OTUs with 4 reads mapped to each OTU, and so on.
+Next all the different IGSs and the corresponding abundances can be listed,
 as shown in Table \ref{table:list_IGS}. This list is the counterpart of an 
 OTU table in OTU based diversity analysis.
 With such table at hand, existing statistical methods and software 
-packages can be used to investigate the alpha diversity.  
+packages can be directly used to investigate the alpha diversity.  
 
 
 \begin{table}[!ht]
@@ -267,7 +268,7 @@ IGS ID & abundance \\
 
 \subsection{IGS can be used to do beta diversity analysis}
 
-As in alpha diversity analysis, OTU table is also a foundation for beta 
+As with alpha diversity analysis, the OTU table is also a foundation for beta 
 diversity analysis. As long as we get a reliable OTU table, there are existing 
 pipelines to do the beta diversity analysis. 
 
@@ -309,7 +310,7 @@ a coverage as C\_B in sampleB, just like read R as one of them. Similarly,
 the C\_B reads in sampleB should all have a coverage as C\_A in sampleA.
 
 Suppose there are 6 reads in sample A, all have a coverage as 3 in sampleA, 
-and have a coverage as 2 in sampleB.According to the discussion about IGS in previous section, the 6 reads cover 
+and have a coverage as 2 in sampleB. According to the discussion about IGS in previous section, the 6 reads cover 
 2 IGSs with a coverage as 3 for each IGSs. There should be 4 reads in sampleB 
 covering the exact same 2 IGSs, with a coverage as 2 in sampleB.
 Now we have 2 distinct IGSs with redundancy as 3 and 2 in the two samples 
@@ -409,7 +410,7 @@ also the evenness.
 
 To evaluate the effectiveness of beta diversity analysis using IGS based method, 
 we compared the dissimilarity matrix generated by IGS based method with the 
-true matrix,since we know exactly the species composition of the 
+true matrix, since we know exactly the species composition of the 
 simulated data set.
 
 
