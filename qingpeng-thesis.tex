@@ -58,44 +58,23 @@
 \begin{abstract}
 
 
-
- Species diversity is an important measurement of ecological communities. Scientists 
-believe that there is a strong relationship between species diversity and ecosystem processes.
- In almost all metagenomics projects, diversity analysis plays an important role in supplying information 
- about the richness of species, the species abundance
-distribution in a sample, and the similarity/difference between 
-samples, all of which are crucial to draw insightful and reliable conclusions. Since we have limited
- sequencing power and financial constraints, the metagenomics data sets from 
- high diversity samples like soil only correspond to a tiny fraction of the actual genomic
- content in the sample. The large size of data sets and low coverage make the assessment of microbial 
- diversity in complex samples even harder. With novel applications of data structures and the development 
- of novel algorithms, my research provides the necessary and highly desired computational methods to enable 
- scalable microbial diversity analysis of the complex metagenomes, with further potential to facilitate other analysis like assembly, annotation.
-
-
- This dissertation
-covers an overview of existing approaches of doing microbial diversity analysis
- of metagenomic samples, especially based on the concept of OTU, including the
-steps in the procedure, like contigs binning, statistical
-analysis of OTU abundance information to estimate the microbial diversity.  As
-the foundation of the IGS based framework, we described a novel method to count k-mers
-efficiently and a scalable approach to retrieve the coverage of a read in a 
-data set based on efficient and online k-mer counting. We also introduced the
-applications of this approach in reducing the redundancy of metagenomic reads
-dataset and analyzing sequencing error, which is beneficial to other tasks 
-in metagenomic data analysis, like
-assembly or error trimming. Next, we discussed how we developed the concept 
-of IGS based on the methods of efficient k-mer counting and digital
-normalization discussed before.  
-The application of IGS to analyze microbial diversity of metagenomic data sets 
-was discussed and the performance of the IGS method on simulated data sets and
-real data sets were demonstrated in the final chapters. 
-Since this method is totally binning-free,
-assembly-free, annotation-free, reference-free, it is specifically promising to
-deal with the highly diverse samples, while we are facing large amount of dark
-matters in it, like soil.
-
-  
+Species diversity is an important measurement of ecological communities.
+Scientists believe that there is a strong relationship between species
+diversity and ecosystem processes. However efforts to investigate microbial
+diversity using whole genome shotgun reads data are still scarce. 
+With novel applications of data structures
+and the development of novel algorithms, firstly we developed an efficient k-mer counting
+approach and approaches to enable scalable streaming analysis of large and 
+error-prone short-read shotgun data sets. Then based on these efforts, we developed a 
+statistical framework allowing for scalable diversity analysis of large,
+complex metagenomes without the need for assembly or reference sequences. This
+method is evaluated on multiple large metagenomes from a variety of
+environments, such as seawater, human microbiome, soil. Given the velocity in
+growth of sequencing data, this method is promising for analyzing highly
+diverse samples with relatively low computational requirements. Further, as the
+method does not depend on reference genomes, it also provides opportunities to
+tackle the large amounts of unknown “dark matter” we find in metagenomic
+datasets.
 
 
 
@@ -171,9 +150,9 @@ Dedication goes here.
 %%%%%%%    APPENDICES    %%%%%%%%%%
 %% If you wish to include one appendix, remove the "%" from the 
 %% following two lines.
-\renewcommand{\appname}{APPENDIX}
-\appendix
-\input{gloss}
+%\renewcommand{\appname}{APPENDIX}
+%\appendix
+%\input{gloss}
 %% To include several appendices, remove the only the "%"
 %% in front of "\appendix".
 
@@ -201,7 +180,7 @@ Dedication goes here.
 %% instead of “Bibliography” if that is the convention in your discipline. 
 %% To do so, place your choice in the  empty argument 
 %% of the following command and remove the "%".
-\renewcommand{\bibname}{BIBLIOGRAPHY}
+%\renewcommand{\bibname}{BIBLIOGRAPHY}
 %% The bibliography may be made using BibTeX.
 %% If it's made from scratch,
 %% remove the "%" in front of "\begin{thebibliography}{???}"
