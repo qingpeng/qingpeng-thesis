@@ -186,18 +186,9 @@ Basically the abundance distribution of IGSs with different coverage in a
 sample data set can be acquired using the method shown above.
 
 Suppose from a reads data set, the coverage distribution of reads is as 
-shown in Table \ref{table:read_coverage}.
-There are 69 reads with coverage as 3, 96 reads with coverage as 4, 
-and so on. We transform this coverage distribution
-of reads into abundance distribution of IGSs, as shown in Table \ref{table:igs_coverage}.
-For example, there are 23 IGSs with abundance 3. This is calculated by dividing  
-total number of reads with coverage as 3, which is 69, by the coverage 3.
-Similarly there are 24 IGSs with abundance 4. 
-If we draw an analogy between IGSs and OTUs, this is like saying there are 23 
-different OTUs with 3 reads mapped to each OTU, and 24 different OTUs with 4 reads mapped to each OTU, and so on.
-
-
-\begin{table}[!ht]
+shown in this table: %Table \ref{table:read_coverage}.
+\\
+%\begin{table}[!ht]
 \begin{tabular}{|c|c|c|c|c|}
 coverage & number of reads \\
 \hline 
@@ -210,12 +201,15 @@ coverage & number of reads \\
 \end{tabular}
 \begin{flushleft}
 \end{flushleft}
-\caption{\bf Reads coverage distribution.}
-\label{table:read_coverage}
-\end{table}
+%\caption{\bf Reads coverage distribution.}
+%\label{table:read_coverage}
+%\end{table}
 
-
-\begin{table}[!ht]
+There are 69 reads with coverage as 3, 96 reads with coverage as 4, 
+and so on. We transform this coverage distribution
+of reads into abundance distribution of IGSs, as shown in this table: %Table \ref{table:igs_coverage}.
+\\
+%\begin{table}[!ht]
 \begin{tabular}{ |c | c |c| c|c| }
 abundance & number of IGS \\
 \hline 
@@ -228,20 +222,20 @@ abundance & number of IGS \\
 \end{tabular}
 \begin{flushleft}
 \end{flushleft}
-\caption{\bf IGS abundance distribution.}
-\label{table:igs_coverage}
-\end{table}
+%\caption{\bf IGS abundance distribution.}
+%\label{table:igs_coverage}
+%\end{table}
 
+For example, there are 23 IGSs with abundance 3. This is calculated by dividing  
+total number of reads with coverage as 3, which is 69, by the coverage 3.
+Similarly there are 24 IGSs with abundance 4. 
+If we draw an analogy between IGSs and OTUs, this is like saying there are 23 
+different OTUs with 3 reads mapped to each OTU, and 24 different OTUs with 4 reads mapped to each OTU, and so on.
 
 Next all the different IGSs and the corresponding abundances can be listed,
-as shown in Table \ref{table:igs_abundance}. 
-This list is the counterpart of an 
-OTU table in OTU based diversity analysis.
-With such table at hand, existing statistical methods and software 
-packages can be directly used to investigate the alpha diversity.  
-
-
-\begin{table}[!ht]
+as shown here: %able \ref{table:igs_abundance}. 
+\\
+%\begin{table}[!ht]
 \begin{tabular}{ |c | c |c| c|c| }
 IGS ID & abundance \\
 \hline 
@@ -260,10 +254,14 @@ IGS ID & abundance \\
 \end{tabular}
 \begin{flushleft}
 \end{flushleft}
-\caption{\bf Listing IGSs with the corresponding abundances.}
-\label{table:igs_abundance}
-\end{table}
+%\caption{\bf Listing IGSs with the corresponding abundances.}
+%\label{table:igs_abundance}
+%\end{table}
 
+This list is the counterpart of an 
+OTU table in OTU based diversity analysis.
+With such table at hand, existing statistical methods and software 
+packages can be directly used to investigate the alpha diversity.  
 
 \subsection{IGS can be used to do beta diversity analysis}
 
@@ -272,9 +270,9 @@ diversity analysis. As long as we get a reliable OTU table, there are existing
 pipelines to do the beta diversity analysis. 
 
 A typical OTU table across different samples is like this, which is also 
-called samples-by-OTU data matrix.(Table \ref{table:OTU_table})
-
-\begin{table}[!ht]
+called samples-by-OTU data matrix.%(Table \ref{table:OTU_table})
+\\
+%\begin{table}[!ht]
 \begin{tabular}{ |c | c |c| c|c| }
     OTU ID & Sample1 ID & Sample2 ID & Sample3 ID\\
 \hline 
@@ -286,13 +284,13 @@ OUT3 & 3 & 1 & 4 \\
 \end{tabular}
 \begin{flushleft}
 \end{flushleft}
-\caption{\bf Samples-by-OTU matrix.}
-\label{table:OTU_table}
-\end{table}
+%\caption{\bf Samples-by-OTU matrix.}
+%\label{table:OTU_table}
+%\end{table}
 
-Like a OTU table, we hope to have the IGS table for the IGSs. (Table \ref{table:IGS_table})
-
-\begin{table}[!ht]
+Like a OTU table, we hope to have the IGS table for the IGSs. %(Table \ref{table:IGS_table})
+\\
+%\begin{table}[h]
 \begin{tabular}{ |c | c |c| c|c| }
     IGS ID & Sample1 ID & Sample2 ID & Sample3 ID\\
 \hline 
@@ -302,12 +300,10 @@ IGS2 & 2 & 4 & 0 \\
 IGS3 & 3 & 3 & 4 \\
 ...  & ... & ... & ... \\
 \end{tabular}
-\begin{flushleft}
-\end{flushleft}
-\caption{\bf Samples-by-IGS matrix.}
-\label{table:IGS_table}
-\end{table}
-
+%\caption{\bf Samples-by-IGS matrix.}
+%\label{table:IGS_table}
+%\end{table}
+\\
     
 So now the problem is how we can generate a sample-by-IGS data matrix as 
 the counterpart of samples-by-OTU data matrix so many of  the existing 
@@ -349,12 +345,19 @@ all the 4 samples. The 2 distinct IGSs has a coverage as 5,1,2,1 in the
 both with 5,1,2,1 reads mapped to in sample A,B,C,D respectively.
 
 Like a OTU table, here we can have the IGS table for the two IGSs:
+%    IGS\_ID SampleA SampleB SampleC SampleD\\
+%    IGS1   5       1       2       1\\
+%    IGS2   5       1       2       1\\
 \\
-    IGS\_ID SampleA SampleB SampleC SampleD\\
-    IGS1   5       1       2       1\\
-    IGS2   5       1       2       1\\
-\\
-    
+\begin{tabular}{ |c | c |c| c|c| }
+    IGS & SampleA & SampleB & SampleC & SampleD\\
+\hline 
+&&&&\\
+IGS1 & 5 & 1 & 2 & 1 \\
+IGS2 & 5 & 1 & 2 & 1 \\
+\end{tabular}
+
+
     
     
  % should all include alpha and beta diversity results
@@ -386,8 +389,7 @@ sample5        & AFGH & 10 & A:10 F:10 G:10 H:10 & 400K\\
 sample6        & IFGH & 10 & I:10 F:10 G:10 H:10 & 400K\\
 
 \end{tabular}
-\begin{flushleft}
-\end{flushleft}
+
 \label{table:simulated_metag}
 \end{table}
 
