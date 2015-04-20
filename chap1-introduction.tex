@@ -39,9 +39,9 @@ needed.
 Over the past decade, next-generation sequencing (NGS) has become the dominant
 technology and almost replaced classic Sanger sequencing technology. Illumina
 and Roche 454 are the two most popular platforms. Illumina can generate reads
-of shorter lengths, typically 100 base pairs(bp) for HiSeq and 150 bp for MiSeq
-platform\cite{Qin:2010aa, Mason:2012aa},   % @CTB up to 250 for MiSeq and 150
-for Hiseq but at a much lower cost compared to the Roche 454 sequencing
+of shorter lengths, typically up to 150 base pairs(bp) for HiSeq and 250 bp for MiSeq
+platform\cite{Qin:2010aa, Mason:2012aa},   % @CTB up to 250 for MiSeq and 150 @QP edited
+but at a much lower cost compared to the Roche 454 sequencing
 technology, which generates reads with a length of 500 to 1K bp. In fact a
 recent study comparing Illumina versus Roche 454 for metagenomics shows that
 both platforms agreed on over 90\% of the assembled contiguous reads (contigs)
@@ -62,15 +62,15 @@ was standard protocol to culture and isolate microbes then do analysis. This
 resulted in a much narrower picture of the diversity of an ecosystem as only a
 small portion of the microbial species (5\% or less) in the biosphere can be
 cultured with traditional cultivation techniques \cite{Sogin:2006aa}.
-Metagenomics, with the concept of cloning DNA directly from an environment
+Metagenomics, with the concept of cloning DNA directly from sample 
 without cultivation, brought researchers the ability to explore the entire
 spectrum of organisms in an environment.
 
-The improvement of NGS technology with ever higher throughput and ever lower
-costs has been accelerating metagenomics research recently. % @CTB transition?
 The number of microbial species in some ecological community is huge. In soil,
 it is estimated that there exist millions of species with most of them in low
-abundance \cite{Gans:2005aa}. Only high throughput NGS strategy can sample the
+abundance \cite{Gans:2005aa}. The improvement of NGS technology with ever higher throughput and ever lower
+costs has been accelerating metagenomics research recently, % @CTB transition?@QP edited.
+since only high throughput NGS strategy can sample the
 contents of those populations deeply enough to examine rare species.
 
 Currently, there are two approaches in metagenomics. One is amplicon
@@ -93,7 +93,7 @@ like human gut \cite{Qin:2010aa} and cow rumen \cite{Hess:2011aa}, to high
 complexity samples like seawater \cite{Venter:2004aa} and soil
 \cite{Gilbert:2010aa}.
 
-Metagenomics studies have expanded our knowledge of the microbial world in
+Metagenomics studies have revealed lots of knowledge of the microbial community in
 different habitats. Some of them shed light on the explanation of some serious
 human diseases. Studies have shown associations between human gut metagenomes
 and type II diabetes \cite{Qin:2012aa}, obesity \cite{Turnbaugh:2009aa,
@@ -149,19 +149,19 @@ index, since both Shannon and Simpson index and richness can be seen as special
 cases of the Hill diversity index. It is necessary to note that we cannot tell
 if any index is generically better than the others. It all depends on the
 characteristics of a community and the process of sampling, as well as other
-factors. Often an index is used just because it has been used by many others
-before in the same scenario. It may be used because it is more feasible in this
-scenario but it is not necessarily because it is better or even provides useful
-information.
-% @CTB this last statement is pretty strong; rephrase?
-% 
+factors. How to choose the diversity indices to better represent the 
+diversity information of a community has been investigated and discussed extensively 
+\cite{Bohannan2003,Haegeman:2013aa,Morris2014}.
+
 In microbial ecology, richness is simply the most popular index to measure
 microbial diversity, partially because of the challenge raised by the different
-characteristics of microbial community. Lots of methods to estimate richness in
+characteristics of microbial community. Most of the microbial diversity studies
+concentrate on species richness comparison\cite{Bohannan2003}. 
+Lots of methods to estimate richness in
 classic ecology were borrowed to tackle the problem of estimating microbial
 diversity, which will be discussed in the next section.
 %@ ``most popular index'' - how did you assess this?
-%
+%@QP add citation
 %%
 \section{Problem Statement}
 
@@ -189,8 +189,10 @@ measure diversity is popular but is not without problems. 16S rRNAs may not be
 that reliable to be OTU markers. The reliability is sensitive to potential
 horizontal gene transfer and the variance of gene copy in bacteria. There have
 been suggestions that alternative marker genes should be used, such as single
-copy housekeeping genes.
+copy housekeeping genes. Thus measuring diversity beyond using 16S rRNA data is 
+worth investigating.
 % @CTB this last switch to 16s discussion is rather surprising...?
+% @QP one more sentence is added.
 % 
 % from proposal, need to be rewritten to be more precise. @CTB yes ;)
 Recently there are many more projects generating whole genome shotgun
@@ -225,6 +227,8 @@ metagenomics data set.
 
 % @CTB I think this needs to be rewritten using language not copy/pasted from
 % other papers.
+% @QP done. has been rewritten
+
 We established a series of approaches to enable scalable and effective
 investigation of microbial diversity using whole-genome shotgun metagenomic
 data. Firstly a k-mer counting package - khmer was developed to enable fast and
