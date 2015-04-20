@@ -147,8 +147,7 @@ which is close to the observed value. See Table \ref{table:IGSs}
 
 \begin{figure}[!ht]
 \centerline{\includegraphics[width=4in]{./figures/from_reads_to_IGS.png}}
-%\caption{\bf cluster of GOS samples using IGS method}
-\caption{\bf from reads to IGS}
+\caption{\bf Transforming reads into IGSs.}
 \label{fig:reads_to_IGS}
 \end{figure}
 
@@ -158,7 +157,7 @@ which is close to the observed value. See Table \ref{table:IGSs}
 }
 \begin{tabular}{ |c | c |c| c|c| }
 Data set & total number of IGSs \\
-\hline \\
+\hline 
 1X depth                   & 6419  \\
 10X depth                  & 12022  \\
 40X depth                  & 12371 \\
@@ -172,7 +171,7 @@ Data set & total number of IGSs \\
 
 \begin{figure}[!ht]
 \centerline{\includegraphics[width=4in]{./figures/IGSs_figure.pdf}}
-\caption{\bf the concept of IGS}
+\caption{\bf IGS(informative genomic segment) can represent the novel information of a genome.}
 \label{fig:IGS}
 \end{figure}
 
@@ -180,7 +179,7 @@ Data set & total number of IGSs \\
 
 
 
-\subsection{IGS can be used to do alpha diversity analysis}
+\subsection{Using IGS to analyze alpha diversity}
 
 Basically the abundance distribution of IGSs with different coverage in a 
 sample data set can be acquired using the method shown above.
@@ -192,7 +191,7 @@ shown in this table: %Table \ref{table:read_coverage}.
 \begin{tabular}{|c|c|c|c|c|}
 coverage & number of reads \\
 \hline 
-&\\
+%&\\
 3                   & 69  \\
 4                  & 96  \\
 5                  & 125 \\
@@ -213,7 +212,7 @@ of reads into abundance distribution of IGSs, as shown in this table: %Table \re
 \begin{tabular}{ |c | c |c| c|c| }
 abundance & number of IGS \\
 \hline 
-&\\
+%&\\
 3                   & 23  \\
 4                  & 24  \\
 5                  & 25 \\
@@ -239,7 +238,7 @@ as shown here: %able \ref{table:igs_abundance}.
 \begin{tabular}{ |c | c |c| c|c| }
 IGS ID & abundance \\
 \hline 
-&\\
+%&\\
 1                   & 3  \\
 1                 & 3  \\
 1                  & 3 \\
@@ -263,21 +262,21 @@ OTU table in OTU based diversity analysis.
 With such table at hand, existing statistical methods and software 
 packages can be directly used to investigate the alpha diversity.  
 
-\subsection{IGS can be used to do beta diversity analysis}
+\subsection{Using IGS to analyze beta diversity}
 
 As with alpha diversity analysis, the OTU table is also a foundation for beta 
 diversity analysis. As long as we get a reliable OTU table, there are existing 
-pipelines to do the beta diversity analysis. 
+pipelines to perform the beta diversity analysis. 
 
 A typical OTU table across different samples is like this, which is also 
-called samples-by-OTU data matrix.%(Table \ref{table:OTU_table})
+called a samples-by-OTU data matrix:%(Table \ref{table:OTU_table})
 \\
 %\begin{table}[!ht]
 \begin{tabular}{ |c | c |c| c|c| }
-    OTU ID & Sample1 ID & Sample2 ID & Sample3 ID\\
+    OTU ID & Sample A & Sample B & Sample C \\
 \hline 
-&&&\\
-OTU1 & 3 & 4 & 2 \\
+%&&\\
+OTU1 & 3 & 4 & 2  \\
 OTU2 & 2 & 5 & 0 \\
 OUT3 & 3 & 1 & 4 \\
 ...  & ... & ... & ... \\
@@ -288,14 +287,14 @@ OUT3 & 3 & 1 & 4 \\
 %\label{table:OTU_table}
 %\end{table}
 
-Like a OTU table, we hope to have the IGS table for the IGSs. %(Table \ref{table:IGS_table})
+Like a OTU table, we hope to have the IGS table for the IGSs: %(Table \ref{table:IGS_table})
 \\
 %\begin{table}[h]
 \begin{tabular}{ |c | c |c| c|c| }
-    IGS ID & Sample1 ID & Sample2 ID & Sample3 ID\\
+    IGS ID & Sample A & Sample B & Sample C \\
 \hline 
-&&&\\
-IGS1 & 2 & 3 & 2 \\
+%&&&\\
+IGS1 & 2 & 3 & 2  \\
 IGS2 & 2 & 4 & 0 \\
 IGS3 & 3 & 3 & 4 \\
 ...  & ... & ... & ... \\
@@ -304,60 +303,84 @@ IGS3 & 3 & 3 & 4 \\
 %\label{table:IGS_table}
 %\end{table}
 \\
+
+
+
+\begin{figure}[!ht]
+ \centerline{\includegraphics[width=7in]{./figures/read_coverage_samples.png}}
+\caption{\bf Get the coverage of a read in samples. A read in sample A has the coverage of 5 in sample A, has
+the coverage of 8 in sample B.}
+\label{fig:read_coverage_samples}
+\end{figure}
+
+
+
     
-So now the problem is how we can generate a sample-by-IGS data matrix as 
-the counterpart of samples-by-OTU data matrix so many of  the existing 
-tools/methods used for OTU-based diversity can be borrowed for this kind 
+So now the problem is how we can generate a samples-by-IGS matrix as 
+the counterpart of samples-by-OTU matrix so many of the existing 
+tools/methods used for OTU-based diversity analysis can be borrowed for this kind 
 of IGS-based analysis, just as what is shown above for alpha diversity analysis.
 
-Firstly, as how we get the coverage of a read from a sample dataset in this 
-sample dataset, we can get the coverage of a read from a sample A dataset in 
-another sample B dataset. We can still use the median k-mer count to represent 
-the coverage. The basic idea is the same. 
+Firstly, using the same approach to get the coverage of a read in the sample data set where it is from 
+(Figure \ref{fig:read_coverage_samples}-A), we can get the coverage of a read from sample A dataset in 
+ sample B dataset (Figure \ref{fig:read_coverage_samples}-B). We still use the median k-mer count to represent 
+the coverage of a read.  
 
-Because a read must derive from a segment in the genome of some species in a 
-sample, if a read R from sample A with a coverage C\_A in sample A has a 
-coverage as C\_B in sample B, that means that segment of genome in sample A 
-from which read R derive also exists in sample B. That genomic segment has 
-a coverage as C\_A in sample A and has a coverage as C\_B in sample B. 
-Roughly there should be about C\_A reads (read R should be one of them) 
-in sampleA covering that genomic segment and C\_B reads in sampleB covering 
-that genomic segment. Meanwhile, the C\_A reads in sampleA should all have 
-a coverage as C\_B in sampleB, just like read R as one of them. Similarly,
-the C\_B reads in sampleB should all have a coverage as C\_A in sampleA.
+\begin{figure}[!ht]
+ \centerline{\includegraphics[width=7in]{./figures/coverage_profile.png}}
+ \caption{\bf From read coverage profile to IGS. (A): Get the coverage profile of one read. (B): Get the coverage
+ profiles of all the reads in 3 samples. (C): Group the reads with same coverage profiles into ``super bin''. 
+ (D): Calculate the number of IGSs in each ``super bin''.}
+\label{fig:coverage_profile}
+\end{figure}
 
-Suppose there are 6 reads in sample A, all have a coverage of 3 in sampleA, 
-and they all have a coverage of 2 in sampleB. According to the discussion about IGS in previous section, the 6 reads cover 
-2 IGSs with a coverage as 3 for each IGSs. There should be 4 reads in sampleB 
-covering the exact same 2 IGSs, with a coverage as 2 in sampleB.
-Now we have 2 distinct IGSs with redundancy as 3 and 2 in the two samples 
-respectively. Small numbers are used in the analysis here as an example. It should
-be noted that the analysis is based on much larger numbers.
+For a data set with several samples to analyze, firstly we can get the coverage of a read across different samples and get a read coverage
+profile like ``4:6:2'', as shown in Figure \ref{fig:coverage_profile}(A). 
+For all the reads in the samples we can get such read coverage profiles, as 
+shown in Figure \ref{fig:coverage_profile}(B). 
+We have already known that "contigs with similar coverage profiles are likely
+to have originated from the same microbial population"\cite{Imelfort2014}.
+Several new binning methods based on coverage profiles have been developed
+based on such assumption\cite{Albertsen2013,Karlsson2013,Alneberg2014,Nielsen2014,Imelfort2014}.
+Thus, here we can assume that reads with similar coverage profiles are 
+likely to have originated from the same genomic region. Actually it is safer to 
+say reads with different coverage profiles are not likely to have originated from
+the same genomic region. The next step is to group those reads with same
+coverage profiles together into ``super bin'' in different samples, as shown 
+in Figure \ref{fig:coverage_profile}(C). The reads in each ``super bin'' may 
+not be from the same species, but they should be from the species that have
+same abundance profile across samples. In the example shown in the figure,
+the 6 reads from sample A, the 4 reads from sample B and the 4 reads from
+sample C all have the same coverage profile as ``3:2:2''. Actually, the 
+numbers of reads from different samples with same coverage profile have 
+similar ratio to the numbers in the profile, like ``6:4:4''
+versus ``3:2:2'' in the example above. (Experiments using simulated data are not
+shown here.)
+ 
+Next we can use the approach similar to the one used for alpha diversity analysis
+to estimate the size of the genomic region each ``super bin'' covers, represented
+by the number of IGSs. Still for the example in Figure \ref{fig:coverage_profile}(C),
+6 reads from sample A grouped into the first ``super bin'' have a coverage of 3 
+in sample A, where they originate from. The number of IGSs those 6 reads cover can be calculated as $6/3$, which is 2. 
+Thus 2 IGSs have an abundance profile as ``3:2:2'' across the samples.
+Similarly there are 2 IGSs with abundance profile as ``2:0:3'' and 1 IGS 
+with abundance profile as ``2:4:3'', as shown in Figure \ref{fig:coverage_profile}(D).
 
-We can expand this example from 2 samples to 4 samples(A,B,C,D), as in the samples-
-by-OTU(IGS) matrix above. If we find 10 reads in sampleA, with coverage as 5-1-2-1 in samples 
-A-B-C-D respectively. (We call ``5-1-2-1'' a ``coverage  spectrum'' across samples.)
-So there should be about 2 reads in sampleB, 4 reads in sampleC, 2 reads 
-in sampleD, all of which have a ``coverage spectrum'' as ``5-1-2-1''. Basically 
-these 18 reads altogether cover 2 distinct IGSs, which apparently exist in 
-all the 4 samples. The 2 distinct IGSs has a coverage as 5,1,2,1 in the 
-4 samples respectively.If we draw an analogy between IGSs and OTUs, this is like there are 2 OTUs, 
-both with 5,1,2,1 reads mapped to in sample A,B,C,D respectively.
-
-Like a OTU table, here we can have the IGS table for the two IGSs:
-%    IGS\_ID SampleA SampleB SampleC SampleD\\
-%    IGS1   5       1       2       1\\
-%    IGS2   5       1       2       1\\
-\\
+List those IGSs and the corresponding abundance profiles across samples,
+we can have the samples-by-IGS matrix like this:
+\newline
 \begin{tabular}{ |c | c |c| c|c| }
-    IGS & SampleA & SampleB & SampleC & SampleD\\
+    IGS & Sample A & Sample B & Sample C\\
 \hline 
-&&&&\\
-IGS1 & 5 & 1 & 2 & 1 \\
-IGS2 & 5 & 1 & 2 & 1 \\
+IGS1 & 3 & 2 & 2\\ 
+IGS2 & 3 & 2 & 2\\ 
+IGS3 & 2 & 0 & 3\\ 
+IGS4 & 2 & 0 & 3\\ 
+IGS5 & 2 & 4 & 3\\ 
 \end{tabular}
 
-
+With such samples-by-IGS matrix, similarity matrix between samples can be calculated using different similarity indices, like 
+Bray-Curtis. Next clustering and ordination methods can be applied to better interpret the relationship between samples. 
     
     
  % should all include alpha and beta diversity results
@@ -402,8 +425,8 @@ In this experiment, we use ACE metric since we find it is more accurate than
 Chao1, since it uses more abundance information.
 
 
-\begin{table}[h]
-\begin{tabular}{|l|l|l|l|l|l|}
+\begin{table}[!ht]
+\begin{tabular}{|c|c|c|c|c|c|}
 \hline
 \textbf{} & \textbf{\begin{tabular}[c]{@{}l@{}}observed \\ IGS\end{tabular}} &
 \textbf{ACE} & \textbf{\begin{tabular}[c]{@{}l@{}}simpson \\
@@ -438,8 +461,8 @@ true matrix, since we know exactly the species composition of the
 simulated data set.
 
 
-\begin{table}[h]
-\begin{tabular}{|l|l|l|l|l|l|l|}
+\begin{table}[!ht]
+\begin{tabular}{|c|c|c|c|c|c|c|}
 \hline
                   & \textbf{sample 1} & \textbf{sample2} & \textbf{sample 3} & \textbf{sample 4} & \textbf{sample 5} & \textbf{sample 6} \\ \hline
 \textbf{sample 1} & 0.00              & 0.25             & 0.50              & 0.50              & 0.75              & 1.00              \\ \hline
@@ -454,8 +477,8 @@ from species composition directly. }
 \label{table:simulated_real_matrix}
 \end{table}
 
-\begin{table}[h]
-\begin{tabular}{|l|l|l|l|l|l|l|}
+\begin{table}[!ht]
+\begin{tabular}{|c|c|c|c|c|c|c|}
 \hline
                   & \textbf{sample 1} & \textbf{sample2} & \textbf{sample 3} & \textbf{sample 4} & \textbf{sample 5} & \textbf{sample 6} \\ \hline
 \textbf{sample 1} & 0.00              & 0.35             & 0.60              & 0.66              & 0.80              & 1.00              \\ \hline
