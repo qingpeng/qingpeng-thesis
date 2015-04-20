@@ -185,34 +185,41 @@ Data set & total number of IGSs \\
 Basically the abundance distribution of IGSs with different coverage in a 
 sample data set can be acquired using the method shown above.
 
+Suppose from a reads data set, the coverage distribution of reads is as 
+shown in Table \ref{table:read_coverage}.
+There are 69 reads with coverage as 3, 96 reads with coverage as 4, 
+and so on. We transform this coverage distribution
+of reads into abundance distribution of IGSs, as shown in Table \ref{table:igs_coverage}.
+For example, there are 23 IGSs with abundance 3. This is calculated by dividing  
+total number of reads with coverage as 3, which is 69, by the coverage 3.
+Similarly there are 24 IGSs with abundance 4. 
+If we draw an analogy between IGSs and OTUs, this is like saying there are 23 
+different OTUs with 3 reads mapped to each OTU, and 24 different OTUs with 4 reads mapped to each OTU, and so on.
 
 
 \begin{table}[!ht]
-\caption{
-\bf{coverage distribution of reads}
-}
-\begin{tabular}{ |c | c |c| c|c| }
+\begin{tabular}{|c|c|c|c|c|}
 coverage & number of reads \\
-\hline \\
+\hline 
+&\\
 3                   & 69  \\
 4                  & 96  \\
 5                  & 125 \\
-6        & 150 \\
+6                   & 150 \\
 ...        & ... \\
 \end{tabular}
 \begin{flushleft}
 \end{flushleft}
-\label{table:coverage_reads}
+\caption{\bf Reads coverage distribution.}
+\label{table:read_coverage}
 \end{table}
 
 
 \begin{table}[!ht]
-\caption{
-\bf{abundance distribution of IGSs}
-}
 \begin{tabular}{ |c | c |c| c|c| }
 abundance & number of IGS \\
-\hline \\
+\hline 
+&\\
 3                   & 23  \\
 4                  & 24  \\
 5                  & 25 \\
@@ -221,31 +228,24 @@ abundance & number of IGS \\
 \end{tabular}
 \begin{flushleft}
 \end{flushleft}
-\label{table:coverage_IGS}
+\caption{\bf IGS abundance distribution.}
+\label{table:igs_coverage}
 \end{table}
 
-Suppose from a reads data set, the coverage distribution of reads is as 
-shown in Table \ref{table:coverage_reads}. We transform this coverage distribution
-of reads into abundance distribution of IGSs, as shown in Table \ref{table:coverage_IGS}.
-For example, there are 23 IGSs with abundance 3. This is calculated by dividing  
-total number of reads with coverage as 3, which is 69, by the coverage 3.
-Similarly there are 24 IGSs with abundance 4. 
-If we draw an analogy between IGSs and OTUs, this is like saying there are 23 
-different OTUs with 3 reads mapped to each OTU, and 24 different OTUs with 4 reads mapped to each OTU, and so on.
+
 Next all the different IGSs and the corresponding abundances can be listed,
-as shown in Table \ref{table:list_IGS}. This list is the counterpart of an 
+as shown in Table \ref{table:igs_abundance}. 
+This list is the counterpart of an 
 OTU table in OTU based diversity analysis.
 With such table at hand, existing statistical methods and software 
 packages can be directly used to investigate the alpha diversity.  
 
 
 \begin{table}[!ht]
-\caption{
-\bf{list of IGSs with abundance information}
-}
 \begin{tabular}{ |c | c |c| c|c| }
 IGS ID & abundance \\
-\hline \\
+\hline 
+&\\
 1                   & 3  \\
 1                 & 3  \\
 1                  & 3 \\
@@ -260,10 +260,9 @@ IGS ID & abundance \\
 \end{tabular}
 \begin{flushleft}
 \end{flushleft}
-\label{table:list_IGS}
+\caption{\bf Listing IGSs with the corresponding abundances.}
+\label{table:igs_abundance}
 \end{table}
-
-
 
 
 \subsection{IGS can be used to do beta diversity analysis}
@@ -273,25 +272,47 @@ diversity analysis. As long as we get a reliable OTU table, there are existing
 pipelines to do the beta diversity analysis. 
 
 A typical OTU table across different samples is like this, which is also 
-called samples-by-OTU data matrix.
-\\
-OTU\_ID Sample1\_ID Sample2\_ID Sample3\_ID\\
-OTU1   3          4          2\\
-OTU2   2          5          0\\
-OTU3   3          1          4\\
-\\
+called samples-by-OTU data matrix.(Table \ref{table:OTU_table})
+
+\begin{table}[!ht]
+\begin{tabular}{ |c | c |c| c|c| }
+    OTU ID & Sample1 ID & Sample2 ID & Sample3 ID\\
+\hline 
+&&&\\
+OTU1 & 3 & 4 & 2 \\
+OTU2 & 2 & 5 & 0 \\
+OUT3 & 3 & 1 & 4 \\
+...  & ... & ... & ... \\
+\end{tabular}
+\begin{flushleft}
+\end{flushleft}
+\caption{\bf Samples-by-OTU matrix.}
+\label{table:OTU_table}
+\end{table}
+
+Like a OTU table, we hope to have the IGS table for the IGSs. (Table \ref{table:IGS_table})
+
+\begin{table}[!ht]
+\begin{tabular}{ |c | c |c| c|c| }
+    IGS ID & Sample1 ID & Sample2 ID & Sample3 ID\\
+\hline 
+&&&\\
+IGS1 & 2 & 3 & 2 \\
+IGS2 & 2 & 4 & 0 \\
+IGS3 & 3 & 3 & 4 \\
+...  & ... & ... & ... \\
+\end{tabular}
+\begin{flushleft}
+\end{flushleft}
+\caption{\bf Samples-by-IGS matrix.}
+\label{table:IGS_table}
+\end{table}
+
     
-Like a OTU table, we hope to have the IGS table for the IGSs:
-\\
-    IGS\_ID SampleA SampleB SampleC SampleD\\
-    IGS1   5       1       2       1\\
-    IGS2   5       1       2       1\\
-\\
-    
-    So now the problem is how we can generate a sample-by-IGS data matrix as 
-    the counterpart of samples-by-OTU data matrix so many of  the existing 
-    tools/methods used for OTU-based diversity can be borrowed for this kind 
-    of IGS-based analysis, just as what is shown above for alpha diversity analysis.
+So now the problem is how we can generate a sample-by-IGS data matrix as 
+the counterpart of samples-by-OTU data matrix so many of  the existing 
+tools/methods used for OTU-based diversity can be borrowed for this kind 
+of IGS-based analysis, just as what is shown above for alpha diversity analysis.
 
 Firstly, as how we get the coverage of a read from a sample dataset in this 
 sample dataset, we can get the coverage of a read from a sample A dataset in 
@@ -355,7 +376,8 @@ synthetic reads data sets.
 }
 \begin{tabular}{ |c | c |c| c|c| }
 sample ID & species composition & sequencing depth & abundance of species & size of metagenome (bp)\\
-\hline \\
+\hline
+&&&&\\
 sample1        & AAAB & 10 & A:30 B:10 & 200K\\
 sample2        & AABC & 10 & A:20 B:10 C:10 & 300K\\
 sample3        & ABCD & 10 & A:10 B:10 C:10 D:10 & 400K\\
@@ -456,8 +478,9 @@ matrix can be calculated by using the IGS method, as shown in Table
 are not very close to those in the real matrix. But the relative values 
 correspond to those in the real matrix well enough to show the relative distance 
 between each pair of samples. To get a objective metric, we use the
-Mantel (cite) test to calculate the correlation value between the two 
-matrixes. The correlation is 0.9714, which means a very strong correlation 
+Mantel \cite{Mantel1967} test to calculate the correlation value between the two 
+matrixes.
+The correlation is 0.9714, which means a very strong correlation 
 between the two matrices. Thus the dissimilarity matrix from the IGS method 
 reflects the true relationship between samples effectively.
 
@@ -544,7 +567,7 @@ will be discussed below.
 \end{figure}
 
 We also check the beta diversity analysis with different error rate and notice
-that the beta diversity is less prone to increasing sequencing error rate (@reference figure). We 
+that the beta diversity is less prone to increasing sequencing error rate \ref{fig:beta_no_adjustment}. We 
 will therefore focus on alpha diversity in the discussion below.
 
 \subsubsection{the effect of sequencing error to the accuracy of analysis}
@@ -978,7 +1001,7 @@ Figure \ref{fig:GPGC-alpha} shows the rarefaction curve and estimated number
 of IGSs of the samples. Basically the ``corn'' and ``switchgrass'' samples
 have higher richness than ``restored'' and ``prairie'' samples. This observation 
 that cultivation increases the richness of soil 
-is consistent with the intermediate disturbance hypothesis (citation). The disturbance 
+is consistent with the intermediate disturbance hypothesis \cite{wilkinson1999disturbing}. The disturbance 
 from treatment like cultivation opens more niches and the stable 
 communities in prairie eliminate some populations by the principle of 
 competitive exclusion.
