@@ -142,29 +142,34 @@ number of IGSs is
 
 \[1000000/80 = 12500 \], 
 
-which is close to the observed value. See Table \ref{table:IGSs}
+which is close to the observed value (Table \ref{table:IGSs}).
 
 
 \begin{figure}[!ht]
-\centerline{\includegraphics[width=4in]{./figures/from_reads_to_IGS.png}}
+\centerline{\includegraphics[width=6in]{./figures/from_reads_to_IGS.png}}
 \caption{\bf Transforming reads into IGSs.}
 \label{fig:reads_to_IGS}
 \end{figure}
 
+
+
+
+
 \begin{table}[!ht]
-\caption{
-\bf{Total number of IGSs in different simulated reads data sets.}
-}
+\centering
 \begin{tabular}{ |c | c |c| c|c| }
+\hline 
 Data set & total number of IGSs \\
 \hline 
 1X depth                   & 6419  \\
 10X depth                  & 12022  \\
 40X depth                  & 12371 \\
 1X,10X,40X combined        & 30748 \\
+\hline 
 \end{tabular}
-\begin{flushleft}
-\end{flushleft}
+\caption{
+\bf{Total number of IGSs in different simulated reads data sets.}
+}
 \label{table:IGSs}
 \end{table}
 
@@ -198,8 +203,7 @@ coverage & number of reads \\
 6                   & 150 \\
 ...        & ... \\
 \end{tabular}
-\begin{flushleft}
-\end{flushleft}
+
 %\caption{\bf Reads coverage distribution.}
 %\label{table:read_coverage}
 %\end{table}
@@ -219,8 +223,7 @@ abundance & number of IGS \\
 6        & 25 \\
 ...        & ... \\
 \end{tabular}
-\begin{flushleft}
-\end{flushleft}
+
 %\caption{\bf IGS abundance distribution.}
 %\label{table:igs_coverage}
 %\end{table}
@@ -307,7 +310,7 @@ IGS3 & 3 & 3 & 4 \\
 
 
 \begin{figure}[!ht]
- \centerline{\includegraphics[width=7in]{./figures/read_coverage_samples.png}}
+ \centerline{\includegraphics[width=6in]{./figures/read_coverage_samples.png}}
 \caption{\bf Get the coverage of a read in samples. A read in sample A has the coverage of 5 in sample A, has
 the coverage of 8 in sample B.}
 \label{fig:read_coverage_samples}
@@ -327,7 +330,7 @@ Firstly, using the same approach to get the coverage of a read in the sample dat
 the coverage of a read.  
 
 \begin{figure}[!ht]
- \centerline{\includegraphics[width=7in]{./figures/coverage_profile.png}}
+ \centerline{\includegraphics[width=6in]{./figures/coverage_profile.png}}
  \caption{\bf From read coverage profile to IGS. (A): Get the coverage profile of one read. (B): Get the coverage
  profiles of all the reads in 3 samples. (C): Group the reads with same coverage profiles into ``super bin''. 
  (D): Calculate the number of IGSs in each ``super bin''.}
@@ -348,7 +351,7 @@ say reads with different coverage profiles are not likely to have originated fro
 the same genomic region. The next step is to group those reads with same
 coverage profiles together into ``super bin'' in different samples, as shown 
 in Figure \ref{fig:coverage_profile}(C). The reads in each ``super bin'' may 
-not be from the same species, but they should be from the species that have
+not be from the same species, however, they should be from the species that have
 same abundance profile across samples. In the example shown in the figure,
 the 6 reads from sample A, the 4 reads from sample B and the 4 reads from
 sample C all have the same coverage profile as ``3:2:2''. Actually, the 
@@ -397,23 +400,24 @@ there is no sequencing error introduced in the
 synthetic reads data sets.
 
 \begin{table}[!ht]
-\scriptsize
-\caption{
-\bf{6 synthetic simple metagenomes}
-}
+\centering
+\resizebox{16cm}{!} {
 \begin{tabular}{ |c | c |c| c|c| }
+\hline
 sample ID & species composition & sequencing depth & abundance of species & size of metagenome (bp)\\
 \hline
-&&&&\\
 sample1        & AAAB & 10 & A:30 B:10 & 200K\\
 sample2        & AABC & 10 & A:20 B:10 C:10 & 300K\\
 sample3        & ABCD & 10 & A:10 B:10 C:10 D:10 & 400K\\
 sample4        & ABCE & 10 & A:10 B:10 C:10 E:10 & 400K\\
 sample5        & AFGH & 10 & A:10 F:10 G:10 H:10 & 400K\\
 sample6        & IFGH & 10 & I:10 F:10 G:10 H:10 & 400K\\
-
+\hline
 \end{tabular}
-
+}
+\caption{
+\bf{6 synthetic simple metagenomes}
+}
 \label{table:simulated_metag}
 \end{table}
 
@@ -427,20 +431,23 @@ Chao1, since it uses more abundance information.
 
 
 \begin{table}[!ht]
+\centering
+%\resizebox{16cm}{!} {
 \begin{tabular}{|c|c|c|c|c|c|}
 \hline
-\textbf{} & \textbf{\begin{tabular}[c]{@{}l@{}}observed \\ IGS\end{tabular}} &
-\textbf{ACE} & \textbf{\begin{tabular}[c]{@{}l@{}}simpson \\
-evenness\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}estimated \\ genome
-size (Kbp)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}real \\ genome
-size (Kbp)\end{tabular}} \\ \hline
-\textbf{sample1} & 2002 & 2002.0 & 0.76 & 200.2 & 200 \\ \hline
-\textbf{sample2} & 3038 & 3038.0 & 0.83 & 303.8 & 300 \\ \hline
-\textbf{sample3} & 4076 & 4076.0 & 0.91 & 407.6 & 400 \\ \hline
-\textbf{sample4} & 4078 & 4078.0 & 0.91 & 407.8 & 400 \\ \hline
-\textbf{sample5} & 4069 & 4069.0 & 0.91 & 406.9 & 400 \\ \hline
-\textbf{sample6} & 4087 & 4087.0 & 0.91 & 408.7 & 400 \\ \hline
+ & \begin{tabular}[c]{@{}l@{}}observed \\ IGS\end{tabular} &
+ACE & \begin{tabular}[c]{@{}l@{}}simpson \\
+evenness\end{tabular} & \begin{tabular}[c]{@{}l@{}}estimated \\ genome
+size (Kbp)\end{tabular} & \begin{tabular}[c]{@{}l@{}}real \\ genome
+size (Kbp)\end{tabular} \\ \hline
+sample1 & 2002 & 2002.0 & 0.76 & 200.2 & 200 \\ 
+sample2 & 3038 & 3038.0 & 0.83 & 303.8 & 300 \\ 
+sample3 & 4076 & 4076.0 & 0.91 & 407.6 & 400 \\ 
+sample4 & 4078 & 4078.0 & 0.91 & 407.8 & 400 \\ 
+sample5 & 4069 & 4069.0 & 0.91 & 406.9 & 400 \\ 
+sample6 & 4087 & 4087.0 & 0.91 & 408.7 & 400 \\ \hline
 \end{tabular}
+%}
 \caption{\bf Alpha diversity analysis result of the simple simulated data using
 IGS method.}
 \label{table:a_simulated}
@@ -451,7 +458,7 @@ genome sizes of the samples are close to real size. This is not surprising since
 there is no error introduced and the coverage is high (10x) to cover most of the genetic materials in the samples. 
 Also the Simpson evenness shows the relative evenness of the samples correctly. 
 Sample 1 is the least even with composed of two  species with abundance ratio as 1:3.
-This shows that in this simple example, the IGS method can not only analyze the richness of samples but 
+This shows that in this simple example, the IGS method cannot only analyze the richness of samples but 
 also the evenness.
 
 
@@ -463,15 +470,16 @@ simulated data set.
 
 
 \begin{table}[!ht]
+\centering
 \begin{tabular}{|c|c|c|c|c|c|c|}
 \hline
-                  & \textbf{sample 1} & \textbf{sample2} & \textbf{sample 3} & \textbf{sample 4} & \textbf{sample 5} & \textbf{sample 6} \\ \hline
-\textbf{sample 1} & 0.00              & 0.25             & 0.50              & 0.50              & 0.75              & 1.00              \\ \hline
-\textbf{sample 2} & 0.25              & 0.00             & 0.25              & 0.25              & 0.75              & 1.00              \\ \hline
-\textbf{sample 3} & 0.50              & 0.25             & 0.00              & 0.25              & 0.75              & 1.00              \\ \hline
-\textbf{sample 4} & 0.50              & 0.25             & 0.25              & 0.00              & 0.75              & 1.00              \\ \hline
-\textbf{sample 5} & 0.75              & 0.75             & 0.75              & 0.75              & 0.00              & 0.25              \\ \hline
-\textbf{sample 6} & 1.00              & 1.00             & 1.00              & 1.00              & 0.25              & 0.00              \\ \hline
+                  & sample 1 & sample2 & sample 3 & sample 4 & sample 5 & sample 6 \\ \hline
+sample 1 & 0.00              & 0.25             & 0.50              & 0.50              & 0.75              & 1.00              \\ 
+sample 2 & 0.25              & 0.00             & 0.25              & 0.25              & 0.75              & 1.00              \\ 
+sample 3 & 0.50              & 0.25             & 0.00              & 0.25              & 0.75              & 1.00              \\ 
+sample 4 & 0.50              & 0.25             & 0.25              & 0.00              & 0.75              & 1.00              \\ 
+sample 5 & 0.75              & 0.75             & 0.75              & 0.75              & 0.00              & 0.25              \\ 
+sample 6 & 1.00              & 1.00             & 1.00              & 1.00              & 0.25              & 0.00              \\ \hline
 \end{tabular}
 \caption{\bf Dissimilarity matrix between synthetic samples using Bray-curtis
 from species composition directly. }
@@ -479,15 +487,16 @@ from species composition directly. }
 \end{table}
 
 \begin{table}[!ht]
+\centering
 \begin{tabular}{|c|c|c|c|c|c|c|}
 \hline
-                  & \textbf{sample 1} & \textbf{sample2} & \textbf{sample 3} & \textbf{sample 4} & \textbf{sample 5} & \textbf{sample 6} \\ \hline
-\textbf{sample 1} & 0.00              & 0.35             & 0.60              & 0.66              & 0.80              & 1.00              \\ \hline
-\textbf{sample 2} & 0.35              & 0.00             & 0.42              & 0.51              & 0.84              & 1.00              \\ \hline
-\textbf{sample 3} & 0.60              & 0.42             & 0.00              & 0.56              & 0.89              & 1.00              \\ \hline
-\textbf{sample 4} & 0.66              & 0.51             & 0.56              & 0.00              & 0.89              & 1.00              \\ \hline
-\textbf{sample 5} & 0.80              & 0.84             & 0.89              & 0.89              & 0.00              & 0.42              \\ \hline
-\textbf{sample 6} & 1.00              & 1.00             & 1.00              & 1.00              & 0.25              & 0.00              \\ \hline
+                  & sample 1 & sample2 & sample 3 & sample 4 & sample 5 & sample 6 \\ \hline
+sample 1 & 0.00              & 0.35             & 0.60              & 0.66              & 0.80              & 1.00              \\ 
+sample 2 & 0.35              & 0.00             & 0.42              & 0.51              & 0.84              & 1.00              \\ 
+sample 3 & 0.60              & 0.42             & 0.00              & 0.56              & 0.89              & 1.00              \\ 
+sample 4 & 0.66              & 0.51             & 0.56              & 0.00              & 0.89              & 1.00              \\ 
+sample 5 & 0.80              & 0.84             & 0.89              & 0.89              & 0.00              & 0.42              \\ 
+sample 6 & 1.00              & 1.00             & 1.00              & 1.00              & 0.25              & 0.00              \\ \hline
 \end{tabular}
 \caption{\bf Dissimilarity matrix between synthetic samples using Bray-Curtis
 from sequencing reads using IGS method. }
@@ -501,7 +510,7 @@ For a simulated data set with 10x coverage and no error introduced
 (which again will tell us the optimal performance of IGS method), the dissimilarity 
 matrix can be calculated by using the IGS method, as shown in Table 
 \ref{table:simulated_matrix1}. We can see the absolute values in the matrix 
-are not very close to those in the real matrix. But the relative values 
+are not very close to those in the real matrix. However, the relative values 
 correspond to those in the real matrix well enough to show the relative distance 
 between each pair of samples. To get a objective metric, we use the
 Mantel \cite{Mantel1967} test to calculate the correlation value between the two 
@@ -516,14 +525,14 @@ will only be routine tasks.
 
 
 \begin{figure}[!ht]
- \centerline{\includegraphics[width=4in]{./figures/simple_PCA_3d.png}}
+ \centerline{\includegraphics[width=6in]{./figures/simple_PCA_3d.png}}
 \caption{\bf Ordination of the 6 synthetic samples using IGS method.}
 \label{fig:simple_pcoa}
 \end{figure}
 
 
 \begin{figure}[!ht]
- \centerline{\includegraphics[width=4in]{./figures/simple_tree.png}}
+ \centerline{\includegraphics[width=6in]{./figures/simple_tree.png}}
 \caption{\bf Clustering of the 6 synthetic samples using IGS method}
 \label{fig:simple_cluster}
 \end{figure}
@@ -581,13 +590,13 @@ matches the real size perfectly. With increasing error rate, the size of metagen
 is increasingly over-estimated. This is due to several factors,which
 will be discussed below. 
 \begin{figure}[!ht]
- \centerline{\includegraphics[width=4in]{./figures/alpha_by_error_no_adjust.pdf}}
+ \centerline{\includegraphics[width=6in]{./figures/alpha_by_error_no_adjust.pdf}}
 \caption{\bf Richness estimation using IGS method without adjustment.}
 \label{fig:IGS_richness_no_adjustment}
 \end{figure}
 
 \begin{figure}[!ht]
- \centerline{\includegraphics[width=4in]{./figures/beta_by_error.pdf}}
+ \centerline{\includegraphics[width=6in]{./figures/beta_by_error.pdf}}
 \caption{\bf Beta diversity analysis using IGS method without adjustment.}
 \label{fig:beta_no_adjustment}
 \end{figure}
@@ -611,7 +620,7 @@ previously as an example, for read length of 100bp and k as 19, one sequencing
 error will affect the count of 19 k-mers at most, and two sequencing errors
 will affect the count of at most 38 k-mers. The count of these k-mers will
 generally be much lower than the true count. So out of the 82 k-mers
-in the 100bp read, at most 38 k-mers will have incorrectly low counts, but this
+in the 100bp read, at most 38 k-mers will have incorrectly low counts. However, this
 will not affect the median k-mer count, which is the count of the 41th k-mer if
 ranked by count. However, if there are three or more errors in the read, the 
 situation is more complicated. For 3 errors in a read, 3 to 57 k-mers
@@ -645,7 +654,7 @@ Practically, when $n>5$ and $e<0.015$, $P\_error(n,e,L)$ is very small, we only 
 number of errors in a read as 3, 4 and 5.
 
 \begin{figure}[!ht]
- \centerline{\includegraphics[width=4in]{./figures/IGS_affected_k_kmers.png}}
+ \centerline{\includegraphics[width=6in]{./figures/IGS_affected_k_kmers.png}}
 \caption{\bf Richness estimation using IGS method without adjustment. }
 \label{fig:IGS_affected_k_kmers}
 \end{figure}
@@ -660,10 +669,10 @@ reads abundance distribution.
 Also, we want to make sure 2 errors in a read will not affect median k-mer 
 count, since it is more common to have 2 errors in a read practically. 
 In this case, 
-\[2 \times k < \lfloor \frac{L-k+1}{2}\rfloor \],
+\[2 \times k < \lfloor \frac{L-k+1}{2}\rfloor,\]
 we can get $k<L/5$,basically. For $L$ as 100, $k$ will be 19, which is what we 
 choose in the testing. However, the $k$ should not be too small, or the k-mers 
-can not handle the diversity of information of a large data set.
+cannot handle the diversity of information of a large data set.
 
 Taking the sequencing error into account, we used the methods introduced above
 to adjust the estimation of metagenome size of the 6 synthetic samples. The
@@ -672,7 +681,7 @@ estimation after adjustment is closer to real number, as shown in Figure
 
 
 \begin{figure}[!ht]
- \centerline{\includegraphics[width=4in]{./figures/alpha_by_error_erroronly_adjust.pdf}}
+ \centerline{\includegraphics[width=6in]{./figures/alpha_by_error_erroronly_adjust.pdf}}
 \caption{\bf Richness estimation using IGS method adjusted by sequencing error
 rate.}
 \label{fig:IGS_richness_error_adjustment}
@@ -684,7 +693,7 @@ which we use for efficient k-mer counting will result in counting error. If the
 false positive rate for a specific bloom filter we use for k-mer counting is
 0.1, 10\% of the k-mers will have incorrect counts. When we use median k-mer
 count to get read coverage, such incorrect count has the effect on two aspects.
-On one hand, some k-mers in a read will have incorrect higher count. But if the
+On one hand, some k-mers in a read will have incorrect higher count. However, if the
  false
 positive rate is low, this will not affect median k-mer count. This shows the
 method of using median k-mer count to get read coverage is not only less prone
@@ -692,7 +701,7 @@ to sequencing error, but also less prone to the inaccuracy characteristics of
 underlying data structure. One the other hand, this inaccurate count also
 affects the counts of those erroneous k-mers generated by sequencing error. For
 example, 3 errors in a read affect the count of 43 k-mers, the counts for these
-43 k-mers are supposed to be 1. But because of the collision in the Bloom filter
+43 k-mers are supposed to be 1. However, because of the collision in the Bloom filter
 and the resulting incorrect k-mer counting, if the false positive rate is 0.1,
 about 4 out of the 43 k-mers will have inflated count, mostly as 2. So the
 combined effect of sequencing error and collision in bloom filter is that some
@@ -720,7 +729,7 @@ accuracy of the estimation that we failed to take into account.
 
 
 \begin{figure}[!ht]
- \centerline{\includegraphics[width=4in]{./figures/alpha_by_error_full_adjust.pdf}}
+ \centerline{\includegraphics[width=6in]{./figures/alpha_by_error_full_adjust.pdf}}
 \caption{\bf Richness estimation using IGS method adjusted by sequencing error
 rate and false positive rate of bloom filter.}
 \label{fig:IGS_richness_adjustment}
@@ -752,7 +761,7 @@ sequencing error, but also less prone to sequencing depth.
 % relationship between ordination/clustering and correlation??? 0.89, is it good enough to do ordination/clustering?
 
 \begin{figure}[!ht]
- \centerline{\includegraphics[width=4in]{./figures/beta_by_coverage.pdf}}
+ \centerline{\includegraphics[width=6in]{./figures/beta_by_coverage.pdf}}
 \caption{\bf Correlation between calculated distance matrix and true matrix
 from different data sets with different sequencing depth.}
 \label{fig:IGS_correlation_coverage}
@@ -788,21 +797,21 @@ estimated size of genome will be more accurate. This again demonstrates the impo
 the streaming method doing error profile analysis discussed in chapter 4 above.
 
 \begin{figure}[!ht]
- \centerline{\includegraphics[width=4in]{./figures/alpha_by_coverage_0e.pdf}}
+ \centerline{\includegraphics[width=6in]{./figures/alpha_by_coverage_0e.pdf}}
 \caption{\bf Estimated genome size from data sets with variable coverage,
 without error.}
 \label{fig:alpha_by_coverage_0e}
 \end{figure}
 
 \begin{figure}[!ht]
- \centerline{\includegraphics[width=4in]{./figures/alpha_by_coverage_0005e.pdf}}
+ \centerline{\includegraphics[width=6in]{./figures/alpha_by_coverage_0005e.pdf}}
 \caption{\bf Estimated genome size from data sets with variable coverage, with
 error rate as 0.5\%.}
 \label{fig:alpha_by_coverage_0005e}
 \end{figure}
 
 \begin{figure}[!ht]
- \centerline{\includegraphics[width=4in]{./figures/alpha_by_coverage_001e.pdf}}
+ \centerline{\includegraphics[width=6in]{./figures/alpha_by_coverage_001e.pdf}}
 \caption{\bf Estimated genome size from data sets with variable coverage, with
 error rate as 1.0\%. }
 \label{fig:alpha_by_coverage_001e}
@@ -838,7 +847,7 @@ In the experiment below with real metagenomic dataset, we will see more evidence
 that the IGS method has better performance than some other metagenome comparison methods.
 
 \begin{figure}[!ht]
- \centerline{\includegraphics[width=4in]{./figures/compare_commet.pdf}}
+ \centerline{\includegraphics[width=6in]{./figures/compare_commet.pdf}}
 \caption{\bf Correlation between calculated distance matrix and true distance matrix
 from different data sets and using different methods.}
 \label{fig:compare_commet}
@@ -858,7 +867,7 @@ IGS-by-samples table.
 
 The other software package to do metagenome comparison - Compareads/COMMET -
 based on reads overlap between samples can get a matrix 
-reflecting the real relationship between samples but it is stuck with one 
+reflecting the real relationship between samples. However, it is stuck with one 
 metric, which is based on the percentage of overlapping reads between samples. 
 This metric is like Bray-Curtis, but not exactly the same.
 
@@ -911,12 +920,12 @@ in original research, sample 00a is separated from the other three samples.
 
 Compared with the clustering generated using Compareads, our method is comparable, with some 
 distinct differences. For example, sample 16 is clustered together with 15,17,
-18, and 19 in our result, but in the result by Compareads, sample 16 is clustered 
+18, and 19 in our result. However, in the result by Compareads, sample 16 is clustered 
 with 23 and 26, in contradiction to the geographical origin of the samples.
 
 Next we used IGS method to analyze the alpha diversity.
 Figure \ref{fig:GOS-rarefaction} shows the rarefaction curve of IGSs of the samples.
-As expected, we can not see the saturation,which means the sequencing data 
+As expected, we cannot see the saturation,which means the sequencing data 
 set is still far from deeply covered.
 Because the data sets for different samples have dramatically different sizes, 
 we estimated the total number of IGSs using the Chao1 estimator with a limited 
@@ -933,21 +942,21 @@ the relative relationship between samples on richness should be reliable.
 (This is not discussed in original research work on the GOS samples.)
 
 \begin{figure}[!ht]
- \centerline{\includegraphics[width=7in]{./figures/GOS_cluster.png}}
+ \centerline{\includegraphics[width=6in]{./figures/GOS_cluster.png}}
 \caption{\bf Clustering of Global Ocean Sampling Expedition samples using IGS
 method.}
 \label{fig:GOS-beta}
 \end{figure}
 
 \begin{figure}[!ht]
- \centerline{\includegraphics[width=7in]{./figures/GOS_observed.png}}
+ \centerline{\includegraphics[width=6in]{./figures/GOS_observed.png}}
 \caption{\bf Rarefaction curve of IGSs of Global Ocean Sampling Expedition
 samples.}
 \label{fig:GOS-rarefaction}
 \end{figure}
 
 \begin{figure}[!ht]
- \centerline{\includegraphics[width=7in]{./figures/GOS_chao.png}}
+ \centerline{\includegraphics[width=6in]{./figures/GOS_chao.png}}
 \caption{\bf Estimated number of IGSs of Global Ocean Sampling Expedition
  samples.}
 \label{fig:GOS-chao1}
@@ -975,7 +984,7 @@ which is consistent with other research. \cite{Human-Microbiome-Project-Consorti
 
 
 \begin{figure}[!ht]
- \centerline{\includegraphics[width=4in]{./figures/HMP_beta.png}}
+ \centerline{\includegraphics[width=6in]{./figures/HMP_beta.png}}
 \caption{\bf Principal coordinates analysis of 12 Human Microbiome Project
 samples, red: anterior nares- skin, green: throat -oral, blue: buccal mucosa -oral, orange: 
 posterior fornix -vaginal.}
@@ -983,7 +992,7 @@ posterior fornix -vaginal.}
 \end{figure}
 
 \begin{figure}[!ht]
- \centerline{\includegraphics[width=4in]{./figures/HMP_alpha.png}}
+ \centerline{\includegraphics[width=6in]{./figures/HMP_alpha.png}}
 \caption{\bf Alpha diversity of 12 Human Microbiome Project samples:
  estimation of metagenome size of HMP samples,
 red: anterior nares- skin, green: throat -oral, blue: buccal mucosa -oral, orange: 
@@ -1005,11 +1014,31 @@ different locations across the great prairie region in the US.
 (Table \ref{table:gpgc}). 
 
 
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+sample & \# of reads & size of .gz file & \# of bps & ave. length \\ \hline
+iowa corn & 1,514,290,825 & 46G & 144,202,427,079 & 95.2 \\ 
+iowa prairie & 2,597,093,273 & 74G & 226,815,059,143 & 87.3 \\ 
+kansas\_corn & 2,029,883,371 & 66G & 206,933,829,048 & 101.9 \\ 
+kansas\_prairie & 4,987,358,734 & 145G & 499,387,223,498 & 100.3 \\ 
+wisconsin\_corn & 1,616,440,116 & 51G & 162,257,698,471 & 100.4 \\ 
+wisconsin\_prairie & 1,653,557,590 & 53G & 166,467,901,724 & 100.7 \\
+wisconsin\_restored & 226,830,595 & 11G & 34,241,520,930 & 151.0 \\ 
+wisconsin\_switchgrass & 310,966,735 & 13G & 40,259,619,921 & 129.5 \\ \hline
+\end{tabular}
+\caption{\bf{GPGC data sets}}
+\label{table:gpgc}
+\end{table}
+
+
 %new GPGC has better understanding??
 
 % should be enough??
 As discussed above using simulated data sets, read data sets with lower sequencing coverage will reduce
-the accuracy of the analysis. But as shown in Figure \ref{fig:IGS_correlation_coverage}, with sequencing depth
+the accuracy of the analysis. However, as shown in Figure \ref{fig:IGS_correlation_coverage}, with sequencing depth
 as 0.1x, the calculated distance matrix using IGS method still has a reasonably high correlation with golden standard
 distance matrix. So we can use subset of a large data set to acquire the diversity information, with the trade-off of
 lower accuracy. 
@@ -1036,7 +1065,7 @@ Its harder to explain the rank by state.
 The Kansas site experiences more drought stress and higher tempseratures. 
 The Iowa and 
 Wisconsin sites experience more cold, especially freezing conditions arresting 
-their biology for 3-4 months, but the freeze-thaw cycles also kill off 
+their biology for 3-4 months. However, the freeze-thaw cycles also kill off 
 some each cycle, which is similar to intermediate disturbance. With new 
 growth each spring, this new growth would be the fast growers with 
 less diverse. Why Iowa is the least diverse is still difficult to explain for now.
@@ -1048,7 +1077,7 @@ less diverse. Why Iowa is the least diverse is still difficult to explain for no
  
 
 \begin{figure}[!ht]
- \centerline{\includegraphics[width=4in]{./figures/GPGC_old_subset1M.png}}
+ \centerline{\includegraphics[width=6in]{./figures/GPGC_old_subset1M.png}}
 \caption{\bf Principal coordinates analysis of 8 Great Prairie Soil Metagenome
 Grand Challenge (GPGC) samples.}
 \label{fig:GPGC_beta}
@@ -1057,7 +1086,7 @@ Grand Challenge (GPGC) samples.}
 
 
 \begin{figure}[!ht]
- \centerline{\includegraphics[width=7in]{./figures/GPGC_1m_old.png}}
+ \centerline{\includegraphics[width=6in]{./figures/GPGC_1m_old.png}}
 \caption{\bf Alpha diversity analysis of 8 GPGC samples. Upper left,
 rarefaction curve of IGSs. Upper right, estimated number of IGSs in different
 samples. Lower left, estimated number of IGSs in samples grouped by
@@ -1092,7 +1121,7 @@ lower richness than prairie.  (Figure \ref{fig:ARMO_alpha})
 
 
 \begin{figure}[!ht]
- \centerline{\includegraphics[width=4in]{./figures/IGS_KBS_beta.png}}
+ \centerline{\includegraphics[width=6in]{./figures/IGS_KBS_beta.png}}
 \caption{\bf  Principal coordinates analysis of soil samples with different
 treatments collected from Kellogg Biological Station(KBS). Red, corn. Blue,
 miscanthus. Brown, switchgrass.}
@@ -1100,7 +1129,7 @@ miscanthus. Brown, switchgrass.}
 \end{figure}
 
 \begin{figure}[!ht]
- \centerline{\includegraphics[width=4in]{./figures/IGS_ARMO_beta.png}}
+ \centerline{\includegraphics[width=6in]{./figures/IGS_ARMO_beta.png}}
 \caption{\bf Principal coordinates analysis of soil samples collected from
 Amazon rainforest. Red, forest samples. Blue, prairie
 samples.}
@@ -1108,7 +1137,7 @@ samples.}
 \end{figure}
 
 \begin{figure}[!ht]
- \centerline{\includegraphics[width=7in]{./figures/IGS_ARMO_alpha.png}}
+ \centerline{\includegraphics[width=6in]{./figures/IGS_ARMO_alpha.png}}
 \caption{\bf Estimated number of IGSs in metagenomic data from soil samples
 collected from Amazon rainforest. Grouped by treatment. Red, forest samples. Blue, prairie
 samples.}
@@ -1135,27 +1164,4 @@ The code and detailed instruction used to generate all the results in this
 chapter is available at
 http://github.com/ged-lab/2013-diversity/. 
 
-
-\subsection{Simulated sequencing reads of e.coli}
-
-
-
-
-\begin{table}[h]
-\caption{\bf{GPGC Data sets}}
-\label{my-label}
-\begin{tabular}{|c|c|c|c|c|}
-\hline
-sample & \# of reads & size of .gz file & \# of bps & ave. length \\ \hline
-iowa corn & 1,514,290,825 & 46G & 144,202,427,079 & 95.2 \\ \hline
-iowa prairie & 2,597,093,273 & 74G & 226,815,059,143 & 87.3 \\ \hline
-kansas\_corn & 2,029,883,371 & 66G & 206,933,829,048 & 101.9 \\ \hline
-kansas\_prairie & 4,987,358,734 & 145G & 499,387,223,498 & 100.3 \\ \hline
-wisconsin\_corn & 1,616,440,116 & 51G & 162,257,698,471 & 100.4 \\ \hline
-wisconsin\_prairie & 1,653,557,590 & 53G & 166,467,901,724 & 100.7 \\ \hline
-wisconsin\_restored & 226,830,595 & 11G & 34,241,520,930 & 151.0 \\ \hline
-wisconsin\_switchgrass & 310,966,735 & 13G & 40,259,619,921 & 129.5 \\ \hline
-\end{tabular}
-\label{table:gpgc}
-\end{table}
 

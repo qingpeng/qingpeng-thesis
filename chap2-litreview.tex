@@ -1,4 +1,4 @@
-\chapter{Review of Relevant Literature}
+\chapter{Review of relevant literature}
 
 
 \section{Challenges in counting k-mers accurately and efficiently}
@@ -69,7 +69,7 @@ there is an obvious obstacle. If the size of sequence dataset is larger, the
 efficiency of the counting using a simple hash table drops dramatically.
 Instead another k-mer counting tool - Tallymer, uses suffix array data
 structure\cite{Kurtz2008}. Admittedly it is more efficient than simple hash table in
-general, but the memory requirement is still linear to the number of
+general. However, the memory requirement is still linear to the number of
 unique k-mers. Thus this method is not very scalable. For example,
 the size of a soil metagenomic data set for one sample only have already 
 exceeded 400G bytes, with only a limited sequencing depth\cite{Howe2014}.
@@ -108,52 +108,46 @@ packages with the function and limitation for each.
 % \cite{DBLP:conf/sigmod/CohenM03}, which are related to the Count-Min Sketch
 % and our khmer implementation.
 
+%%%%%% LANDSCAPE PAGES  %%%%%%
+%% To produce graphics or tables in landscape mode,
+%% begin by removing the "%" in the next two lines.
+%\begin{landscape}
+%\thispagestyle{empty}
+%% The contents of the page can be centered using the center environment
+%% or the \centering command. Insert either a table with the tabular environment
+%% or input a graphics file.
+%% Use \captionof{table}{caption_text} (or figure in place of table) 
+%% to create the caption for a short table or a figure. 
+%% Insert a long table in a table environment. It disables double spacing
+%% which is permitted for long tables.  Finally remove the "%" from the next line.
+%\end{landacape}
 
-\begin{sidewaystable}[h]
-\tiny
-\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|}
+\begin{landscape}
+\thispagestyle{empty}
+%\begin{sidewaystable}[h]
+%\tiny
+\centering
+\resizebox{21cm}{!} {
+\begin{tabular}{|l|l|l|l|l|l|l|}
 \hline
-\textbf{software} & \textbf{Algorithms} & \textbf{multiple steps?} &
-\textbf{\begin{tabular}[c]{@{}l@{}}arbitrary\\ k-size?\end{tabular}} &
-\textbf{\begin{tabular}[c]{@{}l@{}}exact\\ count?\end{tabular}} &
-\textbf{\begin{tabular}[c]{@{}l@{}}(built in) get\\ k-mer\\ ccurrence\\
-histogram?\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}(built in)\\
-specific\\ k-mer\\ count retrieval?\end{tabular}} & \textbf{API?} &
-\textbf{multithreaded?} & \textbf{\begin{tabular}[c]{@{}l@{}}online\\
-counting?\end{tabular}} \\ \hline
-\textbf{BFCounter\cite{Melsted2011}} & \begin{tabular}[c]{@{}l@{}}bloom filter,filter out low\\
-abundance kmer\end{tabular} & \begin{tabular}[c]{@{}l@{}}Y\\ (count and
-dump)\end{tabular} & Y (compile time) & Y & N & N & N & Y & Y \\ \hline
-\textbf{DSK\cite{Rizk2013}} & \begin{tabular}[c]{@{}l@{}}fixed-memory and fixed-disk\\ space
-streaming algorithm\end{tabular} & \begin{tabular}[c]{@{}l@{}}N\\
-(dsk)\end{tabular} & Y & Y & Y & N & N & N & N \\ \hline
-\textbf{Jellyfish \cite{jellyfish}} & lock-free hash table & \begin{tabular}[c]{@{}l@{}}Y\\
-(count and histo/query)\end{tabular} & Y for 2.0, \textless=32 for 1.0 & Y & Y
-& Y & N & Y & Y \\ \hline
-\textbf{KAnalyze\cite{Audano2014}} & split to disk and merge & \begin{tabular}[c]{@{}l@{}}N\\
-(count)\end{tabular} & \textless=31 & Y & N & N & Y & Y & N \\ \hline
-\textbf{Khmer\cite{khmer}} & count-min sketch & \begin{tabular}[c]{@{}l@{}}Y\\
-(load\_counting,other)\end{tabular} & \textless=32 & N & Y & Y & Y & Y & Y \\
-\hline
-\textbf{KMC\cite{Deorowicz2013}} & \begin{tabular}[c]{@{}l@{}}parallel disk-based,similar\\ to
-DSK\end{tabular} & \begin{tabular}[c]{@{}l@{}}Y\\ (kmc and
-kmc\_dump)\end{tabular} & 10-256 & Y & N & N & N & Y & N \\ \hline
-\textbf{MSPKmerCounter} & \begin{tabular}[c]{@{}l@{}}Minimum Substring\\
-Partitioning\end{tabular} & \begin{tabular}[c]{@{}l@{}}Y\\
-(partition,count,dump,hist)\end{tabular} &  & Y & Y & Y & N & Y & N \\ \hline
-\textbf{Tallymer\cite{Kurtz2008}} & enhanced suffix arrays & \begin{tabular}[c]{@{}l@{}}Y\\
-(suffixerator and \\ tallymer mkindex)\end{tabular} & Y & Y & Y & Y & N & N &
-N? \\ \hline
-\textbf{Turtle\cite{Roy2014}} & \begin{tabular}[c]{@{}l@{}}pattern-blocked Bloom \\ filter,
-filter out low\\ bundance kmer\end{tabular} & \begin{tabular}[c]{@{}l@{}}N\\
-(one step \\ scTurtle/cTurtle)\end{tabular} & \textless=64 &
-\begin{tabular}[c]{@{}l@{}}Y for scTurtle\\ N for cTurtle\end{tabular} & N & N
-& N & Y & Y \\ \hline
+\textbf{software}       & \textbf{algorithm}                                          & \textbf{\begin{tabular}[c]{@{}l@{}}(built in) get k-mer \\ occurrence histogram\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}(built in)specific \\ k-mer count retrieval?\end{tabular}} & \textbf{API?} & \textbf{multithreaded?} & \textbf{online counting?} \\ \hline
+\textbf{BFCounter}      & bloom filter,filter out low abundance kmer                  & N                                                                                             & N                                                                                             & N             & Y                       & Y                         \\ \hline
+\textbf{DSK}            & fixed-memory and fixed-disk space streaming algorithm       & Y                                                                                             & N                                                                                             & N             & N                       & N                         \\ \hline
+\textbf{Jellyfish}      & lock-free hash table                                        & Y                                                                                             & Y                                                                                             & N             & Y                       & Y                         \\ \hline
+\textbf{KAnalyze}       & split to disk and merge                                     & N                                                                                             & N                                                                                             & Y             & Y                       & N                         \\ \hline
+\textbf{Khmer}          & count-min sketch                                            & Y                                                                                             & Y                                                                                             & Y             & Y                       & Y                         \\ \hline
+\textbf{KMC}            & parallel disk-based,similar to DSK                          & N                                                                                             & N                                                                                             & N             & Y                       & N                         \\ \hline
+\textbf{MSPKmerCounter} & Minimum Substring Partitioning                              & Y                                                                                             & Y                                                                                             & N             & Y                       & N                         \\ \hline
+\textbf{Tallymer}       & enhanced suffix arrays                                      & Y                                                                                             & Y                                                                                             & N             & N                       & N                         \\ \hline
+\textbf{Turtle}         & pattern-blocked Bloom filter, filter out low abundance kmer & N                                                                                             & N                                                                                             & N             & Y                       & Y                         \\ \hline
 \end{tabular}
-\caption{\bf{Description of k-mer counting packages.}} 
+}
 \label{table:kmer_counting}
+\captionof{table}{\bf{Description of k-mer counting packages.}}
+%\caption{\bf{Description of k-mer counting packages.}} 
  
-\end{sidewaystable}
+\end{landscape}
+%\end{sidewaystable}
 
 
 
@@ -178,7 +172,7 @@ a decent coverage of human genome with by NGS short reads to get satisfying asse
 data set\cite{pubmed21187386}. For samples with variable abundance of genomic 
 contents such as transcriptome or metagenome, to get enough sequencing depth for
 the rarer genomic content, the overall sequencing depth will greatly increase, 
-which leads to dramatically large reads data sets, but with uneven
+which leads to dramatically large reads data sets. However, with uneven
 abundance of genomic contents meanwhile. 
 
 Still like the k-mer counting problem, sequencing errors bring significant troubles
@@ -193,7 +187,7 @@ effectiveness of many down-streaming analysis of such short reads data.
 
 With the two characteristics of NGS short reads data - large size and error-prone,
  combined with the dropped cost of sequencing, 
-we are facing the third challenge, that the increase of our capacity to analyze data can not
+we are facing the third challenge, that the increase of our capacity to analyze data cannot
 catch up with the capacity of generating data \cite{pubmed20441614}.  It is difficult
 to easily manipulate and analyze the large genomic data without significant improvement
 of computational approaches.
@@ -215,8 +209,8 @@ like metagenome or transcriptome, novel assembler or 3rd party add-ons are devel
 specifically, such as Trinity, Oases, MetaVelvet, MetaVelvet-SL, Meta-IDBA, Velvet-SC, DIME, MEGAHIT, Omega
 \cite{pubmed21572440,pubmed22368243,Namiki2012,Afiahayati2015, pubmed21685107,pubmed21926975,Guo2015,Li2015,Haider2014}.
 
-Assembly can be seen as a solution to decrease error rate either. There may still
-be errors in assembled contigs or genomes, but large amount of errors located in 
+Assembly can be seen as a solution to decrease error rate too. There may still
+be errors in assembled contigs or genomes. However, large amount of errors located in 
 numerous reads have been discarded in the procedure of assembly. 
 To remove or correct errors directly from reads, k-mer spectral analysis is 
 a popular approach\cite{Pevzner2001}. Basically low-abundance k-mers will be found and treated as 
@@ -244,7 +238,7 @@ In this dissertation, we will discuss our efforts in this direction.
 \section{Challenges in measuring diversity of metagenomics}
 
 
-\subsection{Diversity measurement in Microbial Ecology}
+\subsection{Diversity measurement in microbial ecology}
 
 There have been numerous mature methods and tools to measure diversity of
 macroorganisms in decades of development of classic ecology. One would think
@@ -272,7 +266,7 @@ rate corresponding with the evolutionary distance. So we can describe microbial
 individuals with higher than a certain percent(e.g. 97\%) 16S rRNA sequence
 similarity as one OTU, or belonging to one species \cite{Schloss:2005aa}.
 
-\subsubsection{Binning of Metagenomic Reads into OTUs}
+\subsubsection{Binning of metagenomic reads into OTUs}
 
 In classic ecology dealing with samples from macroorganisms communities, before
 we can use any statistical method to measure diversity, it is standard
@@ -320,7 +314,7 @@ this strategy.
 
 
 
-\subsubsection{Statistics for Diversity Estimation} After the binning of
+\subsubsection{Statistics for diversity estimation} After the binning of
 sequences into OTU, we need statistical analysis to help us estimate the diversity. Many
 statistical methods have been developed and widely used in classical ecology of
 macroorganisms. However the first difference between diversity measurement of
@@ -366,7 +360,7 @@ abundance distribution accurately when the sample size is large enough. There
 have been some attempts on this direction recently \cite{Gans:2005aa} and more
 robust methods are still needed.
 
-If the species abundance distribution can not be inferred, we can still use
+If the species abundance distribution cannot be inferred, we can still use
 nonparametric estimators to estimate the total diversity without assuming that
 abundance distribution arbitrarily. These estimators are related to
 MRR(mark-release-recapture) statistics, which compare the number of species

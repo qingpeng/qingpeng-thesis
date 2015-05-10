@@ -13,8 +13,8 @@ k-mers in different metagenomics data sets and get the abundance distribution.
 In the beginning we used an existing k-mer counting tool - Tallymer \cite{Kurtz2008}
 . However as we started to deal with 
 larger metagenomic data, where we routinely encounter data sets that contain 
-300 -109 bases of DNA and over 50 billion distinct k-mers \cite{Howe2012},
-it was not efficient enough and for some data set it can not handle at all. 
+$300 \times 10^9$ bases of DNA and over 50 billion distinct k-mers \cite{Howe2012},
+it was not efficient enough and for some data set it cannot handle at all. 
  Also, to efficiently filter, partition,
 and assemble these data, we need to store counts for each of these
 k-mers in main memory, and query and update them in realtime --- a set
@@ -47,6 +47,7 @@ disk usage for these problems.  We also analyze the effects of
 counting error on calculations of the k-mer count in sequencing data
 sets, and in particular on metagenomic data sets. 
 
+This chapter contains published materials from \cite{Zhang2014}.
 
 \section{Count-Min Sketch and its application in k-mer counting}
 
@@ -77,7 +78,7 @@ counting.
 \subsection{Implementing a Count-Min Sketch for k-mers}
 
 The two basic operations supported by khmer are {\tt
-  increment\_count(kmer) } and {\tt c = get\_count(kmer). } Both
+  increment\_count(kmer) } and\\ {\tt c = get\_count(kmer). } Both
 operate on the data structure in memory, such that neither
 incrementing a count nor retrieving a count involves disk access.
 
@@ -165,10 +166,8 @@ khmer\cite{flajolet2008hyperloglog}.
 
 
 \begin{table}[!ht]
-\scriptsize
-\caption{
-\bf{Benchmark soil metagenome data sets for k-mer counting performance, taken from
-\cite{Howe2012}.}}
+\centering
+\resizebox{16cm}{!} {
 \begin{tabular}{ |c | c |c| c|c| }
 \hline
 Data set & size of file (GB) & number of reads & number of distinct
@@ -179,9 +178,12 @@ subset 2        & 2.17 & 19,488,798 & 1,060,354,144 & 1,259,079,821 \\
 subset 3        & 3.14 & 29,233,197 & 1,445,923,389 & 1,771,614,378 \\
 subset 4        & 4.05 & 38,977,596 & 1,770,589,216 & 2,227,756,662 \\
 entire data set & 5.00 & 48,721,995 & 2,121,474,237 & 2,743,130,683 \\
+\hline
 \end{tabular}
-\begin{flushleft}
-\end{flushleft}
+}
+\caption{
+\bf{Benchmark soil metagenome data sets for k-mer counting performance, taken from
+\cite{Howe2012}.}}
 \label{table:datasets}
 \end{table}
 
@@ -396,12 +398,11 @@ both real and simulated data sets (Table \ref{table:random_data}) to evaluate th
 in practice.
 
 \begin{table}[!ht]
-\scriptsize
-\caption{
-\bf{Data sets used for analyzing miscounts.}}
+\centering
+\resizebox{16cm}{!} {
 \begin{tabular}{ | p{5cm} | c | c | c |}
 \hline
-Data set & Size of data set file & Number of total k-mers & Number of distinct k-mers \\
+data set & size of data set file & number of total k-mers & number of distinct k-mers \\
 \hline
 Real metagenomics reads                                  & 7.01M  & 2,917,200  & 1,944,996 \\
 \hline
@@ -412,9 +413,12 @@ Simulated reads from simulated genome with error         & 5.92M  & 3,757,479  &
 Simulated reads from simulated genome without error      & 9.07M  & 5,714,973  & 1,989,644 \\
 \hline
 Real {\em E. coli} reads                                        & 4.85M  & 4,004,911  & 2,079,302 \\
+\hline
 \end{tabular}
-\begin{flushleft}
-\end{flushleft}
+}
+\caption{
+\bf{Data sets used for analyzing miscounts.}}
+
 \label{table:random_data}
 \end{table}
 
@@ -510,7 +514,7 @@ shows that khmer works well to analyze large, real-world metagenomic data
 sets.
 
 
-\subsection{Real-world applications for khmer}
+\subsection{Real-world applications of khmer}
 
 Khmer has been widely used by many research groups for solving different 
 bioinformatics problems. It is the foundation of all the work that
@@ -604,7 +608,7 @@ available in that github repository.  Complete instructions to reproduce
 all of the results in this paper are available in the khmer-counting
 repository; see README.rst.
 
-\subsection{Sequence Data}
+\subsection{Sequence data}
 
 One human gut metagenome reads data set (MH0001) from the 
 MetaHIT (Metagenomics of the Human Intestinal Tract) project \cite{Qin2010} was used. 
