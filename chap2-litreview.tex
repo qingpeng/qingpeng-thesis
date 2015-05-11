@@ -16,7 +16,7 @@ Large amount of NGS short reads are generated and de novo assembly is
 required for these sequence data sets\cite{pubmed20211242}. Currently, de Bruijn graph method is
 popular in the attempts to do \textit{de novo} assembly because of its advantage in
 assembling next generation sequencing short reads\cite{Pevzner2001}. Several
-popular assemblers have been developed based on de Bruijn graph, such as
+popular assemblers based on de Bruijn graph have been published , including 
 Velvet\cite{Zerbino2008}, ALLPATHS\cite{Butler2008}, ABySS\cite{Simpson2009}
 and SOAPdenovo\cite{Li2010}. All the k-mers in a sequence
 data set are represented as nodes in the de Bruijn graph. If
@@ -293,8 +293,8 @@ signatures like k-mers or codon-usage to develop reference-independent
 approach. The assumption is that the frequencies distribution of the signatures
 are similar of the sequences from the same species. TETRA is such a
 reference-independent tools using Markov models based on k-mer frequencies
-\cite{Teeling:2004aa}. There is another tool using both TETRA and codon usage
-statistics to classify reads \cite{Tzahor:2009aa}.
+\cite{Teeling:2004aa}. There is another tool integrating TETRA and the codon usage
+profile to classify reads \cite{Tzahor:2009aa}.
 
 
 \paragraph{Similarity-based approach} The similarity-based extrinsic approach
@@ -324,8 +324,8 @@ the high diversity characteristics of microbial community and the limit of
 metagenomics sampling and sequencing. The first approach which is also
 considered as classic is rarefaction. Rarefaction curve can be used to compare
 observed richness among different samples that have been sampled unequally,
-which is basically plotting of the number of observed species as a function of
-the sampled individuals. It is worth noting that rarefaction curve shows the
+which is basically plotting of the relationship between the number of observed species 
+and the number of sampled individuals. It is worth noting that rarefaction curve shows the
 observed diversity, not the total diversity. We should not disregard those
 unseen microbial species, which is pretty common for microbial community
 sampling.
@@ -346,14 +346,14 @@ curve equally well but will deduct dramatically different asymptote value. So
 this curve extrapolation method should be used cautiously.
 
 Another one is parametric estimator, which assumes that the relative abundance
-follows a particular distribution. Then the number of unobserved species in the
+follows a particular distribution. Then the number of species unobserved in the
 community can be estimated by fitting observed sample data to such abundance
 distribution then the total number of species in the community can be
 estimated. Lognormal abundance distribution is mostly used in different project
 since most communities of macroorganisms has a lognormal abundance distribution
 and it is believed that it is also typical for some microbial communities
 \cite{Curtis:2002aa, Schloss:2006aa, Quince:2008aa}. It is understandable that
-there is always controversy as to which models fit the communities best since
+ it is difficulty to know which models fit the communities best since
 in an ideal world the abundance distribution should be inferred from the
 data,not be assumed unverifiably. The problem is that we can only infer the
 abundance distribution accurately when the sample size is large enough. There
@@ -365,8 +365,7 @@ nonparametric estimators to estimate the total diversity without assuming that
 abundance distribution arbitrarily. These estimators are related to
 MRR(mark-release-recapture) statistics, which compare the number of species
 observed more than once and the number of species observed only once. If
-current sampling only covers a small fraction of a diverse community, the
-probability that a species is observed more than once will be low and most
+current sampling only covers a small fraction of a diverse community, most
 species will be observed only once. If current sampling is enough to cover most
 species in the community, the opposite will be the case. A series of estimators
 invented by Chao are the representative estimators in this category, including
@@ -380,8 +379,8 @@ sample. The ACE uses data from all species rather than just singletons and
 doubletons. Its formular is:\\
 $${S}_{ACE}={S}_{abund}+\frac{{S}_{rare}}{{C}_{ACE}}+\frac{{F}_{1}}{{C}_{ACE}}{
 {\gamma }_{ACE}}^{2}$$ where ${S}_{rare}$ is the number of rare species (with
-few than 10 individuals observed) and ${S}_{abund}$ is the number of abundant
-species (with more than 10 individuals).
+few than 10 observed individuals) and ${S}_{abund}$ is the number of abundant
+species (with more than 10 observed individuals).
 
 In past years there are several software packages that have been developed for
 biodiversity analysis. Out of them, EstimateS \cite{colwellestimates} is a
