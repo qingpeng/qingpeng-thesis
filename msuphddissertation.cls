@@ -73,7 +73,8 @@
 	\@author
 	\end{tabular}%
 	\end{doublespace}
-	\vspace{\fill}
+%	\vspace{\fill}
+	\vspace*{2.5in}
 	{%
 	A  DISSERTATION 
 	\vspace{\baselineskip}%
@@ -229,8 +230,8 @@
           \addcontentsline{toc}{chapter}{#1}%
                     \fi
            \chaptermark{#1}%
-           \addtocontents{lof}{\protect\addvspace{10\p@}}%
-           \addtocontents{lot}{\protect\addvspace{10\p@}}%
+%           \addtocontents{lof}{\protect\addvspace{10\p@}}%
+%           \addtocontents{lot}{\protect\addvspace{10\p@}}%
                     \if@twocolumn
            \@topnewpage[\@makechapterhead{#2}]%
                    \else
@@ -249,6 +250,7 @@
 	\chapter*{\vspace{-2.5\baselineskip}\centerline{\large \MakeUppercase\contentsname}
 	\@mkboth{%
 	\MakeUppercase\contentsname}{\MakeUppercase\contentsname}}%
+	\vspace*{-1.4\baselineskip}
 	\@starttoc{toc}%
     		\if@restonecol\twocolumn\fi
 	\end{singlespace}}
@@ -413,7 +415,8 @@
 	\vspace*{\fill}
 	\begin{center}
 	\Huge \textbf{\MakeUppercase{\bibname}}
-	\addcontentsline{toc}{chapter}{\tocentry{\bibname}{\bibname}}%
+	\addcontentsline{toc}{chapter}{\tocentry{BIBLIOGRAPHY}{Bibliography}}%
+
 	\vspace{\baselineskip}% 
 	\end{center}
 	\vfill
@@ -421,6 +424,7 @@
 	\chapter*{\vspace{-2.2\baselineskip}\centerline{\MakeUppercase{\bibname}}}%
 	\@mkboth{\MakeUppercase\bibname}{\MakeUppercase\bibname}%
          %\addcontentsline{toc}{chapter}{\tocentry{\bibname}{\bibname}}
+	\vspace*{-1.2\baselineskip}
 	\begin{singlespace}
 	\list{\@biblabel{\@arabic\c@enumiv}}%
 	{\settowidth\labelwidth{\@biblabel{#1}}%

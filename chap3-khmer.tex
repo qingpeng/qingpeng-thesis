@@ -18,7 +18,7 @@ it was not efficient enough and for some data set it cannot handle at all.
  Also, to efficiently filter, partition,
 and assemble these data, we need to store counts for each of these
 k-mers in main memory, and query and update them in realtime --- a set
-of functionality not readily offered by current packages.  Moreover,
+of functionality not readily offered by current packages. Moreover,
 we wish to enable the use of cloud and desktop computers, which may
 have poor I/O performance or limited memory. These needs have dictated
 our exploration of efficient in-memory k-mer counting techniques.
@@ -28,11 +28,11 @@ software package for fast and memory efficient {\em online} counting
 of k-mers in sequencing data sets. Unlike previous methods based on
 data structures such as hash tables, suffix arrays, and trie
 structures, khmer relies entirely on a simple probabilistic data
-structure, a Count-Min Sketch.  The Count-Min Sketch permits online
+structure, a Count-Min Sketch. The Count-Min Sketch permits online
 updating and retrieval of k-mer counts in memory which is necessary to
-support online k-mer analysis algorithms.  On sparse data sets this
+support online k-mer analysis algorithms. On sparse data sets this
 data structure is considerably more memory efficient than any exact
-data structure.  In exchange, the use of a Count-Min Sketch introduces
+data structure. In exchange, the use of a Count-Min Sketch introduces
 a systematic overcount for k-mers; moreover, only the counts, and not
 the k-mers, are stored.
 
@@ -42,8 +42,8 @@ k-mer counting implementation with that of other k-mer counting software package
 for two problems. First, we generate a k-mer abundance
 distribution for large data sets; and second, we query many individual
 k-mer counts at random from a previously constructed k-mer count
-database.  We show that khmer is competitive in speed, memory, and
-disk usage for these problems.  We also analyze the effects of
+database. We show that khmer is competitive in speed, memory, and
+disk usage for these problems. We also analyze the effects of
 counting error on calculations of the k-mer count in sequencing data
 sets, and in particular on metagenomic data sets. 
 

@@ -52,7 +52,7 @@ k-mers as the source of signatures\cite{Alneberg2014, Imelfort2014}. Suppose the
 number of distinct k-mers in the sequence data set correlates to the number of 
 species in a sample. However, because of sequencing error, which is unavoidable
  due to the limit of sequencing technology, this k-mer based analysis does not 
-work well on unassembled data. One sequencing error on a read will generate up to  k erroneous 
+work well on unassembled data. One sequencing error on a read will generate up to k erroneous 
 k-mers. In metagenomics data sets, especially with high coverage, most of the 
 distinct observed k-mers are from sequencing errors.
 %add citation about k-mer based diversity analysis ,entropy...
@@ -129,13 +129,13 @@ Even though the datasets have different sequencing depth like 10X and 40X,
 they have similar numbers of IGSs. Dataset with 1X sequencing depth has fewer 
 IGSs because the depth is not enough to cover all the content of the 
 genome(63.2\%). The IGSs can be seen as the
-genomic segments on a genome with the length of reads.(Figure \ref{fig:IGS}  
+genomic segments on a genome with the length of reads.(Figure \ref{fig:IGS} 
 Assume the composition of species 
 genome is totally random, which is the case in the simulated data sets, the 
 number of IGSs (N) in a species genome is related to the size of genome(G), 
 read length(L) and k size(k), which can be denoted as
 
-\[N =\frac{G}{L}  \]
+\[N =\frac{G}{L} \]
 which is the number of reads that can have a 1X coverage of the genome.
 For the simulated genome with size of 1M bps, read length as 80bps, expected 
 number of IGSs is 
@@ -190,10 +190,12 @@ Basically the abundance distribution of IGSs with different coverage in a
 sample data set can be acquired using the method shown above.
 
 Suppose from a reads data set, the coverage distribution of reads is as 
-shown in this table: %Table \ref{table:read_coverage}.
-\\
-%\begin{table}[!ht]
+shown in Table \ref{table:read_coverage}.
+
+\begin{table}[!ht]
+\centering
 \begin{tabular}{|c|c|c|c|c|}
+\hline 
 coverage & number of reads \\
 \hline 
 %&\\
@@ -202,18 +204,21 @@ coverage & number of reads \\
 5                  & 125 \\
 6                   & 150 \\
 ...        & ... \\
+\hline 
 \end{tabular}
 
-%\caption{\bf Reads coverage distribution.}
-%\label{table:read_coverage}
-%\end{table}
+\caption{\bf Reads coverage distribution.}
+\label{table:read_coverage}
+\end{table}
 
 There are 69 reads with coverage as 3, 96 reads with coverage as 4, 
 and so on. We transform this coverage distribution
-of reads into abundance distribution of IGSs, as shown in this table: %Table \ref{table:igs_coverage}.
-\\
-%\begin{table}[!ht]
+of reads into abundance distribution of IGSs, as shown in Table \ref{table:igs_coverage}.
+
+\begin{table}[!ht]
+\centering
 \begin{tabular}{ |c | c |c| c|c| }
+\hline 
 abundance & number of IGS \\
 \hline 
 %&\\
@@ -222,11 +227,12 @@ abundance & number of IGS \\
 5                  & 25 \\
 6        & 25 \\
 ...        & ... \\
+\hline 
 \end{tabular}
 
-%\caption{\bf IGS abundance distribution.}
-%\label{table:igs_coverage}
-%\end{table}
+\caption{\bf IGS abundance distribution.}
+\label{table:igs_coverage}
+\end{table}
 
 For example, there are 23 IGSs with abundance 3. This is calculated by dividing  
 total number of reads with coverage as 3, which is 69, by the coverage 3.
@@ -235,10 +241,12 @@ If we draw an analogy between IGSs and OTUs, this is like saying there are 23
 different OTUs with 3 reads mapped to each OTU, and 24 different OTUs with 4 reads mapped to each OTU, and so on.
 
 Next all the different IGSs and the corresponding abundances can be listed,
-as shown here: %able \ref{table:igs_abundance}. 
-\\
-%\begin{table}[!ht]
+as shown in Table \ref{table:igs_abundance}. 
+
+\begin{table}[!ht]
+\centering
 \begin{tabular}{ |c | c |c| c|c| }
+\hline 
 IGS ID & abundance \\
 \hline 
 %&\\
@@ -253,12 +261,11 @@ IGS ID & abundance \\
 47        & 4 \\
 48        & 5 \\
 ...        & ... \\
+\hline 
 \end{tabular}
-\begin{flushleft}
-\end{flushleft}
-%\caption{\bf Listing IGSs with the corresponding abundances.}
-%\label{table:igs_abundance}
-%\end{table}
+\caption{\bf Listing IGSs with the corresponding abundances.}
+\label{table:igs_abundance}
+\end{table}
 
 This list is the counterpart of an 
 OTU table in OTU based diversity analysis.
@@ -272,10 +279,12 @@ diversity analysis. As long as we get a reliable OTU table, there are existing
 pipelines to perform the beta diversity analysis. 
 
 A typical OTU table across different samples is like this, which is also 
-called a samples-by-OTU data matrix:%(Table \ref{table:OTU_table})
-\\
-%\begin{table}[!ht]
+called a samples-by-OTU data matrix, as shown in Table \ref{table:OTU_table}.
+
+\begin{table}[!ht]
+\centering
 \begin{tabular}{ |c | c |c| c|c| }
+\hline 
     OTU ID & Sample A & Sample B & Sample C \\
 \hline 
 %&&\\
@@ -283,17 +292,20 @@ OTU1 & 3 & 4 & 2  \\
 OTU2 & 2 & 5 & 0 \\
 OUT3 & 3 & 1 & 4 \\
 ...  & ... & ... & ... \\
+\hline 
 \end{tabular}
 \begin{flushleft}
 \end{flushleft}
-%\caption{\bf Samples-by-OTU matrix.}
-%\label{table:OTU_table}
-%\end{table}
+\caption{\bf Samples-by-OTU matrix.}
+\label{table:OTU_table}
+\end{table}
 
-Like a OTU table, we hope to have the IGS table for the IGSs: %(Table \ref{table:IGS_table})
-\\
-%\begin{table}[h]
+Like a OTU table, we hope to have the IGS table for the IGSs, as Table \ref{table:IGS_table}.
+
+\begin{table}[!ht]
+\centering
 \begin{tabular}{ |c | c |c| c|c| }
+\hline 
     IGS ID & Sample A & Sample B & Sample C \\
 \hline 
 %&&&\\
@@ -301,11 +313,12 @@ IGS1 & 2 & 3 & 2  \\
 IGS2 & 2 & 4 & 0 \\
 IGS3 & 3 & 3 & 4 \\
 ...  & ... & ... & ... \\
+\hline 
 \end{tabular}
-%\caption{\bf Samples-by-IGS matrix.}
-%\label{table:IGS_table}
-%\end{table}
-\\
+\caption{\bf Samples-by-IGS matrix.}
+\label{table:IGS_table}
+\end{table}
+
 
 
 
@@ -370,9 +383,13 @@ Similarly there are 2 IGSs with abundance profile as ``2:0:3'' and 1 IGS
 with abundance profile as ``2:4:3'', as shown in Figure \ref{fig:coverage_profile}(D).
 
 List those IGSs and the corresponding abundance profiles across samples,
-we can have the samples-by-IGS matrix like this:
-\newline
+we can have the samples-by-IGS matrix as shown in Table \ref{table:sample_IGS_table}.
+
+
+\begin{table}[!ht]
+\centering
 \begin{tabular}{ |c | c |c| c|c| }
+\hline 
     IGS & Sample A & Sample B & Sample C\\
 \hline 
 IGS1 & 3 & 2 & 2\\ 
@@ -380,7 +397,13 @@ IGS2 & 3 & 2 & 2\\
 IGS3 & 2 & 0 & 3\\ 
 IGS4 & 2 & 0 & 3\\ 
 IGS5 & 2 & 4 & 3\\ 
+\hline 
 \end{tabular}
+\caption{\bf Samples-by-IGS matrix from example.}
+\label{table:sample_IGS_table}
+\end{table}
+
+
 
 With such samples-by-IGS matrix, similarity matrix between samples can be calculated using different similarity indices, like 
 Bray-Curtis. Next clustering and ordination methods can be applied to better interpret the relationship between samples. 
@@ -416,7 +439,7 @@ sample6        & IFGH & 10 & I:10 F:10 G:10 H:10 & 400K\\
 \end{tabular}
 }
 \caption{
-\bf{6 synthetic simple metagenomes}
+\bf{Six synthetic simple metagenomes}
 }
 \label{table:simulated_metag}
 \end{table}
@@ -645,7 +668,7 @@ read with length as $L$, with error rate as $e$ and $P\_effect(n,k,L)$ is the
 probability that $n$ 
 errors in a read with length of $L$ affect median k-mer count. The probability 
 that the coverage of a read is incorrectly assessed as 1 is 
-\[\sum_{n=3}^{\infty} P\_error(n,e,L) \times P\_effect(n,k,L)  \],
+\[\sum_{n=3}^{\infty} P\_error(n,e,L) \times P\_effect(n,k,L) \],
 and by binomial distribution,
 
 \[P\_error(n,e,L) = f(n;L,e) = Pr(X=n) = {L \choose n}e^n(1-e)^{L-n} \] 
@@ -836,7 +859,7 @@ This data set has the same species composition as that used in other experiment 
 
 As shown in Figure \ref{fig:compare_commet}, firstly, for 
 all data sets, the matrix from IGS method has a higher 
-correlation to golden standard than that from COMMET.  As expected, 
+correlation to golden standard than that from COMMET. As expected, 
 the matrix from data sets with sequencing error has a lower correlation 
 than that from error-free
 data sets. COMMET is more prone to sequencing error rate, compared to 
@@ -1070,7 +1093,7 @@ some each cycle, which is similar to intermediate disturbance. With new
 growth each spring, this new growth would be the fast growers with 
 less diverse. Why Iowa is the least diverse is still difficult to explain for now.
 
- From the alpha diversity, we also have a rough estimation of the  total 
+ From the alpha diversity, we also have a rough estimation of the total 
  size of the metagenome in Iowa soil, which is about 540G base pairs. This 
  proves the high complexity of soil sample and we still need considerably more sequencing 
  effort to achieve a reasonable high coverage.
@@ -1115,14 +1138,14 @@ The other data set is a series of soil samples from Amazon rainforest.
 The samples are separated well
 by the treatment. (Figure \ref{fig:ARMO_beta} ) It is also obvious 
 that samples from forest have 
-lower richness than prairie.  (Figure \ref{fig:ARMO_alpha})
+lower richness than prairie. (Figure \ref{fig:ARMO_alpha})
 
 
 
 
 \begin{figure}[!ht]
  \centerline{\includegraphics[width=6in]{./figures/IGS_KBS_beta.png}}
-\caption{\bf  Principal coordinates analysis of soil samples with different
+\caption{\bf Principal coordinates analysis of soil samples with different
 treatments collected from Kellogg Biological Station(KBS). Red, corn. Blue,
 miscanthus. Brown, switchgrass.}
 \label{fig:KBS_beta}
