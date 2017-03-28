@@ -1,0 +1,8 @@
+all:
+	pdflatex IGS_chapter 
+	bibtex IGS_chapter 
+	pdflatex IGS_chapter 
+	pdflatex IGS_chapter 
+	open IGS_chapter.pdf
+clean:
+	rm -r IGS_chapter.pdf *.bbl *.blg *.aux *.log *.lot *.lof *.toc 
